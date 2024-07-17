@@ -16,7 +16,7 @@ const config: Config = {
     },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
-      koulen: ["var(--font-zilla-koulen)"],
+      koulen: ["var(--font-koulen)"],
     },
   },
   plugins: [],
