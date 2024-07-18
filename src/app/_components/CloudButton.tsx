@@ -9,9 +9,9 @@ function CloudButton(props: SvgComponentProps) {
   const { children, ...svgProps } = props;
 
   return (
-    <button className="group relative h-auto w-full cursor-pointer md:w-[419px]">
+    <button className="group relative h-auto w-full cursor-pointer sm:w-[419px]">
       <svg
-        className="h-full w-full group-hover:fill-blue md:h-[232px] md:w-[419px]"
+        className="h-full w-full group-hover:fill-blue sm:h-[232px] sm:w-[419px]"
         viewBox="0 0 419 232"
         fill="#7D1D3F"
         xmlns="http://www.w3.org/2000/svg"
