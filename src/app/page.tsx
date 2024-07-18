@@ -7,8 +7,11 @@ export default function Home() {
     <main className="flex min-h-screen flex-col px-10">
       <Header />
       <div className="flex flex-1 items-center justify-end">
-        <div className="relative">
+        <div className="relativ flex flex-1">
           <CloudTextContainer>
+            <div className="mb-2 font-unbutton text-[20px] font-normal md:text-[50px]">
+              DONT MISS A BEAT!
+            </div>
             <div>Be the first to learn about:</div>
             <div>Call for proposals, Tickets, Workshops,</div>
             <div>Meetups, Discounts and so much more</div>
