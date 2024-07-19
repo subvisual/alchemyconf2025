@@ -20,7 +20,7 @@ export default function Banner() {
       <div className="absolute bottom-[95px] left-[300px] hidden md:block">
         <Arrow />
       </div>
-      <div className="relative bottom-[90px] left-[190px] w-[163px] sm:hidden">
+      <div className="absolute bottom-[-110px] left-[190px] w-[163px] sm:hidden">
         <ArrowMobileVersion />
       </div>
     </div>

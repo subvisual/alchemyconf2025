@@ -1,5 +1,4 @@
 import Header from "./_components/Header";
-
 import Banner from "./_components/Banner";
 import CloudsContainer from "./_components/CloudsContainer";
 

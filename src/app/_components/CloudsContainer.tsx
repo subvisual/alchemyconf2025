@@ -3,7 +3,7 @@ import CloudTextContainer from "./CloudTextContainer";
 
 export default function CloudsContainer() {
   return (
-    <div className="relative sm:ml-[195px] sm:mt-[120px]">
+    <div className="relative mt-[155px] sm:ml-[195px] sm:mt-[120px]">
       <CloudTextContainer>
         <div className="mb-2 ml-2 font-unbutton text-[24px] font-normal sm:text-[50px]">
           DONT MISS A BEAT!
