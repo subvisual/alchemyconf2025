@@ -10,7 +10,7 @@ export default function CloudsContainer() {
         </div>
         <div>Be the first to learn about:</div>
         <div>Call for proposals, Tickets, Workshops,</div>
-        <div>Meetups, Discounts and so much more</div>
+        <div>Meetups, Discounts and so much more!</div>
       </CloudTextContainer>
       <div className="absolute bottom-[-100px] sm:bottom-0 sm:left-[-38px]">
         <CloudButton>Get your ticket here!</CloudButton>
