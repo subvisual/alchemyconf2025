@@ -15,10 +15,6 @@ const config: Config = {
       bordeux: "#7D1D3F",
       blue: "#84ACCE",
     },
-    variants: {
-      fill: ["hover", "focus"],
-      stroke: ["hover", "focus"],
-    },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
       koulen: ["var(--font-koulen)"],
