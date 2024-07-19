@@ -11,7 +11,7 @@ export default function Banner() {
         <AlchemyIcon className="w-[93px] sm:w-[129px]" />
       </div>
       <div className="flex flex-col gap-1 font-koulen text-[80px] leading-none text-dark_blue sm:text-[105px]">
-        <div className="leading-1">Alchemy</div>
+        <div>Alchemy</div>
         <div>Conf</div>
         <div className="text-bordeux">2025</div>
       </div>
@@ -19,10 +19,10 @@ export default function Banner() {
         <div>2 - 3 April</div>
         <div>Braga, Portugal</div>
       </div>
-      <div className="absolute bottom-[95px] left-[300px]">
+      <div className="absolute bottom-[95px] left-[300px] hidden md:block">
         <Arrow />
       </div>
-      <div className="relative bottom-[7rem] left-[17rem] md:hidden">
+      <div className="relative bottom-[90px] left-[190px] w-[163px] sm:hidden">
         <ArrowMobileVersion />
       </div>
     </div>
