@@ -1,4 +1,3 @@
-import * as React from "react";
 import { SVGProps } from "react";
 
 interface AlchemyIconProps extends SVGProps<SVGSVGElement> {
