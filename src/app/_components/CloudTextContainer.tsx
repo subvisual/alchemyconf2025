@@ -5,7 +5,7 @@ interface CloudTextContainerProps extends SVGProps<SVGSVGElement> {
   children?: ReactNode;
 }
 
-function CloudTextContainer(props: CloudTextContainerProps) {
+export default function CloudTextContainer(props: CloudTextContainerProps) {
   const { children, ...svgProps } = props;
 
   return (
@@ -29,5 +29,3 @@ function CloudTextContainer(props: CloudTextContainerProps) {
     </div>
   );
 }
-
-export default CloudTextContainer;
