@@ -1,10 +1,14 @@
 import { SVGProps } from "react";
 
-const SubvisualIcon = (props: SVGProps<SVGSVGElement>) => (
+interface SubvisualIconProps extends SVGProps<SVGSVGElement> {
+  className?: string;
+}
+
+const SubvisualIcon = ({ className = "", ...props }: SubvisualIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    width={188}
-    height={32}
+    className={`h-auto ${className}`}
+    viewBox="0 0 188 32"
     fill="none"
     {...props}
   >

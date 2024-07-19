@@ -13,10 +13,12 @@ const config: Config = {
       sage: "#D7D9B1",
       purple: "#827191",
       bordeux: "#7D1D3F",
+      blue: "#84ACCE",
     },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
       koulen: ["var(--font-koulen)"],
+      unbutton: ["var(--font-unbutton)"],
     },
   },
   plugins: [],

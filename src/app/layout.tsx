@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { zilla_slab, koulen } from "@/utils/fonts";
+import { koulen, unbutton, zilla_slab } from "@/utils/fonts";
 
 export const metadata: Metadata = {
   title: "Save the Date",
@@ -13,7 +13,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={`${zilla_slab.variable} ${koulen.variable}`} lang="en">
+    <html
+      className={`${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
+      lang="en"
+    >
       <body className="bg-background">{children}</body>
     </html>
   );
