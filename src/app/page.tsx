@@ -1,5 +1,5 @@
 import AlchemyIcon from "@/assets/icons/alchemy_icon";
-import Header from "./_components/Header";
+import Header from "./_components/header";
 
 export default function Home() {
   return (
