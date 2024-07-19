@@ -1,5 +1,3 @@
-import React from "react";
-
 import AlchemyIcon from "@/assets/icons/alchemy_icon";
 import Arrow from "@/assets/icons/arrow_icon";
 import ArrowMobileVersion from "@/assets/icons/arrow_mobile_icon";

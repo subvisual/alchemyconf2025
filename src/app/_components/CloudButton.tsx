@@ -1,4 +1,3 @@
-import * as React from "react";
 import { SVGProps, ReactNode } from "react";
 
 interface SvgComponentProps extends SVGProps<SVGSVGElement> {

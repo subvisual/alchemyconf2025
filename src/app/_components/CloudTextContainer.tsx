@@ -1,6 +1,4 @@
-import { ReactNode } from "react";
-import { SVGProps } from "react";
-
+import { ReactNode, SVGProps } from "react";
 interface CloudTextContainerProps extends SVGProps<SVGSVGElement> {
   children?: ReactNode;
 }
