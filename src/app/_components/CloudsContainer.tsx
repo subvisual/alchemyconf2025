@@ -1,5 +1,6 @@
 import CloudButton from "./CloudButton";
 import CloudTextContainer from "./CloudTextContainer";
+import LogoAnimation from "./LogoAnimation";
 
 export default function CloudsContainer() {
   return (
@@ -15,6 +16,7 @@ export default function CloudsContainer() {
       <div className="absolute bottom-[-100px] sm:bottom-0 sm:left-[-38px]">
         <CloudButton>Get your ticket here!</CloudButton>
       </div>
+      <LogoAnimation />
     </div>
   );
 }
