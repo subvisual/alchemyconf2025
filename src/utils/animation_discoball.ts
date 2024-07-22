@@ -1,7 +1,7 @@
-export function discoBall() {
+export function AnimationDiscoBall() {
   var t = 1;
   var radius = 50;
-  var squareSize = 6.5;
+  var squareSize = 7.5;
   var prec = 19.55;
   var fuzzy = 0.001;
   var inc = (Math.PI - fuzzy) / prec;
@@ -13,7 +13,7 @@ export function discoBall() {
       var currentRadius =
         Math.abs(
           radius * Math.cos(0) * Math.sin(t) -
-            radius * Math.cos(Math.PI) * Math.sin(t)
+            radius * Math.cos(Math.PI) * Math.sin(t),
         ) / 2.5;
       var circumference = Math.abs(2 * Math.PI * currentRadius);
       var squaresThatFit = Math.floor(circumference / squareSize);
@@ -26,11 +26,7 @@ export function discoBall() {
         squareTile.style.transformOrigin = "0 0 0";
         squareTile.style.transform =
           "rotate(" + i + "rad) rotateY(" + t + "rad)";
-        if ((t > 1.3 && t < 1.9) || (t < -1.3 && t > -1.9)) {
-          squareTile.style.backgroundColor = randomColor("bright");
-        } else {
-          squareTile.style.backgroundColor = randomColor("any");
-        }
+        squareTile.style.backgroundColor = randomColor();
         square.appendChild(squareTile);
         square.className = "square";
         squareTile.style.animation = "reflect 2s linear infinite";
@@ -52,17 +48,17 @@ export function discoBall() {
     }
   }
 
-  function randomColor(type: string) {
-    var c;
-    if (type == "bright") {
-      c = randomNumber(206, 255);
-    } else {
-      c = randomNumber(110, 82);
-    }
-    return "rgb(" + c + "," + c + "," + c + ")";
-  }
-
   function randomNumber(min: number, max: number) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
+
+  function randomColor() {
+    const colors = [
+      "rgba(186,110,189,255)",
+      "rgba(225,184,206,255)",
+      "rgba(199,198,209,255)",
+    ];
+    const randomIndex = Math.floor(Math.random() * colors.length);
+    return colors[randomIndex];
   }
 }

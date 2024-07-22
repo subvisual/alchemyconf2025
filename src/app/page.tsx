@@ -4,14 +4,12 @@ import CloudsContainer from "./_components/CloudsContainer";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-row px-8 sm:px-10">
-      <div className="flex flex-1 flex-col">
-        <Header />
-        <div className="flex flex-1 flex-col py-[58px] sm:flex-row sm:items-center sm:justify-center">
-          <Banner />
-          <CloudsContainer />
-        </div>
-      </div>
+    <main className="flex min-h-screen flex-col p-8">
+      <Header />
+      <section className="flex flex-grow items-center justify-evenly gap-24">
+        <Banner />
+        <CloudsContainer />
+      </section>
     </main>
   );
 }
