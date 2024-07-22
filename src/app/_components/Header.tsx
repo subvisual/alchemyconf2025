@@ -12,7 +12,7 @@ export default function Header() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <SubvisualIcon className="w-[94px] sm:w-[188px]" />
+          <SubvisualIcon className="w-[94px] sm:w-[120px] lg:w-[188px]" />
         </a>
       </div>
     </header>
