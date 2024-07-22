@@ -7,7 +7,13 @@ export default function Header() {
         <span className="text-md flex-1 font-zilla_slab leading-10 sm:text-[1.75rem]">
           Powered by
         </span>
-        <SubvisualIcon className="w-[94px] sm:w-[188px]" />
+        <a
+          href="https://subvisual.com/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <SubvisualIcon className="w-[94px] sm:w-[188px]" />
+        </a>
       </div>
     </header>
   );
