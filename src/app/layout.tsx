@@ -20,7 +20,9 @@ export default function RootLayout({
       className={`scroll-smoth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
       lang="en"
     >
-      <body className="bg-background">{children}</body>
+      <body className="overflow-x-hidden bg-background sm:overflow-x-auto">
+        {children}
+      </body>
     </html>
   );
 }
