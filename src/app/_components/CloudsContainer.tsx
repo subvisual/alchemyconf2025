@@ -17,7 +17,7 @@ export default function CloudsContainer() {
         <div>Call for proposals, Tickets, Workshops,</div>
         <div>Meetups, Discounts and so much more!</div>
       </CloudTextContainer>
-      <div className="absolute bottom-[-100px] sm:bottom-0 sm:left-[-38px]">
+      <div className="absolute bottom-[-100px] left-[20px] sm:bottom-0 sm:left-[-38px]">
         <CloudButton>Get your ticket here!</CloudButton>
       </div>
       <div className="absolute bottom-[75%] left-[8%] sm:bottom-[70%] sm:left-[70%]">
