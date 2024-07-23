@@ -1,3 +1,6 @@
+"use client";
+
+import useScreenSize from "@/hooks/useScreenSize";
 import CloudButton from "./CloudButton";
 import CloudTextContainer from "./CloudTextContainer";
 import { DiscoBall } from "./DiscoBall";
