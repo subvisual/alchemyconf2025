@@ -58,3 +58,19 @@
     transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
   }
   
+@keyframes animatedLogoHand {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.animated-path {
+  animation: animatedLogoHand 0.5s infinite ease-in-out;
+  transform-origin: 32% 60%;
+}

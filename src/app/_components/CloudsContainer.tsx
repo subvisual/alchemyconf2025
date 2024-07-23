@@ -4,6 +4,7 @@ import useScreenSize from "@/hooks/useScreenSize";
 import CloudButton from "./CloudButton";
 import CloudTextContainer from "./CloudTextContainer";
 import { DiscoBall } from "./DiscoBall";
+import LogoAnimation from "./LogoAnimation";
 
 export default function CloudsContainer() {
   return (
@@ -22,6 +23,7 @@ export default function CloudsContainer() {
       <div className="absolute bottom-[75%] left-[8%] sm:bottom-[70%] sm:left-[70%]">
         <DiscoBall />
       </div>
+      <LogoAnimation />
     </div>
   );
 }
