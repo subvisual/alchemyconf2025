@@ -13,7 +13,7 @@ export default function CloudsContainer() {
         <div className="ml-6 mt-4 pb-2 font-unbutton text-[24px] font-normal sm:ml-0 sm:mt-0 sm:text-[38px] md:text-[50px]">
           DON&apos;T MISS A BEAT!
         </div>
-        <div className="text-center text-[14px] leading-7 sm:text-xl">
+        <div className="text-center text-[14px] leading-6 sm:text-xl sm:leading-8 md:text-[28px] md:leading-[42px]">
           <p>Be the first to learn about:</p>
           <p>Call for proposals, Tickets, Workshops,</p>
           <p>Meetups, Discounts and so much more!</p>
