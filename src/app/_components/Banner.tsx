@@ -17,7 +17,7 @@ export default function Banner() {
         <div>2 - 3 April</div>
         <div>Braga, Portugal</div>
       </div>
-      <div className="absolute bottom-[95px] left-[300px] hidden sm:block">
+      <div className="absolute bottom-[95px] left-[300px] hidden md:block">
         <Arrow />
       </div>
       <div className="absolute bottom-[-110px] left-[190px] w-[163px] md:hidden">

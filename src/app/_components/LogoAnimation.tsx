@@ -2,7 +2,7 @@ import * as React from "react";
 import { SVGProps } from "react";
 
 const LogoAnimation = (props: SVGProps<SVGSVGElement>) => (
-  <div className="absolute right-[-75px] top-[-650px] -rotate-[30deg] scale-150 sm:bottom-2 sm:right-5 sm:top-[515px] sm:rotate-0 sm:transform-none">
+  <div className="absolute right-[-75px] top-[-650px] -rotate-[30deg] scale-150 sm:bottom-2 sm:right-5 sm:top-[450px] sm:rotate-0 sm:transform-none md:top-[515px]">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width={109}
