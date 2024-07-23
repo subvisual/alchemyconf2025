@@ -1,5 +1,6 @@
 import CloudButton from "./CloudButton";
 import CloudTextContainer from "./CloudTextContainer";
+import { DiscoBall } from "./DiscoBall";
 
 export default function CloudsContainer() {
   return (
@@ -14,6 +15,9 @@ export default function CloudsContainer() {
       </CloudTextContainer>
       <div className="absolute bottom-[-100px] sm:bottom-0 sm:left-[-38px]">
         <CloudButton>Get your ticket here!</CloudButton>
+      </div>
+      <div className="absolute bottom-[75%] left-[8%] sm:bottom-[70%] sm:left-[70%]">
+        <DiscoBall />
       </div>
     </div>
   );
