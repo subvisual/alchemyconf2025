@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-row px-8 sm:px-10">
       <div className="flex flex-1 flex-col">
         <Header />
-        <div className="flex flex-1 flex-col py-[58px] sm:flex-row sm:items-center sm:justify-center">
+        <div className="flex flex-1 flex-col pb-[115px] pt-[58px] sm:flex-row sm:items-center sm:justify-center sm:pb-0">
           <Banner />
           <CloudsContainer />
         </div>
