@@ -27,6 +27,11 @@ export default function RootLayout({
       className={`scroll-smoth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
       lang="en"
     >
+      <script
+        data-goatcounter="https://alchemyconf2025.goatcounter.com/count"
+        async
+        src="//gc.zgo.at/count.js"
+      ></script>
       <body className="bg-background">
         <div className="overflow-hidden md:overflow-auto">{children}</div>
       </body>
