@@ -8,19 +8,19 @@ export default function Banner() {
       <div>
         <AlchemyIcon className="w-[93px] sm:w-[129px]" />
       </div>
-      <div className="flex flex-col gap-1 font-koulen text-[80px] leading-none text-dark_blue sm:text-[105px]">
+      <div className="flex flex-col gap-1 font-koulen text-[80px] leading-none text-dark_blue sm:text-[90px] md:text-[105px]">
         <div>Alchemy</div>
         <div>Conf</div>
         <div className="text-bordeux">2025</div>
       </div>
-      <div className="flex flex-col gap-2 text-nowrap font-zilla_slab text-2xl font-semibold uppercase text-dark_blue sm:text-4xl">
+      <div className="flex flex-col gap-2 text-nowrap font-zilla_slab text-2xl font-semibold uppercase text-dark_blue md:text-4xl">
         <div>2 - 3 April</div>
         <div>Braga, Portugal</div>
       </div>
-      <div className="absolute bottom-[95px] left-[300px] hidden sm:block">
+      <div className="absolute bottom-[95px] left-[300px] hidden md:block">
         <Arrow />
       </div>
-      <div className="absolute bottom-[-110px] left-[190px] w-[163px] sm:hidden">
+      <div className="absolute bottom-[-110px] left-[190px] w-[163px] md:hidden">
         <ArrowMobileVersion />
       </div>
     </div>

@@ -8,16 +8,18 @@ import LogoAnimation from "./LogoAnimation";
 
 export default function CloudsContainer() {
   return (
-    <div className="relative mt-[155px] sm:ml-[195px] sm:mt-[120px]">
+    <div className="relative mt-[155px] md:ml-[195px] md:mt-[120px]">
       <CloudTextContainer>
-        <div className="mb-2 ml-2 font-unbutton text-[24px] font-normal sm:text-[50px]">
-          DONT MISS A BEAT!
+        <div className="ml-6 mt-4 pb-2 font-unbutton text-[24px] font-normal sm:ml-0 sm:mt-0 sm:text-[38px] md:text-[50px]">
+          DON&apos;T MISS A BEAT!
         </div>
-        <div>Be the first to learn about:</div>
-        <div>Call for proposals, Tickets, Workshops,</div>
-        <div>Meetups, Discounts and so much more!</div>
+        <div className="text-center text-[14px] leading-7 sm:text-xl">
+          <p>Be the first to learn about:</p>
+          <p>Call for proposals, Tickets, Workshops,</p>
+          <p>Meetups, Discounts and so much more!</p>
+        </div>
       </CloudTextContainer>
-      <div className="absolute bottom-[-100px] left-[20px] sm:bottom-0 sm:left-[-38px]">
+      <div className="absolute bottom-[-100px] left-[20px] sm:bottom-[-70px] sm:left-[-38px] md:bottom-0">
         <CloudButton>Get your ticket here!</CloudButton>
       </div>
       <div className="absolute bottom-[75%] left-[8%] sm:bottom-[70%] sm:left-[70%]">

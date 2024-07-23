@@ -21,7 +21,7 @@ export default function RootLayout({
       lang="en"
     >
       <body className="bg-background">
-        <div className="overflow-hidden sm:overflow-auto">{children}</div>
+        <div className="overflow-hidden md:overflow-auto">{children}</div>
       </body>
     </html>
   );
