@@ -3,8 +3,11 @@ import "./globals.css";
 import { koulen, unbutton, zilla_slab } from "@/utils/fonts";
 
 export const metadata: Metadata = {
-  title: "Save the Date",
-  description: "Save the date app",
+  title: "AlchemyConf 2025 | Save the Date",
+  description: "AlchemyConf 2025 | 2-3 April | Braga, Portugal",
+  icons: {
+    icon: "/icon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -14,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
+      className={`scroll-smoth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
       lang="en"
     >
       <body className="bg-background">{children}</body>
