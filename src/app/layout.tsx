@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.ico",
   },
-  metadataBase: new URL("https://alchemyconf.com"),
+  metadataBase: new URL("https://deploy-preview-16--alchemyconf.netlify.app"),
   alternates: {
     canonical: "/",
   },
