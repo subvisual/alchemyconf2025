@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: "/opengraph-image.png",
+        url: "https://alchemyconf.com/opengraph-image.png",
       },
     ],
   },
