@@ -8,10 +8,14 @@ export const metadata: Metadata = {
   icons: {
     icon: "/icon.ico",
   },
+  metadataBase: new URL("https://alchemyconf.com"),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     images: [
       {
-        url: "https://alchemyconf.com/opengraph-image.png",
+        url: "/opengraph-image-main.png",
       },
     ],
   },
