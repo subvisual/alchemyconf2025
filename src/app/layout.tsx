@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { koulen, unbutton, zilla_slab } from "@/utils/fonts";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "AlchemyConf 2025 | Save the Date",
@@ -36,6 +37,7 @@ export default function RootLayout({
         async
         src="//gc.zgo.at/count.js"
       ></script>
+        <GoogleTagManager gtmId="GTM-TMJC46NG" />
       <body className="bg-background">
         <div className="overflow-hidden md:overflow-auto">{children}</div>
       </body>
