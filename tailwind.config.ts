@@ -7,13 +7,18 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    container: {
+      center: true,
+    },
     colors: {
       background: "#FFF5DA",
-      dark_blue: "#003049",
+      white: "#FFFFFF",
+      "dark-blue": "#003049",
       sage: "#D7D9B1",
       purple: "#827191",
       bordeux: "#7D1D3F",
       blue: "#84ACCE",
+      yellow: "#F4AC45",
     },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
