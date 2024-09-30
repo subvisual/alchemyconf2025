@@ -2,10 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { koulen, unbutton, zilla_slab } from "@/utils/fonts";
 import { GoogleTagManager } from "@next/third-parties/google";
-
+import Header from "./_components/Header";
+import Footer from "./_components/Footer";
 export const metadata: Metadata = {
-  title: "AlchemyConf 2025 | Save the Date",
-  description: "AlchemyConf 2025 | 2-3 April | Braga, Portugal",
+  title: "Alchemy Conf 2025",
+  description: "Alchemy Conf | 2-3 April 2025 | Braga, Portugal",
   icons: {
     icon: "/icon.ico",
   },
@@ -29,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`scroll-smoth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
+      className={`scroll-smooth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
       lang="en"
     >
       <script
@@ -37,9 +38,11 @@ export default function RootLayout({
         async
         src="//gc.zgo.at/count.js"
       ></script>
-        <GoogleTagManager gtmId="GTM-TMJC46NG" />
-      <body className="bg-background">
+      <GoogleTagManager gtmId="GTM-TMJC46NG" />
+      <body className="overflow-x-hidden overscroll-none bg-background">
+        <Header />
         <div className="overflow-hidden md:overflow-auto">{children}</div>
+        <Footer />
       </body>
     </html>
   );
