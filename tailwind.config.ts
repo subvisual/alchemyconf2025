@@ -7,6 +7,14 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      mobile: "390px",
+      tablet: "834px",
+      desktop: "1440px",
+    },
+    variants: {
+      fill: ["hover", "focus"],
+    },
     container: {
       center: true,
     },

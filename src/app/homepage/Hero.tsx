@@ -5,10 +5,9 @@ export default function Hero() {
   return (
     <section className="flex min-h-[calc(100vh_+_80px)] flex-col items-center justify-center px-32">
       <div className="flex justify-around gap-32">
-        <div className="flex flex-col gap-[65px]">
+        <div className="flex flex-col gap-[40px]">
           <AlchemyIcon className="h-[130px] w-[140px]" />
           <div>
-            {/* TODO: check h1 font size, its too big for 200px */}
             <h1 className="text-dark-blue font-koulen text-[160px] leading-none">
               Alchemy <br /> Conf <br />{" "}
               <span className="text-bordeux">2025</span>
