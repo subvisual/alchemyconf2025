@@ -5,15 +5,21 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="flex flex-col items-center justify-center overflow-hidden py-[220px]"
+      className="my-20 flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="text-dark-blue font-koulen text-[128px]">
+      <div className="mb-10 font-koulen text-[128px] text-dark-blue">
         Talks & Speakers
       </div>
-      <div className="flex gap-8 pt-[96px]">
+      <div className="w-[760px] text-center font-zilla_slab text-[32px] font-medium text-dark-blue">
+        Alchemy Conf 2025 brings together the brightest minds in the Elixir
+        community. The top experts in our community will share what they’ve
+        learned about building, innovation, and real-world applications.
+      </div>
+
+      <div className="grid grid-cols-4 gap-8 pt-[96px] mobile:grid-cols-2 tablet:grid-cols-3 desktop:grid-cols-4">
         {speakers.map((speaker, key) => (
           <div key={speaker.id} className="flex flex-col font-zilla_slab">
-            <div className="mb-[22px] h-[280px] w-[280px] rounded-xl border-4 border-bordeux bg-sage">
+            <div className="mb-[22px] h-[280px] w-[280px] rounded-xl border-8 border-bordeux bg-grey">
               {/* <Image
                 src={speaker.image}
                 alt="Speaker"
@@ -22,22 +28,23 @@ export default function Speakers() {
               /> */}
               {speaker.image}
             </div>
-            <p className="text-dark-blue pb-4 text-[32px] font-bold uppercase leading-none">
+            <p className="pb-1 text-[32px] font-semibold uppercase leading-none text-dark-blue">
               {speaker.name}
             </p>
-            <p className="pb-4 text-[22px] font-semibold">{speaker.role}</p>
-            <p className="pb-4 text-[22px]">{speaker.description}</p>
+            <p className="pb-4 text-2xl font-semibold text-dark-blue">
+              {speaker.role}
+            </p>
             <div className="flex items-start justify-start gap-2">
               {speaker.tags.map((tag, key) => (
                 <div
                   key={`${speaker.id}-${tag}`}
-                  className={`bg-white border-2 border-l-8 px-4 capitalize ${
+                  className={`border-2 border-l-8 bg-none px-4 capitalize ${
                     tag === "web3"
-                      ? "border-sage"
+                      ? "border-blue"
                       : tag === "elixir"
-                        ? "border-bordeux"
+                        ? "border-sage"
                         : tag === "crypto"
-                          ? "border-blue"
+                          ? "border-purple"
                           : ""
                   }`}
                 >
