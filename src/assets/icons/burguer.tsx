@@ -15,9 +15,9 @@ const Burguer = ({ className, ...props }: BurguerProps) => (
     <path
       d="M2 2H26M2 10H26M2 18H26"
       stroke="#003049"
-      stroke-width="3.33333"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="3.33333"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
