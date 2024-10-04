@@ -27,6 +27,7 @@ const config: Config = {
       bordeux: "#7D1D3F",
       blue: "#84ACCE",
       yellow: "#F4AC45",
+      grey: "#C4C4C4",
     },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
