@@ -7,8 +7,8 @@ export default function Practical() {
       id="practical"
       className="flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="text-dark-blue font-koulen text-[128px]">Practical</div>
-      <div className="text-dark-blue w-[472px] text-center font-zilla_slab text-[22px]">
+      <div className="font-koulen text-[128px] text-dark-blue">Practical</div>
+      <div className="w-[472px] text-center font-zilla_slab text-[22px] text-dark-blue">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
@@ -26,7 +26,7 @@ export default function Practical() {
         <Blob className="h-[247px] w-[298px]" text="Sleep" textSize="24px" />
       </div>
 
-      <Button text="View all information" href="/" />
+      <Button text="View all information" className="bg-bordeux" href="/" />
     </section>
   );
 }

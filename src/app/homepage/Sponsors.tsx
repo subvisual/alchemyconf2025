@@ -7,7 +7,7 @@ export default function Sponsors() {
       id="sponsors"
       className="flex flex-col items-center justify-center gap-24 overflow-hidden py-[220px]"
     >
-      <div className="text-dark-blue font-koulen text-[128px]">Sponsors</div>
+      <div className="font-koulen text-[128px] text-dark-blue">Sponsors</div>
       <div className="grid w-full grid-cols-4 grid-rows-2 gap-[40px]">
         {sponsors.map((sponsor) => (
           <div key={sponsor.id} className="bg-sage p-4">
@@ -20,7 +20,7 @@ export default function Sponsors() {
         ))}
       </div>
 
-      <Button text="Sponsorship Prospectus" href="/" />
+      <Button className="bg-bordeux" text="Sponsorship Prospectus" href="/" />
     </section>
   );
 }
