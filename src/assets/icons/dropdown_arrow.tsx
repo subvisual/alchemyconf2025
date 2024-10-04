@@ -24,9 +24,9 @@ const DropdownArrow = ({
     <path
       d="M13 1L7 7L1 1"
       stroke="#003049"
-      stroke-width="2"
-      stroke-linecap="round"
-      stroke-linejoin="round"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
     />
   </svg>
 );
