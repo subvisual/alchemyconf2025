@@ -17,15 +17,15 @@ export default function Header() {
 
   return (
     <header className="fixed left-0 top-0 z-50 w-full select-none border-b-2 border-b-bordeux">
-      <nav className="tablet:px-20 flex items-center justify-between bg-opacity-50 px-6 py-4 backdrop-blur-lg backdrop-filter">
+      <nav className="flex items-center justify-between bg-opacity-50 px-6 py-4 backdrop-blur-lg backdrop-filter tablet:px-20">
         <Link href="/" className="flex w-fit items-center gap-4 outline-none">
           <AlchemySquareIcon className="h-12 w-12" />
-          <p className="text-dark-blue tablet:flex hidden font-koulen text-[25px]">
+          <p className="hidden font-koulen text-[25px] text-dark-blue tablet:flex">
             Alchemy Conf
           </p>
         </Link>
 
-        <ul className="desktop:flex hidden gap-6 font-zilla_slab text-[18px]">
+        <ul className="hidden gap-6 font-zilla_slab text-[18px] desktop:flex">
           <li
             className={`${
               pathname === "/about" && "-ml-0.5 font-semibold text-bordeux"
@@ -53,12 +53,12 @@ export default function Header() {
 
         <div className="flex items-center gap-8">
           <Button
-            className="tablet:flex hidden"
+            className="hidden bg-bordeux tablet:flex"
             text="Tickets"
             href="https://ti.to/subvisual/alchemy-conf-2025"
           />
           <Burguer
-            className="desktop:hidden h-6 w-6 hover:cursor-pointer"
+            className="h-6 w-6 hover:cursor-pointer desktop:hidden"
             onClick={toggleSidebar}
           />
         </div>
