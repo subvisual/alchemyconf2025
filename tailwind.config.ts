@@ -22,7 +22,7 @@ const config: Config = {
       background: "#FFF5DA",
       white: "#FFFFFF",
       "dark-blue": "#003049",
-      sage: "#D7D9B1",
+      sage: "#B6B980",
       purple: "#827191",
       bordeux: "#7D1D3F",
       blue: "#84ACCE",
@@ -33,6 +33,11 @@ const config: Config = {
       zilla_slab: ["var(--font-zilla-slab)"],
       koulen: ["var(--font-koulen)"],
       unbutton: ["var(--font-unbutton)"],
+    },
+    extend: {
+      fontSize: {
+        "2.5xl": ["2rem", { lineHeight: "2.5rem" }],
+      },
     },
   },
   plugins: [],

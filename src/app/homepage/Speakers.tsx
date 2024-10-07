@@ -5,12 +5,12 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="my-20 flex flex-col items-center justify-center overflow-hidden"
+      className="my-[136px] flex flex-col items-center justify-center overflow-hidden"
     >
-      <div className="mb-10 font-koulen text-[128px] text-dark-blue">
+      <div className="mb-10 font-koulen text-9xl leading-[1.1] text-dark-blue">
         Talks & Speakers
       </div>
-      <div className="w-[760px] text-center font-zilla_slab text-[32px] font-medium text-dark-blue">
+      <div className="w-[760px] text-center font-zilla_slab text-2.5xl font-medium text-dark-blue">
         Alchemy Conf 2025 brings together the brightest minds in the Elixir
         community. The top experts in our community will share what they’ve
         learned about building, innovation, and real-world applications.

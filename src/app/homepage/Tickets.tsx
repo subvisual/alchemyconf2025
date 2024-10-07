@@ -5,12 +5,12 @@ export default function Tickets() {
   return (
     <section
       id="tickets"
-      className="my-20 flex flex-col items-center justify-center overflow-hidden"
+      className="my-[136px] flex flex-col items-center justify-center overflow-hidden"
     >
       <div className="mb-10 font-koulen text-9xl leading-[1] text-dark-blue">
         Tickets
       </div>
-      <div className="w-[760px] text-center font-zilla_slab text-[32px] font-medium text-dark-blue">
+      <div className="w-[760px] text-center font-zilla_slab text-2.5xl font-medium text-dark-blue">
         Join us in celebrating Elixir! Choose the ticket option that best suits
         your needs and secure your spot at the most unique event the community’s
         ever seen.
