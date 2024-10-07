@@ -25,10 +25,10 @@ export default function Header() {
           </p>
         </Link>
 
-        <ul className="hidden gap-6 font-zilla_slab text-[18px] desktop:flex">
+        <ul className="hidden gap-6 font-zilla_slab text-[18px] font-medium text-dark-blue desktop:flex">
           <li
             className={`${
-              pathname === "/about" && "-ml-0.5 font-semibold text-bordeux"
+              pathname === "/about" && "-ml-0.5 font-semibold"
             } transition-all hover:text-bordeux`}
           >
             <Link href="/about">About</Link>
@@ -53,7 +53,7 @@ export default function Header() {
 
         <div className="flex items-center gap-8">
           <Button
-            className="hidden bg-bordeux tablet:flex"
+            className="hidden bg-bordeux text-xl font-medium tablet:flex"
             text="Tickets"
             href="https://ti.to/subvisual/alchemy-conf-2025"
           />
