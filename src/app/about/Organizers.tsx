@@ -1,13 +1,15 @@
 import Link from "next/link";
+import Button from "../_components/Button";
+import Image from "next/image";
 
 export default function Organizers() {
   return (
-    <section className="flex flex-col items-center justify-start px-32 py-[120px]">
-      <div className="text-dark-blue pb-8 font-koulen text-[128px]">
+    <section className="my-[136px] flex flex-col items-center justify-start px-32">
+      <div className="mb-16 font-koulen text-9xl text-dark-blue">
         About Organizers
       </div>
-      <div className="text-dark-blue w-[800px] text-center font-zilla_slab text-[22px]">
-        <p className="pb-20 text-[36px] font-semibold uppercase">
+      <div className="w-[800px] text-center font-zilla_slab text-2xl text-dark-blue">
+        <p className="mb-12 text-[36px] font-semibold uppercase">
           Who&apos;s behind Alchemy Conf?
         </p>
         <p>
@@ -26,10 +28,24 @@ export default function Organizers() {
           not just the products they&apos;re entrusted with, but the very
           companies that come through the door.
         </p>
-        <div className="py-6 text-right">
-          <Link className="uppercase text-bordeux" href="#">
-            Get to know Subvisual
-          </Link>
+        <div className="absolute left-52">
+          <div className="flex h-[83px] w-[250px] rotate-[7.84deg] items-center justify-center overflow-hidden rounded-2xl border-[7px] border-yellow bg-grey">
+            <Image
+              src={"/"}
+              alt=""
+              width={176}
+              height={176}
+              className="rotate-[-7.84deg] transform"
+            ></Image>
+          </div>
+        </div>
+
+        <div className="pb-12 pt-6 text-right">
+          <Button
+            className="bg-bordeux py-1 text-[16px] font-medium"
+            text="GET TO KNOW SUBVISUAL"
+            href="/"
+          />
         </div>
 
         <p>
@@ -40,10 +56,23 @@ export default function Organizers() {
           of work with their forward-thinking HR solutions.
         </p>
 
-        <div className="py-6 text-right">
-          <Link className="uppercase text-bordeux" href="#">
-            Get to know Remote
-          </Link>
+        <div className="absolute right-52">
+          <div className="flex h-[83px] w-[250px] rotate-[-7.84deg] items-center justify-center overflow-hidden rounded-2xl border-[7px] border-purple bg-grey">
+            <Image
+              src={"/"}
+              alt=""
+              width={176}
+              height={176}
+              className="rotate-[7.84deg] transform"
+            ></Image>
+          </div>
+        </div>
+        <div className="pt-6 text-left">
+          <Button
+            className="bg-bordeux py-1 text-[16px] font-medium"
+            text="GET TO KNOW REMOTE"
+            href="/"
+          />
         </div>
       </div>
     </section>
