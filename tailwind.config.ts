@@ -38,6 +38,15 @@ const config: Config = {
       fontSize: {
         "2.5xl": ["2rem", { lineHeight: "2.5rem" }],
       },
+      animation: {
+        "bounce-horizontal": "bounce-horizontal 1s infinite",
+      },
+      keyframes: {
+        "bounce-horizontal": {
+          "0%, 100%": { transform: "translateX(0)" },
+          "50%": { transform: "translateX(25%)" },
+        },
+      },
     },
   },
   plugins: [],

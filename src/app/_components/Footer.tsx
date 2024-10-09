@@ -29,14 +29,14 @@ export default function Footer() {
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Sponsors</p>
-        <Link href="/">Sponsorship Prospectus</Link>
+        <Link href="/">
+          Sponsorship
+          <br /> Prospectus
+        </Link>
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Follow us</p>
-        <Link href="/">X</Link>
-        <Link href="/">Dribbble</Link>
-        <Link href="/">Instagram</Link>
-        <Link href="/">LinkedIn</Link>
+        <Link href="https://x.com/alchemy_conf">X</Link>
       </div>
     </footer>
   );
