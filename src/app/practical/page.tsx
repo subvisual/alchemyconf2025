@@ -19,15 +19,16 @@ export default function Practical() {
               <span className="font-semibold text-bordeux">Theatro Circo</span>{" "}
               , and all local transportation and maps can be found below.
             </p>
-            <div className="flex flex-row items-center justify-center gap-3">
-              <Link
-                className="text-[16px] font-semibold uppercase text-bordeux"
-                href="/practical/move"
-              >
-                Getting around{" "}
-              </Link>
-              <ArrowRight color="#7D1D3F" className="h-[20px]"></ArrowRight>
-            </div>
+            <Link
+              className="flex flex-row items-center justify-center gap-3 text-[16px] font-semibold uppercase text-bordeux"
+              href="/practical/move"
+            >
+              Getting around{" "}
+              <ArrowRight
+                color="#7D1D3F"
+                className="h-[20px] animate-bounce-horizontal"
+              ></ArrowRight>
+            </Link>
           </div>
         </div>
       </div>
@@ -40,15 +41,16 @@ export default function Practical() {
               convenience during your stay. Our recommendations are just minutes
               from the venue, and they&apos;re lovely. Check out our top choices
             </p>
-            <div className="flex flex-row items-center justify-center gap-3">
-              <Link
-                className="text-[16px] font-semibold uppercase text-bordeux"
-                href="/practical/sleep"
-              >
-                See more{" "}
-              </Link>
-              <ArrowRight color="#7D1D3F" className="h-[20px]"></ArrowRight>
-            </div>
+            <Link
+              className="flex flex-row items-center justify-center gap-2 text-[16px] font-semibold uppercase text-bordeux"
+              href="/practical/sleep"
+            >
+              See more
+              <ArrowRight
+                color="#7D1D3F"
+                className="h-[20px] animate-bounce-horizontal"
+              ></ArrowRight>
+            </Link>
           </div>
           <Blob variant={5} stroke="#F4AC45" className="h-[376px] w-[446px]" />
         </div>
