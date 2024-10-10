@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "cardTitle": "Walking",
+    "description": "Braga is a compact city, making it ideal for walking. Many key locations, including Theatro Circo, are in very walkable neighborhoods. Braga also has lovely cycling lanes if you have your bike handy.",
+    "linkText": "City Map",
+    "link": "https://www.google.pt/maps/place/Braga",
+    "image": "/",
+    "color": "yellow"
+  },
+  {
+    "id": 2,
+    "cardTitle": "By Transit",
+    "description": "For longer distances, Braga’s bus system can be a convenient and inexpensive choice. Here are all routes and schedules, but do keep in mind that Google Maps includes this information for the entire city of Braga.",
+    "linkText": "Tub",
+    "link": "https://tub.pt",
+    "image": "/",
+    "color": "blue"
+  },
+  {
+    "id": 3,
+    "cardTitle": "By Airport Shuttle",
+    "description": "Braga is served by the Francisco Sá Carneiro Airport, better known as the Porto airport. GetBus has a convenient shuttle service that will deliver you right to the city centre.",
+    "linkText": "Getbus",
+    "link": "https://www.getbus.eu/en/braga-aeroporto-porto",
+    "image": "/",
+    "color": "bordeux"
+  },
+  {
+    "id": 4,
+    "cardTitle": "By Train",
+    "description": "Braga is well-connected by train, making it easy to get here from Porto or Lisbon. The Intercidades trains or Alfapendular service are our recommendations.",
+    "linkText": "CP Portugal",
+    "link": "https://www.cp.pt/passageiros/en",
+    "image": "/",
+    "color": "sage"
+  },
+  {
+    "id": 5,
+    "cardTitle": "By Bus",
+    "description": "There are several companies operating buses from Lisbon, Porto, or anywhere else in the country, really, to Braga. Rede Expressos and FlixBus are both solid options.",
+    "linkText": "Rede Expressos",
+    "link": "https://rede-expressos.pt/en",
+    "image": "/",
+    "color": "yellow"
+  }
+]
