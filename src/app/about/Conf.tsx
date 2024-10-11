@@ -1,13 +1,13 @@
 export default function Conf() {
   return (
-    <section className="flex flex-col items-center justify-start px-32 py-[120px]">
-      <div className="text-dark-blue pb-8 font-koulen text-[128px]">
+    <section className="mb-[136px] mt-[180px] flex flex-col items-center justify-center px-32">
+      <div className="mb-16 font-koulen text-9xl text-dark-blue">
         About Alchemy Conf
       </div>
-      <div className="text-dark-blue w-[800px] text-center font-zilla_slab text-[22px]">
+      <div className="w-[800px] text-center font-zilla_slab text-2xl leading-[30px] text-dark-blue">
         <p>
-          <span className="font-medium text-bordeux">Alchemy Conf 2025</span> is
-          more than just a conference—it&apos;s a celebration of the Elixir
+          <span className="font-semibold text-bordeux">Alchemy Conf 2025</span>{" "}
+          is more than just a conference—it&apos;s a celebration of the Elixir
           programming community. Everything about Alchemy Conf is curated and
           organized by passionate Elixir enthusiasts with no purpose other than
           creating something special for everyone to enjoy and learn from.
@@ -15,7 +15,7 @@ export default function Conf() {
         <p>
           <br />
           It&apos;s a week-long event at the
-          <span className="font-medium text-bordeux">
+          <span className="font-semibold text-bordeux">
             {" "}
             Theatro Circo in Braga
           </span>

@@ -1,105 +1,43 @@
-import Link from "next/link";
+import PracticalCard from "@/app/_components/PracticalCard";
+import Bus1 from "@/assets/icons/bus1";
+import BusStop from "@/assets/icons/bus_stop";
+import ConnectVector from "@/assets/icons/connect_vector";
+import Bicycle from "@/assets/icons/bicycle";
+import Plane from "@/assets/icons/plane";
+import Bus2 from "@/assets/icons/bus2";
+import Train from "@/assets/icons/train";
+import moveData from "../../_constants/move.json";
 
 export default function Move() {
   return (
-    <section className="flex flex-col px-32 py-[120px]">
-      <div className="text-dark-blue pb-8 text-center font-koulen text-[128px]">
+    <section className="flex flex-col items-center justify-center py-[120px]">
+      <div className="pb-8 text-center font-koulen text-[128px] text-dark-blue">
         Move
       </div>
-      <div className="text-dark-blue flex w-full flex-col gap-12 font-zilla_slab">
-        <div className="border-yellow bg-yellow flex w-[800px] gap-[22px] rounded-lg border-4 bg-opacity-30 p-[50px]">
-          <div className="h-[170px] w-[170px] flex-shrink-0 rounded-lg bg-sage"></div>
-          <div className="flex-1">
-            <p className="text-[32px] font-semibold uppercase">Walking</p>
-            <p className="text-[22px]">
-              Braga is a compact city, making it ideal for walking. Many key
-              locations, including Theatro Circo, are in very walkable
-              neighborhoods. Braga also has lovely cycling lanes if you have
-              your bike handy.
-            </p>
-            <Link
-              className="ml-auto block text-right text-[16px] font-semibold uppercase"
-              href="/"
-            >
-              City map{" "}
-            </Link>
+      <div className="relative flex w-[1008px] flex-col gap-10 font-zilla_slab text-dark-blue">
+        <Bicycle className="right-[170px] top-[100px]" />
+        <ConnectVector variant={1} className="right-[78px] top-[150px]" />
+        <BusStop className="left-[84px] top-[340px]" />
+        <Bus1 className="left-[237px] top-[377px]" />
+        <ConnectVector variant={2} className="left-[74px] top-[342px]" />
+        <Plane className="right-[215px] top-[693px]" />
+        <Bus2 className="right-[146px] top-[782px]" />
+        <ConnectVector variant={3} className="right-[78px] top-[750px]" />
+        <Train className="left-[284px] top-[1080px]" />
+        <ConnectVector variant={4} className="left-[62px] top-[1060px]" />
+        {moveData.map((card, key) => (
+          <div key={card.id}>
+            <PracticalCard
+              position={key % 2 === 0 ? "left" : "right"}
+              cardTitle={card.cardTitle}
+              description={card.description}
+              linkText={card.linkText}
+              link={card.link}
+              image={card.image}
+              color={card.color}
+            />
           </div>
-        </div>
-
-        <div className="ml-auto flex w-[800px] gap-[22px] rounded-lg border-4 border-blue bg-blue bg-opacity-30 p-[50px]">
-          <div className="h-[170px] w-[170px] flex-shrink-0 rounded-lg bg-sage"></div>
-          <div className="flex-1">
-            <p className="text-[32px] font-semibold uppercase">By Transit</p>
-            <p className="text-[22px]">
-              For longer distances, Braga&apos;s bus system can be a convenient
-              and inexpensive choice. Here are all routes and schedules, but do
-              keep in mind that Google Maps includes this information for the
-              entire city of Braga.
-            </p>
-            <Link
-              className="ml-auto block text-right text-[16px] font-semibold uppercase"
-              href="/"
-            >
-              Tub{" "}
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex w-[800px] gap-[22px] rounded-lg border-4 border-bordeux bg-bordeux bg-opacity-30 p-[50px]">
-          <div className="h-[170px] w-[170px] flex-shrink-0 rounded-lg bg-sage"></div>
-          <div className="flex-1">
-            <p className="text-[32px] font-semibold uppercase">
-              By airport Shuttle
-            </p>
-            <p className="text-[22px]">
-              Braga is served by the Francisco Sá Carneiro Airport, better known
-              as the Porto airport. GetBus has a convenient shuttle service that
-              will deliver you right to the city centre.
-            </p>
-            <Link
-              className="ml-auto block text-right text-[16px] font-semibold uppercase"
-              href="/"
-            >
-              Getbus{" "}
-            </Link>
-          </div>
-        </div>
-
-        <div className="ml-auto flex w-[800px] gap-[22px] rounded-lg border-4 border-sage bg-sage bg-opacity-30 p-[50px]">
-          <div className="h-[170px] w-[170px] flex-shrink-0 rounded-lg bg-sage"></div>
-          <div className="flex-1">
-            <p className="text-[32px] font-semibold uppercase">By train</p>
-            <p className="text-[22px]">
-              Braga is well-connected by train, making it easy to get here from
-              Porto or Lisbon. The Intercidades trains or Alfapendular service
-              are our recommendations.
-            </p>
-            <Link
-              className="ml-auto block text-right text-[16px] font-semibold uppercase"
-              href="/"
-            >
-              CP Portugal{" "}
-            </Link>
-          </div>
-        </div>
-
-        <div className="flex w-[800px] gap-[22px] rounded-lg border-4 border-purple bg-purple bg-opacity-30 p-[50px]">
-          <div className="h-[170px] w-[170px] flex-shrink-0 rounded-lg bg-sage"></div>
-          <div className="flex-1">
-            <p className="text-[32px] font-semibold uppercase">By bus</p>
-            <p className="text-[22px]">
-              There are several companies operating buses from Lisbon, Porto, or
-              anywhere else in the country, really, to Braga. Rede Expressos and
-              FlixBus are both solid options.
-            </p>
-            <Link
-              className="ml-auto block text-right text-[16px] font-semibold uppercase"
-              href="/"
-            >
-              Rede Expressos{" "}
-            </Link>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

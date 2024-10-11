@@ -10,33 +10,35 @@ export default function Footer() {
       </Link>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">About</p>
-        <Link href="/">About Organizers</Link>
-        <Link href="/">About Alchemy Conf</Link>
-        <Link href="/">Code of Conduct</Link>
+        <Link href="/about">About Organizers</Link>
+        <Link href="/about">About Alchemy Conf</Link>
+        <Link href="/about">Code of Conduct</Link>
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Practical</p>
-        <Link href="/">Schedule</Link>
-        <Link href="/">Move</Link>
-        <Link href="/">Eat</Link>
-        <Link href="/">Party & Mingle</Link>
-        <Link href="/">Sleep</Link>
+        <Link href="/under-construction">Schedule</Link>
+        <Link href="/practical/move">Move</Link>
+        <Link href="/under-construction">Eat</Link>
+        <Link href="/under-construction">Party & Mingle</Link>
+        <Link href="/practical/sleep">Sleep</Link>
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Alchemy Conf 2025</p>
-        <Link href="/">Talks & Speakers</Link>
-        <Link href="/">Workshops</Link>
+        <Link href="/under-construction">Talks & Speakers</Link>
+        <Link href="/under-construction">Workshops</Link>
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Sponsors</p>
-        <Link href="/">Sponsorship Prospectus</Link>
+        <Link href="/under-construction">
+          Sponsorship
+          <br /> Prospectus
+        </Link>
       </div>
       <div className="flex flex-col gap-2 text-[18px]">
         <p className="pb-6 text-[20px] font-semibold">Follow us</p>
-        <Link href="/">X</Link>
-        <Link href="/">Dribbble</Link>
-        <Link href="/">Instagram</Link>
-        <Link href="/">LinkedIn</Link>
+        <Link href="https://x.com/alchemy_conf" target="_blank">
+          X
+        </Link>
       </div>
     </footer>
   );

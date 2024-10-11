@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "cardTitle": "Stay Name 1",
+    "description": "Braga is a compact city, making it ideal for walking. Many key locations, including Theatro Circo, are in very walkable neighborhoods. Braga also has lovely cycling lanes if you have your bike handy.",
+    "linkText": "Stay website",
+    "link": "https://www.google.pt/maps/place/Braga",
+    "image": "/",
+    "color": "yellow",
+    "bedColor1": "#A38BB8",
+    "bedColor2": "#5B4F66"
+  },
+  {
+    "id": 2,
+    "cardTitle": "Stay Name 2",
+    "description": "For longer distances, Braga’s bus system can be a convenient and inexpensive choice. Here are all routes and schedules, but do keep in mind that Google Maps includes this information for the entire city of Braga.",
+    "linkText": "Stay website",
+    "link": "/",
+    "image": "/",
+    "color": "blue",
+    "bedColor1": "#7D1D3F",
+    "bedColor2": "#4B1226"
+  },
+  {
+    "id": 3,
+    "cardTitle": "Stay Name 3",
+    "description": "Braga is served by the Francisco Sá Carneiro Airport, better known as the Porto airport. GetBus has a convenient shuttle service that will deliver you right to the city centre.",
+    "linkText": "Stay website",
+    "link": "https://www.getbus.eu/en/braga-aeroporto-porto",
+    "image": "/",
+    "color": "bordeux",
+    "bedColor1": "#F4AC45",
+    "bedColor2": "#B4771F"
+  },
+  {
+    "id": 4,
+    "cardTitle": "Stay Name 4",
+    "description": "Braga is well-connected by train, making it easy to get here from Porto or Lisbon. The Intercidades trains or Alfapendular service are our recommendations.",
+    "linkText": "Stay website",
+    "link": "/",
+    "image": "/",
+    "color": "sage",
+    "bedColor1": "#84ACCE",
+    "bedColor2": "#3E7DB2"
+  },
+  {
+    "id": 5,
+    "cardTitle": "Stay Name 5",
+    "description": "There are several companies operating buses from Lisbon, Porto, or anywhere else in the country, really, to Braga. Rede Expressos and FlixBus are both solid options.",
+    "linkText": "Stay website",
+    "link": "/",
+    "image": "/",
+    "color": "yellow",
+    "bedColor1": "#B6B980",
+    "bedColor2": "#81844C"
+  }
+]

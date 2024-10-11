@@ -10,7 +10,6 @@ export const config = {
 };
 
 export function middleware(request: NextRequest) {
-  console.log("Middleware is running!");
   const authorizationHeader = request.headers.get("authorization");
 
   if (authorizationHeader) {
