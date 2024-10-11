@@ -1,20 +1,69 @@
-import SubvisualIcon from "@/assets/icons/subvisual_icon";
+"use client";
+
+import { useState } from "react";
+import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
+import Button from "./Button";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+import DropdownArrow from "@/assets/icons/dropdown_arrow";
+import Burguer from "@/assets/icons/burguer";
+import Sidebar from "./Sidebar";
 
 export default function Header() {
+  const pathname = usePathname();
+  const [showSidebar, setShowSidebar] = useState(false);
+
+  const toggleSidebar = () => setShowSidebar(!showSidebar);
+
   return (
-    <header className="flex border-b border-dark_blue pb-1 pt-6 sm:pb-2">
-      <div className="ml-auto flex items-center gap-2 text-dark_blue sm:gap-4">
-        <span className="text-md flex-1 font-zilla_slab leading-10 sm:text-[1.75rem]">
-          Powered by
-        </span>
-        <a
-          href="https://subvisual.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <SubvisualIcon className="w-[94px] sm:w-[120px] lg:w-[188px]" />
-        </a>
-      </div>
+    <header className="fixed left-0 top-0 z-50 w-full select-none border-b-2 border-b-bordeux">
+      <nav className="tablet:px-20 flex items-center justify-between bg-opacity-50 px-6 py-4 backdrop-blur-lg backdrop-filter">
+        <Link href="/" className="flex w-fit items-center gap-4 outline-none">
+          <AlchemySquareIcon className="h-12 w-12" />
+          <p className="text-dark-blue tablet:flex hidden font-koulen text-[25px]">
+            Alchemy Conf
+          </p>
+        </Link>
+
+        <ul className="desktop:flex hidden gap-6 font-zilla_slab text-[18px]">
+          <li
+            className={`${
+              pathname === "/about" && "-ml-0.5 font-semibold text-bordeux"
+            } transition-all hover:text-bordeux`}
+          >
+            <Link href="/about">About</Link>
+          </li>
+          <li
+            className={`${
+              pathname === "/alchemy-2025" &&
+              "-ml-0.5 font-semibold text-bordeux"
+            } flex items-center gap-1 transition-all hover:text-bordeux`}
+          >
+            <Link href="/alchemy-2025">Alchemy Conf 2025</Link>
+            <DropdownArrow width={12} height={6} />
+          </li>
+          <li
+            className={`${
+              pathname === "/practical" && "-ml-0.5 font-semibold text-bordeux"
+            } transition-all hover:text-bordeux`}
+          >
+            <Link href="/practical">Practical</Link>
+          </li>
+        </ul>
+
+        <div className="flex items-center gap-8">
+          <Button
+            className="tablet:flex hidden"
+            text="Tickets"
+            href="https://ti.to/subvisual/alchemy-conf-2025"
+          />
+          <Burguer
+            className="desktop:hidden h-6 w-6 hover:cursor-pointer"
+            onClick={toggleSidebar}
+          />
+        </div>
+      </nav>
+      <Sidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
     </header>
   );
 }
