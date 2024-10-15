@@ -49,6 +49,13 @@ export default function Header() {
           >
             <Link href="/practical">Practical</Link>
           </li>
+          <li
+            className={`${
+              pathname === "/testing" && "-ml-0.5 font-semibold text-bordeux"
+            } transition-all hover:text-bordeux`}
+          >
+            <Link href="/testing">Testing</Link>
+          </li>
         </ul>
 
         <div className="flex items-center gap-8">
