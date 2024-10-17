@@ -4,12 +4,14 @@ interface DropdownArrowProps extends SVGProps<SVGSVGElement> {
   className?: string;
   width?: number;
   height?: number;
+  color?: string;
 }
 
 const DropdownArrow = ({
   className,
   width,
   height,
+  color = "#003049",
   ...props
 }: DropdownArrowProps) => (
   <svg
@@ -23,7 +25,7 @@ const DropdownArrow = ({
   >
     <path
       d="M13 1L7 7L1 1"
-      stroke="#003049"
+      stroke={color}
       strokeWidth="2"
       strokeLinecap="round"
       strokeLinejoin="round"
