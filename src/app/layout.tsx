@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { koulen, unbutton, zilla_slab } from "@/utils/fonts";
+import { koulen, unbutton, zilla_slab, alegreya_sans } from "@/utils/fonts";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`scroll-smooth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} `}
+      className={`scroll-smooth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} ${alegreya_sans.variable} `}
       lang="en"
     >
       <script
@@ -41,7 +41,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-TMJC46NG" />
       <body className="overflow-x-hidden overscroll-none bg-background">
         <Header />
-        <div className="overflow-hidden md:overflow-auto">{children}</div>
+        <div className="md:overflow-auto overflow-hidden">{children}</div>
         <Footer />
       </body>
     </html>

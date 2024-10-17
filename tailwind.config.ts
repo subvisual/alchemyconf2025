@@ -33,6 +33,7 @@ const config: Config = {
       zilla_slab: ["var(--font-zilla-slab)"],
       koulen: ["var(--font-koulen)"],
       unbutton: ["var(--font-unbutton)"],
+      alegreya_sans: ["var(--font-alegreya-sans)"],
     },
     extend: {
       fontSize: {

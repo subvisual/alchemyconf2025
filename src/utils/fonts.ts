@@ -1,4 +1,4 @@
-import { Zilla_Slab, Koulen } from "next/font/google";
+import { Zilla_Slab, Koulen, Alegreya_Sans } from "next/font/google";
 import localFont from "next/font/local";
 
 export const unbutton = localFont({
@@ -16,4 +16,10 @@ export const koulen = Koulen({
   subsets: ["latin"],
   weight: ["400"],
   variable: "--font-koulen",
+});
+
+export const alegreya_sans = Alegreya_Sans({
+  subsets: ["latin"],
+  weight: ["400", "500", "700", "800"],
+  variable: "--font-alegreya-sans",
 });
