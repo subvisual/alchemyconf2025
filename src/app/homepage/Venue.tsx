@@ -47,11 +47,18 @@ export default function Venue() {
           </div>
         </div>
         <div className="w-[750px] text-left font-alegreya_sans text-[32px] leading-[45px] text-dark-blue">
-          Held at the majestic Theatro Circo, one of the most beautiful venues
-          in Europe, Alchemy Conf wants to provide the Elixir programming
-          community a larger than life week-long experience where together we’ll
-          celebrate Elixir, from the technical prowess of its developers to the
-          fun-loving spirit of its community.
+          Held at the majestic{" "}
+          <span className="text-bordeux underline">
+            {" "}
+            <a href="http://www.theatrocirco.com/" target="_blank">
+              {" "}
+              Theatro Circo
+            </a>
+          </span>
+          , one of the most beautiful venues in Europe, Alchemy Conf wants to
+          provide the Elixir programming community a larger than life week-long
+          experience where together we’ll celebrate Elixir, from the technical
+          prowess of its developers to the fun-loving spirit of its community.
         </div>
       </div>
       <div className="relative right-[125px]">
