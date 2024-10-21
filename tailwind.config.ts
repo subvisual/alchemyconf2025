@@ -5,6 +5,7 @@ const config: Config = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/assets/**/*.{png,svg,jpeg}",
   ],
   theme: {
     screens: {
@@ -47,6 +48,9 @@ const config: Config = {
           "0%, 100%": { transform: "translateX(0)" },
           "50%": { transform: "translateX(25%)" },
         },
+      },
+      dropShadow: {
+        title: "0px 4px 4px rgba(125, 29, 63, 0.5)",
       },
     },
   },

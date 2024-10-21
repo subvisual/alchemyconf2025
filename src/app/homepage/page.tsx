@@ -9,7 +9,6 @@ export default function Homepage() {
   return (
     <>
       <Hero />
-      <Intro />
       <Venue />
       <Speakers />
       <Tickets />
