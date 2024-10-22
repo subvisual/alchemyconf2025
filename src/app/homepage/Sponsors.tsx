@@ -7,6 +7,18 @@ import remoteLogo from "@/assets/images/remote_logo.svg";
 import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
 
 export default function Sponsors() {
+  let itemsPerRow = 3;
+
+  const chunkArray = (arr, size) => {
+    let chunkedArray = [];
+    for (let i = 0; i < arr.length; i += size) {
+      chunkedArray.push(arr.slice(i, i + size));
+    }
+    return chunkedArray;
+  };
+
+  const rows = chunkArray(sponsors, itemsPerRow);
+
   return (
     <section
       id="sponsors"
@@ -52,22 +64,30 @@ export default function Sponsors() {
 
       <div className="relative">
         <SponsorGoldBlob className="z-0" />
-        <div className="absolute right-[200px] top-[100px] w-[10px] font-alegreya_sans text-2.5xl font-bold text-yellow">
+        <div className="absolute right-[220px] top-[130px] w-[10px] font-alegreya_sans text-2.5xl font-bold text-yellow">
           Gold Sponsors
-        </div>
-        <div className="w-100px absolute left-[100px] top-[100px] grid grid-cols-3 grid-rows-2 gap-x-10 gap-y-[86px] py-[74px]">
-          {sponsors.map((sponsor) => (
+        </div>{" "}
+        <div className="absolute left-[-10px] top-[100px] space-y-[86px] py-[74px]">
+          {" "}
+          {rows.map((row, rowIndex) => (
             <div
-              key={sponsor.id}
-              className={`h-[200] w-[286px] rounded-lg bg-white`}
+              key={rowIndex}
+              className={`grid grid-cols-3 gap-x-6 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
-              <Image
-                src={sponsor.logo}
-                width={286}
-                height={200}
-                alt={`Sponsor ${sponsor.id}`}
-                className="h-auto w-full"
-              />
+              {row.map((sponsor) => (
+                <div
+                  key={sponsor.id}
+                  className="h-[200px] w-[286px] rounded-lg bg-white drop-shadow-xl"
+                >
+                  <Image
+                    src={sponsor.logo}
+                    width={286}
+                    height={200}
+                    alt={`Sponsor ${sponsor.id}`}
+                    className="h-auto w-full"
+                  />
+                </div>
+              ))}
             </div>
           ))}
         </div>
