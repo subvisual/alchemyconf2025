@@ -64,7 +64,7 @@ export default function Venue() {
       <div className="relative right-[125px]">
         <VenueBlob1 />
         <div className="absolute left-[50px] top-[140px]">
-          <div className="relative h-[234px] w-[325px] rotate-[-10deg] overflow-hidden rounded-lg bg-grey">
+          <div className="relative h-[234px] w-[325px] rotate-[-10deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
             <Image
               src={venue_pic1}
               alt=""
@@ -74,7 +74,7 @@ export default function Venue() {
           </div>
         </div>
         <div className="absolute left-[150px] top-[265px]">
-          <div className="relative h-[234px] w-[325px] rotate-[2deg] overflow-hidden rounded-lg bg-grey">
+          <div className="relative h-[234px] w-[325px] rotate-[2deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
             <Image
               src={venue_pic2}
               alt=""

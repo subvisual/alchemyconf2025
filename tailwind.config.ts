@@ -38,7 +38,7 @@ const config: Config = {
     },
     extend: {
       fontSize: {
-        "2.5xl": ["2rem", { lineHeight: "2.5rem" }],
+        "2.5xl": ["2rem", { lineHeight: "44.8px" }],
       },
       animation: {
         "bounce-horizontal": "bounce-horizontal 1s infinite",

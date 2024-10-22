@@ -1,9 +1,3 @@
-import Image from "next/image";
-import TicketsBlob from "@/assets/icons/tickets_blob";
-import AltButton from "../_components/AltButton";
-import Button from "../_components/Button";
-import ticketIcon from "@/assets/images/ticket_icon.svg";
-
 export default function Workshops() {
   return (
     <section id="tickets" className="flex flex-col items-center justify-center">
@@ -27,7 +21,7 @@ export default function Workshops() {
                 Ticket.
               </p>
               <div className="mt-9 flex flex-row items-center">
-                <div className="mr-8 font-koulen text-[32px] text-dark-blue">
+                <div className="mr-8 font-koulen text-[32px] leading-none text-dark-blue">
                   COMING SOON
                 </div>
               </div>

@@ -50,17 +50,17 @@ const SpeakerBlob1 = ({
   return (
     <div
       style={{
-        width,
-        height,
+        // width,
+        // height,
         position: "relative",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <svg
-        width="458"
-        height="460"
-        viewBox="0 0 300 460"
+        width="358"
+        height="560"
+        viewBox="0 0 358 460"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         {...props}
@@ -96,7 +96,7 @@ const SpeakerBlob1 = ({
           width: "100%",
           height: "100%",
           maxWidth: "none",
-          objectFit: "cover",
+          objectFit: "fill",
           objectPosition: "center",
           clipPath: "url(#myClipPath)",
           position: "absolute",
