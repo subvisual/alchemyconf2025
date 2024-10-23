@@ -20,6 +20,6 @@ export const koulen = Koulen({
 
 export const alegreya_sans = Alegreya_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "700", "800"],
+  weight: ["100", "300", "400", "500", "700", "800"],
   variable: "--font-alegreya-sans",
 });

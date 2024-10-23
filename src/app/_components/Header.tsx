@@ -68,6 +68,14 @@ export default function Header() {
                   height={6}
                   color={isHovered ? "#7D1D3F" : "#003049"}
                 />
+              </li>{" "}
+              <li
+                className={`${
+                  pathname === "/testing" &&
+                  "-ml-0.5 font-semibold text-bordeux"
+                } transition-all hover:text-bordeux`}
+              >
+                <Link href="/testing">Testing</Link>
               </li>
             </ul>
           </div>

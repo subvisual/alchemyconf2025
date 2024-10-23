@@ -9,7 +9,7 @@ export default function Footer() {
       <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 -translate-x-1/2 transform">
         <FooterBlob className="w-full max-w-[1440px] overflow-visible" />{" "}
       </div>
-      <footer className="z-50 mx-auto flex w-[1440px] justify-between bg-none p-20 pr-32 font-alegreya_sans text-xl text-background">
+      <footer className="z-50 mx-auto flex w-[1440px] justify-between bg-none p-20 pr-32 font-alegreya_sans text-xl font-light text-background">
         <Link href="/" className="flex h-fit items-center gap-4 outline-none">
           <AlchemySquareIcon className="h-12 w-12" />
           <p className="font-koulen text-[25px]">Alchemy Conf</p>

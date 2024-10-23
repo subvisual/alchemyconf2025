@@ -9,7 +9,7 @@ import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
 export default function Sponsors() {
   let itemsPerRow = 3;
 
-  const chunkArray = (arr, size) => {
+  const chunkArray = (arr: any, size: number) => {
     let chunkedArray = [];
     for (let i = 0; i < arr.length; i += size) {
       chunkedArray.push(arr.slice(i, i + size));
@@ -74,7 +74,7 @@ export default function Sponsors() {
               key={rowIndex}
               className={`grid grid-cols-3 gap-x-6 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
-              {row.map((sponsor) => (
+              {row.map((sponsor: any) => (
                 <div
                   key={sponsor.id}
                   className="h-[200px] w-[286px] rounded-lg bg-white drop-shadow-xl"
