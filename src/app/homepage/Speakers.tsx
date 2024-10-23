@@ -25,8 +25,8 @@ export default function Speakers() {
       <SpeakerBlob1
         src={speakerTest.src}
         alt="image1"
-        height="1000"
-        width="888"
+        height="500px"
+        width="500px"
       />
       <div className="relative mx-auto grid grid-cols-2 justify-center gap-x-11 gap-y-[74px] py-[74px]">
         {speakers.map((speakers) => (
@@ -34,12 +34,12 @@ export default function Speakers() {
             key={speakers.id}
             className="flex h-[560px] w-[560px] items-center justify-center bg-grey"
           >
-            <SpeakerBlob1
+            {/* <SpeakerBlob1
               src={speakerTest.src}
               alt="image1"
-              height="1000"
-              width="888"
-            />
+              height="1000px"
+              width="888px"
+            /> */}
             {/* <SpeakerBlob src={testSpeaker1.src} /> */}
             {/* <Image */}
             {/*   src={speakers.image} */}

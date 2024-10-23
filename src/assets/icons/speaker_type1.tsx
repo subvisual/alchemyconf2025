@@ -24,8 +24,8 @@ const SpeakerBlob1 = ({
     ref: animationRef,
     to: [
       { x: 1, config: { duration: 2000 } },
-      { x: 2, config: { duration: 2000 } },
-      { x: 3, config: { duration: 2000 } },
+      //{ x: 2, config: { duration: 2000 } },
+      //{ x: 3, config: { duration: 2000 } },
       // { x: 4, config: { duration: 2000 } },
       // { x: 5, config: { duration: 2000 } },
       { x: 0, config: { duration: 8000 } },
@@ -50,23 +50,43 @@ const SpeakerBlob1 = ({
   return (
     <div
       style={{
-        // width,
-        // height,
+        width,
+        height,
         position: "relative",
       }}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
     >
       <svg
-        width="358"
-        height="560"
-        viewBox="0 0 358 460"
+        width="313"
+        height="432"
+        viewBox="0 0 313 432"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        style={{
+          position: "absolute",
+          maxHeight: "100%",
+          maxWidth: "100%",
+        }}
         {...props}
       >
-        <defs>
-          <clipPath id="myClipPath">
+        <mask id="myMask">
+          <animated.path
+            fill="white"
+            d={x.to({
+              range: [0, 1],
+              output: [
+                "M32.9992 225.499C25.2601 185.423 -2.03465 166.703 1.00001 125.999C5.25972 68.8632 73.4143 17.2279 133.5 4.49999C193.592 -8.22922 266.352 7.12257 303.001 56.0004C334.528 98.0483 273.466 171.982 286.001 256.5C291.952 296.629 296 328.184 286.001 367.5C271.814 423.281 210.531 429.315 153 431C103.561 432.448 67.1804 434.381 32.9992 390.499C1.89997 350.575 45.2166 288.767 32.9992 225.499Z",
+                "M3.28185 230.094C1.14522 182.938 -6.45665 152.7 12.7817 109.594C39.5281 49.6648 84.6962 18.3223 144.782 5.59446C204.874 -7.13476 253.133 -0.283393 289.782 48.5945C321.31 90.6423 308.347 137.177 305.282 206.093C302.881 260.091 332.412 309.594 297.782 351.095C260.907 395.287 164.781 414.595 164.781 414.595C164.781 414.595 70.9631 430.975 36.782 387.093C5.68274 347.169 6.11949 292.722 3.28185 230.094Z",
+              ],
+            })}
+          />
+        </mask>
+        {/*  <defs>
+          <clipPath
+            id="myClipPath"
+            d="M63.9992 229.499C56.2601 189.423 28.9654 170.703 32 129.999C36.2597 72.8633 104.414 21.2278 164.5 8.49999C224.592 -4.22923 297.352 11.1226 334.001 60.0004C365.528 102.048 304.466 175.982 317.001 260.5C322.952 300.629 327 332.184 317.001 371.5C302.814 427.281 241.531 433.315 184 435C134.561 436.448 98.1804 438.381 63.9992 394.499C32.9 354.575 76.2166 292.767 63.9992 229.499Z"
+          >
             <animated.path
               d={x.to({
                 range: [0, 1, 2, 3],
@@ -87,24 +107,17 @@ const SpeakerBlob1 = ({
               })}
             />
           </clipPath>
-        </defs>
+        </defs> */}
       </svg>
-      <animated.img
-        src={src}
-        alt={alt}
-        style={{
-          width: "100%",
-          height: "100%",
-          maxWidth: "none",
-          objectFit: "fill",
-          objectPosition: "center",
-          clipPath: "url(#myClipPath)",
-          position: "absolute",
-          top: 10,
-          left: 0,
-          scale,
-        }}
-      />
+      <div style={{ mask: "url(#myMask)", overflow: "hidden" }}>
+        <animated.img
+          src={src}
+          alt={alt}
+          style={{
+            scale,
+          }}
+        />
+      </div>
     </div>
   );
 };
