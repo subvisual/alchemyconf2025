@@ -71,7 +71,7 @@ export default function Tickets() {
                 <Button
                   className="font-medium"
                   text="Contact us"
-                  href="hmailto:hello@alchemyconf.com"
+                  href="mailto:hello@alchemyconf.com"
                 />
               </div>
             </div>
