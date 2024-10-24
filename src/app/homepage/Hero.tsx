@@ -33,14 +33,14 @@ export default function Hero() {
           </div>
         </div>
         <TheatroTitleBlob
-          className="absolute right-[-100px] top-[120px] overflow-visible"
+          className="absolute right-[-100px] top-[150px] overflow-visible"
           style={{ height: "394px" }}
         />
-        <TheatroBlob
+        <TheatroBlobAnime
           src={theatro_circo.src}
           alt="Teatro Circo"
-          height="900"
-          width="1300"
+          height="900px"
+          width="1300px"
         />
       </div>
     </section>

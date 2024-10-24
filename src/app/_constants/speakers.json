@@ -1,50 +1,73 @@
 [
   {
     "id": 1,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["elixir", "web3", "crypto"]
+    "blobType": 1,
+    "titleBlobType": 2,
+    "x": "0px",
+    "y": "0px",
+    "image": "@/assets/images/speaker_testpic1.svg",
+    "name": "Joe",
+    "surname": "Alvez",
+    "socials": "@jalv",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": 2,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["elixir", "crypto"]
+    "blobType": 0,
+    "titleBlobType": 1,
+    "x": "0px",
+    "y": "0px",
+    "image": "@/assets/images/speaker_testpic1.svg",
+    "name": "Martha",
+    "surname": "Stewart",
+    "socials": "@m_stew",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": 3,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["web3", "crypto"]
+    "blobType": 2,
+    "titleBlobType": 4,
+    "x": "160px",
+    "y": "0px",
+    "image": "../assets/images/speaker_testpic1.svg",
+    "name": "Alexis",
+    "surname": "McDonalds",
+    "socials": "@mc_alex",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": 4,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["web3"]
+    "blobType": 2,
+    "titleBlobType": 3,
+    "x": "180px",
+    "y": "-120px",
+    "image": "@/assets/images/speaker_testpic1.svg",
+    "name": "Ricardo",
+    "surname": "Villalobos",
+    "socials": "@rivVilla",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": 5,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["web3"]
+    "blobType": 0,
+    "titleBlobType": 1,
+    "x": "0px",
+    "y": "0px",
+    "image": "@/assets/images/speaker_testpic1.svg",
+    "name": "Jim",
+    "surname": "Clark",
+    "socials": "@jimclark",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   },
   {
     "id": 6,
-    "image": "",
-    "name": "Speaker name",
-    "role": "Speaker role",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-    "tags": ["elixir", "web3"]
+    "blobType": 1,
+    "titleBlobType": 5,
+    "x": "0px",
+    "image": "@/assets/images/speaker_testpic1.svg",
+    "name": "Mollyane",
+    "surname": "Slagubi",
+    "socials": "@msla",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
   }
 ]

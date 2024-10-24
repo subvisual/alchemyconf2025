@@ -1,15 +1,27 @@
-import SpeakerBlob1 from "@/assets/icons/speaker_type1";
-import speakers from "../_constants/speakers.json";
-import speakerTest from "@/assets/images/speaker_testpic1.svg";
+import AltButton from "../_components/AltButton";
 import SpeakerBlob from "@/assets/icons/speaker_blob";
-import Image from "next/image";
-import SpeakerBlobWip from "@/assets/icons/speaker_blob_wip";
+import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
+import speakers from "../_constants/speakers.json";
+import speakerTest1 from "@/assets/images/speaker_testpic2.svg";
+import speakerTest2 from "@/assets/images/speaker_testpic1.svg";
+import speakerTest3 from "@/assets/images/speaker_testpic3.svg";
+import speakerTest4 from "@/assets/images/speaker_testpic3.svg";
+import speakerTest5 from "@/assets/images/speaker_testpic1.svg";
+import speakerTest6 from "@/assets/images/speaker_testpic2.svg";
 
 export default function Speakers() {
+  const speakerImages = [
+    speakerTest1,
+    speakerTest2,
+    speakerTest3,
+    speakerTest4,
+    speakerTest5,
+    speakerTest6,
+  ];
   return (
     <section
       id="speakers"
-      className="my-[136px] flex flex-col items-center justify-center"
+      className="relative my-[136px] flex flex-col items-center justify-center"
     >
       <div className="relative mb-32 w-[400px] text-center font-koulen text-[120px] leading-none text-dark-blue">
         Speakers
@@ -17,44 +29,44 @@ export default function Speakers() {
           Speakers
         </span>
       </div>
-      <div className="w-[760px] text-center font-zilla_slab text-2.5xl font-medium text-dark-blue">
+      <div className="absolute left-0 top-[280px] w-[770px] max-w-screen-desktop px-20 text-left font-alegreya_sans text-2.5xl text-dark-blue">
         Alchemy Conf 2025 brings together the brightest minds in the Elixir
-        community. The top experts in our community will share what they’ve
-        learned about building, innovation, and real-world applications.
+        community. <br /> The top experts in our community will share what
+        they’ve learned about building, innovation, and real-world applications.
       </div>
-      <SpeakerBlob1
-        src={speakerTest.src}
-        alt="image1"
-        height="500px"
-        width="500px"
-      />
-      <div className="relative mx-auto grid grid-cols-2 justify-center gap-x-11 gap-y-[74px] py-[74px]">
+      <div className="relative mx-auto mb-[74px] grid grid-cols-2 justify-center gap-x-[80px] gap-y-[30px] py-[10px]">
         {speakers.map((speakers) => (
           <div
             key={speakers.id}
-            className="flex h-[560px] w-[560px] items-center justify-center bg-grey"
+            className={`relative flex h-[500px] w-[600px] items-center justify-center`}
+            style={{
+              transform: `translateX(${speakers.x}) ${speakers.id % 2 !== 0 ? "translateY(400px)" : ""}`,
+            }}
           >
-            {/* <SpeakerBlob1
-              src={speakerTest.src}
-              alt="image1"
-              height="1000px"
-              width="888px"
-            /> */}
-            {/* <SpeakerBlob src={testSpeaker1.src} /> */}
-            {/* <Image */}
-            {/*   src={speakers.image} */}
-            {/*   width={288} */}
-            {/*   height={96} */}
-            {/*   alt={`Speaker ${speakers.id}`} */}
-            {/*   className="h-auto w-full" */}
-            {/* /> */}
+            <SpeakerBlob
+              src={speakerImages[speakers.id - 1].src}
+              alt={speakers.name}
+              height="550px"
+              width="500px"
+              position={String(speakers.id)}
+              blobType={speakers.blobType}
+            />
+            <SpeakerTitleBlob
+              name={speakers.name}
+              surname={speakers.surname}
+              socials={speakers.socials}
+              variant={Number(speakers.titleBlobType)}
+            />
           </div>
         ))}
       </div>
-      {/* <div className="h-11"> */}
-      {/* <SpeakerBlob /> */}
-      {/* <SpeakerBlob1 src={testSpeaker1.src} height="560" width="358" alt="" /> */}
-      {/* </div> */}
+      <div className="relative mb-[336px] flex w-full translate-y-[200px] flex-col items-end pr-[350px]">
+        <div className="pb-[20px] pr-[150px] font-alegreya_sans text-2.5xl font-medium text-dark-blue">
+          {" "}
+          ...and many more
+        </div>
+        <AltButton href="" className="font-medium" text="See all Speakers" />
+      </div>
     </section>
   );
 }
