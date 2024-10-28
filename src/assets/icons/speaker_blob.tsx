@@ -12,6 +12,9 @@ interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
   height: string;
   position: string;
   blobType: number;
+  imageX: string;
+  imageY: string;
+  imageScale: number;
 }
 
 const SpeakerBlob = ({
@@ -22,6 +25,9 @@ const SpeakerBlob = ({
   height,
   position,
   blobType,
+  imageX,
+  imageY,
+  imageScale,
   ...props
 }: SpeakerBlobProps) => {
   const [hovered, setHovered] = useState(false);
@@ -64,7 +70,7 @@ const SpeakerBlob = ({
   });
 
   const { scale } = useSpring({
-    scale: hovered ? 1.05 : 1,
+    scale: hovered ? imageScale * 1.1 : imageScale * 1,
     config: { tension: 300, friction: 200 },
   });
 
@@ -118,6 +124,8 @@ const SpeakerBlob = ({
           src={src}
           alt={alt}
           style={{
+            translateX: `${imageX}`,
+            translateY: `${imageY}`,
             height: `${height}`,
             scale,
           }}

@@ -2,21 +2,21 @@ import AltButton from "../_components/AltButton";
 import SpeakerBlob from "@/assets/icons/speaker_blob";
 import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
 import speakers from "../_constants/speakers.json";
-import speakerTest1 from "@/assets/images/speaker_testpic2.svg";
-import speakerTest2 from "@/assets/images/speaker_testpic1.svg";
-import speakerTest3 from "@/assets/images/speaker_testpic3.svg";
-import speakerTest4 from "@/assets/images/speaker_testpic3.svg";
-import speakerTest5 from "@/assets/images/speaker_testpic1.svg";
-import speakerTest6 from "@/assets/images/speaker_testpic2.svg";
+import speaker1 from "@/assets/images/pic_hugo_barauna.jpg";
+import speaker2 from "@/assets/images/pic_andrea_leopardi.jpg";
+import speaker3 from "@/assets/images/pic_wojtek_mach.jpg";
+import speaker4 from "@/assets/images/pic_sasa_juric.png";
+import speaker5 from "@/assets/images/speaker_testpic1.svg";
+import speaker6 from "@/assets/images/pic_zach_daniel.jpg";
 
 export default function Speakers() {
   const speakerImages = [
-    speakerTest1,
-    speakerTest2,
-    speakerTest3,
-    speakerTest4,
-    speakerTest5,
-    speakerTest6,
+    speaker1,
+    speaker2,
+    speaker3,
+    speaker4,
+    speaker5,
+    speaker6,
   ];
   return (
     <section
@@ -35,37 +35,47 @@ export default function Speakers() {
         they’ve learned about building, innovation, and real-world applications.
       </div>
       <div className="relative mx-auto mb-[74px] grid grid-cols-2 justify-center gap-x-[80px] gap-y-[30px] py-[10px]">
-        {speakers.map((speakers) => (
-          <div
-            key={speakers.id}
-            className={`relative flex h-[500px] w-[600px] items-center justify-center`}
-            style={{
-              transform: `translateX(${speakers.x}) ${speakers.id % 2 !== 0 ? "translateY(400px)" : ""}`,
-            }}
-          >
-            <SpeakerBlob
-              src={speakerImages[speakers.id - 1].src}
-              alt={speakers.name}
-              height="550px"
-              width="500px"
-              position={String(speakers.id)}
-              blobType={speakers.blobType}
-            />
-            <SpeakerTitleBlob
-              name={speakers.name}
-              surname={speakers.surname}
-              socials={speakers.socials}
-              variant={Number(speakers.titleBlobType)}
-            />
-          </div>
-        ))}
+        {speakers.map((speakers) =>
+          // NOTE: skipping the 5th speaker, last one is the 6th, since we are offseting the columns
+          speakers.id === 5 ? (
+            <div key="empty-slot" className="h-[10px] w-[10px]" />
+          ) : (
+            <div
+              key={speakers.id}
+              className={`relative flex h-[500px] w-[600px] items-center justify-center`}
+              style={{
+                transform: `translateX(${speakers.blob_x}) translateY(${speakers.blob_y})`,
+              }}
+            >
+              <SpeakerBlob
+                src={speakerImages[speakers.id - 1].src}
+                alt={speakers.name}
+                height="550px"
+                width="500px"
+                position={String(speakers.id)}
+                blobType={speakers.blobType}
+                imageX={speakers.image_x}
+                imageY={speakers.image_y}
+                imageScale={Number(speakers.image_scale)}
+              />
+              <SpeakerTitleBlob
+                name={speakers.name}
+                surname={speakers.surname}
+                variant={Number(speakers.titleBlobType)}
+                xLink={speakers.x_link}
+                gitLink={speakers.git_link}
+                webLink={speakers.web_link}
+              />
+            </div>
+          ),
+        )}
       </div>
-      <div className="relative mb-[336px] flex w-full translate-y-[200px] flex-col items-end pr-[350px]">
+      <div className="relative mb-[336px] mt-[-250px] flex w-full translate-y-[200px] flex-col items-end pr-[350px]">
         <div className="pb-[20px] pr-[150px] font-alegreya_sans text-2.5xl font-medium text-dark-blue">
           {" "}
           ...and many more
         </div>
-        <AltButton href="" className="font-medium" text="See all Speakers" />
+        {/* <AltButton href="" className="font-medium" text="See all Speakers" /> */}
       </div>
     </section>
   );

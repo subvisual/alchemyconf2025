@@ -49,9 +49,6 @@ const config: Config = {
           "50%": { transform: "translateX(25%)" },
         },
       },
-      dropShadow: {
-        title: "0px 4px 4px rgba(125, 29, 63, 0.5)",
-      },
     },
   },
   plugins: [],

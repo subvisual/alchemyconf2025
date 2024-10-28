@@ -1,12 +1,17 @@
 // TS-nocheck
 import { SVGProps } from "react";
+import XIcon from "./icon_x";
+import GithubIcon from "./icon_github";
+import WebIcon from "./icon_web";
 
 interface BlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
   variant?: number;
   name: string;
   surname: string;
-  socials: string;
+  xLink: string;
+  gitLink: string;
+  webLink: string;
 }
 
 const SpeakerTitleBlob = ({
@@ -14,7 +19,9 @@ const SpeakerTitleBlob = ({
   variant = 1,
   name,
   surname,
-  socials,
+  xLink,
+  gitLink,
+  webLink,
   ...props
 }: BlobProps) => {
   const blobs = {
@@ -23,21 +30,21 @@ const SpeakerTitleBlob = ({
       viewBox: "0 0 286 200",
       height: "200",
       width: "286",
-      top: "130px",
-      left: "300px",
-      x: "45%",
-      y: "35%",
+      top: "170",
+      left: "300",
+      x: "120",
+      y: "80",
       color: "#7D1D3F",
     },
     2: {
       path: "M245.205 82.9493C258.084 97.6135 267.22 117.039 271.945 135.606C276.691 154.254 276.888 171.629 272.367 182.308C258.698 214.597 234.153 228.259 199.364 238.841C177.509 245.489 158.944 247.699 140.894 245.578C122.836 243.456 105.15 236.983 85.0728 226.064C67.6564 216.592 54.5856 207.777 43.5018 196.869C32.4232 185.966 23.249 172.892 13.732 154.811C4.2362 136.769 1.94774 128.098 2.4066 119.41C2.63905 115.009 3.5783 110.542 4.80569 104.705L4.83501 104.565C6.06982 98.6925 7.55785 91.5673 8.7779 82.0724C11.5041 60.8556 17.15 45.8682 26.0499 34.1124C34.9621 22.3405 47.2693 13.6322 63.646 5.19596C71.4159 1.19341 77.1924 1.36257 82.1598 3.77194C87.3284 6.27885 91.9066 11.3336 96.8905 17.8208C98.3256 19.6888 99.7856 21.6665 101.294 23.7096C110.063 35.5872 120.464 49.6753 137.077 57.2761C146.334 61.511 156.075 63.1737 165.829 63.8413C172.196 64.277 178.692 64.2912 185.07 64.3051C188.388 64.3124 191.674 64.3195 194.893 64.386C213.906 64.7783 231.389 67.2187 245.205 82.9493Z",
       viewBox: "0 0 278 249",
-      height: "249",
-      width: "279",
-      top: "200px",
-      left: "300px",
-      x: "40%",
-      y: "50%",
+      height: "250",
+      width: "280",
+      top: "200",
+      left: "250",
+      x: "112",
+      y: "125",
       color: "#003049",
     },
     3: {
@@ -45,10 +52,10 @@ const SpeakerTitleBlob = ({
       viewBox: "0 0 286 223",
       height: "223",
       width: "286",
-      top: "130px",
-      left: "-70px",
-      x: "15%",
-      y: "45%",
+      top: "180",
+      left: "-100",
+      x: "34",
+      y: "100",
       color: "#003049",
     },
     4: {
@@ -56,10 +63,10 @@ const SpeakerTitleBlob = ({
       viewBox: "0 0 305 219",
       height: "219",
       width: "305",
-      top: "130px",
-      left: "-40px",
-      x: "10%",
-      y: "30%",
+      top: "130",
+      left: "-120",
+      x: "40",
+      y: "72",
       color: "#7D1D3F",
     },
     5: {
@@ -67,10 +74,10 @@ const SpeakerTitleBlob = ({
       viewBox: "0 0 285 225",
       height: "255",
       width: "285",
-      top: "220px",
-      left: "280px",
-      x: "45%",
-      y: "45%",
+      top: "230",
+      left: "230",
+      x: "135",
+      y: "88",
       color: "#003049",
     },
   };
@@ -79,49 +86,76 @@ const SpeakerTitleBlob = ({
   const currentBlob = blobs[variant];
 
   return (
-    <svg
-      className={`${className} -z-10`}
-      height={currentBlob.height}
-      width={currentBlob.width}
-      viewBox={currentBlob.viewBox}
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      style={{
-        top: `${currentBlob.top}`,
-        left: `${currentBlob.left}`,
-        position: "absolute",
-        maxHeight: "100%",
-        maxWidth: "100%",
-      }}
-      {...props}
-    >
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d={currentBlob.path}
-        fill={currentBlob.color}
-        stroke={currentBlob.color}
-        strokeWidth={4}
-      />
-      <text
-        x={currentBlob.x}
-        y={currentBlob.y}
-        textAnchor="start"
-        fill="#FFF5DA"
-        fontSize="32px"
-        className="font-alegreya_sans font-bold"
+    <div>
+      <svg
+        className={`${className} -z-10`}
+        height={currentBlob.height}
+        width={currentBlob.width}
+        viewBox={currentBlob.viewBox}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        style={{
+          top: `${currentBlob.top}px`,
+          left: `${currentBlob.left}px`,
+          position: "absolute",
+          maxHeight: "100%",
+          maxWidth: "100%",
+        }}
+        {...props}
       >
-        <tspan x={currentBlob.x} dy="0">
-          {name}
-        </tspan>
-        <tspan x={currentBlob.x} dy="36px">
-          {surname}
-        </tspan>
-        <tspan fill="#F4AC45" fontSize="20px" x={currentBlob.x} dy="32px">
-          {socials}
-        </tspan>
-      </text>
-    </svg>
+        <path
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d={currentBlob.path}
+          fill={currentBlob.color}
+          stroke={currentBlob.color}
+          strokeWidth={4}
+        />
+        <text
+          x={`${currentBlob.x}px`}
+          y={`${currentBlob.y}px`}
+          textAnchor="start"
+          fill="#FFF5DA"
+          fontSize="32px"
+          className="font-alegreya_sans font-bold"
+        >
+          <tspan x={`${currentBlob.x}px`} dy="0">
+            {name}
+          </tspan>
+          <tspan x={`${currentBlob.x}px`} dy="36px">
+            {surname}
+          </tspan>
+        </text>
+      </svg>
+      <div
+        className={`absolute flex w-[40px] flex-row`}
+        style={{
+          left: `${Number(currentBlob.x) + Number(currentBlob.left)}px`,
+          top: `${Number(currentBlob.y) + Number(currentBlob.top) + (currentBlob === blobs[5] ? 68 : 52)}px`,
+
+          gap: "8px",
+        }}
+      >
+        <XIcon
+          link={xLink}
+          style={{
+            height: "28px",
+          }}
+        />
+        <GithubIcon
+          link={gitLink}
+          style={{
+            height: "28px",
+          }}
+        />
+        <WebIcon
+          link={webLink}
+          style={{
+            height: "28px",
+          }}
+        />
+      </div>
+    </div>
   );
 };
 
