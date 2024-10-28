@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 w-full select-none border-b border-b-bordeux bg-opacity-50 px-6 py-4 backdrop-blur-lg backdrop-filter">
       <div className="mx-auto max-w-[1440px]">
-        <nav className="flex items-center justify-between tablet:px-20">
+        <nav className="flex items-center justify-between tablet:px-14">
           <div className="flex items-center gap-12">
             <Link
               href="/"
