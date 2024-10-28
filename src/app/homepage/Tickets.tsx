@@ -42,7 +42,7 @@ export default function Tickets() {
                 </div>
                 <AltButton
                   className="font-medium"
-                  text="Buy Tickets"
+                  text="Get Tickets"
                   href="https://ti.to/subvisual/alchemy-conf-2025"
                 />
               </div>

@@ -26,7 +26,7 @@ export default function Intro() {
           />
 
           <Button
-            text="Buy tickets"
+            text="Get Tickets"
             href="https://ti.to/subvisual/alchemy-conf-2025"
             className="absolute left-[60px] top-[260px] whitespace-nowrap bg-blue text-xl font-semibold uppercase text-dark-blue"
           />

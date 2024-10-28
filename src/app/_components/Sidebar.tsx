@@ -1,7 +1,10 @@
 "use client";
 
+import { useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
+import Button from "./Button";
 
 interface SidebarProps {
   showSidebar: boolean;
@@ -9,14 +12,24 @@ interface SidebarProps {
 }
 
 export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
+  const pathname = usePathname();
+
+  useEffect(() => {
+    document.body.classList.toggle("overflow-hidden", showSidebar);
+    return () => {
+      document.body.classList.remove("overflow-hidden");
+    };
+  }, [showSidebar]);
+
   return (
     <>
       <div
-        className={`desktop:hidden fixed right-0 top-0 z-40 h-full w-full transform bg-bordeux shadow-lg ${
+        className={`fixed right-0 top-0 z-40 h-full w-full transform bg-dark-blue shadow-lg transition-transform duration-300 ease-in-out ${
           showSidebar ? "translate-x-0" : "translate-x-full"
-        } transition-transform duration-300 ease-in-out`}
+        } desktop:hidden`}
+        aria-hidden={!showSidebar}
       >
-        <div className="flex items-center justify-between border-b-2 border-b-background p-4">
+        <div className="flex items-center justify-between p-4">
           <Link href="/" className="flex w-fit items-center gap-4 outline-none">
             <AlchemySquareIcon className="h-12 w-12" />
             <p className="font-koulen text-[25px] text-background">
@@ -38,25 +51,37 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             </svg>
           </div>
         </div>
-        <ul className="space-y-8 p-8 text-center font-zilla_slab text-xl text-background">
-          <li>
+        <ul className="flex min-h-screen flex-col items-center space-y-10 bg-bordeux bg-opacity-30 bg-gradient-to-br from-bordeux via-dark-blue to-dark-blue p-8 text-center font-alegreya_sans text-xl text-background drop-shadow-xl backdrop-blur-lg">
+          <li
+            className={`${pathname === "/about" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
             <Link href="/about" onClick={toggleSidebar}>
               About
             </Link>
           </li>
-          <li>
+          <li
+            className={`${pathname === "/alchemy-2025" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
             <Link href="/alchemy-2025" onClick={toggleSidebar}>
               Alchemy Conf 2025
             </Link>
           </li>
-          <li>
+          <li
+            className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
             <Link href="/practical" onClick={toggleSidebar}>
               Practical
             </Link>
           </li>
+          <li>
+            <Button
+              className="text-center"
+              text="Get Tickets"
+              href="https://ti.to/subvisual/alchemy-conf-2025"
+            />
+          </li>
         </ul>
       </div>
-
       {showSidebar && (
         <div
           className="bg-black fixed inset-0 z-30 bg-opacity-50"
