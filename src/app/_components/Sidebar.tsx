@@ -51,7 +51,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             </svg>
           </div>
         </div>
-        <ul className="flex min-h-screen flex-col items-center space-y-10 bg-bordeux bg-opacity-30 bg-gradient-to-br from-bordeux via-dark-blue to-dark-blue p-8 text-center font-alegreya_sans text-xl text-background drop-shadow-xl backdrop-blur-lg">
+        <ul className="flex min-h-screen flex-col items-center space-y-10 bg-bordeux bg-opacity-30 bg-gradient-to-br from-bordeux via-dark-blue to-dark-blue p-8 text-center font-alegreya_sans text-xl text-background">
           <li
             className={`${pathname === "/about" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
           >
