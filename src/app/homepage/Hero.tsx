@@ -10,8 +10,11 @@ export default function Hero() {
       <div className="relative flex w-full max-w-screen-desktop flex-row justify-start">
         <div className="z-10 flex flex-col items-start gap-[40px]">
           <AlchemyIcon className="h-[100px]" />
-          <h1 className="font-koulen text-[180px] leading-[170px] text-dark-blue">
-            Alchemy <br /> Conf <span className="text-bordeux">2025</span>
+          <h1 className="text-transparent bg-gradient-to-r from-[#19445b] via-[#003049] to-[#001c2b] bg-clip-text font-koulen text-[180px] leading-[170px]">
+            Alchemy <br /> Conf{" "}
+            <span className="text-transparent bg-gradient-to-r from-[#974a65] to-bordeux bg-clip-text">
+              2025
+            </span>
           </h1>
           <div className="z-10 mb-6 flex flex-col items-start gap-10 text-right">
             <p className="font-alegreya_sans text-[40px] font-extrabold leading-6 text-dark-blue">
