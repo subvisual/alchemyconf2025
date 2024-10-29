@@ -64,9 +64,10 @@ export default function Venue() {
         </div>
       </div>
 
-      <div className="relative right-[125px]">
-        <VenueBlob1 />
-        <div className="absolute left-[50px] top-[140px]">
+      <div className="relative desktop:right-[125px]">
+        <VenueBlob1 className="tabler:pt-0 h-auto w-[600px] pt-12 tablet:w-[1000px]" />
+
+        <div className="absolute left-[50px] top-[140px] hidden tablet:flex">
           <div className="relative h-[234px] w-[325px] rotate-[-10deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
             <Image
               src={venue_pic1}
@@ -76,7 +77,7 @@ export default function Venue() {
             ></Image>
           </div>
         </div>
-        <div className="absolute left-[150px] top-[265px]">
+        <div className="absolute left-[150px] top-[265px] hidden tablet:flex">
           <div className="relative h-[234px] w-[325px] rotate-[2deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
             <Image
               src={venue_pic2}
@@ -86,28 +87,29 @@ export default function Venue() {
             ></Image>
           </div>
         </div>
-        <div className="width-[525px] absolute right-[150px] top-[170px] z-10 flex flex-row justify-between">
-          <div className="mr-8 border-l-4 border-yellow pl-5">
-            <p className="font-alegreya_sans text-[64px] font-bold leading-[2.25rem] text-background">
+
+        <div className="absolute right-[125px] top-[130px] z-10 flex flex-row justify-between tablet:right-[150px] tablet:top-[180px]">
+          <div className="mr-4 border-l-4 border-yellow pl-2 tablet:mr-8 tablet:pl-5">
+            <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-background tablet:text-[64px]">
               12
             </p>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-background">
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-background tablet:text-[24px]">
               Speakers
             </p>
           </div>
-          <div className="mr-8 border-l-4 border-yellow pl-5">
-            <p className="font-alegreya_sans text-[64px] font-bold leading-[2.25rem] text-background">
+          <div className="mr-4 border-l-4 border-yellow pl-2 tablet:mr-8 tablet:pl-5">
+            <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-background tablet:text-[64px]">
               6
             </p>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-background">
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-background tablet:text-[24px]">
               Workshops
             </p>
           </div>
-          <div className="mr-8 border-l-4 border-yellow pl-5">
-            <p className="font-alegreya_sans text-[64px] font-bold leading-[2.25rem] text-background">
+          <div className="mr-4 border-l-4 border-yellow pl-2 tablet:mr-8 tablet:pl-5">
+            <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-background tablet:text-[64px]">
               500
             </p>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-background">
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-background tablet:text-[24px]">
               Attendees
             </p>
           </div>
