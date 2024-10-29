@@ -3,61 +3,61 @@
 @tailwind utilities;
 
 @-webkit-keyframes rotateDiscoBall {
-    0% {
-      -webkit-transform: rotateX(90deg) rotateZ(0deg) rotate(0deg);
-    }
-    100% {
-      -webkit-transform: rotateX(90deg) rotateZ(360deg) rotate(0deg);
-    }
+  0% {
+    -webkit-transform: rotateX(90deg) rotateZ(0deg) rotate(0deg);
   }
-  
-  @keyframes rotateDiscoBall {
-    0% {
-      transform: rotateX(90deg) rotateZ(0deg) rotate(0deg);
-    }
-    100% {
-      transform: rotateX(90deg) rotateZ(360deg) rotate(0deg);
-    }
+  100% {
+    -webkit-transform: rotateX(90deg) rotateZ(360deg) rotate(0deg);
   }
-  
-  @-webkit-keyframes reflect {
-    0% {
-      -webkit-filter: brightness(40%);
-    }
-    50% {
-      -webkit-filter: brightness(120%);
-    }
-    100% {
-      -webkit-filter: brightness(90%);
-    }
+}
+
+@keyframes rotateDiscoBall {
+  0% {
+    transform: rotateX(90deg) rotateZ(0deg) rotate(0deg);
   }
-  
-  @keyframes reflect {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.15;
-    }
-    100% {
-      opacity: 1;
-    }
+  100% {
+    transform: rotateX(90deg) rotateZ(360deg) rotate(0deg);
   }
-  
-  #discoBall {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    z-index: 50;
-    -webkit-animation: rotateDiscoBall 15s linear infinite;
-    animation: rotateDiscoBall 15s linear infinite;
+}
+
+@-webkit-keyframes reflect {
+  0% {
+    -webkit-filter: brightness(40%);
   }
-  
-  .square {
-    -webkit-transform-style: preserve-3d;
-    transform-style: preserve-3d;
-    transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+  50% {
+    -webkit-filter: brightness(120%);
   }
-  
+  100% {
+    -webkit-filter: brightness(90%);
+  }
+}
+
+@keyframes reflect {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#discoBall {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  z-index: 50;
+  -webkit-animation: rotateDiscoBall 15s linear infinite;
+  animation: rotateDiscoBall 15s linear infinite;
+}
+
+.square {
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  transform: rotateX(90deg) rotateY(0deg) translateZ(0px);
+}
+
 @keyframes animatedLogoHand {
   0% {
     transform: rotate(0deg);
@@ -73,4 +73,40 @@
 .animated-path {
   animation: animatedLogoHand 0.5s infinite ease-in-out;
   transform-origin: 32% 60%;
+}
+
+@media (min-width: 390px) {
+  .speaker-transform {
+    transform: var(--translate-mobile); /* Default for mobile */
+  }
+  .speaker-blob {
+    display: none;
+  }
+  .speaker-blob-mobile {
+    display: block;
+  }
+}
+
+@media (min-width: 834px) {
+  .speaker-transform {
+    transform: var(--translate-tablet);
+  }
+  .speaker-blob {
+    display: block;
+  }
+  .speaker-blob-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .speaker-transform {
+    transform: var(--translate-desktop);
+  }
+  .speaker-blob {
+    display: block;
+  }
+  .speaker-blob-mobile {
+    display: none;
+  }
 }
