@@ -19,8 +19,8 @@ export default function Venue() {
           Beyond a simple conference
         </span>
       </h1>
-      <div className="flex w-full max-w-screen-desktop px-20">
-        <div className="mr-14 w-[400px]">
+      <div className="flex w-full items-center justify-between">
+        <div className="w-[400px]">
           <div className="mb-8 border-l-4 border-bordeux pl-5">
             <p className="font-alegreya_sans text-2xl font-medium leading-none text-bordeux">
               WORKSHOPS

@@ -7,12 +7,12 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section className="mt-32 flex min-h-[calc(100vh_+_80px)] flex-col items-center justify-start tablet:mt-40">
-      <div className="relative flex w-full max-w-screen-desktop flex-col justify-start tablet:flex-row">
+    <section className="mt-32 flex min-h-[calc(100vh_+_80px)] flex-col items-center tablet:mt-40">
+      <div className="relative flex w-full flex-col justify-between tablet:flex-row">
         {/* Left Side: Title and Text */}
         <div className="z-10 flex flex-col items-center gap-6 tablet:absolute tablet:items-start tablet:gap-10 tablet:px-0">
           <AlchemyIcon className="h-[60px] mobile:h-[65px] tablet:h-[90px] desktop:h-[100px]" />
-          <h1 className="text-transparent bg-gradient-to-r from-[#30566B] via-[#003049] to-[#001c2b] bg-clip-text text-center font-koulen text-[80px] leading-[80px] tablet:text-left tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px]">
+          <h1 className="text-transparent bg-gradient-to-r from-[#30566B] via-[#003049] to-[#001c2b] bg-clip-text text-center font-koulen text-[80px] leading-[80px] tablet:text-left tablet:text-[120px] tablet:leading-[120px] desktop:text-[180px] desktop:leading-[180px]">
             Alchemy <br /> Conf{" "}
             <span className="text-transparent bg-gradient-to-r from-[#974a65] to-bordeux bg-clip-text">
               2025
@@ -44,9 +44,9 @@ export default function Hero() {
         </div>
 
         {/* WIP */}
-        {/* <div>
+        {/* <div className="hidden tablet:flex">
           <TheatroTitleBlob
-            className="absolute right-[-100px] top-[20px] overflow-visible"
+            className="absolute right-[-100px] top-[166px] overflow-visible"
             style={{ height: "394px" }}
           />
           <TheatroBlobAnime

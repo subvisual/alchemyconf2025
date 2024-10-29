@@ -41,7 +41,7 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-TMJC46NG" />
       <body className="overflow-x-hidden overscroll-none bg-gradient-to-tr from-white to-background">
         <Header />
-        <div className="md:overflow-auto overflow-hidden px-6 tablet:px-12">
+        <div className="md:overflow-auto overflow-hidden px-6 tablet:px-24 desktop:px-52">
           {children}
         </div>
         <Footer />
