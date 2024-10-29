@@ -3,7 +3,6 @@ import TheatroBlobAnime from "@/assets/icons/theatro_blob_anime";
 import theatro_circo from "../../assets/images/theatro_circo.svg";
 import TheatroTitleBlob from "@/assets/icons/theatro_title_blob";
 import venue from "@/assets/images/venue.png";
-import yellow_blob from "@/assets/images/yellow_blob.svg";
 import Image from "next/image";
 
 export default function Hero() {
