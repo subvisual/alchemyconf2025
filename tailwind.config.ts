@@ -19,17 +19,6 @@ const config: Config = {
     container: {
       center: true,
     },
-    colors: {
-      background: "#FFF5DA",
-      white: "#FFFFFF",
-      "dark-blue": "#003049",
-      sage: "#B6B980",
-      purple: "#827191",
-      bordeux: "#7D1D3F",
-      blue: "#84ACCE",
-      yellow: "#F4AC45",
-      grey: "#C4C4C4",
-    },
     fontFamily: {
       zilla_slab: ["var(--font-zilla-slab)"],
       koulen: ["var(--font-koulen)"],
@@ -37,6 +26,17 @@ const config: Config = {
       alegreya_sans: ["var(--font-alegreya-sans)"],
     },
     extend: {
+      colors: {
+        background: "#FFF5DA",
+        white: "#FFFFFF",
+        "dark-blue": "#003049",
+        sage: "#B6B980",
+        purple: "#827191",
+        bordeux: "#7D1D3F",
+        blue: "#84ACCE",
+        yellow: "#F4AC45",
+        grey: "#C4C4C4",
+      },
       fontSize: {
         "2.5xl": ["2rem", { lineHeight: "44.8px" }],
       },
