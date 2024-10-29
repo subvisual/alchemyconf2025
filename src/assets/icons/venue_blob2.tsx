@@ -7,10 +7,8 @@ interface BlobProps extends SVGProps<SVGSVGElement> {
 
 const VenueBlob2 = ({ className, color = "#F4AC45", ...props }: BlobProps) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`${className}`}>
       <svg
-        width="877"
-        height="519"
         viewBox="0 0 877 519"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

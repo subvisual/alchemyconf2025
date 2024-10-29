@@ -48,7 +48,7 @@ export default function Venue() {
           </div>
         </div>
 
-        <div className="text-left font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
+        <div className="text-left font-alegreya_sans text-xl text-dark-blue tablet:pb-20 tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Held at the majestic{" "}
           <span className="text-bordeux underline">
             {" "}
@@ -64,9 +64,8 @@ export default function Venue() {
         </div>
       </div>
 
-      <div className="relative desktop:right-[125px]">
-        <VenueBlob1 className="tabler:pt-0 h-auto w-[600px] pt-12 tablet:w-[1000px]" />
-
+      <div className="relative desktop:right-[300px]">
+        <VenueBlob1 className="h-auto w-[600px] pt-12 tablet:w-[1070px] tablet:pt-0" />
         <div className="absolute left-[50px] top-[140px] hidden tablet:flex">
           <div className="relative h-[234px] w-[325px] rotate-[-10deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
             <Image
@@ -87,8 +86,7 @@ export default function Venue() {
             ></Image>
           </div>
         </div>
-
-        <div className="absolute right-[125px] top-[130px] z-10 flex flex-row justify-between tablet:right-[150px] tablet:top-[180px]">
+        <div className="absolute right-[125px] top-[130px] z-10 flex flex-row justify-between tablet:right-[150px] tablet:top-[155px]">
           <div className="mr-4 border-l-4 border-yellow pl-2 tablet:mr-8 tablet:pl-5">
             <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-background tablet:text-[64px]">
               12
@@ -115,34 +113,43 @@ export default function Venue() {
           </div>
         </div>
       </div>
-      <div className="relative bottom-[260px] left-[530px]">
-        <VenueBlob2 />
-        <div className="absolute bottom-[270px] left-[450px]">
-          <Image src={venue_pic4} alt="" height={241}></Image>
-        </div>
-        <div className="absolute bottom-[-70px] left-[50px]">
-          <Image src={venue_pic3} alt="" height={230}></Image>
-        </div>
-        <div className="width-[550px] absolute right-[275px] top-[270px] z-10 flex flex-row justify-between">
-          <div className="mr-8 border-l-4 border-bordeux pl-5">
-            <p className="font-alegreya_sans text-[64px] font-bold leading-[2.25rem] text-dark-blue">
+
+      <div className="relative bottom-[50px] tablet:left-[254px] desktop:bottom-[260px] desktop:left-[490px]">
+        <VenueBlob2 className="h-auto w-[600px] tablet:w-[900px]" />
+
+        <Image
+          src={venue_pic4}
+          alt=""
+          className="absolute left-[390px] top-[-50px] w-[130px] tablet:left-[505px] tablet:w-[270px]"
+        />
+
+        <Image
+          src={venue_pic3}
+          alt=""
+          height={230}
+          className="absolute bottom-[-105px] left-[50px] tablet:bottom-[-70px]"
+        />
+
+        <div className="absolute right-[100px] top-[158px] z-10 flex flex-row justify-between tablet:right-[275px] tablet:top-[270px]">
+          <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
+            <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-dark-blue tablet:text-[64px]">
               10+
             </p>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-dark-blue tablet:text-[24px]">
               Side Events
             </p>
           </div>
-          <div className="mr-8 border-l-4 border-bordeux pl-5">
-            <p className="font-alegreya_sans text-[64px] font-bold leading-[2.25rem] text-dark-blue">
+          <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
+            <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-dark-blue tablet:text-[64px]">
               1
             </p>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-dark-blue tablet:text-[24px]">
               Mega-Party
             </p>
           </div>
-          <div className="mr-8 border-l-4 border-bordeux pl-5">
-            <Image src={infinite} alt="" height={36}></Image>
-            <p className="leading-1 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+          <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
+            <Image src={infinite} alt="Infinite" />
+            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-dark-blue tablet:text-[24px]">
               Francesinhas
             </p>
           </div>
