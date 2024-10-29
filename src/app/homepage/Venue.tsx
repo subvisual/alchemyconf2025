@@ -13,40 +13,42 @@ export default function Venue() {
       id="venue"
       className="my-16 flex flex-col items-center justify-center"
     >
-      <h1 className="relative mb-32 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Beyond a simple conference
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Beyond a simple conference
         </span>
       </h1>
-      <div className="flex w-full items-center justify-between">
-        <div className="w-[400px]">
-          <div className="mb-8 border-l-4 border-bordeux pl-5">
-            <p className="font-alegreya_sans text-2xl font-medium leading-none text-bordeux">
+
+      <div className="flex w-full flex-col justify-between gap-8 desktop:flex-row desktop:gap-48">
+        <div className="flex w-full flex-row justify-between desktop:flex-col">
+          <div className="mb-8 border-l-4 border-bordeux pl-2 tablet:pl-5">
+            <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
               WORKSHOPS
             </p>
-            <p className="font-alegreya_sans text-[40px] font-bold text-dark-blue">
+            <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
               March 30 - 1 April
             </p>
           </div>
-          <div className="mb-8 border-l-4 border-yellow pl-5">
-            <p className="font-alegreya_sans text-2xl font-medium leading-none text-bordeux">
+          <div className="mb-8 border-l-4 border-yellow pl-2 tablet:pl-5">
+            <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
               ELIXIR MEETUP
             </p>
-            <p className="font-alegreya_sans text-[40px] font-bold text-dark-blue">
+            <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
               1 April
             </p>
           </div>
-          <div className="mb-8 border-l-4 border-purple pl-5">
-            <p className="font-alegreya_sans text-2xl font-medium leading-none text-bordeux">
+          <div className="mb-8 border-l-4 border-purple pl-2 tablet:pl-5">
+            <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
               TALKS
             </p>
-            <p className="font-alegreya_sans text-[40px] font-bold text-dark-blue">
-              2 -3 April
+            <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
+              2 - 3 April
             </p>
           </div>
         </div>
-        <div className="w-[750px] text-left font-alegreya_sans text-[32px] leading-[45px] text-dark-blue">
+
+        <div className="text-left font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Held at the majestic{" "}
           <span className="text-bordeux underline">
             {" "}
@@ -61,6 +63,7 @@ export default function Venue() {
           prowess of its developers to the fun-loving spirit of its community.
         </div>
       </div>
+
       <div className="relative right-[125px]">
         <VenueBlob1 />
         <div className="absolute left-[50px] top-[140px]">
