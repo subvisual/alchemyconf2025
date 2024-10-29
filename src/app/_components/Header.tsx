@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <header className="fixed left-0 top-0 z-50 w-full select-none border-b border-b-bordeux bg-opacity-50 px-6 py-4 backdrop-blur-lg backdrop-filter">
       <div className="mx-auto max-w-[1440px]">
-        <nav className="flex items-center justify-between tablet:px-14">
+        <nav className="flex items-center justify-between tablet:px-14 desktop:px-0">
           <div className="flex items-center gap-12">
             <Link
               href="/"
@@ -30,7 +30,6 @@ export default function Header() {
                 Alchemy Conf
               </p>
             </Link>
-
             <ul className="hidden gap-6 font-alegreya_sans text-xl font-medium leading-[30px] text-dark-blue desktop:flex">
               <li
                 className={`${
