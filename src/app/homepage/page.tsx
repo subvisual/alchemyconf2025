@@ -1,5 +1,4 @@
 import Hero from "./Hero";
-import Intro from "./Intro";
 import Venue from "./Venue";
 import Speakers from "./Speakers";
 import Tickets from "./Tickets";

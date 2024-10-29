@@ -29,6 +29,7 @@ export default function Hero() {
             </p>
           </div>
         </div>
+
         {/* WIP */}
         {/* <div>
           <TheatroTitleBlob

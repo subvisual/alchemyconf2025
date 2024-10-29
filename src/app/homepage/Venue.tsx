@@ -13,12 +13,12 @@ export default function Venue() {
       id="venue"
       className="my-[136px] flex flex-col items-center justify-center"
     >
-      <div className="relative mb-32 w-[800px] text-center font-koulen text-[120px] leading-none text-dark-blue">
+      <h1 className="relative mb-32 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:text-[140px] desktop:leading-[140px]">
         Beyond a simple conference
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Beyond a simple conference
         </span>
-      </div>
+      </h1>
       <div className="flex w-full max-w-screen-desktop px-20">
         <div className="mr-14 w-[400px]">
           <div className="mb-8 border-l-4 border-bordeux pl-5">
