@@ -2,6 +2,9 @@ import AlchemyIcon from "@/assets/icons/alchemy_icon";
 import TheatroBlobAnime from "@/assets/icons/theatro_blob_anime";
 import theatro_circo from "../../assets/images/theatro_circo.svg";
 import TheatroTitleBlob from "@/assets/icons/theatro_title_blob";
+import venue from "@/assets/images/venue.png";
+import yellow_blob from "@/assets/images/yellow_blob.svg";
+import Image from "next/image";
 
 export default function Hero() {
   return (
@@ -28,6 +31,17 @@ export default function Hero() {
               <span className="font-semibold"> side events.</span>
             </p>
           </div>
+        </div>
+        <div className="relative flex items-center justify-center tablet:hidden">
+          <TheatroTitleBlob
+            className="absolute right-[-20px] top-[-50px] overflow-visible"
+            style={{ height: "300px" }}
+          />
+          <Image
+            src={venue}
+            alt="venue"
+            className="absolute left-[-80px] top-[-10px] z-20 scale-125 pt-20 mobile:scale-125"
+          />
         </div>
 
         {/* WIP */}

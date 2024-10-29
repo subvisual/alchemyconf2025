@@ -11,7 +11,7 @@ export default function Venue() {
   return (
     <section
       id="venue"
-      className="my-[136px] flex flex-col items-center justify-center"
+      className="my-16 flex flex-col items-center justify-center"
     >
       <h1 className="relative mb-32 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:text-[140px] desktop:leading-[140px]">
         Beyond a simple conference
