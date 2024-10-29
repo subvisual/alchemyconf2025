@@ -21,14 +21,15 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="relative my-[136px] flex flex-col items-center justify-center"
+      className="relative flex flex-col items-center justify-center py-[136px] desktop:py-0"
     >
-      <div className="relative mb-32 w-[400px] text-center font-koulen text-[120px] leading-none text-dark-blue">
+      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Speakers
         </span>
-      </div>
+      </h1>
+
       <div className="absolute left-0 top-[280px] w-[770px] max-w-screen-desktop px-20 text-left font-alegreya_sans text-2.5xl text-dark-blue">
         Alchemy Conf 2025 brings together the brightest minds in the Elixir
         community. <br /> The top experts in our community will share what
