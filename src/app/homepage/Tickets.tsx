@@ -10,14 +10,14 @@ export default function Tickets() {
       id="tickets"
       className="mt-[136px] flex h-[860px] flex-col items-center"
     >
-      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative z-10 pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Tickets
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Tickets
         </span>
       </h1>
 
-      <div className="relative bottom-[235px] -z-10">
+      <div className="relative bottom-[235px] z-0">
         <TicketsBlob className="opacity-25" />
         <div className="absolute left-[480px] top-[210px] flex w-[1500px] flex-row tablet:left-[260px] tablet:top-[220px] desktop:left-[150px]">
           <div className="hidden text-left font-alegreya_sans text-sm leading-[45px] text-dark-blue tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
@@ -45,7 +45,7 @@ export default function Tickets() {
                 <AltButton
                   className="font-medium"
                   text="Get Tickets"
-                  href="https://ti.to/subvisual/alchemy-conf-2025"
+                  href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
                 />
               </div>
             </div>

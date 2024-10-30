@@ -1,38 +1,47 @@
 [
   {
     "id": 1,
-    "logo": "/"
+    "name": "CeSIUM Centro de Estudantes",
+    "link": "https://cesium.di.uminho.pt/"
   },
   {
     "id": 2,
-    "logo": "/"
+    "name": "GET BUS",
+    "link": "https://www.getbus.eu/en/"
   },
   {
     "id": 3,
-    "logo": "/"
+    "name": "marmela",
+    "link": "https://marmelasoft.com/"
   },
   {
     "id": 4,
-    "logo": "/"
+    "name": "Startup Braga",
+    "link": "https://www.startupbraga.com/"
   },
   {
     "id": 5,
-    "logo": "/"
+    "logo": "/",
+    "link": ""
   },
   {
     "id": 6,
-    "logo": "/"
+    "logo": "/",
+    "link": ""
   },
   {
     "id": 7,
-    "logo": "/"
+    "logo": "/",
+    "link": ""
   },
   {
     "id": 8,
-    "logo": "/"
+    "logo": "/",
+    "link": ""
   },
   {
     "id": 9,
-    "logo": "/"
+    "logo": "/",
+    "link": ""
   }
 ]

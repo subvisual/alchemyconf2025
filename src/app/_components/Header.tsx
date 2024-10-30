@@ -74,7 +74,7 @@ export default function Header() {
           <div className="flex items-center gap-4 tablet:gap-8">
             <Button
               text="Get Tickets"
-              href="https://ti.to/subvisual/alchemy-conf-2025"
+              href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
             />
             <Burguer
               className="h-6 w-6 hover:cursor-pointer desktop:hidden"
