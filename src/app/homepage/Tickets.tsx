@@ -18,9 +18,9 @@ export default function Tickets() {
       </h1>
 
       <div className="relative bottom-[235px] z-0">
-        <TicketsBlob className="opacity-25" />
-        <div className="absolute left-[480px] top-[210px] flex w-[1500px] flex-row tablet:left-[260px] tablet:top-[220px] desktop:left-[150px]">
-          <div className="hidden text-left font-alegreya_sans text-sm leading-[45px] text-dark-blue tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
+        <TicketsBlob className="opacity-25 mobile:translate-x-[-250px] mobile:translate-y-[135px] tablet:translate-x-0 tablet:translate-y-4 desktop:translate-x-0 desktop:translate-y-4" />
+        <div className="absolute left-[480px] top-[210px] flex mobile:w-[310px] mobile:flex-col tablet:left-[260px] tablet:top-[220px] tablet:w-[1500px] tablet:flex-row desktop:left-[150px]">
+          <div className="text-left font-alegreya_sans text-xl text-dark-blue mobile:mb-[50px] mobile:text-center tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
             Join us in celebrating Elixir! Choose the ticket option that best
             suits your needs and secure your spot at the most unique event the
             community’s ever seen.
