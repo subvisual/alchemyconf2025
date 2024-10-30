@@ -4,9 +4,14 @@ import sponsors from "../_constants/sponsors.json";
 import Image from "next/image";
 import AltButton from "../_components/AltButton";
 import remoteLogo from "@/assets/images/remote_logo.svg";
+import logo1 from "@/assets/images/cesium_logo.svg";
+import logo2 from "@/assets/images/getbus_logo.png";
+import logo3 from "@/assets/images/marmela_logo.svg";
+import logo4 from "@/assets/images/startupbraga_logo.png";
 import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
 
 export default function Sponsors() {
+  const logoImages = [logo1, logo2, logo3, logo4];
   let itemsPerRow = 3;
 
   const chunkArray = (arr: any, size: number) => {
@@ -37,16 +42,16 @@ export default function Sponsors() {
           <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans text-[28px] font-bold text-bordeux tablet:text-[32px]">
             Main Sponsor
           </div>
-          <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px]">
-            <a href="https://remote.com/" target="_blank">
+          <a href="https://remote.com/" target="_blank">
+            <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px]">
               <Image
                 src={remoteLogo}
-                alt=""
+                alt="Remote Logo"
                 width={250}
                 className="translate-x-[20px] translate-y-[15px] rotate-[14.75deg] transform"
               ></Image>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
         <div className="flex flex-col items-start desktop:ml-28">
           <div className="mb-8 flex flex-col items-center gap-4 px-[90px] text-center font-alegreya_sans text-xl text-dark-blue tablet:px-0 tablet:text-2xl desktop:items-start desktop:gap-8 desktop:text-left desktop:text-3xl">
@@ -79,18 +84,20 @@ export default function Sponsors() {
               className={`grid grid-cols-1 gap-x-6 desktop:grid-cols-3 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
               {row.map((sponsor: any) => (
-                <div
-                  key={sponsor.id}
-                  className="h-[200px] w-[286px] rounded-lg bg-white drop-shadow-xl"
-                >
-                  <Image
-                    src={sponsor.logo}
-                    width={286}
-                    height={200}
-                    alt={`Sponsor ${sponsor.id}`}
-                    className="h-auto w-full"
-                  />
-                </div>
+                <a href={sponsor.link} target="_blank" key={sponsor.id}>
+                  <div
+                    key={sponsor.id}
+                    className="h-[200px] w-[286px] rounded-lg bg-white drop-shadow-xl"
+                  >
+                    <Image
+                      src={logoImages[sponsor.id - 1]}
+                      width={286}
+                      height={200}
+                      alt={`Sponsor ${sponsor.name}`}
+                      className="h-auto w-full"
+                    />
+                  </div>
+                </a>
               ))}
             </div>
           ))}
@@ -106,18 +113,20 @@ export default function Sponsors() {
         <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 transition-transform mobile:grid-cols-3 tablet:grid-cols-2">
             {sponsors.map((sponsor) => (
-              <div
-                key={sponsor.id}
-                className="h-[100px] w-[100px] rounded-lg bg-white drop-shadow-xl tablet:w-[220px]"
-              >
-                <Image
-                  src={sponsor.logo}
-                  width={286}
-                  height={200}
-                  alt={`Sponsor ${sponsor.id}`}
-                  className="h-auto w-full"
-                />
-              </div>
+              <a href={sponsor.link} target="_blank" key={sponsor.id}>
+                <div
+                  key={sponsor.id}
+                  className="h-[100px] w-[100px] rounded-lg bg-white drop-shadow-xl tablet:w-[220px]"
+                >
+                  <Image
+                    src={logoImages[sponsor.id - 1]}
+                    width={286}
+                    height={200}
+                    alt={`Sponsor ${sponsor.name}`}
+                    className="h-auto w-full"
+                  />
+                </div>
+              </a>
             ))}
           </div>
         </div>
