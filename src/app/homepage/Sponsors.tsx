@@ -12,7 +12,7 @@ import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
 
 export default function Sponsors() {
   const logoImages = [logo1, logo2, logo3, logo4];
-  let itemsPerRow = 3;
+  let itemsPerRow = 2;
 
   const chunkArray = (arr: any, size: number) => {
     let chunkedArray = [];
@@ -76,25 +76,28 @@ export default function Sponsors() {
         <div className="absolute right-[220px] top-[130px] w-[10px] font-alegreya_sans text-2.5xl font-bold text-yellow">
           Gold Sponsors
         </div>{" "}
-        <div className="absolute left-[-10px] top-[100px] space-y-[86px] py-[74px]">
+        <div className="absolute left-[180px] top-[100px] space-y-[86px] py-[74px]">
           {" "}
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`grid grid-cols-1 gap-x-6 desktop:grid-cols-3 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
+              className={`grid grid-cols-1 gap-x-6 desktop:grid-cols-2 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
               {row.map((sponsor: any) => (
                 <a href={sponsor.link} target="_blank" key={sponsor.id}>
                   <div
                     key={sponsor.id}
-                    className="h-[200px] w-[286px] rounded-lg bg-white drop-shadow-xl"
+                    className="flex h-[200px] w-[286px] items-center justify-center rounded-lg bg-white drop-shadow-xl"
                   >
                     <Image
                       src={logoImages[sponsor.id - 1]}
                       width={286}
                       height={200}
                       alt={`Sponsor ${sponsor.name}`}
-                      className="h-auto w-full"
+                      className="h-auto w-full object-contain"
+                      style={{
+                        scale: `${sponsor.scale}`,
+                      }}
                     />
                   </div>
                 </a>
@@ -106,24 +109,27 @@ export default function Sponsors() {
 
       {/* mobile */}
       <div className="relative desktop:hidden">
-        <SponsorGoldBlob className="z-0" />
+        <SponsorGoldBlob className="tablet: z-0 translate-x-[40px] tablet:translate-y-[-90px] tablet:scale-[0.8]" />
         <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-2.5xl font-bold text-yellow">
           Gold Sponsors
         </div>
         <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">
-          <div className="grid grid-cols-2 gap-x-6 gap-y-8 transition-transform mobile:grid-cols-3 tablet:grid-cols-2">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-8 transition-transform mobile:grid-cols-1 tablet:grid-cols-2">
             {sponsors.map((sponsor) => (
               <a href={sponsor.link} target="_blank" key={sponsor.id}>
                 <div
                   key={sponsor.id}
-                  className="h-[100px] w-[100px] rounded-lg bg-white drop-shadow-xl tablet:w-[220px]"
+                  className="flex h-[150px] w-[250px] items-center justify-center rounded-lg bg-white drop-shadow-xl tablet:w-[220px]"
                 >
                   <Image
                     src={logoImages[sponsor.id - 1]}
                     width={286}
                     height={200}
                     alt={`Sponsor ${sponsor.name}`}
-                    className="h-auto w-full"
+                    className="h-auto w-full object-contain"
+                    style={{
+                      scale: `${sponsor.scale}`,
+                    }}
                   />
                 </div>
               </a>
