@@ -8,33 +8,35 @@ export default function Tickets() {
   return (
     <section
       id="tickets"
-      className="my-[136px] flex h-[860px] flex-col items-center"
+      className="mt-[136px] flex h-[860px] flex-col items-center"
     >
-      <div className="relative z-10 mb-32 w-[300px] text-center font-koulen text-[120px] leading-none text-dark-blue">
+      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Tickets
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Tickets
         </span>
-      </div>
-      <div className="relative bottom-[235px]">
+      </h1>
+
+      <div className="relative bottom-[235px] -z-10">
         <TicketsBlob className="opacity-25" />
-        <div className="absolute left-[150px] top-[220px] flex w-[1500px] flex-row">
-          <div className="mr-10 w-[570px] text-left font-alegreya_sans text-[32px] leading-[45px] text-dark-blue">
+        <div className="absolute left-[480px] top-[210px] flex w-[1500px] flex-row tablet:left-[260px] tablet:top-[220px] desktop:left-[150px]">
+          <div className="hidden text-left font-alegreya_sans text-sm leading-[45px] text-dark-blue tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
             Join us in celebrating Elixir! Choose the ticket option that best
             suits your needs and secure your spot at the most unique event the
             community’s ever seen.
           </div>
-          <div className="left-[100px] ml-20 w-[400px]">
+
+          <div className="w-[400px] flex-col pl-8 tablet:left-[100px] tablet:flex desktop:pl-20">
             <div className="mb-16 border-l-4 border-yellow pl-5">
-              <p className="mb-4 flex flex-row items-center font-alegreya_sans text-5xl font-bold leading-none text-dark-blue">
+              <p className="mb-4 flex flex-row items-center font-alegreya_sans text-2xl font-bold leading-none text-dark-blue tablet:text-3xl desktop:text-5xl">
                 <Image src={ticketIcon} alt="" width={60} className="mr-4" />
                 Regular
               </p>
-              <p className="w-[250px] font-alegreya_sans text-2xl text-dark-blue">
+              <p className="w-[250px] font-alegreya_sans text-xl text-dark-blue desktop:text-2xl">
                 Full access to all talks and networking events
               </p>
               <div className="mt-9 flex flex-row items-center">
-                <div className="mr-8 font-koulen text-5xl text-dark-blue">
+                <div className="mr-8 font-koulen text-4xl text-dark-blue tablet:text-5xl">
                   250
                   <span className="font-koulen text-[32px] text-dark-blue">
                     €
@@ -47,23 +49,24 @@ export default function Tickets() {
                 />
               </div>
             </div>
+
             <div className="mb-8 border-l-4 border-yellow pl-5">
-              <div className="mb-6 flex flex-row items-center font-alegreya_sans text-5xl font-bold leading-none text-dark-blue">
+              <div className="mb-4 flex flex-row items-center font-alegreya_sans text-2xl font-bold leading-none text-dark-blue tablet:text-3xl desktop:text-5xl">
                 <Image
                   src={ticketIcon}
-                  alt=""
+                  alt="Ticket icon"
                   width={60}
                   className="absolute mr-4 rotate-[-10deg] opacity-80"
                 />
                 <Image
                   src={ticketIcon}
-                  alt=""
+                  alt="Ticket icon"
                   width={60}
                   className="absolute mr-4 translate-y-[9px] rotate-[15deg] transform"
                 />
                 <p className="ml-[78px]">Groups</p>
               </div>
-              <p className="w-[240px] font-alegreya_sans text-2xl text-dark-blue">
+              <p className="w-[240px] font-alegreya_sans text-xl text-dark-blue desktop:text-2xl">
                 Discounts to purchases of{" "}
                 <span className="font-bold">5 or more</span> tickets
               </p>

@@ -44,7 +44,8 @@ export default function RootLayout({
         <div className="md:overflow-auto overflow-hidden px-6 tablet:px-24 desktop:px-52">
           {children}
         </div>
-        <Footer />
+        {/* horizontal scroll fix footer! */}
+        {/* <Footer /> */}
       </body>
     </html>
   );

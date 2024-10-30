@@ -23,7 +23,7 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="relative my-[136px] flex flex-col items-center justify-center"
+      className="relative flex flex-col items-center justify-center py-[136px] desktop:py-0"
     >
       <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
