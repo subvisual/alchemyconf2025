@@ -63,7 +63,8 @@ export default function Sponsors() {
         </div>
       </div>
 
-      <div className="relative">
+      {/* desktop */}
+      <div className="relative hidden desktop:flex">
         <SponsorGoldBlob className="z-0" />
         <div className="absolute right-[220px] top-[130px] w-[10px] font-alegreya_sans text-2.5xl font-bold text-yellow">
           Gold Sponsors
@@ -73,7 +74,7 @@ export default function Sponsors() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`grid grid-cols-3 gap-x-6 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
+              className={`grid grid-cols-1 gap-x-6 desktop:grid-cols-3 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
               {row.map((sponsor: any) => (
                 <div
@@ -91,6 +92,32 @@ export default function Sponsors() {
               ))}
             </div>
           ))}
+        </div>
+      </div>
+
+      {/* mobile */}
+      <div className="relative desktop:hidden">
+        <SponsorGoldBlob className="z-0" />
+        <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-2.5xl font-bold text-yellow">
+          Gold Sponsors
+        </div>
+        <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 transition-transform mobile:grid-cols-3 tablet:grid-cols-2">
+            {sponsors.map((sponsor) => (
+              <div
+                key={sponsor.id}
+                className="h-[100px] w-[100px] rounded-lg bg-white drop-shadow-xl tablet:w-[220px]"
+              >
+                <Image
+                  src={sponsor.logo}
+                  width={286}
+                  height={200}
+                  alt={`Sponsor ${sponsor.id}`}
+                  className="h-auto w-full"
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

@@ -19,7 +19,7 @@ export default function Tickets() {
 
       <div className="relative bottom-[235px] -z-10">
         <TicketsBlob className="opacity-25" />
-        <div className="absolute left-[480px] top-[244px] flex w-[1500px] flex-row tablet:left-[260px] tablet:top-[220px] desktop:left-[150px]">
+        <div className="absolute left-[480px] top-[210px] flex w-[1500px] flex-row tablet:left-[260px] tablet:top-[220px] desktop:left-[150px]">
           <div className="hidden text-left font-alegreya_sans text-sm leading-[45px] text-dark-blue tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
             Join us in celebrating Elixir! Choose the ticket option that best
             suits your needs and secure your spot at the most unique event the
