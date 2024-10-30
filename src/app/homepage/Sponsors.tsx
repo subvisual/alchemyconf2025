@@ -38,12 +38,14 @@ export default function Sponsors() {
             Main Sponsor
           </div>
           <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px]">
-            <Image
-              src={remoteLogo}
-              alt=""
-              width={250}
-              className="translate-x-[20px] translate-y-[15px] rotate-[14.75deg] transform"
-            ></Image>
+            <a href="https://remote.com/" target="_blank">
+              <Image
+                src={remoteLogo}
+                alt=""
+                width={250}
+                className="translate-x-[20px] translate-y-[15px] rotate-[14.75deg] transform"
+              ></Image>
+            </a>
           </div>
         </div>
         <div className="flex flex-col items-start desktop:ml-28">
@@ -57,7 +59,7 @@ export default function Sponsors() {
             <AltButton
               className="w-fit font-medium"
               text="Sponsorship Prospectus"
-              href="https://ti.to/subvisual/alchemy-conf-2025"
+              href="/sponsorship.pdf"
             />{" "}
           </div>
         </div>

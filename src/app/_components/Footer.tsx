@@ -35,7 +35,7 @@ export default function Footer() {
         </div>
         <div className="flex flex-col gap-2">
           <p className="pb-6 font-koulen">SPONSORS</p>
-          <Link href="/under-construction">
+          <Link href="/sponsorship.pdf">
             Sponsorship
             <br /> Prospectus
           </Link>
