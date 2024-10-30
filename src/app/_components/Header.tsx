@@ -30,45 +30,45 @@ export default function Header() {
                 Alchemy Conf
               </p>
             </Link>
-            <ul className="hidden gap-6 font-alegreya_sans text-xl font-medium leading-[30px] text-dark-blue desktop:flex">
-              <li
-                className={`${
-                  pathname === "/about" && "-ml-0.5 font-semibold text-bordeux"
-                } transition-all hover:text-bordeux`}
-              >
-                <Link href="/about">About</Link>
-              </li>
-              <li
-                className={`${
-                  pathname === "/alchemy-2025" &&
-                  "-ml-0.5 font-semibold text-bordeux"
-                } flex items-center gap-1 transition-all hover:text-bordeux`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <Link href="/alchemy-2025">Alchemy Conf 2025</Link>
-                <DropdownArrow
-                  width={12}
-                  height={6}
-                  color={isHovered ? "#7D1D3F" : "#003049"}
-                />
-              </li>
-              <li
-                className={`${
-                  pathname === "/practical" &&
-                  "-ml-0.5 font-semibold text-bordeux"
-                } flex items-center gap-1 transition-all hover:text-bordeux`}
-                onMouseEnter={() => setIsHovered(true)}
-                onMouseLeave={() => setIsHovered(false)}
-              >
-                <Link href="/practical">Practical</Link>
-                <DropdownArrow
-                  width={12}
-                  height={6}
-                  color={isHovered ? "#7D1D3F" : "#003049"}
-                />
-              </li>{" "}
-            </ul>
+            {/* <ul className="hidden gap-6 font-alegreya_sans text-xl font-medium leading-[30px] text-dark-blue desktop:flex"> */}
+            {/*   <li */}
+            {/*     className={`${ */}
+            {/*       pathname === "/about" && "-ml-0.5 font-semibold text-bordeux" */}
+            {/*     } transition-all hover:text-bordeux`} */}
+            {/*   > */}
+            {/*     <Link href="/about">About</Link> */}
+            {/*   </li> */}
+            {/*   <li */}
+            {/*     className={`${ */}
+            {/*       pathname === "/alchemy-2025" && */}
+            {/*       "-ml-0.5 font-semibold text-bordeux" */}
+            {/*     } flex items-center gap-1 transition-all hover:text-bordeux`} */}
+            {/*     onMouseEnter={() => setIsHovered(true)} */}
+            {/*     onMouseLeave={() => setIsHovered(false)} */}
+            {/*   > */}
+            {/*     <Link href="/alchemy-2025">Alchemy Conf 2025</Link> */}
+            {/*     <DropdownArrow */}
+            {/*       width={12} */}
+            {/*       height={6} */}
+            {/*       color={isHovered ? "#7D1D3F" : "#003049"} */}
+            {/*     /> */}
+            {/*   </li> */}
+            {/*   <li */}
+            {/*     className={`${ */}
+            {/*       pathname === "/practical" && */}
+            {/*       "-ml-0.5 font-semibold text-bordeux" */}
+            {/*     } flex items-center gap-1 transition-all hover:text-bordeux`} */}
+            {/*     onMouseEnter={() => setIsHovered(true)} */}
+            {/*     onMouseLeave={() => setIsHovered(false)} */}
+            {/*   > */}
+            {/*     <Link href="/practical">Practical</Link> */}
+            {/*     <DropdownArrow */}
+            {/*       width={12} */}
+            {/*       height={6} */}
+            {/*       color={isHovered ? "#7D1D3F" : "#003049"} */}
+            {/*     /> */}
+            {/*   </li>{" "} */}
+            {/* </ul> */}
           </div>
 
           <div className="flex items-center gap-4 tablet:gap-8">
@@ -76,10 +76,10 @@ export default function Header() {
               text="Get Tickets"
               href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
             />
-            <Burguer
-              className="h-6 w-6 hover:cursor-pointer desktop:hidden"
-              onClick={toggleSidebar}
-            />
+            {/* <Burguer */}
+            {/*   className="h-6 w-6 hover:cursor-pointer desktop:hidden" */}
+            {/*   onClick={toggleSidebar} */}
+            {/* /> */}
           </div>
         </nav>
       </div>

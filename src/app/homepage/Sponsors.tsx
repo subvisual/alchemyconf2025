@@ -3,7 +3,7 @@ import Button from "../_components/Button";
 import sponsors from "../_constants/sponsors.json";
 import Image from "next/image";
 import AltButton from "../_components/AltButton";
-import remoteLogo from "@/assets/images/remote_logo.svg";
+import remoteLogo from "@/assets/images/remote_logo.png";
 import logo1 from "@/assets/images/cesium_logo.svg";
 import logo2 from "@/assets/images/getbus_logo.png";
 import logo3 from "@/assets/images/marmela_logo.svg";
@@ -48,7 +48,7 @@ export default function Sponsors() {
                 src={remoteLogo}
                 alt="Remote Logo"
                 width={250}
-                className="translate-x-[20px] translate-y-[15px] rotate-[14.75deg] transform"
+                className="translate-x-[20px] translate-y-[55px] rotate-[14.75deg] transform"
               ></Image>
             </div>
           </a>
