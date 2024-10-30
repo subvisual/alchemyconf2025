@@ -22,21 +22,22 @@ export default function Sponsors() {
   return (
     <section
       id="sponsors"
-      className="my-[136px] flex flex-col items-center justify-center overflow-hidden"
+      className="my-[136px] flex flex-col items-center justify-center"
     >
-      <div className="relative z-10 mb-32 w-[400px] text-center font-koulen text-[120px] leading-none text-dark-blue">
+      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Sponsors
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Sponsors
         </span>
-      </div>
-      <div className="relative mb-10 flex flex-row">
+      </h1>
+
+      <div className="relative mb-10 flex flex-col desktop:flex-row">
         <div className="relative">
-          <SponsorMainBlob className="top-[-80px]" />
-          <div className="absolute left-[70px] top-[5px] w-[10px] font-alegreya_sans text-[32px] font-bold text-bordeux">
+          <SponsorMainBlob className="left-[45px] top-[-80px]" />
+          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans text-[28px] font-bold text-bordeux tablet:text-[32px]">
             Main Sponsor
           </div>
-          <div className="absolute left-[240px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)]">
+          <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px]">
             <Image
               src={remoteLogo}
               alt=""
@@ -45,20 +46,20 @@ export default function Sponsors() {
             ></Image>
           </div>
         </div>
-        <div className="ml-28 flex w-[600px] flex-col items-start">
-          <div className="mb-8 w-[560px] text-left font-alegreya_sans text-2.5xl text-dark-blue">
+        <div className="flex flex-col items-start desktop:ml-28">
+          <div className="mb-8 flex flex-col items-center gap-4 px-[90px] text-center font-alegreya_sans text-xl text-dark-blue tablet:px-0 tablet:text-2xl desktop:items-start desktop:gap-8 desktop:text-left desktop:text-3xl">
             Alchemy Conf is powered by the support of our esteemed sponsors.
             <br />
             <br />
             <span className="font-bold">Want to join them?</span> <br />
             You get to support the Elixir community and elevate your brand. A
             win-win.
+            <AltButton
+              className="w-fit font-medium"
+              text="Sponsorship Prospectus"
+              href="https://ti.to/subvisual/alchemy-conf-2025"
+            />{" "}
           </div>
-          <AltButton
-            className="font-medium"
-            text="Sponsorship Prospectus"
-            href="https://ti.to/subvisual/alchemy-conf-2025"
-          />{" "}
         </div>
       </div>
 
