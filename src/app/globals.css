@@ -75,7 +75,7 @@
   transform-origin: 32% 60%;
 }
 
-@media (min-width: 390px) {
+@media (min-width: 290px) {
   .speaker-transform {
     transform: var(--translate-mobile);
   }
