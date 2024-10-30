@@ -6,7 +6,7 @@ import WebIcon from "./icon_web";
 
 interface BlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
-  variant?: number;
+  variant: number;
   name: string;
   surname: string;
   xLink: string;
@@ -16,7 +16,7 @@ interface BlobProps extends SVGProps<SVGSVGElement> {
 
 const SpeakerTitleBlob = ({
   className,
-  variant = 1,
+  variant,
   name,
   surname,
   xLink,
@@ -32,8 +32,8 @@ const SpeakerTitleBlob = ({
       width: "286",
       top: "170",
       left: "300",
-      x: "120",
-      y: "80",
+      x: "130",
+      y: "70",
       color: "#7D1D3F",
     },
     2: {
@@ -77,7 +77,7 @@ const SpeakerTitleBlob = ({
       top: "230",
       left: "230",
       x: "125",
-      y: "90",
+      y: "95",
       color: "#003049",
     },
     6: {
@@ -87,8 +87,8 @@ const SpeakerTitleBlob = ({
       width: "286",
       top: "170",
       left: "250",
-      x: "120",
-      y: "80",
+      x: "125",
+      y: "70",
       color: "#7D1D3F",
     },
   };

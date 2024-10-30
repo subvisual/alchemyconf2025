@@ -6,7 +6,7 @@ import WebIcon from "./icon_web";
 
 interface BlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
-  variant?: number;
+  variant: number;
   name: string;
   surname: string;
   xLink: string;
@@ -16,7 +16,7 @@ interface BlobProps extends SVGProps<SVGSVGElement> {
 
 const SpeakerTitleBlobMobile = ({
   className,
-  variant = 1,
+  variant,
   name,
   surname,
   xLink,
@@ -30,9 +30,9 @@ const SpeakerTitleBlobMobile = ({
       viewBox: "0 0 214 150",
       height: "150",
       width: "214",
-      top: "30",
-      left: "250",
-      x: "70",
+      top: "40",
+      left: "150",
+      x: "85",
       y: "50",
       color: "#7D1D3F",
     },
@@ -42,7 +42,7 @@ const SpeakerTitleBlobMobile = ({
       height: "188",
       width: "209",
       top: "80",
-      left: "250",
+      left: "150",
       x: "92",
       y: "95",
       color: "#003049",
@@ -53,7 +53,7 @@ const SpeakerTitleBlobMobile = ({
       height: "168",
       width: "214",
       top: "60",
-      left: "-90",
+      left: "-190",
       x: "34",
       y: "70",
       color: "#003049",
@@ -63,8 +63,8 @@ const SpeakerTitleBlobMobile = ({
       viewBox: "0 0 230 165",
       height: "165",
       width: "230",
-      top: "50",
-      left: "-100",
+      top: "40",
+      left: "-190",
       x: "35",
       y: "45",
       color: "#7D1D3F",
@@ -75,8 +75,8 @@ const SpeakerTitleBlobMobile = ({
       height: "169",
       width: "214",
       top: "110",
-      left: "170",
-      x: "75",
+      left: "70",
+      x: "85",
       y: "70",
       color: "#003049",
     },
@@ -85,8 +85,8 @@ const SpeakerTitleBlobMobile = ({
       viewBox: "0 0 214 150",
       height: "150",
       width: "214",
-      top: "20",
-      left: "170",
+      top: "30",
+      left: "75",
       x: "90",
       y: "50",
       color: "#7D1D3F",
@@ -141,10 +141,9 @@ const SpeakerTitleBlobMobile = ({
       <div
         className={`absolute flex w-[40px] flex-row`}
         style={{
-          left: `${Number(currentBlob.x) + Number(currentBlob.left)}px`,
+          left: `${Number(currentBlob.x) + Number(currentBlob.left) - 4}px`,
           top: `${Number(currentBlob.y) + Number(currentBlob.top) + 42}px`,
-
-          gap: "4px",
+          gap: "2px",
         }}
       >
         <XIcon

@@ -77,13 +77,7 @@
 
 @media (min-width: 390px) {
   .speaker-transform {
-    transform: var(--translate-mobile); /* Default for mobile */
-  }
-  .speaker-blob {
-    display: none;
-  }
-  .speaker-blob-mobile {
-    display: block;
+    transform: var(--translate-mobile);
   }
 }
 
@@ -91,22 +85,10 @@
   .speaker-transform {
     transform: var(--translate-tablet);
   }
-  .speaker-blob {
-    display: block;
-  }
-  .speaker-blob-mobile {
-    display: none;
-  }
 }
 
 @media (min-width: 1440px) {
   .speaker-transform {
     transform: var(--translate-desktop);
-  }
-  .speaker-blob {
-    display: block;
-  }
-  .speaker-blob-mobile {
-    display: none;
   }
 }

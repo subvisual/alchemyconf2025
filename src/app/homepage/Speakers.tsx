@@ -31,7 +31,7 @@ export default function Speakers() {
           Speakers
         </span>
       </h1>
-      <div className="relative mb-[74px] grid grid-cols-1 justify-center gap-x-[20px] gap-y-[30px] desktop:grid-cols-2">
+      <div className="relative grid w-full max-w-[1440px] grid-cols-1 justify-center gap-x-[20px] gap-y-[30px] desktop:grid-cols-2">
         <div className="text-left font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Alchemy Conf 2025 brings together the brightest minds in the Elixir
           community. <br /> The top experts in our community will share what
@@ -45,7 +45,7 @@ export default function Speakers() {
             // ) : (
             <div
               key={speakers.id}
-              className="speaker-transform relative flex h-[350px] w-[600px] items-center justify-center tablet:h-[500px]"
+              className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
               style={{
                 // @ts-ignore
                 "--translate-mobile": `translateX(${speakers.m_blob_x}) translateY(${speakers.m_blob_y})`,
@@ -53,55 +53,56 @@ export default function Speakers() {
                 "--translate-desktop": `translateX(${speakers.blob_x}) translateY(${speakers.blob_y})`,
               }}
             >
-              {/* <div className="hidden tablet:block"> */}
-              {/*   <SpeakerBlob */}
-              {/*     className="speaker-blob" */}
-              {/*     src={speakerImages[speakers.id - 1].src} */}
-              {/*     alt={speakers.name} */}
-              {/*     height="550px" */}
-              {/*     width="500px" */}
-              {/*     position={String(speakers.id)} */}
-              {/*     blobType={speakers.blobType} */}
-              {/*     imageX={speakers.image_x} */}
-              {/*     imageY={speakers.image_y} */}
-              {/*     imageScale={Number(speakers.image_scale)} */}
-              {/*   /> */}
-              {/* </div> */}
-              {/* <div className="block tablet:hidden"> */}
-              <SpeakerBlobMobile
-                className="speaker-blob-mobile"
-                src={speakerImages[speakers.id - 1].src}
-                alt={speakers.name}
-                height="550px"
-                width="550px"
-                position={String(speakers.id)}
-                blobType={speakers.blobType}
-                imageX={speakers.image_x_mob}
-                imageY={speakers.image_y_mob}
-                imageScale={Number(speakers.image_scale_mob)}
-              />
-              {/* </div> */}
-              {/* <SpeakerTitleBlob */}
-              {/*   name={speakers.name} */}
-              {/*   surname={speakers.surname} */}
-              {/*   variant={Number(speakers.titleBlobType)} */}
-              {/*   xLink={speakers.x_link} */}
-              {/*   gitLink={speakers.git_link} */}
-              {/*   webLink={speakers.web_link} */}
-              {/* /> */}
-              <SpeakerTitleBlobMobile
-                name={speakers.name}
-                surname={speakers.surname}
-                variant={Number(speakers.titleBlobType)}
-                xLink={speakers.x_link}
-                gitLink={speakers.git_link}
-                webLink={speakers.web_link}
-              />
+              {/* desktop / tablet */}
+              <div className="hidden tablet:flex">
+                <SpeakerBlob
+                  src={speakerImages[speakers.id - 1].src}
+                  alt={speakers.name}
+                  height="550px"
+                  width="500px"
+                  position={String(speakers.id)}
+                  blobType={speakers.blobType}
+                  imageX={speakers.image_x}
+                  imageY={speakers.image_y}
+                  imageScale={Number(speakers.image_scale)}
+                />
+                <SpeakerTitleBlob
+                  name={speakers.name}
+                  surname={speakers.surname}
+                  variant={Number(speakers.titleBlobType)}
+                  xLink={speakers.x_link}
+                  gitLink={speakers.git_link}
+                  webLink={speakers.web_link}
+                />
+              </div>
+
+              {/* mobile */}
+              <div className="flex tablet:hidden">
+                <SpeakerBlobMobile
+                  src={speakerImages[speakers.id - 1].src}
+                  alt={speakers.name}
+                  height="550px"
+                  width="550px"
+                  position={String(speakers.id)}
+                  blobType={speakers.blobType}
+                  imageX={speakers.image_x_mob}
+                  imageY={speakers.image_y_mob}
+                  imageScale={Number(speakers.image_scale_mob)}
+                />
+                <SpeakerTitleBlobMobile
+                  name={speakers.name}
+                  surname={speakers.surname}
+                  variant={Number(speakers.titleBlobType)}
+                  xLink={speakers.x_link}
+                  gitLink={speakers.git_link}
+                  webLink={speakers.web_link}
+                />
+              </div>
             </div>
           ),
           // ),
         )}
-        <div className="mt-[80px] flex justify-center font-alegreya_sans text-2.5xl font-medium text-dark-blue desktop:ml-[150px] desktop:mt-[300px]">
+        <div className="mt-[80px] flex justify-center font-alegreya_sans text-2.5xl font-medium text-dark-blue tablet:mt-[-60px] desktop:ml-[150px] desktop:mt-[300px]">
           {" "}
           ...and many more
         </div>

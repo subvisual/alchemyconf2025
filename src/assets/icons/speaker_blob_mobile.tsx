@@ -109,7 +109,7 @@ const SpeakerBlobMobile = ({
         }}
         {...props}
       >
-        <mask id={`myMask${position}`}>
+        <mask id={`myMask${position}mob`}>
           <animated.path
             fill="white"
             // d={x.to((x) => interpolator(x))}
@@ -120,7 +120,7 @@ const SpeakerBlobMobile = ({
           />
         </mask>
       </svg>
-      <div style={{ mask: `url(#myMask${position})`, overflow: "hidden" }}>
+      <div style={{ mask: `url(#myMask${position}mob)`, overflow: "hidden" }}>
         <animated.img
           src={src}
           alt={alt}
