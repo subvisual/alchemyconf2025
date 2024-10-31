@@ -102,7 +102,7 @@ export default function Speakers() {
           ),
           // ),
         )}
-        <div className="mt-[40px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[300px] desktop:text-[32px] desktop:leading-[44px]">
+        <div className="mt-[70px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[300px] desktop:text-[32px] desktop:leading-[44px]">
           {" "}
           ...and many more
         </div>
