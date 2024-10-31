@@ -3,7 +3,7 @@ import Image from "next/image";
 import venue_pic1 from "@/assets/images/venue_pic1.svg";
 import venue_pic2 from "@/assets/images/venue_pic2.svg";
 import venue_pic3 from "@/assets/images/venue_pic3.svg";
-import venue_pic4 from "@/assets/images/venue_pic4.svg";
+import venue_pic4 from "@/assets/images/francesinha.png";
 import infinite from "@/assets/images/infinite.svg";
 import VenueBlob2 from "@/assets/icons/venue_blob2";
 
@@ -120,7 +120,7 @@ export default function Venue() {
         <Image
           src={venue_pic4}
           alt=""
-          className="absolute left-[390px] top-[-50px] w-[130px] tablet:left-[505px] tablet:w-[270px]"
+          className="absolute left-[390px] top-[-50px] w-[240px] scale-125 tablet:left-[505px] tablet:w-[270px]"
         />
 
         <Image
@@ -147,8 +147,12 @@ export default function Venue() {
               Mega-Party
             </p>
           </div>
-          <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
-            <Image src={infinite} alt="Infinite" />
+          <div className="mr-4 border-l-4 border-bordeux pl-2 pt-[6px] tablet:mr-8 tablet:pl-5">
+            <Image
+              className="scale-[0.85] tablet:scale-100"
+              src={infinite}
+              alt="Infinite"
+            />
             <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-dark-blue tablet:text-[24px]">
               Francesinhas
             </p>
