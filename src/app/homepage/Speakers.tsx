@@ -3,7 +3,7 @@ import SpeakerBlob from "@/assets/icons/speaker_blob";
 import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
 import speakers from "../_constants/speakers.json";
 import speaker1 from "@/assets/images/pic_andrea_leopardi.jpg";
-import speaker2 from "@/assets/images/speaker_testpic1.svg";
+import speaker2 from "@/assets/images/pic_bruce_tate.png";
 import speaker3 from "@/assets/images/pic_hugo_barauna.jpg";
 import speaker4 from "@/assets/images/pic_sasa_juric.png";
 import speaker5 from "@/assets/images/pic_wojtek_mach.jpg";
