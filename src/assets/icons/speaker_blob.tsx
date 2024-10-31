@@ -2,7 +2,6 @@
 
 import { SVGProps, useState, useEffect } from "react";
 import { useSpring, animated, useSpringRef } from "@react-spring/web";
-import { interpolate } from "flubber";
 
 interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
@@ -46,23 +45,12 @@ const SpeakerBlob = ({
   const path6 =
     "M25.867 246.929C34.0757 206.817 2.63001 143.491 25.8667 109.625C60.4487 59.225 132.437 16.5679 192.666 3.83552C252.901 -8.8982 314.916 10.2121 351.652 59.1073C383.254 101.17 389.59 185.685 379.718 237.17C371.328 280.93 355.164 291.184 326.091 325.201C291.852 365.263 284.087 457.553 231.868 466.751C176.663 476.474 47.1104 454.128 12.8479 410.232C-18.3253 370.293 15.7473 296.38 25.867 246.929Z";
 
-  const interpolator = interpolate(path1, path2);
-
   const { x } = useSpring({
     ref: animationRef,
-    // to: async (next) => {
-    //   while (true) {
-    //     await next({ x: 1, config: { duration: 2000 } });
-    //     await next({ x: 0, config: { duration: 2000 } });
-    //   }
-    // },
     to: [
       { x: 0, config: { duration: 2000 } },
       { x: 1, config: { duration: 2000 } },
       { x: 2, config: { duration: 2000 } },
-      // { x: 3, config: { duration: 2000 } },
-      // { x: 4, config: { duration: 2000 } },
-      // { x: 5, config: { duration: 2000 } },
       { x: blobType, config: { duration: 6000 } },
     ],
     from: { x: blobType },
@@ -112,7 +100,6 @@ const SpeakerBlob = ({
         <mask id={`myMask${position}`}>
           <animated.path
             fill="white"
-            // d={x.to((x) => interpolator(x))}
             d={x.to({
               range: [0, 1, 2],
               output: [path1, path5, path3],
