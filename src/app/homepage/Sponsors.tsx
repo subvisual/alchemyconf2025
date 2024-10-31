@@ -4,10 +4,10 @@ import sponsors from "../_constants/sponsors.json";
 import Image from "next/image";
 import AltButton from "../_components/AltButton";
 import remoteLogo from "@/assets/images/remote_logo.png";
-import logo1 from "@/assets/images/cesium_logo.svg";
-import logo2 from "@/assets/images/getbus_logo.png";
-import logo3 from "@/assets/images/marmela_logo.svg";
-import logo4 from "@/assets/images/startupbraga_logo.png";
+import logo1 from "@/assets/images/marmela_logo.svg";
+import logo2 from "@/assets/images/startupbraga_logo.png";
+import logo3 from "@/assets/images/cesium_logo.svg";
+import logo4 from "@/assets/images/getbus_logo.png";
 import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
 
 export default function Sponsors() {
@@ -74,7 +74,7 @@ export default function Sponsors() {
       <div className="relative hidden desktop:flex">
         <SponsorGoldBlob className="z-0" />
         <div className="absolute right-[220px] top-[130px] w-[10px] font-alegreya_sans text-2.5xl font-bold text-yellow">
-          Gold Sponsors
+          Partners
         </div>{" "}
         <div className="absolute left-[180px] top-[100px] space-y-[86px] py-[74px]">
           {" "}

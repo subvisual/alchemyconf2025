@@ -6,12 +6,13 @@ import venue_pic3 from "@/assets/images/venue_pic3.svg";
 import venue_pic4 from "@/assets/images/venue_pic4.svg";
 import infinite from "@/assets/images/infinite.svg";
 import VenueBlob2 from "@/assets/icons/venue_blob2";
+import Link from "next/link";
 
 export default function Venue() {
   return (
     <section
       id="venue"
-      className="mt-16 flex flex-col items-center justify-center"
+      className="mt-32 flex flex-col items-center justify-center"
     >
       <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Beyond a simple conference
@@ -27,7 +28,7 @@ export default function Venue() {
               WORKSHOPS
             </p>
             <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
-              March 30 - 1 April
+              March 31 - 1 April
             </p>
           </div>
           <div className="mb-8 border-l-4 border-yellow pl-2 tablet:pl-5">
@@ -127,17 +128,28 @@ export default function Venue() {
           src={venue_pic3}
           alt=""
           height={230}
-          className="absolute bottom-[-105px] left-[50px] tablet:bottom-[-70px]"
+          className="absolute bottom-[-125px] left-[50px] tablet:bottom-[-70px]"
         />
 
-        <div className="absolute right-[100px] top-[158px] z-10 flex flex-row justify-between tablet:right-[275px] tablet:top-[270px]">
+        <div className="absolute right-[100px] top-[158px] z-10 flex flex-row justify-between tablet:right-[200px] tablet:top-[270px]">
           <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
             <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-dark-blue tablet:text-[64px]">
               10+
             </p>
-            <p className="leading-1 font-alegreya_sans text-[20px] font-normal text-dark-blue tablet:text-[24px]">
-              Side Events
-            </p>
+            <Link
+              href="https://membrz.club/alchemyconf/events"
+              target="_blank"
+              className="leading-1 hidden font-alegreya_sans text-[20px] font-normal text-dark-blue underline tablet:flex tablet:text-[24px]"
+            >
+              Alchemy on the Road
+            </Link>
+            <Link
+              href="https://membrz.club/alchemyconf/events"
+              target="_blank"
+              className="font-alegreya_sans text-[20px] font-normal text-dark-blue underline tablet:hidden tablet:text-[24px]"
+            >
+              Alchemy <br /> on the Road
+            </Link>
           </div>
           <div className="mr-4 border-l-4 border-bordeux pl-2 tablet:mr-8 tablet:pl-5">
             <p className="font-alegreya_sans text-[40px] font-bold leading-[2.25rem] text-dark-blue tablet:text-[64px]">
