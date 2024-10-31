@@ -23,7 +23,7 @@ export default function Hero() {
               <br className="hidden tablet:block desktop:hidden" /> Braga,
               Portugal
             </p>
-            <p className="text-center font-alegreya_sans text-xl text-bordeux tablet:w-[260px] tablet:w-auto tablet:text-left tablet:text-[28px] tablet:leading-[36px] desktop:w-full desktop:text-[32px] desktop:leading-[44px]">
+            <p className="text-center font-alegreya_sans text-xl text-bordeux tablet:w-[260px] tablet:text-left tablet:text-[28px] tablet:leading-[36px] desktop:w-full desktop:text-[32px] desktop:leading-[44px]">
               A week-long experience for Elixir lovers, with{" "}
               <br className="hidden tablet:block" />
               <span className="font-semibold">talks</span>,
