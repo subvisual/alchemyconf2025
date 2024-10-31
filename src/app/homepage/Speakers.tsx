@@ -23,9 +23,9 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="relative flex flex-col items-center justify-center py-[136px] desktop:py-0"
+      className="relative mt-36 flex flex-col items-center justify-center tablet:py-0"
     >
-      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-16 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Speakers
@@ -45,7 +45,7 @@ export default function Speakers() {
             // ) : (
             <div
               key={speakers.id}
-              className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
+              className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
               style={{
                 // @ts-ignore
                 "--translate-mobile": `translateX(${speakers.m_blob_x}) translateY(${speakers.m_blob_y})`,
@@ -102,7 +102,7 @@ export default function Speakers() {
           ),
           // ),
         )}
-        <div className="mt-[80px] flex justify-center font-alegreya_sans text-2.5xl font-medium text-dark-blue tablet:mt-[-60px] desktop:ml-[150px] desktop:mt-[300px]">
+        <div className="mt-[40px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[300px] desktop:text-[32px] desktop:leading-[44px]">
           {" "}
           ...and many more
         </div>
