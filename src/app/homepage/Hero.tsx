@@ -34,7 +34,7 @@ export default function Hero() {
         </div>
 
         {/* desktop */}
-        <div className="hidden tablet:hidden desktop:flex">
+        <div className="hidden tablet:hidden desktop:flex desktop:pb-[1200px]">
           <TheatroTitleBlob
             className="absolute right-[-100px] top-[166px] overflow-visible"
             style={{ height: "394px" }}
@@ -53,7 +53,7 @@ export default function Hero() {
         </div>
 
         {/* tablet */}
-        <div className="hidden tablet:flex desktop:hidden">
+        <div className="hidden tablet:flex tablet:pb-[1000px] desktop:hidden">
           <TheatroTitleBlob
             className="absolute right-[-100px] top-[166px] overflow-visible"
             style={{ height: "394px" }}
@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
 
         {/* mobile*/}
-        <div className="relative tablet:hidden">
+        <div className="relative pb-[500px] tablet:hidden">
           <TheatroTitleBlob
             className="absolute right-[-20px] top-[-80px] overflow-visible"
             style={{ height: "394px", scale: "0.6" }}

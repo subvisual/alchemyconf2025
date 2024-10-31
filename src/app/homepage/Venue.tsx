@@ -27,12 +27,12 @@ export default function Venue() {
             <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
               WORKSHOPS
             </p>
-            <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
+            <p className="pr-[8px] font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
               March 31 - 1 April
             </p>
           </div>
           <div className="mb-8 border-l-4 border-yellow pl-2 tablet:pl-5">
-            <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
+            <p className="mr-[8px] font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
               ELIXIR MEETUP
             </p>
             <p className="font-alegreya_sans text-xl font-bold text-dark-blue tablet:text-[30px] desktop:text-[40px] desktop:leading-[40px]">
@@ -65,7 +65,7 @@ export default function Venue() {
         </div>
       </div>
 
-      <div className="relative desktop:right-[300px]">
+      {/*<div className="relative desktop:right-[300px]">
         <VenueBlob1 className="h-auto w-[600px] pt-12 tablet:w-[1070px] tablet:pt-0" />
         <div className="absolute left-[50px] top-[140px] hidden tablet:flex">
           <div className="relative h-[234px] w-[325px] rotate-[-10deg] overflow-hidden rounded-lg bg-grey drop-shadow-[-12px_12px_12px_rgba(0,48,73,0.24)]">
@@ -170,7 +170,7 @@ export default function Venue() {
             </p>
           </div>
         </div>
-      </div>
+      </div>*/}
     </section>
   );
 }

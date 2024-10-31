@@ -107,11 +107,11 @@ export default function Sponsors() {
         </div>
       </div>
 
-      {/* mobile */}
+      {/* tablet / mobile */}
       <div className="relative desktop:hidden">
         <SponsorGoldBlob className="tablet: z-0 translate-x-[40px] tablet:translate-y-[-90px] tablet:scale-[0.8]" />
         <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-2.5xl font-bold text-yellow">
-          Gold Sponsors
+          Partners
         </div>
         <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 transition-transform mobile:grid-cols-1 tablet:grid-cols-2">
