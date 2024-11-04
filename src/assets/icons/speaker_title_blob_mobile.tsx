@@ -75,7 +75,7 @@ const SpeakerTitleBlobMobile = ({
       height: "165",
       width: "230",
       top: "40",
-      left: "-190",
+      left: isNonChromium ? "-210" : "-190",
       x: "35",
       y: "45",
       color: "#7D1D3F",
