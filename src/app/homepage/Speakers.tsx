@@ -1,3 +1,5 @@
+"use client";
+import { useEffect, useState } from "react";
 import AltButton from "../_components/AltButton";
 import SpeakerBlob from "@/assets/icons/speaker_blob";
 import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
@@ -12,6 +14,16 @@ import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import SpeakerTitleBlobMobile from "@/assets/icons/speaker_title_blob_mobile";
 
 export default function Speakers() {
+  // const isNonChromium =
+  //   typeof navigator !== "undefined" && /firefox/i.test(navigator.userAgent);
+  const [isNonChromium, setIsNonChromium] = useState(false);
+
+  useEffect(() => {
+    const isNonChromiumBrowser =
+      /firefox|safari/i.test(navigator.userAgent) &&
+      !/chrome|android/i.test(navigator.userAgent);
+    setIsNonChromium(isNonChromiumBrowser);
+  }, []);
   const speakerImages = [
     speaker1,
     speaker2,
@@ -48,9 +60,9 @@ export default function Speakers() {
               className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
               style={{
                 // @ts-ignore
-                "--translate-mobile": `translateX(${speakers.m_blob_x}) translateY(${speakers.m_blob_y})`,
-                "--translate-tablet": `translateX(${speakers.t_blob_x}) translateY(${speakers.t_blob_y})`,
-                "--translate-desktop": `translateX(${speakers.blob_x}) translateY(${speakers.blob_y})`,
+                "--translate-mobile": `translateX(${isNonChromium ? speakers.m_blob_x_ff : speakers.m_blob_x}px) translateY(${speakers.m_blob_y}px)`,
+                "--translate-tablet": `translateX(${speakers.t_blob_x}px) translateY(${speakers.t_blob_y}px)`,
+                "--translate-desktop": `translateX(${isNonChromium ? speakers.blob_x_ff : speakers.blob_x}px) translateY(${speakers.blob_y}px)`,
               }}
             >
               {/* desktop / tablet */}
