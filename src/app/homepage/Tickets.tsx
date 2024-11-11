@@ -27,21 +27,18 @@ export default function Tickets() {
           </div>
 
           <div className="w-[400px] flex-col pl-8 tablet:left-[100px] tablet:flex desktop:pl-20">
-            {/* early bird */}
             <div className="mb-16 border-l-4 border-yellow pl-5">
               <p className="mb-4 flex flex-row items-center font-alegreya_sans text-2xl font-bold leading-none text-dark-blue tablet:text-3xl desktop:text-5xl">
                 <Image src={ticketIcon} alt="" width={60} className="mr-4" />
-                Early Bird
+                Regular
               </p>
               <p className="w-[250px] font-alegreya_sans text-xl text-dark-blue desktop:text-2xl">
-                Full access to all talks and networking events. Grab yours now!
+                Full access to all talks and networking events
               </p>
-              <div className="mt-9 flex flex-row items-center">
-                <div className="mr-8 font-koulen text-4xl text-dark-blue tablet:text-5xl">
-                  200
-                  <span className="font-koulen text-[32px] text-dark-blue">
-                    €
-                  </span>
+              <div className="mt-9 flex flex-row items-center font-alegreya_sans font-semibold">
+                <div className="mr-8 text-4xl text-dark-blue tablet:text-5xl">
+                  300
+                  <span className="text-[32px] text-dark-blue">€</span>
                 </div>
                 <AltButton
                   className="font-medium"
@@ -50,30 +47,6 @@ export default function Tickets() {
                 />
               </div>
             </div>
-
-            {/* Regular ticket (show later) */}
-            {/* <div className="mb-16 border-l-4 border-yellow pl-5">
-              <p className="mb-4 flex flex-row items-center font-alegreya_sans text-2xl font-bold leading-none text-dark-blue tablet:text-3xl desktop:text-5xl">
-                <Image src={ticketIcon} alt="" width={60} className="mr-4" />
-                Regular
-              </p>
-              <p className="w-[250px] font-alegreya_sans text-xl text-dark-blue desktop:text-2xl">
-                Full access to all talks and networking events
-              </p>
-              <div className="mt-9 flex flex-row items-center">
-                <div className="mr-8 font-koulen text-4xl text-dark-blue tablet:text-5xl">
-                  300
-                  <span className="font-koulen text-[32px] text-dark-blue">
-                    €
-                  </span>
-                </div>
-                <AltButton
-                  className="font-medium"
-                  text="Get Tickets"
-                  href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
-                />
-              </div>
-            </div> */}
 
             <div className="mb-8 border-l-4 border-yellow pl-5">
               <div className="mb-4 flex flex-row items-center font-alegreya_sans text-2xl font-bold leading-none text-dark-blue tablet:text-3xl desktop:text-5xl">
