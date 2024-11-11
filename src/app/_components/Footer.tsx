@@ -2,6 +2,7 @@ import Link from "next/link";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import FooterBlob from "@/assets/icons/footer_blob";
 import SubvisualIcon from "@/assets/icons/subvisual_icon";
+
 export default function Footer() {
   return (
     <div className="relative w-full">
@@ -34,8 +35,9 @@ export default function Footer() {
       </footer>
       <div className="flex items-center justify-center pb-6 font-alegreya_sans text-base text-background">
         Powered by &nbsp;
-        <a target="_blank" href="https://subvisual.com/">
-          <SubvisualIcon className="mb-1 h-4 w-auto" />
+        <a className="underline" target="_blank" href="https://subvisual.com/">
+          {/* <SubvisualIcon className="mb-1 h-4 w-auto" /> */}
+          Subvisual
         </a>
       </div>
     </div>

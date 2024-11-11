@@ -4,10 +4,10 @@ interface SubvisualIconProps extends SVGProps<SVGSVGElement> {
   className?: string;
 }
 
-const SubvisualIcon = ({ className = "", ...props }: SubvisualIconProps) => (
+const SubvisualIcon = ({ className, ...props }: SubvisualIconProps) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
-    className={`h-auto ${className}`}
+    className={`${className}`}
     viewBox="0 0 188 32"
     fill="none"
     {...props}
