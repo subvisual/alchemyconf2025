@@ -1,14 +1,14 @@
 import Link from "next/link";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import FooterBlob from "@/assets/icons/footer_blob";
-
+import SubvisualIcon from "@/assets/icons/subvisual_icon";
 export default function Footer() {
   return (
     <div className="relative w-full">
       <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 -translate-x-1/2 transform">
         <FooterBlob className="w-full max-w-[1440px] translate-y-[0px] overflow-visible tablet:translate-y-[100px]" />
       </div>
-      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:text-xl">
+      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-16 tablet:text-xl">
         <Link
           href="/"
           className="mb-4 flex h-fit translate-y-[-10px] items-center gap-4 outline-none tablet:mb-0"
@@ -32,6 +32,12 @@ export default function Footer() {
           </div>
         </div>
       </footer>
+      <div className="flex items-center justify-center pb-6 font-alegreya_sans text-base text-background">
+        Powered by &nbsp;
+        <a target="_blank" href="https://subvisual.com/">
+          <SubvisualIcon className="mb-1 h-4 w-auto" />
+        </a>
+      </div>
     </div>
   );
 }
