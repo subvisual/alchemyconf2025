@@ -86,8 +86,8 @@ const SpeakerBlob = ({
     >
       <svg
         width="313"
-        height="432"
-        viewBox="0 0 313 432"
+        height="452"
+        viewBox="0 0 313 452"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{
@@ -114,7 +114,7 @@ const SpeakerBlob = ({
           style={{
             translateX: `${imageX}`,
             translateY: `${imageY}`,
-            height: `${height}`,
+            objectFit: "contain",
             scale,
           }}
         />
