@@ -5,14 +5,16 @@ import SpeakerBlob from "@/assets/icons/speaker_blob";
 import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
 import speakers from "../_constants/speakers.json";
 import speaker1 from "@/assets/images/pic_aaron_cruz.png";
-import speaker2 from "@/assets/images/pic_andrea_leopardi.jpg";
-import speaker3 from "@/assets/images/pic_bruce_tate.png";
-import speaker4 from "@/assets/images/pic_hugo_barauna.jpg";
-import speaker5 from "@/assets/images/pic_sasa_juric.png";
-import speaker6 from "@/assets/images/speaker_testpic2.svg";
-import speaker7 from "@/assets/images/pic_tobias_pfeiffer.jpg";
-import speaker8 from "@/assets/images/pic_wojtek_mach.jpg";
-import speaker9 from "@/assets/images/pic_zach_daniel.jpg";
+import speaker2 from "@/assets/images/speaker_testpic1.svg";
+import speaker3 from "@/assets/images/pic_andrea_leopardi.jpg";
+import speaker4 from "@/assets/images/pic_bruce_tate.png";
+import speaker5 from "@/assets/images/pic_hugo_barauna.jpg";
+import speaker6 from "@/assets/images/speaker_testpic3.svg";
+import speaker7 from "@/assets/images/pic_sasa_juric.png";
+import speaker8 from "@/assets/images/speaker_testpic2.svg";
+import speaker9 from "@/assets/images/pic_tobias_pfeiffer.jpg";
+import speaker10 from "@/assets/images/pic_wojtek_mach.jpg";
+import speaker11 from "@/assets/images/pic_zach_daniel.jpg";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import SpeakerTitleBlobMobile from "@/assets/icons/speaker_title_blob_mobile";
 
@@ -37,6 +39,8 @@ export default function Speakers() {
     speaker7,
     speaker8,
     speaker9,
+    speaker10,
+    speaker11,
   ];
   return (
     <section
