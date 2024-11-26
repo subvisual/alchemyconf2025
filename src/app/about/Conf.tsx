@@ -1,8 +1,8 @@
 export default function Conf() {
   return (
     <section
-      id="conf"
-      className="mb-20 mt-40 flex flex-col items-center justify-center px-32 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
+      id="conference"
+      className="mb-20 mt-40 flex scroll-mt-32 flex-col items-center justify-center px-32 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
       <h1 className="relative pb-6 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         About Alchemy Conf
