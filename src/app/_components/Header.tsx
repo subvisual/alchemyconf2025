@@ -12,6 +12,13 @@ export default function Header() {
   const pathname = usePathname();
   const [showSidebar, setShowSidebar] = useState(false);
 
+  const getNavLinkClass = (path: string) => 
+    `px-3 py-8 transition-all ${
+      pathname === path
+        ? "bg-bordeux text-background"
+        : "hover:bg-bordeux hover:text-background"
+    }`;
+
   const toggleSidebar = () => setShowSidebar(!showSidebar);
 
   return (
@@ -32,13 +39,17 @@ export default function Header() {
               <li>
                 <Link 
                   href="/about" 
-                  className={`px-3 py-8 transition-all ${
-                    pathname === "/about"
-                      ? "bg-bordeux text-background"
-                      : "hover:bg-bordeux hover:text-background"
-                  }`}
+                  className={getNavLinkClass("/about")}
                 >
                   About
+                </Link>
+              </li>
+              <li>
+                <Link 
+                  href="/speakers" 
+                  className={getNavLinkClass("/speakers")}
+                >
+                  Speakers
                 </Link>
               </li>
             </ul>

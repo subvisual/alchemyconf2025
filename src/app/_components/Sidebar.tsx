@@ -59,20 +59,13 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
               About
             </Link>
           </li>
-          {/* <li */}
-          {/*   className={`${pathname === "/alchemy-2025" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`} */}
-          {/* > */}
-          {/*   <Link href="/alchemy-2025" onClick={toggleSidebar}> */}
-          {/*     Alchemy Conf 2025 */}
-          {/*   </Link> */}
-          {/* </li> */}
-          {/* <li */}
-          {/*   className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`} */}
-          {/* > */}
-          {/*   <Link href="/practical" onClick={toggleSidebar}> */}
-          {/*     Practical */}
-          {/*   </Link> */}
-          {/* </li> */}
+          <li
+            className={`${pathname === "/speakers" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
+            <Link href="/speakers" onClick={toggleSidebar}>
+              Speakers
+            </Link>
+          </li>
           <li>
             <Button
               className="text-center"
