@@ -60,17 +60,10 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             </Link>
           </li>
           <li
-            className={`${pathname === "/alchemy-2025" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+            className={`${pathname === "/speakers" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
           >
-            <Link href="/alchemy-2025" onClick={toggleSidebar}>
-              Alchemy Conf 2025
-            </Link>
-          </li>
-          <li
-            className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
-          >
-            <Link href="/practical" onClick={toggleSidebar}>
-              Practical
+            <Link href="/speakers" onClick={toggleSidebar}>
+              Speakers
             </Link>
           </li>
           <li>
@@ -84,7 +77,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
       </div>
       {showSidebar && (
         <div
-          className="bg-black fixed inset-0 z-30 bg-opacity-50"
+          className="fixed inset-0 z-30 bg-black bg-opacity-50"
           onClick={toggleSidebar}
         />
       )}

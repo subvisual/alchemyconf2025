@@ -1,18 +1,22 @@
 export default function CodeConduct() {
   return (
-    <section className="my-[136px] flex flex-col items-center justify-start px-32">
-      <div className="mb-16 font-koulen text-9xl text-dark-blue">
+    <section
+      id="code-of-conduct"
+      className="mb-[136px] flex scroll-mt-32 flex-col items-center justify-start px-32"
+    >
+      <h1 className="relative pb-6 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         Code of Conduct
-      </div>
-      <div className="w-[800px] text-center font-zilla_slab text-2xl text-dark-blue">
+        <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
+          Code of Conduct
+        </span>
+      </h1>
+      <div className="w-full min-w-[250px] max-w-screen-desktop text-left font-alegreya_sans text-xl text-dark-blue tablet:pb-20 tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
         <p>
           Alchemy Conf 2025 is dedicated to providing a harassment-free
           conference experience for everyone.
         </p>
         <br />
-        <div className="text-left font-semibold text-bordeux">
-          Harassment includes:
-        </div>
+        <div className="text-left font-bold">Harassment includes:</div>
         <ul className="list-inside list-disc pl-6 text-left marker:text-lg">
           <li>
             offensive verbal comments related to gender, gender identity and
@@ -28,7 +32,7 @@ export default function CodeConduct() {
           <li>inappropriate physical contact;</li>
           <li>unwelcome sexual attention.</li>
         </ul>
-        <div className="mt-8 font-semibold text-bordeux">
+        <div className="mt-8 font-bold">
           We do not tolerate harassment of conference participants in any form.
           Participants violating these rules may be sanctioned or expelled from
           the conference without a refund at the discretion of the conference
