@@ -50,19 +50,10 @@ const SpeakerBlobMobile = ({
 
   const { x } = useSpring({
     ref: animationRef,
-    // to: async (next) => {
-    //   while (true) {
-    //     await next({ x: 1, config: { duration: 2000 } });
-    //     await next({ x: 0, config: { duration: 2000 } });
-    //   }
-    // },
     to: [
       { x: 0, config: { duration: 2000 } },
       { x: 1, config: { duration: 2000 } },
       { x: 2, config: { duration: 2000 } },
-      // { x: 3, config: { duration: 2000 } },
-      // { x: 4, config: { duration: 2000 } },
-      // { x: 5, config: { duration: 2000 } },
       { x: blobType, config: { duration: 6000 } },
     ],
     from: { x: blobType },
@@ -127,7 +118,7 @@ const SpeakerBlobMobile = ({
           style={{
             translateX: `${imageX}`,
             translateY: `${imageY}`,
-            height: `${height}`,
+            objectFit: "contain",
             scale,
           }}
         />
