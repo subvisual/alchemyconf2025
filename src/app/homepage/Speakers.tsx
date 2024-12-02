@@ -4,12 +4,17 @@ import AltButton from "../_components/AltButton";
 import SpeakerBlob from "@/assets/icons/speaker_blob";
 import SpeakerTitleBlob from "@/assets/icons/speaker_title_blob";
 import speakers from "../_constants/speakers.json";
-import speaker1 from "@/assets/images/pic_andrea_leopardi.jpg";
-import speaker2 from "@/assets/images/pic_bruce_tate.png";
-import speaker3 from "@/assets/images/pic_hugo_barauna.jpg";
-import speaker4 from "@/assets/images/pic_sasa_juric.png";
-import speaker5 from "@/assets/images/pic_wojtek_mach.jpg";
-import speaker6 from "@/assets/images/pic_zach_daniel.jpg";
+import speaker1 from "@/assets/images/pic_aaron_cruz.png";
+import speaker2 from "@/assets/images/pic_andre_albuquerque.png";
+import speaker3 from "@/assets/images/pic_andrea_leopardi.jpg";
+import speaker4 from "@/assets/images/pic_bruce_tate.png";
+import speaker5 from "@/assets/images/pic_hugo_barauna.jpg";
+import speaker6 from "@/assets/images/pic_julia_mathias.jpg";
+import speaker7 from "@/assets/images/pic_sasa_juric.png";
+import speaker8 from "@/assets/images/pic_shannon_ryan.jpg";
+import speaker9 from "@/assets/images/pic_tobias_pfeiffer.jpg";
+import speaker10 from "@/assets/images/pic_wojtek_mach.jpg";
+import speaker11 from "@/assets/images/pic_zach_daniel.jpg";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import SpeakerTitleBlobMobile from "@/assets/icons/speaker_title_blob_mobile";
 
@@ -31,11 +36,16 @@ export default function Speakers() {
     speaker4,
     speaker5,
     speaker6,
+    speaker7,
+    speaker8,
+    speaker9,
+    speaker10,
+    speaker11,
   ];
   return (
     <section
       id="speakers"
-      className="relative mt-36 flex flex-col items-center justify-center tablet:py-0"
+      className="relative mt-36 flex flex-col items-center justify-center tablet:py-0 desktop:mb-72"
     >
       <h1 className="relative pb-16 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
@@ -71,7 +81,7 @@ export default function Speakers() {
                   src={speakerImages[speakers.id - 1].src}
                   alt={speakers.name}
                   height="550px"
-                  width="500px"
+                  width="550px"
                   position={String(speakers.id)}
                   blobType={speakers.blobType}
                   imageX={speakers.image_x}
@@ -114,10 +124,10 @@ export default function Speakers() {
           ),
           // ),
         )}
-        <div className="mt-[70px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[300px] desktop:text-[32px] desktop:leading-[44px]">
-          {" "}
-          ...and many more
-        </div>
+        {/* <div className="mt-[70px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[200px] desktop:text-[32px] desktop:leading-[44px]"> */}
+        {/*   {" "} */}
+        {/*   ...and many more */}
+        {/* </div> */}
       </div>
       {/* <div className="relative mb-[336px] mt-[-250px] flex w-full flex-col items-end pr-[150px]"> */}
       {/*   <div className="pb-[20px] pr-[100px] font-alegreya_sans text-2.5xl font-medium text-dark-blue"> */}
