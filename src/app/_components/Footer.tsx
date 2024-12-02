@@ -6,10 +6,10 @@ import SubvisualIcon from "@/assets/icons/subvisual_icon";
 export default function Footer() {
   return (
     <div className="relative w-full">
-      <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 -translate-x-1/2 transform">
-        <FooterBlob className="w-full max-w-[1440px] translate-y-[0px] overflow-visible tablet:translate-y-[100px]" />
+      <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 translate-x-[-1300px] translate-y-[320px] tablet:-translate-x-1/2 tablet:translate-y-[300px] transform">
+        <FooterBlob className="w-full max-w-[1440px] translate-y-[-50px] tablet:translate-y-[80px]" />
       </div>
-      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-16 tablet:text-xl">
+      <footer className="z-50 mx-auto flex max-w-desktop flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-16 tablet:text-xl">
         <Link
           href="/"
           className="mb-4 flex h-fit translate-y-[-10px] items-center gap-4 outline-none tablet:mb-0"
@@ -18,14 +18,19 @@ export default function Footer() {
           <p className="text-nowrap font-koulen text-[25px]">Alchemy Conf</p>
         </Link>
         <div className="flex flex-col gap-8 tablet:flex-row tablet:gap-24">
-          <div className="w-fit">
+          <div className="flex w-fit flex-col gap-2">
+            <p className="pb-1 font-koulen tablet:pb-6">ABOUT</p>
+            <Link href="/about#conference">About Alchemy Conf</Link>
+            <Link href="/about#code-of-conduct">Code of Conduct</Link>
+          </div>
+          <div className="flex w-fit flex-col gap-2">
             <p className="pb-1 font-koulen tablet:pb-6">SPONSORS</p>
             <Link href="/sponsorship.pdf">
               Sponsorship
               <br /> Prospectus
             </Link>
           </div>
-          <div className="w-fit">
+          <div className="flex w-fit flex-col gap-2">
             <p className="pb-1 font-koulen tablet:pb-6">FOLLOW US</p>
             <Link href="https://x.com/alchemy_conf" target="_blank">
               X
