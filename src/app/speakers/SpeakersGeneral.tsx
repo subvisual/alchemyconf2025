@@ -33,44 +33,52 @@ const speakerImages = [
 interface InfoSectionProps {
   title: string;
   content: string;
-  color?: 'dark-blue' | 'yellow';
+  color?: "dark-blue" | "yellow";
 }
 
-const InfoSection = ({ title, content, color = 'dark-blue' }: InfoSectionProps) => (
-  <div className="flex gap-8 pb-8">
-  <div className="flex items-stretch">
-    <div className="relative flex w-8 flex-col items-start justify-start">
-      <p
-        className={`justify font-normal uppercase text-${color}`}
-        style={{
-          writingMode: "vertical-rl",
-          transform: "rotate(180deg) translateY(-6%)",
-        }}
-      >
-        {title}
-      </p>
-      <span
-        className={`absolute right-0 top-0 h-full w-1 bg-${color}`}
-        style={{
-          top: "4%",
-        }}
-      ></span>
+const InfoSection = ({
+  title,
+  content,
+  color = "dark-blue",
+}: InfoSectionProps) => (
+  <div className="flex gap-8 pl-8 pb-8">
+    <div className="flex items-stretch">
+      <div className="relative flex w-8 flex-col items-start justify-start">
+        <p
+          className={`justify font-normal uppercase text-${color}`}
+          style={{
+            writingMode: "vertical-rl",
+            transform: "rotate(180deg) translateY(-6%)",
+          }}
+        >
+          {title}
+        </p>
+        <span
+          className={`absolute right-0 top-0 h-full w-1 bg-${color}`}
+          style={{
+            top: "4%",
+          }}
+        ></span>
+      </div>
+    </div>
+    <div className="flex-1">
+      <p>{content}</p>
     </div>
   </div>
-  <div className="flex-1">
-    <p>{content}</p>
-  </div>
-</div>
 );
 
-  export default function SpeakersGeneral() {
+export default function SpeakersGeneral() {
   return (
-    <section className="mb-20 mt-40 scroll-mt-32 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64">
+    <section className="mb-20 mt-40 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64">
       {speakers.map((speaker) => (
-        <div key={speaker.id} className="flex w-full max-w-screen-desktop flex-row gap-6 p-6 mb-20">
+        <div
+          key={speaker.id}
+          id={`speaker-${speaker.id}`}
+          className="mb-20 flex w-full max-w-screen-desktop scroll-mt-48 flex-row gap-6 p-6"
+        >
           {speaker.id % 2 === 1 ? (
             <>
-              <div className="w-1/3 mt-[100px]">
+              <div className="mt-[120px] w-1/3">
                 <SpeakerBlob
                   src={speakerImages[speaker.id - 1].src}
                   alt={speaker.name}
@@ -90,15 +98,31 @@ const InfoSection = ({ title, content, color = 'dark-blue' }: InfoSectionProps) 
                     {speaker.name + " " + speaker.surname}{" "}
                   </span>
                 </h1>
-                <div className="flex mt-[-20px] items-center justify-center space-x-4 pb-8">
+                <div className="mt-[-20px] flex items-center justify-center space-x-4 pb-8">
                   <p className="font-bold text-dark-blue">FOLLOW</p>
                   <XIcon link={speaker.x_link} />
                   <GithubIcon link={speaker.git_link} />
                   <WebIcon link={speaker.web_link} />
                 </div>
-                <InfoSection title="Short Bio" content={speaker.bio || ''} color="dark-blue"/>
-                <InfoSection title="Talk Topic" content={speaker.talk_title || ''} color="yellow"/>
-                <InfoSection title="Workshop" content={speaker.workshop_title || ''} color="yellow"/>
+                <InfoSection
+                  title="Short Bio"
+                  content={speaker.bio || ""}
+                  color="dark-blue"
+                />
+                {speaker.talk_title && (
+                  <InfoSection
+                    title="Talk Topic"
+                    content={speaker.talk_title}
+                    color="yellow"
+                  />
+                )}
+                {speaker.workshop_title && (
+                  <InfoSection
+                    title="Workshop"
+                    content={speaker.workshop_title}
+                    color="yellow"
+                  />
+                )}
               </div>
             </>
           ) : (
@@ -110,17 +134,33 @@ const InfoSection = ({ title, content, color = 'dark-blue' }: InfoSectionProps) 
                     {speaker.name + " " + speaker.surname}{" "}
                   </span>
                 </h1>
-                <div className="flex mt-[-20px] items-center justify-center space-x-4 pb-8">
+                <div className="mt-[-20px] flex items-center justify-center space-x-4 pb-8">
                   <p className="font-bold text-dark-blue">FOLLOW</p>
                   <XIcon link={speaker.x_link} />
                   <GithubIcon link={speaker.git_link} />
                   <WebIcon link={speaker.web_link} />
                 </div>
-                <InfoSection title="Short Bio" content={speaker.bio || ''} color="dark-blue"/>
-                <InfoSection title="Talk Topic" content={speaker.talk_title || ''} color="yellow"/>
-                <InfoSection title="Workshop" content={speaker.workshop_title || ''} color="yellow"/>
+                <InfoSection
+                  title="Short Bio"
+                  content={speaker.bio || ""}
+                  color="dark-blue"
+                />
+                {speaker.talk_title && (
+                  <InfoSection
+                    title="Talk Topic"
+                    content={speaker.talk_title}
+                    color="yellow"
+                  />
+                )}
+                {speaker.workshop_title && (
+                  <InfoSection
+                    title="Workshop"
+                    content={speaker.workshop_title}
+                    color="yellow"
+                  />
+                )}
               </div>
-              <div className="w-1/3 mt-[100px]">
+              <div className="mt-[120px] w-1/3">
                 <SpeakerBlob
                   src={speakerImages[speaker.id - 1].src}
                   alt={speaker.name}

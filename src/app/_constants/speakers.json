@@ -25,7 +25,7 @@
     "bio": "Aaron is a Freelance Elixir Developer who streams coding on twitch https://linktr.ee/mraaroncruz. Elixir Vienna organizer. Runner. Ex-cook.",
     "talk_title": "TBD",
     "talk_description": "TBD",
-    "workshop_title": "TBD",
+    "workshop_title": "",
     "workshop_description": "TBD"
   },
   {
@@ -51,7 +51,11 @@
     "x_link": "https://x.com/lejboua",
     "git_link": "https://github.com/amalbuquerque",
     "web_link": "",
-    "bio": "André Albuquerque is a staff backend engineer at Remote who co-authored the Mastering Elixir book. He uses Elixir every day to develop and scale the Remote platform, currently with a focus on the Fintech area. He has a master's degree in distributed systems and software engineering. In his time off, he likes to build his own keyboards, practice obstacle course racing, and spend time with his wife and five kids."
+    "bio": "André Albuquerque is a staff backend engineer at Remote who co-authored the Mastering Elixir book. He uses Elixir every day to develop and scale the Remote platform, currently with a focus on the Fintech area. He has a master's degree in distributed systems and software engineering. In his time off, he likes to build his own keyboards, practice obstacle course racing, and spend time with his wife and five kids.",
+    "talk_title": "TBD",
+    "talk_description": "TBD",
+    "workshop_title": "",
+    "workshop_description": "TBD"
   },
   {
     "id": 3,
@@ -76,7 +80,11 @@
     "x_link": "https://x.com/whatyouhide",
     "git_link": "https://github.com/whatyouhide",
     "web_link": "https://andrealeopardi.com/",
-    "bio": "Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He’s a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair."
+    "bio": "Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He’s a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""
   },
   {
     "id": 4,
@@ -101,7 +109,11 @@
     "x_link": "https://x.com/redrapids",
     "git_link": "https://github.com/batate",
     "web_link": "https://grox.io/",
-    "bio": "Bruce Tate lives in Chattanooga, Tennessee. An avid adventurer, he enjoys kayaking rivers, indoor climbing, and boating. He has actively participated in the launch of three companies and served as the CTO of icanmakeitbetter. With a strong focus on education, Bruce is an author of over a dozen books and a prominent figure in the Elixir community as a speaker, author, editor, and conference organizer. In 2018, he founded Groxio, a platform dedicated to teaching computer languages. Bruce Tate's contributions in the field of programming education have made a significant impact nationally and beyond."
+    "bio": "Bruce Tate lives in Chattanooga, Tennessee. An avid adventurer, he enjoys kayaking rivers, indoor climbing, and boating. He has actively participated in the launch of three companies and served as the CTO of icanmakeitbetter. With a strong focus on education, Bruce is an author of over a dozen books and a prominent figure in the Elixir community as a speaker, author, editor, and conference organizer. In 2018, he founded Groxio, a platform dedicated to teaching computer languages. Bruce Tate's contributions in the field of programming education have made a significant impact nationally and beyond.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""
   },
   {
     "id": 5,
@@ -126,7 +138,11 @@
     "x_link": "https://x.com/hugobarauna",
     "git_link": "https://github.com/hugobarauna",
     "web_link": "",
-    "bio": "Hugo is a developer advocate at Livebook. He’s also the founder of Elixir Radar. Before that, he co-founded Plataformatec, the company where Elixir was created."
+    "bio": "Hugo is a developer advocate at Livebook. He’s also the founder of Elixir Radar. Before that, he co-founded Plataformatec, the company where Elixir was created.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "",
+    "workshop_description": ""
   },
   {
     "id": 6,
@@ -151,7 +167,11 @@
     "x_link": "https://x.com/thejuliams",
     "git_link": "",
     "web_link": "",
-    "bio": "Journey spanning roles in design, documentary research, and even assisting as an art director, before diving into coding in 2021. She found her stride with Elixir and now builds real-time systems at Turn.io, where she’s passionate about using technology to make a tangible difference. At Turn.io, Julia works across a variety of projects, creating solutions that connect people to essential support—whether in crisis counseling, healthcare, or community engagement—when it matters most. Outside of code, Julia is a ballet enthusiast, a Formula 1 fan, and a newly rediscovered poet. And for the record, she’s not a 1D fan, but she does love BTS! (Ask her who her bias is in person 😊)"
+    "bio": "Journey spanning roles in design, documentary research, and even assisting as an art director, before diving into coding in 2021. She found her stride with Elixir and now builds real-time systems at Turn.io, where she’s passionate about using technology to make a tangible difference. At Turn.io, Julia works across a variety of projects, creating solutions that connect people to essential support—whether in crisis counseling, healthcare, or community engagement—when it matters most. Outside of code, Julia is a ballet enthusiast, a Formula 1 fan, and a newly rediscovered poet. And for the record, she’s not a 1D fan, but she does love BTS! (Ask her who her bias is in person 😊)",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "",
+    "workshop_description": ""
   },
   {
     "id": 7,
@@ -176,7 +196,11 @@
     "x_link": "https://x.com/sasajuric",
     "git_link": "https://github.com/sasa1977",
     "web_link": "https://medium.com/@sasa.juric",
-    "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com."
+    "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""
   },
   {
     "id": 8,
@@ -201,7 +225,11 @@
     "x_link": "https://x.com/",
     "git_link": "https://github.com/",
     "web_link": "https://",
-    "bio": ""
+    "bio": "",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": "TBD"
   },
   {
     "id": 9,
@@ -226,7 +254,11 @@
     "x_link": "https://x.com/PragTob",
     "git_link": "https://github.com/PragTob",
     "web_link": "https://www.xing.com/profiles/Tobias_Pfeiffer14",
-    "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com."
+    "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""
   },
   {
     "id": 10,
@@ -251,7 +283,11 @@
     "x_link": "https://x.com/wojtekmach",
     "git_link": "https://github.com/wojtekmach",
     "web_link": "https://hex.pm/users/wojtekmach",
-    "bio": "Wojtek Mach is a developer based in Kraków, Poland. He works at Dashbit helping organisations adopt and run Elixir in production as well as advance the Elixir Open Source ecosystem. He is a member of Hex, Ecto, and ExDoc core teams. He is also the creator of MyXQL, Livebook Desktop, and Req HTTP client."
+    "bio": "Wojtek Mach is a developer based in Kraków, Poland. He works at Dashbit helping organisations adopt and run Elixir in production as well as advance the Elixir Open Source ecosystem. He is a member of Hex, Ecto, and ExDoc core teams. He is also the creator of MyXQL, Livebook Desktop, and Req HTTP client.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""
   },
   {
     "id": 11,
@@ -276,6 +312,10 @@
     "x_link": "https://x.com/ZachSDaniel1",
     "git_link": "https://github.com/zachdaniel",
     "web_link": "https://www.zachdaniel.dev/",
-    "bio": "Zach is the author of the Ash Framework, a resource-oriented declarative design framework for Elixir, and principal platform engineer at Alembic. He has a passion for declarative design, functional programming, and contributing to the open source community. When not programming, he enjoys spending time with his friends and family and studying the Japanese language."
+    "bio": "Zach is the author of the Ash Framework, a resource-oriented declarative design framework for Elixir, and principal platform engineer at Alembic. He has a passion for declarative design, functional programming, and contributing to the open source community. When not programming, he enjoys spending time with his friends and family and studying the Japanese language.",
+    "talk_title": "TBD",
+    "talk_description": "",
+    "workshop_title": "TBD",
+    "workshop_description": ""  
   }
 ]

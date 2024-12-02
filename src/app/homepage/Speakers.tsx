@@ -60,70 +60,65 @@ export default function Speakers() {
           they’ve learned about building, innovation, and real-world
           applications.
         </div>
-        {speakers.map(
-          (speakers) => (
-            // speakers.id === 8 ? (
-            //   <div key="empty-slot" className="h-[10px] w-[10px]" />
-            // ) : (
-            <div
-              key={speakers.id}
-              className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
-              style={{
-                // @ts-ignore
-                "--translate-mobile": `translateX(${isNonChromium ? speakers.m_blob_x_ff : speakers.m_blob_x}px) translateY(${speakers.m_blob_y}px)`,
-                "--translate-tablet": `translateX(${speakers.t_blob_x}px) translateY(${speakers.t_blob_y}px)`,
-                "--translate-desktop": `translateX(${isNonChromium ? speakers.blob_x_ff : speakers.blob_x}px) translateY(${speakers.blob_y}px)`,
-              }}
-            >
-              {/* desktop / tablet */}
-              <div className="hidden tablet:flex">
-                <SpeakerBlob
-                  src={speakerImages[speakers.id - 1].src}
-                  alt={speakers.name}
-                  height="550px"
-                  width="550px"
-                  position={String(speakers.id)}
-                  blobType={speakers.blobType}
-                  imageX={speakers.image_x}
-                  imageY={speakers.image_y}
-                  imageScale={Number(speakers.image_scale)}
-                />
-                <SpeakerTitleBlob
-                  name={speakers.name}
-                  surname={speakers.surname}
-                  variant={Number(speakers.titleBlobType)}
-                  xLink={speakers.x_link}
-                  gitLink={speakers.git_link}
-                  webLink={speakers.web_link}
-                />
-              </div>
-
-              {/* mobile */}
-              <div className="flex tablet:hidden">
-                <SpeakerBlobMobile
-                  src={speakerImages[speakers.id - 1].src}
-                  alt={speakers.name}
-                  height="550px"
-                  width="550px"
-                  position={String(speakers.id)}
-                  blobType={speakers.blobType}
-                  imageX={speakers.image_x_mob}
-                  imageY={speakers.image_y_mob}
-                  imageScale={Number(speakers.image_scale_mob)}
-                />
-                <SpeakerTitleBlobMobile
-                  name={speakers.name}
-                  surname={speakers.surname}
-                  variant={Number(speakers.titleBlobType)}
-                  xLink={speakers.x_link}
-                  gitLink={speakers.git_link}
-                  webLink={speakers.web_link}
-                />
-              </div>
+        {speakers.map((speakers) => (
+          <a
+            href={`/speakers#speaker-${speakers.id}`}
+            key={speakers.id}
+            className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
+            style={{
+              // @ts-ignore
+              "--translate-mobile": `translateX(${isNonChromium ? speakers.m_blob_x_ff : speakers.m_blob_x}px) translateY(${speakers.m_blob_y}px)`,
+              "--translate-tablet": `translateX(${speakers.t_blob_x}px) translateY(${speakers.t_blob_y}px)`,
+              "--translate-desktop": `translateX(${isNonChromium ? speakers.blob_x_ff : speakers.blob_x}px) translateY(${speakers.blob_y}px)`,
+            }}
+          >
+            {/* desktop / tablet */}
+            <div className="hidden tablet:flex">
+              <SpeakerBlob
+                src={speakerImages[speakers.id - 1].src}
+                alt={speakers.name}
+                height="550px"
+                width="550px"
+                position={String(speakers.id)}
+                blobType={speakers.blobType}
+                imageX={speakers.image_x}
+                imageY={speakers.image_y}
+                imageScale={Number(speakers.image_scale)}
+              />
+              <SpeakerTitleBlob
+                name={speakers.name}
+                surname={speakers.surname}
+                variant={Number(speakers.titleBlobType)}
+                xLink={speakers.x_link}
+                gitLink={speakers.git_link}
+                webLink={speakers.web_link}
+              />
             </div>
-          ),
-          // ),
-        )}
+
+            {/* mobile */}
+            <div className="flex tablet:hidden">
+              <SpeakerBlobMobile
+                src={speakerImages[speakers.id - 1].src}
+                alt={speakers.name}
+                height="550px"
+                width="550px"
+                position={String(speakers.id)}
+                blobType={speakers.blobType}
+                imageX={speakers.image_x_mob}
+                imageY={speakers.image_y_mob}
+                imageScale={Number(speakers.image_scale_mob)}
+              />
+              <SpeakerTitleBlobMobile
+                name={speakers.name}
+                surname={speakers.surname}
+                variant={Number(speakers.titleBlobType)}
+                xLink={speakers.x_link}
+                gitLink={speakers.git_link}
+                webLink={speakers.web_link}
+              />
+            </div>
+          </a>
+        ))}
         {/* <div className="mt-[70px] flex justify-center font-alegreya_sans text-xl font-medium text-dark-blue tablet:mt-[-90px] tablet:text-[28px] tablet:leading-[36px] desktop:ml-[150px] desktop:mt-[200px] desktop:text-[32px] desktop:leading-[44px]"> */}
         {/*   {" "} */}
         {/*   ...and many more */}
