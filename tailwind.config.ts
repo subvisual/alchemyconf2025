@@ -1,3 +1,4 @@
+import { sofia_sans_ec } from "@/utils/fonts";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -25,6 +26,7 @@ const config: Config = {
       koulen: ["var(--font-koulen)"],
       unbutton: ["var(--font-unbutton)"],
       alegreya_sans: ["var(--font-alegreya-sans)"],
+      sofia_sans_ec: ["var(--font-sofia-sans-ec"],
     },
     extend: {
       colors: {
