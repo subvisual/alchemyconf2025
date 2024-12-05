@@ -7,35 +7,38 @@ import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
 
 interface InfoSectionProps {
-  title: string;
-  content: string;
+  section_title: string;
+  content_title?: string;
+  content_description: string;
   color?: "dark-blue" | "yellow";
 }
 
 const InfoSection = ({
-  title,
-  content,
+  section_title,
+  content_title,
+  content_description,
   color = "dark-blue",
 }: InfoSectionProps) => (
-  <div className="flex gap-8 pl-8 pb-8">
+  <div className="flex gap-8 pb-8 pl-8">
     <div className="flex items-stretch">
       <div className="relative flex w-10 flex-col items-start justify-start">
         <p
-          className={`justify font-normal uppercase text-${color}`}
+          className={`justify font-normal uppercase ${color === "dark-blue" ? "text-dark-blue" : "text-yellow"}`}
           style={{
             writingMode: "vertical-rl",
             transform: "rotate(180deg)",
           }}
         >
-          {title}
+          {section_title}
         </p>
         <span
-          className={`absolute right-0 top-0 h-full w-1 bg-${color}`}
+          className={`absolute right-0 top-0 h-full w-1 ${color === "dark-blue" ? "bg-dark-blue" : "bg-yellow"}`}
         ></span>
       </div>
     </div>
-    <div className="flex-1">
-      <p>{content}</p>
+    <div className="flex">
+      <p className="font-bold">{content_title}</p>
+      <p>{content_description}</p>
     </div>
   </div>
 );
@@ -48,7 +51,13 @@ interface SpeakerDetailsProps {
   web_link: string;
 }
 
-const SpeakerDetails = ({ name, surname, x_link, git_link, web_link }: SpeakerDetailsProps) => (
+const SpeakerDetails = ({
+  name,
+  surname,
+  x_link,
+  git_link,
+  web_link,
+}: SpeakerDetailsProps) => (
   <>
     <h1 className="relative text-left font-koulen text-[50px] leading-[50px] tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
       {name + " " + surname}{" "}
@@ -56,7 +65,7 @@ const SpeakerDetails = ({ name, surname, x_link, git_link, web_link }: SpeakerDe
         {name + " " + surname}{" "}
       </span>
     </h1>
-    <div className="mt-[-20px] flex items-center justify-start space-x-4 pl-16 pb-8">
+    <div className="mt-[-20px] flex items-center justify-start space-x-4 pb-8 pl-16">
       <p className="font-bold">FOLLOW</p>
       <XIcon link={x_link} />
       <GithubIcon link={git_link} />
@@ -67,12 +76,12 @@ const SpeakerDetails = ({ name, surname, x_link, git_link, web_link }: SpeakerDe
 
 export default function SpeakersGeneral() {
   return (
-    <section className="mb-20 mt-40 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64 flex flex-col items-center justify-center">
+    <section className="mb-20 mt-40 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64">
       {speakers.map((speaker) => (
         <div
           key={speaker.id}
           id={`speaker-${speaker.id}`}
-          className="mb-20 flex w-full max-w-screen-desktop scroll-mt-48 flex-row gap-6 p-6 justify-center"
+          className="mb-20 flex w-full max-w-screen-desktop scroll-mt-48 flex-row justify-center gap-6 p-6"
         >
           {speaker.id % 2 === 1 ? (
             <>
@@ -90,29 +99,32 @@ export default function SpeakersGeneral() {
                 />
               </div>
               <div className="md:w-2/3 flex flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
-                <SpeakerDetails 
-                  name={speaker.name} 
-                  surname={speaker.surname} 
-                  x_link={speaker.x_link} 
-                  git_link={speaker.git_link} 
-                  web_link={speaker.web_link} 
+                <SpeakerDetails
+                  name={speaker.name}
+                  surname={speaker.surname}
+                  x_link={speaker.x_link}
+                  git_link={speaker.git_link}
+                  web_link={speaker.web_link}
                 />
                 <InfoSection
-                  title="Short Bio"
-                  content={speaker.bio || ""}
+                  section_title="Short Bio"
+                  content_title={""}
+                  content_description={speaker.bio || ""}
                   color="dark-blue"
                 />
                 {speaker.talk_title && (
                   <InfoSection
-                    title="Talk Topic"
-                    content={speaker.talk_title}
+                    section_title="Talk Topic"
+                    content_title={speaker.talk_title}
+                    content_description={speaker.talk_description || ""}
                     color="yellow"
                   />
                 )}
                 {speaker.workshop_title && (
                   <InfoSection
-                    title="Workshop"
-                    content={speaker.workshop_title}
+                    section_title="Workshop"
+                    content_title={speaker.workshop_title}
+                    content_description={speaker.workshop_description || ""}
                     color="yellow"
                   />
                 )}
@@ -121,29 +133,32 @@ export default function SpeakersGeneral() {
           ) : (
             <>
               <div className="md:w-2/3 flex flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
-                <SpeakerDetails 
-                  name={speaker.name} 
-                  surname={speaker.surname} 
-                  x_link={speaker.x_link} 
-                  git_link={speaker.git_link} 
-                  web_link={speaker.web_link} 
+                <SpeakerDetails
+                  name={speaker.name}
+                  surname={speaker.surname}
+                  x_link={speaker.x_link}
+                  git_link={speaker.git_link}
+                  web_link={speaker.web_link}
                 />
                 <InfoSection
-                  title="Short Bio"
-                  content={speaker.bio || ""}
+                  section_title="Short Bio"
+                  content_title=""
+                  content_description={speaker.bio || ""}
                   color="dark-blue"
                 />
                 {speaker.talk_title && (
                   <InfoSection
-                    title="Talk Topic"
-                    content={speaker.talk_title}
+                    section_title="Talk Topic"
+                    content_title={speaker.talk_title}
+                    content_description={speaker.talk_description || ""}
                     color="yellow"
                   />
                 )}
                 {speaker.workshop_title && (
                   <InfoSection
-                    title="Workshop"
-                    content={speaker.workshop_title}
+                    section_title="Workshop"
+                    content_title={speaker.workshop_title}
+                    content_description={speaker.workshop_description || ""}
                     color="yellow"
                   />
                 )}
