@@ -24,9 +24,9 @@
     "web_link": "https://linktr.ee/mraaroncruz",
     "bio": "Aaron is a Freelance Elixir Developer who streams coding on twitch https://linktr.ee/mraaroncruz. Elixir Vienna organizer. Runner. Ex-cook.",
     "talk_title": "TBD",
-    "talk_description": "TBD",
+    "talk_description": "",
     "workshop_title": "",
-    "workshop_description": "TBD"
+    "workshop_description": ""
   },
   {
     "id": 2,
@@ -53,9 +53,9 @@
     "web_link": "",
     "bio": "André Albuquerque is a staff backend engineer at Remote who co-authored the Mastering Elixir book. He uses Elixir every day to develop and scale the Remote platform, currently with a focus on the Fintech area. He has a master's degree in distributed systems and software engineering. In his time off, he likes to build his own keyboards, practice obstacle course racing, and spend time with his wife and five kids.",
     "talk_title": "TBD",
-    "talk_description": "TBD",
+    "talk_description": "",
     "workshop_title": "",
-    "workshop_description": "TBD"
+    "workshop_description": ""
   },
   {
     "id": 3,
@@ -228,8 +228,8 @@
     "bio": "",
     "talk_title": "TBD",
     "talk_description": "",
-    "workshop_title": "TBD",
-    "workshop_description": "TBD"
+    "workshop_title": "",
+    "workshop_description": ""
   },
   {
     "id": 9,
@@ -257,7 +257,7 @@
     "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
     "talk_title": "TBD",
     "talk_description": "",
-    "workshop_title": "TBD",
+    "workshop_title": "",
     "workshop_description": ""
   },
   {
@@ -286,7 +286,7 @@
     "bio": "Wojtek Mach is a developer based in Kraków, Poland. He works at Dashbit helping organisations adopt and run Elixir in production as well as advance the Elixir Open Source ecosystem. He is a member of Hex, Ecto, and ExDoc core teams. He is also the creator of MyXQL, Livebook Desktop, and Req HTTP client.",
     "talk_title": "TBD",
     "talk_description": "",
-    "workshop_title": "TBD",
+    "workshop_title": "",
     "workshop_description": ""
   },
   {
@@ -316,6 +316,6 @@
     "talk_title": "TBD",
     "talk_description": "",
     "workshop_title": "TBD",
-    "workshop_description": ""  
+    "workshop_description": ""
   }
 ]
