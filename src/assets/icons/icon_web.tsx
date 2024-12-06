@@ -16,8 +16,7 @@ const WebIcon = ({
     <div className={`relative ${className}`}>
       <a href={link} target="_blank">
         <svg
-          width="32"
-          height="32"
+          className="h-full w-full"
           viewBox="0 0 256 256"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
