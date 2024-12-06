@@ -59,17 +59,17 @@ const SpeakerDetails = ({
   web_link,
 }: SpeakerDetailsProps) => (
   <>
-    <h1 className="relative text-left font-koulen text-[50px] leading-[50px] tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
+    <h1 className="relative text-left font-koulen tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
       {name + " " + surname}{" "}
       <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
         {name + " " + surname}{" "}
       </span>
     </h1>
-    <div className="mt-[-20px] flex items-center justify-start space-x-4 pb-8 pl-16">
+    <div className="mt-[-20px] flex items-center justify-start pb-8 pl-16 tablet:space-x-3 desktop:space-x-4">
       <p className="font-bold">FOLLOW</p>
-      <XIcon link={x_link} />
-      <GithubIcon link={git_link} />
-      <WebIcon link={web_link} />
+      <XIcon link={x_link} className="tablet:h-6 desktop:h-8" />
+      <GithubIcon link={git_link} className="tablet:h-6 desktop:h-8" />
+      <WebIcon link={web_link} className="tablet:h-6 desktop:h-8" />
     </div>
   </>
 );
@@ -98,7 +98,7 @@ export default function SpeakersGeneral() {
                   imageScale={Number(speaker.image_scale)}
                 />
               </div>
-              <div className="md:w-2/3 flex flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+              <div className="flex w-2/3 flex-col gap-4 font-alegreya_sans font-normal text-dark-blue tablet:text-[20px] desktop:text-[24px]">
                 <SpeakerDetails
                   name={speaker.name}
                   surname={speaker.surname}
@@ -132,7 +132,7 @@ export default function SpeakersGeneral() {
             </>
           ) : (
             <>
-              <div className="md:w-2/3 flex flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+              <div className="flex w-2/3 flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
                 <SpeakerDetails
                   name={speaker.name}
                   surname={speaker.surname}
