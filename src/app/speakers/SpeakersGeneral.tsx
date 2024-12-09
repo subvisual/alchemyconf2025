@@ -19,9 +19,9 @@ const InfoSection = ({
   content_description,
   color = "dark-blue",
 }: InfoSectionProps) => (
-  <div className="flex gap-8 pb-8 pl-8">
+  <div className="flex tablet:gap-4 desktop:gap-8 pb-8 tablet:pl-4 desktop:pl-8">
     <div className="flex items-stretch">
-      <div className="relative flex w-10 flex-col items-start justify-start">
+      <div className="relative flex tablet:w-8 desktop:w-10 flex-col items-start justify-start">
         <p
           className={`justify font-normal uppercase ${color === "dark-blue" ? "text-dark-blue" : "text-yellow"}`}
           style={{
@@ -80,7 +80,7 @@ export default function SpeakersGeneral() {
       {speakers.map((speaker) => (
         <div
           key={speaker.id}
-          id={`speaker-${speaker.id}`}
+          id={`s-${speaker.id}`}
           className="mb-20 flex w-full max-w-screen-desktop scroll-mt-48 flex-row justify-center gap-6 p-6"
         >
           {speaker.id % 2 === 1 ? (
@@ -132,7 +132,7 @@ export default function SpeakersGeneral() {
             </>
           ) : (
             <>
-              <div className="flex w-2/3 flex-col gap-4 font-alegreya_sans text-[24px] font-normal text-dark-blue">
+              <div className="flex w-2/3 flex-col gap-4 font-alegreya_sans font-normal text-dark-blue tablet:text-[20px] desktop:text-[24px]">
                 <SpeakerDetails
                   name={speaker.name}
                   surname={speaker.surname}

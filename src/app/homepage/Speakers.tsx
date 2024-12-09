@@ -39,8 +39,7 @@ export default function Speakers() {
         </div>
         {isMounted && (
           speakers.map((speakers) => (
-            <a
-              href={`/speakers#speaker-${speakers.id}`}
+            <div
               key={speakers.id}
               className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
               style={{
@@ -52,17 +51,19 @@ export default function Speakers() {
             >
               {/* desktop / tablet */}
               <div className="hidden tablet:flex">
-                <SpeakerBlob
-                  src={speakerImages[speakers.id - 1].src}
-                  alt={speakers.name}
-                  height="550px"
-                  width="550px"
-                  position={String(speakers.id)}
-                  blobType={speakers.blobType}
-                  imageX={speakers.image_x}
-                  imageY={speakers.image_y}
-                  imageScale={Number(speakers.image_scale)}
-                />
+                <a href={`/speakers#s-${speakers.id}`}>
+                  <SpeakerBlob
+                    src={speakerImages[speakers.id - 1].src}
+                    alt={speakers.name}
+                    height="550px"
+                    width="550px"
+                    position={String(speakers.id)}
+                    blobType={speakers.blobType}
+                    imageX={speakers.image_x}
+                    imageY={speakers.image_y}
+                    imageScale={Number(speakers.image_scale)}
+                  />
+                </a>
                 <SpeakerTitleBlob
                   name={speakers.name}
                   surname={speakers.surname}
@@ -75,17 +76,19 @@ export default function Speakers() {
 
               {/* mobile */}
               <div className="flex tablet:hidden">
-                <SpeakerBlobMobile
-                  src={speakerImages[speakers.id - 1].src}
-                  alt={speakers.name}
-                  height="550px"
-                  width="550px"
-                  position={String(speakers.id)}
-                  blobType={speakers.blobType}
-                  imageX={speakers.image_x_mob}
-                  imageY={speakers.image_y_mob}
-                  imageScale={Number(speakers.image_scale_mob)}
-                />
+                <a href={`/speakers#smob-${speakers.id}`}>
+                  <SpeakerBlobMobile
+                    src={speakerImages[speakers.id - 1].src}
+                    alt={speakers.name}
+                    height="550px"
+                    width="550px"
+                    position={String(speakers.id)}
+                    blobType={speakers.blobType}
+                    imageX={speakers.image_x_mob}
+                    imageY={speakers.image_y_mob}
+                    imageScale={Number(speakers.image_scale_mob)}
+                  />
+                </a>
                 <SpeakerTitleBlobMobile
                   name={speakers.name}
                   surname={speakers.surname}
@@ -95,7 +98,7 @@ export default function Speakers() {
                   webLink={speakers.web_link}
                 />
               </div>
-            </a>
+            </div>
           ))
         )}
       </div>

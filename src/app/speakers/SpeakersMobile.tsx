@@ -91,8 +91,8 @@ export default function SpeakersMobile() {
       {speakers.map((speaker) => (
         <div
           key={speaker.id}
-          id={`speaker-${speaker.id}`}
-          className="mb-20 flex scroll-mt-48 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue w-full"
+          id={`smob-${speaker.id}`}
+          className="mb-20 flex scroll-mt-40 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue w-full"
         >
           <SpeakerBlobMobile
             src={speakerImages[speaker.id - 1].src}
