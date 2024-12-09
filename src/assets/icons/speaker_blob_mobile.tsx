@@ -2,7 +2,6 @@
 
 import { SVGProps, useState, useEffect } from "react";
 import { useSpring, animated, useSpringRef } from "@react-spring/web";
-import { interpolate } from "flubber";
 
 interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
@@ -46,7 +45,6 @@ const SpeakerBlobMobile = ({
   const path6 =
     "M19.414 185.328C25.5749 155.223 1.97393 107.694 19.4138 82.2773C45.3688 44.4503 99.3983 12.4348 144.602 2.87869C189.81 -6.67839 236.355 7.66454 263.926 44.362C287.645 75.9315 292.4 139.363 284.991 178.004C278.694 210.847 266.562 218.543 244.742 244.074C219.045 274.142 213.217 343.408 174.024 350.312C132.592 357.61 35.3579 340.838 9.64281 307.892C-13.7537 277.917 11.8189 222.443 19.414 185.328Z";
 
-  const interpolator = interpolate(path1, path2);
 
   const { x } = useSpring({
     ref: animationRef,
@@ -103,7 +101,6 @@ const SpeakerBlobMobile = ({
         <mask id={`myMask${position}mob`}>
           <animated.path
             fill="white"
-            // d={x.to((x) => interpolator(x))}
             d={x.to({
               range: [0, 1, 2],
               output: [path1, path5, path3],

@@ -209,7 +209,7 @@ const SpeakerTitleBlobMobile = ({
         style={{
           left: `${Number(currentBlob.x) + Number(currentBlob.left) - 4}px`,
           top: `${Number(currentBlob.y) + Number(currentBlob.top) + 40}px`,
-          gap: "1px",
+          gap: "8px",
         }}
       >
         <XIcon
