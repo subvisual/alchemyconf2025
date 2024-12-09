@@ -15,7 +15,6 @@ export default function Homepage() {
       <Tickets />
       <Workshops />
       <Sponsors />
-      <Footer />
     </>
   );
 }

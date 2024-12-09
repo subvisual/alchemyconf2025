@@ -10,8 +10,8 @@ const FooterBlob = ({ className, color = "#7D1D3F", ...props }: BlobProps) => {
     <div className={`relative ${className}`}>
       <svg
         width="2440"
-        height="1145"
-        viewBox="-70 0 2440 545"
+        height="545"
+        viewBox="-70 0 2440 445"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         {...props}
