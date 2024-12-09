@@ -2,7 +2,7 @@ export default function Conf() {
   return (
     <section
       id="conference"
-      className="mb-20 mt-40 flex scroll-mt-32 flex-col items-center justify-center px-32 tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
+      className="mb-20 mt-32 flex scroll-mt-32 flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
       <h1 className="relative pb-6 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         About Alchemy Conf
@@ -10,7 +10,7 @@ export default function Conf() {
           About Alchemy Conf
         </span>
       </h1>
-      <div className="w-full min-w-[250px] max-w-screen-desktop text-left font-alegreya_sans text-xl text-dark-blue tablet:pb-20 tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
+      <div className="w-full max-w-screen-desktop text-left font-alegreya_sans text-xl text-dark-blue tablet:pb-20 tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
         <p>
           <span className="text-bordeux">Alchemy Conf 2025</span> is more than
           just a conference—it&apos;s a celebration of the Elixir programming

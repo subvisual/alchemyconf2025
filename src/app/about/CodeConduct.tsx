@@ -2,7 +2,7 @@ export default function CodeConduct() {
   return (
     <section
       id="code-of-conduct"
-      className="mb-[250px] flex scroll-mt-32 flex-col items-center justify-start px-32"
+      className="mb-[250px] flex scroll-mt-32 flex-col items-center justify-start"
     >
       <h1 className="relative pb-6 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         Code of Conduct
