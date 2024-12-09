@@ -1,15 +1,17 @@
 import Link from "next/link";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import FooterBlob from "@/assets/icons/footer_blob";
+import FooterBlobMobile from "@/assets/icons/footer_blob_mobile";
 import SubvisualIcon from "@/assets/icons/subvisual_icon";
 
 export default function Footer() {
   return (
     <div className="relative w-full">
-      <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 translate-x-[-1300px] translate-y-[320px] tablet:-translate-x-1/2 tablet:translate-y-[300px] transform">
-        <FooterBlob className="w-full max-w-[1440px] translate-y-[-50px] tablet:translate-y-[80px]" />
+      <div className="absolute bottom-0 left-[calc(50%-70px)] -z-10 -translate-x-1/2 transform">
+        <FooterBlob className="hidden tablet:block w-full max-w-[1440px]" />
+        <FooterBlobMobile className="flex tablet:hidden" />
       </div>
-      <footer className="z-50 mx-auto flex max-w-desktop flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-16 tablet:text-xl">
+      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-16 tablet:text-xl">
         <Link
           href="/"
           className="mb-4 flex h-fit translate-y-[-10px] items-center gap-4 outline-none tablet:mb-0"
