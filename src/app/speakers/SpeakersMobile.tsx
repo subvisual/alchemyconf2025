@@ -1,6 +1,6 @@
 "use client";
 
-import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
+import SpeakerBlobMobileSm from "@/assets/icons/speaker_blob_mobile_sm";
 import XIcon from "@/assets/icons/icon_x";
 import GithubIcon from "@/assets/icons/icon_github";
 import WebIcon from "@/assets/icons/icon_web";
@@ -41,9 +41,15 @@ const InfoSection = ({
               {section_title}
             </p>
             {isOpen ? (
-              <ArrowRight className="h-4 w-4 mr-[6px]" color={color === "dark-blue" ? "#003049" : "#F4AC45"} />
+              <ArrowRight
+                className="mr-[6px] h-4 w-4"
+                color={color === "dark-blue" ? "#003049" : "#F4AC45"}
+              />
             ) : (
-              <ArrowDown className="h-4 w-4 mr-[6px]" color={color === "dark-blue" ? "#003049" : "#F4AC45"} />
+              <ArrowDown
+                className="mr-[6px] h-4 w-4"
+                color={color === "dark-blue" ? "#003049" : "#F4AC45"}
+              />
             )}
           </div>
           <span
@@ -104,18 +110,22 @@ export default function SpeakersMobile() {
         const workshopSectionId = `workshop-${speaker.id}`;
 
         return (
-          <div key={speaker.id} id={`smob-${speaker.id}`} className="mb-12 flex w-full scroll-mt-12 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue">
-            <SpeakerBlobMobile
+          <div
+            key={speaker.id}
+            id={`smob-${speaker.id}`}
+            className="mb-12 flex w-full scroll-mt-12 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue"
+          >
+            <SpeakerBlobMobileSm
               src={speakerImages[speaker.id - 1].src}
               alt={speaker.name}
-              height="450px"
-              width="450px"
+              height="350px"
+              width="350px"
               position={String(speaker.id)}
               blobType={speaker.blobType}
-              imageX={speaker.image_x}
-              imageY={speaker.image_y}
-              imageScale={Number(speaker.image_scale)}
-              className="translate-x-[100px] translate-y-[80px] -z-10"
+              imageX={speaker.image_x_mob_sm}
+              imageY={speaker.image_y_mob_sm}
+              imageScale={Number(speaker.image_scale_mob_sm)}
+              className="-z-10 translate-x-[100px] translate-y-[80px]"
             />
             <SpeakerDetails
               name={speaker.name}
@@ -130,7 +140,11 @@ export default function SpeakersMobile() {
               content_description={speaker.bio || ""}
               color="dark-blue"
               isOpen={activeSectionId === bioSectionId}
-              onToggle={() => setActiveSectionId(activeSectionId === bioSectionId ? null : bioSectionId)}
+              onToggle={() =>
+                setActiveSectionId(
+                  activeSectionId === bioSectionId ? null : bioSectionId,
+                )
+              }
             />
             {speaker.talk_title && (
               <InfoSection
@@ -139,7 +153,11 @@ export default function SpeakersMobile() {
                 content_description={speaker.talk_description || ""}
                 color="yellow"
                 isOpen={activeSectionId === talkSectionId}
-                onToggle={() => setActiveSectionId(activeSectionId === talkSectionId ? null : talkSectionId)}
+                onToggle={() =>
+                  setActiveSectionId(
+                    activeSectionId === talkSectionId ? null : talkSectionId,
+                  )
+                }
               />
             )}
             {speaker.workshop_title && (
@@ -149,7 +167,13 @@ export default function SpeakersMobile() {
                 content_description={speaker.workshop_description || ""}
                 color="yellow"
                 isOpen={activeSectionId === workshopSectionId}
-                onToggle={() => setActiveSectionId(activeSectionId === workshopSectionId ? null : workshopSectionId)}
+                onToggle={() =>
+                  setActiveSectionId(
+                    activeSectionId === workshopSectionId
+                      ? null
+                      : workshopSectionId,
+                  )
+                }
               />
             )}
           </div>
