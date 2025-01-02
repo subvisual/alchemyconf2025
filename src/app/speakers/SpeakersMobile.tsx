@@ -125,7 +125,7 @@ export default function SpeakersMobile() {
               imageX={speaker.image_x_mob_sm}
               imageY={speaker.image_y_mob_sm}
               imageScale={Number(speaker.image_scale_mob_sm)}
-              className="-z-10 translate-x-[100px] translate-y-[80px]"
+              className="-z-10 translate-x-[80px] translate-y-[80px]"
             />
             <SpeakerDetails
               name={speaker.name}

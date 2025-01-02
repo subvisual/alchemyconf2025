@@ -5,6 +5,7 @@ import WebIcon from "@/assets/icons/icon_web";
 
 import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
+import SpeakerPageBlob from "@/assets/icons/speaker_page_blob";
 
 interface InfoSectionProps {
   section_title: string;
@@ -19,9 +20,9 @@ const InfoSection = ({
   content_description,
   color = "dark-blue",
 }: InfoSectionProps) => (
-  <div className="flex tablet:gap-4 desktop:gap-8 pb-8 tablet:pl-4 desktop:pl-8">
+  <div className="flex pb-8 tablet:gap-4 tablet:pl-4 desktop:gap-8 desktop:pl-8">
     <div className="flex items-stretch">
-      <div className="relative flex tablet:w-8 desktop:w-10 flex-col items-start justify-start">
+      <div className="relative flex flex-col items-start justify-start tablet:w-8 desktop:w-10">
         <p
           className={`justify font-normal uppercase ${color === "dark-blue" ? "text-dark-blue" : "text-yellow"}`}
           style={{
@@ -86,7 +87,7 @@ export default function SpeakersGeneral() {
           {speaker.id % 2 === 1 ? (
             <>
               <div className="mt-[120px] w-1/3">
-                <SpeakerBlob
+                <SpeakerPageBlob
                   src={speakerImages[speaker.id - 1].src}
                   alt={speaker.name}
                   height="550px"
@@ -164,7 +165,7 @@ export default function SpeakersGeneral() {
                 )}
               </div>
               <div className="mt-[120px] w-1/3">
-                <SpeakerBlob
+                <SpeakerPageBlob
                   src={speakerImages[speaker.id - 1].src}
                   alt={speaker.name}
                   height="550px"
