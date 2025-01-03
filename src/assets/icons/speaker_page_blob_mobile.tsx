@@ -1,6 +1,7 @@
 "use client";
 
 import { SVGProps } from "react";
+import Image from "next/image";
 import SpeakerBackBlobMobile from "./speaker_page_back_blob_mobile";
 
 interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
@@ -70,9 +71,11 @@ const SpeakerPageBlobMobile = ({
         className="translate-x-[-50px]"
       />
       <div style={{ mask: `url(#myMask${position}mob)`, overflow: "hidden" }}>
-        <img
+        <Image
           src={src}
           alt={alt}
+          width="500"
+          height="500"
           style={{
             transform: `translate(${imageX}, ${imageY})`,
             objectFit: "contain",

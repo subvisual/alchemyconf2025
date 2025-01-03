@@ -61,8 +61,8 @@ const InfoSection = ({
         </div>
       </button>
       {isOpen && (
-        <div className="">
-          {content_title && <p className="font-bold">{content_title}</p>}
+    <div className={`flex flex-col ${content_title !== "" ? "gap-2" : ""}`}>
+          {content_title && <p className="font-bold uppercase">{content_title}</p>}
           <p>{content_description}</p>
         </div>
       )}

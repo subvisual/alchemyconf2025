@@ -38,7 +38,7 @@ const InfoSection = ({
       </div>
     </div>
     <div className={`flex flex-col ${content_title !== "" ? "gap-4" : ""}`}>
-      <p className="font-bold uppercase">{content_title}</p>
+      {content_title && <p className="font-bold uppercase">{content_title}</p>}
       <p>{content_description}</p>
     </div>
   </div>
