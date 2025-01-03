@@ -26,8 +26,8 @@
     "git_link": "https://github.com/mraaroncruz",
     "web_link": "https://linktr.ee/mraaroncruz",
     "bio": "Aaron is a Freelance Elixir Developer who streams coding on twitch https://linktr.ee/mraaroncruz. Elixir Vienna organizer. Runner. Ex-cook.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "Elixir in Real-Time Race Coordination",
+    "talk_description": "Building a running race app presents unique challenges, particularly around ensuring data arrives in the correct order to maintain fairness in race results. While GenServers are invaluable for synchronizing data streams, they can become bottlenecks if not managed properly. Testing such systems adds another layer of complexity, often requiring extensive setup to test individual modules. This talk explores these challenges in depth, sharing real-world examples and practical solutions to streamline development and testing in such intricate systems.",
     "workshop_title": "",
     "workshop_description": ""
   },
@@ -58,8 +58,8 @@
     "git_link": "https://github.com/amalbuquerque",
     "web_link": "",
     "bio": "André Albuquerque is a staff backend engineer at Remote who co-authored the Mastering Elixir book. He uses Elixir every day to develop and scale the Remote platform, currently with a focus on the Fintech area. He has a master's degree in distributed systems and software engineering. In his time off, he likes to build his own keyboards, practice obstacle course racing, and spend time with his wife and five kids.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "The Journey of an Elixir Monolith or How We Arrived at >2M Lines of Code",
+    "talk_description": "Join us in the Remote journey from a handful of engineers to >120 backend engineers working within an Elixir monolith with more than 2 million lines of code. You will understand how we scaled our development process, the hard-earned lessons we got, and the improvements we had to make to get here. This talk aims to describe the growth path of our Elixir monolith, the patterns that served us well and the hard-earned lessons that we got along the way.During this time, our monolith allowed us to a single main product to a multi-product.",
     "workshop_title": "",
     "workshop_description": ""
   },
@@ -92,8 +92,8 @@
     "bio": "Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He’s a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair.",
     "talk_title": "TBD",
     "talk_description": "",
-    "workshop_title": "TBD",
-    "workshop_description": ""
+    "workshop_title": "Concurrent Data Processing in Elixir",
+    "workshop_description": "Consuming data and processing it is a central problem in so many systems nowadays. And Elixir is just so good at doing that, and doing it concurrently! Whether you run an event-sourced architecture with applications that react to events, or you have the occasional use case of map/reducing over collections in an optimized way, Elixir has your back. The current ecosystem is full of fantastic tools to help with these problems: GenStage, Broadway, Flow."
   },
   {
     "id": 4,
@@ -186,8 +186,8 @@
     "git_link": "",
     "web_link": "",
     "bio": "Journey spanning roles in design, documentary research, and even assisting as an art director, before diving into coding in 2021. She found her stride with Elixir and now builds real-time systems at Turn.io, where she’s passionate about using technology to make a tangible difference. At Turn.io, Julia works across a variety of projects, creating solutions that connect people to essential support—whether in crisis counseling, healthcare, or community engagement—when it matters most. Outside of code, Julia is a ballet enthusiast, a Formula 1 fan, and a newly rediscovered poet. And for the record, she’s not a 1D fan, but she does love BTS! (Ask her who her bias is in person 😊)",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "TBuilding a Smart Helpdesk: Using Elixir for Social Good",
+    "talk_description": "Discover how we built a real-time helpdesk with Elixir to route critical conversations to the right operators instantly. This talk dives into smart routing, leveraging GenServers, and using tech to drive social impact—transforming code into meaningful connections for those in need.",
     "workshop_title": "",
     "workshop_description": ""
   },
@@ -220,8 +220,8 @@
     "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
     "talk_title": "TBD",
     "talk_description": "",
-    "workshop_title": "TBD",
-    "workshop_description": ""
+    "workshop_title": "Practical testing with Elixir (and Phoenix)",
+    "workshop_description": "This tutorial teaches a practical testing approach which maximizes the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn how to increase the confidence in your tests, organically maximize code coverage, and improve the test clarity. This is going to be a very interactive and hands-on session involving a lot of coding and discussions. You'll need to bring a working machine with Erlang, Elixir, and PostgreSQL installed, and an IDE of your choice. You’ll be writing tests for a Phoenix-powered Elixir web server, so it is expected you are familiar with Elixir, Phoenix, Ecto, and ExUnit."
   },
   {
     "id": 8,
@@ -250,8 +250,8 @@
     "git_link": "https://github.com/",
     "web_link": "https://",
     "bio": "Vice President of Marketing at Veritas Automata. Creative out-of-the-box thinker and a lover of Lego Plants and kaleidoscopes. Deeply enthusiastic about nurturing growth, whether it's in the realm of technology, personal development, or fostering innovation in the ever-evolving digital industry.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "From Code to Leadership: Navigating the Tech Landscape as a Woman",
+    "talk_description": "Navigating the tech landscape as a woman comes with unique challenges and opportunities. “From Code to Leadership: Navigating the Tech Landscape as a Woman” offers a comprehensive guide to career growth, leadership development, and the impact of diversity in technology. This presentation provides practical advice for women aspiring to transition from technical roles to leadership positions, emphasizing the importance of continuous learning, mentorship, and building a personal brand.",
     "workshop_title": "",
     "workshop_description": ""
   },
@@ -281,9 +281,9 @@
     "x_link": "https://x.com/PragTob",
     "git_link": "https://github.com/PragTob",
     "web_link": "https://www.xing.com/profiles/Tobias_Pfeiffer14",
-    "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "bio": "Tobi is a human, developer, leader, and open-source enthusiast with a passion for benchmarking, Elixir, and Ruby. He deeply values human interactions and believes empathy is essential. Tobi enjoys learning, teaching and sharing knowledge. He loves collaboratively creating just about anything people enjoy - be it meetups, presentations or open source projects such as benchee.",
+    "talk_title": "Metaphors are everywhere: Ideas to Improve Software Development",
+    "talk_description": "Let’s embark on a journey together - a journey in which we’ll weave together the realms of basketball, fiction writing, game development and trading card games to explore how these seemingly unrelated domains surprisingly intersect with the world of software development, offering fresh perspectives and insights.",
     "workshop_title": "",
     "workshop_description": ""
   },
@@ -346,9 +346,9 @@
     "git_link": "https://github.com/zachdaniel",
     "web_link": "https://www.zachdaniel.dev/",
     "bio": "Zach is the author of the Ash Framework, a resource-oriented declarative design framework for Elixir, and principal platform engineer at Alembic. He has a passion for declarative design, functional programming, and contributing to the open source community. When not programming, he enjoys spending time with his friends and family and studying the Japanese language.",
-    "talk_title": "TBD",
-    "talk_description": "",
-    "workshop_title": "TBD",
-    "workshop_description": ""
+    "talk_title": "The Next Dimension of Developer Experience",
+    "talk_description": "Igniter is an Elixir framework that simplifies package installation and upgrades using AST-based code patching, enabling developers to manage packages with intuitive commands like mix igniter.install and mix igniter.upgrade. This approach streamlines setup, reduces cognitive overhead, and enhances the developer experience by allowing library authors to provide intelligent, standardized installation and upgrade processes. The talk delves into Igniter's capabilities, exploring examples from basic to advanced use cases, its impact on improving workflows for Elixir applications, and its transformative potential for the future of package management.",
+    "workshop_title": "Supercharge Your Elixir Apps with Ash",
+    "workshop_description": "Ash Framework is a refreshingly different way to craft efficient and maintainable Elixir applications. In this hands-on, interactive course, we’ll dive deep into Ash’s capabilities, exploring how it can streamline your development process and enhance your application’s architecture. Throughout this class, we’ll build a real-world application from the ground up, leveraging Ash’s unique features. You’ll learn to design and implement resources, craft actions that encapsulate your core business logic, and seamlessly integrate APIs and UIs. We’ll also explore advanced topics like custom extensions and strategies for incremental adoption in existing projects."
   }
 ]
