@@ -1,6 +1,5 @@
 "use client";
 
-import SpeakerBlobMobileSm from "@/assets/icons/speaker_blob_mobile_sm";
 import XIcon from "@/assets/icons/icon_x";
 import GithubIcon from "@/assets/icons/icon_github";
 import WebIcon from "@/assets/icons/icon_web";
@@ -10,6 +9,8 @@ import ArrowRight from "@/assets/icons/arrow_right";
 import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
 import { useState } from "react";
+import SpeakerBackBlob from "@/assets/icons/speaker_page_back_blob";
+import SpeakerPageBlobMobile from "@/assets/icons/speaker_page_blob_mobile";
 
 interface InfoSectionProps {
   section_title: string;
@@ -115,7 +116,7 @@ export default function SpeakersMobile() {
             id={`smob-${speaker.id}`}
             className="mb-12 flex w-full scroll-mt-12 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue"
           >
-            <SpeakerBlobMobileSm
+            <SpeakerPageBlobMobile
               src={speakerImages[speaker.id - 1].src}
               alt={speaker.name}
               height="350px"

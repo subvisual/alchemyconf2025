@@ -164,7 +164,7 @@ export default function SpeakersGeneral() {
                   />
                 )}
               </div>
-              <div className="mt-[120px] w-1/3">
+              <div className="ml-[100px] mt-[120px] w-1/3">
                 <SpeakerPageBlob
                   src={speakerImages[speaker.id - 1].src}
                   alt={speaker.name}
