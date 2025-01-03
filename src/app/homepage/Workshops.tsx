@@ -1,7 +1,7 @@
 export default function Workshops() {
   return (
-    <section id="tickets" className="mt-[100px] flex tablet:mt-[0px]">
-      <div className="mb-16 border-l-4 border-yellow pl-5">
+    <section id="tickets" className="mt-[100px] tablet:mt-[0px]">
+      <div className="mx-auto mb-16 max-w-screen-desktop border-l-4 border-yellow pl-5">
         <p className="mb-4 flex flex-row items-center font-alegreya_sans text-4xl font-bold leading-none text-dark-blue tablet:text-5xl">
           Workshops
         </p>

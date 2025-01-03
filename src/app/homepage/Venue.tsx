@@ -21,7 +21,7 @@ export default function Venue() {
         </span>
       </h1>
 
-      <div className="flex w-full flex-col justify-between gap-8 desktop:flex-row desktop:gap-48">
+      <div className="flex w-full max-w-[1440px] flex-col justify-between gap-8 desktop:flex-row desktop:gap-48">
         <div className="flex w-full flex-row justify-between desktop:flex-col">
           <div className="mb-8 border-l-4 border-bordeux pl-2 tablet:pl-5">
             <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">

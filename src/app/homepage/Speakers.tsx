@@ -22,7 +22,7 @@ export default function Speakers() {
   return (
     <section
       id="speakers"
-      className="relative mt-36 flex flex-col items-center justify-center tablet:py-0 desktop:mb-72"
+      className="relative mt-36 flex flex-col items-center justify-center mobile:mb-40 tablet:py-0 desktop:mb-72"
     >
       <h1 className="relative pb-16 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
@@ -37,7 +37,7 @@ export default function Speakers() {
           they’ve learned about building, innovation, and real-world
           applications.
         </div>
-        {isMounted && (
+        {isMounted &&
           speakers.map((speakers) => (
             <div
               key={speakers.id}
@@ -99,8 +99,7 @@ export default function Speakers() {
                 />
               </div>
             </div>
-          ))
-        )}
+          ))}
       </div>
     </section>
   );
