@@ -72,13 +72,12 @@ export default function Hero() {
         </div>
 
         {/* mobile*/}
-        <div className="relative pb-[500px] tablet:hidden">
+        <div className="relative pb-[500px] flex w-full justify-center tablet:hidden">
           <TheatroTitleBlob
             className="absolute right-[-20px] top-[-80px] overflow-visible"
             style={{ height: "394px", scale: "0.6" }}
           />
           <TheatroBlobMob
-            className="mx-auto"
             height="1000px"
             width="1200px"
             src={theatro_circo_full.src}
@@ -86,8 +85,8 @@ export default function Hero() {
             id="TCmob"
             imageScale={0.8}
             style={{ position: "relative" }}
-            posX="0%"
-            posY="-350px"
+            posX="50%"
+            posY="-325px"
           />
         </div>
       </div>
