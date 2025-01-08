@@ -11,11 +11,13 @@ import speakerImages from "../_constants/speakers_images";
 import { useState } from "react";
 import SpeakerBackBlob from "@/assets/icons/speaker_page_back_blob";
 import SpeakerPageBlobMobile from "@/assets/icons/speaker_page_blob_mobile";
+import AltButton from "../_components/AltButton";
 
 interface InfoSectionProps {
   section_title: string;
   content_title?: string;
   content_description: string;
+  content_link?: string;
   color?: "dark-blue" | "yellow";
   isOpen: boolean;
   onToggle: () => void;
@@ -25,6 +27,7 @@ const InfoSection = ({
   section_title,
   content_title,
   content_description,
+  content_link,
   color = "dark-blue",
   isOpen,
   onToggle,
@@ -61,9 +64,20 @@ const InfoSection = ({
         </div>
       </button>
       {isOpen && (
-    <div className={`flex flex-col ${content_title !== "" ? "gap-2" : ""}`}>
-          {content_title && <p className="font-bold uppercase">{content_title}</p>}
-          <p>{content_description}</p>
+        <div className={`flex flex-col ${content_title !== "" ? "gap-2" : ""}`}>
+          {content_title && (
+            <p className="font-bold uppercase">{content_title}</p>
+          )}
+          <p className="whitespace-pre-line">{content_description}</p>
+          {content_link && (
+            <div className="mb-2 mt-1 flex">
+              <AltButton
+                className="font-medium"
+                text="Get Tickets"
+                href={content_link}
+              />
+            </div>
+          )}
         </div>
       )}
     </div>
@@ -101,17 +115,22 @@ const SpeakerDetails = ({
 );
 
 export default function SpeakersMobile() {
-  const [activeSections, setActiveSections] = useState<Record<number, string>>(() => {
-    return speakers.reduce((acc, speaker) => {
-      acc[speaker.id] = `bio-${speaker.id}`;
-      return acc;
-    }, {} as Record<number, string>);
-  });
+  const [activeSections, setActiveSections] = useState<Record<number, string>>(
+    () => {
+      return speakers.reduce(
+        (acc, speaker) => {
+          acc[speaker.id] = `bio-${speaker.id}`;
+          return acc;
+        },
+        {} as Record<number, string>,
+      );
+    },
+  );
 
   const handleSectionToggle = (speakerId: number, sectionId: string) => {
-    setActiveSections(prev => ({
+    setActiveSections((prev) => ({
       ...prev,
-      [speakerId]: prev[speakerId] === sectionId ? '' : sectionId
+      [speakerId]: prev[speakerId] === sectionId ? "" : sectionId,
     }));
   };
 
@@ -170,9 +189,12 @@ export default function SpeakersMobile() {
                 section_title="Workshop"
                 content_title={speaker.workshop_title}
                 content_description={speaker.workshop_description || ""}
+                content_link={speaker.workshop_link || ""}
                 color="yellow"
                 isOpen={activeSections[speaker.id] === workshopSectionId}
-                onToggle={() => handleSectionToggle(speaker.id, workshopSectionId)}
+                onToggle={() =>
+                  handleSectionToggle(speaker.id, workshopSectionId)
+                }
               />
             )}
           </div>

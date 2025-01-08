@@ -1,3 +1,6 @@
+import AltButton from "../_components/AltButton";
+import Button from "../_components/Button";
+
 export default function Workshops() {
   return (
     <section id="tickets" className="mt-[100px] tablet:mt-[0px]">
@@ -9,10 +12,12 @@ export default function Workshops() {
           Access to any of the 2-day workshops. They may have different number
           of slots available. Discount if you have a Regular Ticket.
         </p>
-        <div className="mt-9 flex flex-row items-center">
-          <div className="mr-8 font-koulen text-[28px] leading-none text-dark-blue tablet:text-[32px]">
-            COMING SOON
-          </div>
+        <div className="mt-6 flex flex-row items-center tablet:mt-9">
+          <Button
+            className="font-medium"
+            text="Get Tickets"
+            href="https://membrz.club/alchemyconf/events?tag=workshop"
+          />
         </div>
       </div>
     </section>
