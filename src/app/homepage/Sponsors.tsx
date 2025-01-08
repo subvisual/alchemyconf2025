@@ -38,8 +38,8 @@ export default function Sponsors() {
 
       <div className="relative mb-10 flex flex-col desktop:flex-row">
         <div className="relative">
-          <SponsorMainBlob className="left-[45px] top-[-80px]" />
-          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans text-[28px] font-bold text-bordeux tablet:text-[32px]">
+          <SponsorMainBlob className="left-[45px] top-[-80px] mobile:translate-x-[-40px] mobile:scale-[0.8] tablet:translate-x-[0px] tablet:scale-[1.0]" />
+          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans font-bold text-bordeux mobile:text-[20px] tablet:text-[24px] desktop:text-[32px]">
             Main Sponsor
           </div>
           <a href="https://remote.com/" target="_blank">
@@ -110,7 +110,7 @@ export default function Sponsors() {
       {/* tablet / mobile */}
       <div className="relative desktop:hidden">
         <SponsorGoldBlob className="tablet: z-0 translate-x-[40px] tablet:translate-y-[-90px] tablet:scale-[0.8]" />
-        <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-2.5xl font-bold text-yellow">
+        <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-[20px] font-bold text-yellow tablet:text-[24px] desktop:text-[32px]">
           Partners
         </div>
         <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">

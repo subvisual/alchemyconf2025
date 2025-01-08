@@ -6,11 +6,14 @@ import WebIcon from "@/assets/icons/icon_web";
 import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
 import SpeakerPageBlob from "@/assets/icons/speaker_page_blob";
+import Button from "../_components/Button";
+import AltButton from "../_components/AltButton";
 
 interface InfoSectionProps {
   section_title: string;
   content_title?: string;
   content_description: string;
+  content_link?: string;
   color?: "dark-blue" | "yellow";
 }
 
@@ -18,6 +21,7 @@ const InfoSection = ({
   section_title,
   content_title,
   content_description,
+  content_link,
   color = "dark-blue",
 }: InfoSectionProps) => (
   <div className="flex pb-8 tablet:gap-4 tablet:pl-4 desktop:gap-8 desktop:pl-8">
@@ -39,7 +43,16 @@ const InfoSection = ({
     </div>
     <div className={`flex flex-col ${content_title !== "" ? "gap-4" : ""}`}>
       {content_title && <p className="font-bold uppercase">{content_title}</p>}
-      <p>{content_description}</p>
+      <p className="whitespace-pre-line">{content_description}</p>
+      {content_link && (
+        <div className="mb-2 mt-1 flex">
+          <AltButton
+            className="font-medium"
+            text="Get Tickets"
+            href={content_link}
+          />
+        </div>
+      )}
     </div>
   </div>
 );
@@ -126,6 +139,7 @@ export default function SpeakersGeneral() {
                     section_title="Workshop"
                     content_title={speaker.workshop_title}
                     content_description={speaker.workshop_description || ""}
+                    content_link={speaker.workshop_link || ""}
                     color="yellow"
                   />
                 )}

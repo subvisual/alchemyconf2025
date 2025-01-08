@@ -10,7 +10,7 @@ export default function Tickets() {
       id="tickets"
       className="mt-[136px] flex h-[860px] flex-col items-center"
     >
-      <h1 className="relative z-10 pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative z-10 pb-24 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Tickets
         <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
           Tickets
@@ -18,7 +18,7 @@ export default function Tickets() {
       </h1>
 
       <div className="relative bottom-[235px] z-0">
-        <TicketsBlob className="opacity-25 mobile:translate-x-[-250px] mobile:translate-y-[135px] tablet:translate-x-0 tablet:translate-y-4 desktop:translate-x-0 desktop:translate-y-4" />
+        <TicketsBlob className="opacity-25 mobile:translate-x-[-260px] mobile:translate-y-[110px] mobile:scale-[0.9] tablet:translate-x-0 tablet:translate-y-4 desktop:translate-x-0 desktop:translate-y-4" />
         <div className="absolute left-[480px] top-[210px] flex mobile:w-[310px] mobile:flex-col tablet:left-[260px] tablet:top-[220px] tablet:w-[1500px] tablet:flex-row desktop:left-[150px]">
           <div className="text-left font-alegreya_sans text-xl text-dark-blue mobile:mb-[50px] mobile:text-center tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[570px] desktop:text-[32px] desktop:leading-[44px]">
             Join us in celebrating Elixir! Choose the ticket option that best

@@ -1,7 +1,7 @@
 "use client";
 
 import { SVGProps, useState, useEffect } from "react";
-import { useSpring, animated, useSpringRef } from "@react-spring/web";
+import { useSpring, animated } from "@react-spring/web";
 
 interface TeatroBlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
@@ -27,8 +27,7 @@ const TeatroBlobMob = ({
   posY,
   ...props
 }: TeatroBlobProps) => {
-  const [hovered, setHovered] = useState(false);
-  const animationRef = useSpringRef();
+  const [startAnimation, setStartAnimation] = useState(false);
 
   const path1 =
     "M269.445 17.2699C393.838 11.3439 459.675 -8.92265 513.376 4.51549C546.143 12.715 580.056 71.6351 588.011 143.605C593.114 189.765 578.092 315.385 551.604 348.9C513.68 396.884 449.359 366.514 332.552 375.928C267.118 381.202 121.388 433.022 65.2598 410.244C-11.0946 379.259 14.2899 296.36 24.6053 235.015C33.542 181.87 -24.2436 89.5471 12.1647 42.1725C65.2597 -26.9148 190.241 21.0432 269.445 17.2699Z";
@@ -40,32 +39,23 @@ const TeatroBlobMob = ({
     "M308.024 0.0148405C437.398 0.0151842 547.35 -2.03315 585.905 41.8689C616.069 76.2156 643 135.152 643 207.465C643 287.075 640.267 357.272 585.905 375.34C491.935 406.573 421.367 362.779 323.512 407.03C233.314 447.818 139.274 394.385 86.3256 375.34C27.7122 354.257 11.1762 282.22 2.20204 222.933C-9.64238 144.684 27.4199 100.257 86.3256 52.7878C120.351 25.3693 228.651 0.0146297 308.024 0.0148405Z";
 
   const { x } = useSpring({
-    ref: animationRef,
-    to: [
-      { x: 1, config: { duration: 2000 } },
-      { x: 2, config: { duration: 2000 } },
-      { x: 3, config: { duration: 2000 } },
-      { x: 0, config: { duration: 5000 } },
-      { x: 2, config: { duration: 2000 } },
+    to: startAnimation
+      ?  [
+          { x: 1, config: { duration: 2000 } },
+          { x: 2, config: { duration: 2000 } },
+          { x: 3, config: { duration: 2000 } },
+          { x: 0, config: { duration: 5000 } },
+          { x: 2, config: { duration: 2000 } },
       { x: 1, config: { duration: 2000 } },
       { x: 0, config: { duration: 4000 } },
-    ],
+    ] : { x: 0},
     from: { x: 0 },
     loop: { reverse: false },
   });
-  const { scale } = useSpring({
-    scale: hovered ? imageScale * 1.05 : imageScale * 1,
-    config: { tension: 300, friction: 200 },
-  });
 
   useEffect(() => {
-    if (!hovered) {
-      animationRef.stop();
-      // animationRef.start({ x: 0, loop: false, config: { duration: 1000 } });
-    } else {
-      animationRef.start();
-    }
-  }, [hovered, animationRef]);
+    setStartAnimation(true);
+  }, []);
 
   return (
     <div
@@ -76,10 +66,8 @@ const TeatroBlobMob = ({
         position: "absolute",
         top: `${posY}`,
         left: `${posX}`,
-        transform: "translateX(0)",
+        transform: "translateX(-25%)",
       }}
-      onMouseEnter={() => setHovered(true)}
-      onMouseLeave={() => setHovered(false)}
     >
       <svg
         width="650"
@@ -88,7 +76,7 @@ const TeatroBlobMob = ({
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         style={{
-          position: "relative",
+          position: "absolute",
           maxHeight: "100%",
           maxWidth: "100%",
         }}
@@ -113,7 +101,7 @@ const TeatroBlobMob = ({
             translateY: "-105px",
             width: "100%",
             height: "100%",
-            scale,
+            scale: imageScale,
           }}
         />
       </div>

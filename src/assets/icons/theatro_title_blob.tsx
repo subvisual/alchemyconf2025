@@ -51,7 +51,7 @@ const TheatroTitleBlob = ({
             <tspan
               key={index}
               x="45%"
-              dy={index === 0 ? "0" : "32px"} // Adjust line spacing
+              dy={index === 0 ? "0" : "32px"}
             >
               {line}
             </tspan>
