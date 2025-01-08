@@ -228,7 +228,7 @@
     "talk_description": "",
     "workshop_title": "Practical testing with Elixir (and Phoenix)",
     "workshop_description": "This workshop will help you maximize the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn practical strategies to write clear, reliable tests and increase confidence in your code. This very interactive and hands-on session focuses on testing Phoenix-powered Elixir web servers, involving a lot of coding and discussions.This tutorial teaches a practical testing approach which maximizes the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn how to increase the confidence in your tests, organically maximize code coverage, and improve the test clarity. This is going to be a very interactive and hands-on session involving a lot of coding and discussions.",
-    "workshop_link": "https://membrz.club/alchemyconf/events/supercharge-your-elixir-apps-with-ash"
+    "workshop_link": "https://membrz.club/alchemyconf/events/workshop-practical-testing-with-elixir-and-phoenix"
   },
   {
     "id": 8,
