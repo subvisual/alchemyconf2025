@@ -101,7 +101,19 @@ const SpeakerDetails = ({
 );
 
 export default function SpeakersMobile() {
-  const [activeSectionId, setActiveSectionId] = useState<string | null>(null);
+  const [activeSections, setActiveSections] = useState<Record<number, string>>(() => {
+    return speakers.reduce((acc, speaker) => {
+      acc[speaker.id] = `bio-${speaker.id}`;
+      return acc;
+    }, {} as Record<number, string>);
+  });
+
+  const handleSectionToggle = (speakerId: number, sectionId: string) => {
+    setActiveSections(prev => ({
+      ...prev,
+      [speakerId]: prev[speakerId] === sectionId ? '' : sectionId
+    }));
+  };
 
   return (
     <section className="mx-auto mb-40 mt-14 flex w-full flex-col items-center justify-center">
@@ -140,12 +152,8 @@ export default function SpeakersMobile() {
               content_title={""}
               content_description={speaker.bio || ""}
               color="dark-blue"
-              isOpen={activeSectionId === bioSectionId}
-              onToggle={() =>
-                setActiveSectionId(
-                  activeSectionId === bioSectionId ? null : bioSectionId,
-                )
-              }
+              isOpen={activeSections[speaker.id] === bioSectionId}
+              onToggle={() => handleSectionToggle(speaker.id, bioSectionId)}
             />
             {speaker.talk_title && (
               <InfoSection
@@ -153,12 +161,8 @@ export default function SpeakersMobile() {
                 content_title={speaker.talk_title}
                 content_description={speaker.talk_description || ""}
                 color="yellow"
-                isOpen={activeSectionId === talkSectionId}
-                onToggle={() =>
-                  setActiveSectionId(
-                    activeSectionId === talkSectionId ? null : talkSectionId,
-                  )
-                }
+                isOpen={activeSections[speaker.id] === talkSectionId}
+                onToggle={() => handleSectionToggle(speaker.id, talkSectionId)}
               />
             )}
             {speaker.workshop_title && (
@@ -167,14 +171,8 @@ export default function SpeakersMobile() {
                 content_title={speaker.workshop_title}
                 content_description={speaker.workshop_description || ""}
                 color="yellow"
-                isOpen={activeSectionId === workshopSectionId}
-                onToggle={() =>
-                  setActiveSectionId(
-                    activeSectionId === workshopSectionId
-                      ? null
-                      : workshopSectionId,
-                  )
-                }
+                isOpen={activeSections[speaker.id] === workshopSectionId}
+                onToggle={() => handleSectionToggle(speaker.id, workshopSectionId)}
               />
             )}
           </div>
