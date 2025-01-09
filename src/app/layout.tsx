@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { koulen, unbutton, zilla_slab, alegreya_sans } from "@/utils/fonts";
+import { koulen, unbutton, zilla_slab, alegreya_sans, sofia_sans_extra_condensed } from "@/utils/fonts";
 import { GoogleTagManager } from "@next/third-parties/google";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
@@ -30,7 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`scroll-smooth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} ${alegreya_sans.variable} `}
+      className={`scroll-smooth ${zilla_slab.variable} ${koulen.variable} ${unbutton.variable} ${alegreya_sans.variable} ${sofia_sans_extra_condensed.variable}`}
       lang="en"
     >
       <script
