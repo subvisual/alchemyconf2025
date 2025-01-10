@@ -9,9 +9,9 @@ import ArrowRight from "@/assets/icons/arrow_right";
 import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
 import { useState } from "react";
-import SpeakerBackBlob from "@/assets/icons/speaker_page_back_blob";
 import SpeakerPageBlobMobile from "@/assets/icons/speaker_page_blob_mobile";
 import AltButton from "../_components/AltButton";
+import { normalizeChars } from "../utils";
 
 interface InfoSectionProps {
   section_title: string;
@@ -100,7 +100,7 @@ const SpeakerDetails = ({
   web_link,
 }: SpeakerDetailsProps) => (
   <div className="flex w-full flex-col items-center">
-    <h1 className="relative text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[64px] leading-[64px]">
+    <h1 className="relative text-center font-sofia_sans_extra_condensed text-[64px] font-extrabold uppercase leading-[64px]">
       {name + " " + surname}{" "}
       <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D]">
         {name + " " + surname}{" "}
@@ -144,7 +144,7 @@ export default function SpeakersMobile() {
         return (
           <div
             key={speaker.id}
-            id={`smob-${speaker.id}`}
+            id={`${normalizeChars(speaker.name + speaker.surname)}`}
             className="mb-12 flex w-full scroll-mt-12 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue"
           >
             <SpeakerPageBlobMobile

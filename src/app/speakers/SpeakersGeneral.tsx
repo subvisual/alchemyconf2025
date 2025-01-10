@@ -8,6 +8,7 @@ import speakerImages from "../_constants/speakers_images";
 import SpeakerPageBlob from "@/assets/icons/speaker_page_blob";
 import Button from "../_components/Button";
 import AltButton from "../_components/AltButton";
+import { normalizeChars } from "../utils";
 
 interface InfoSectionProps {
   section_title: string;
@@ -73,7 +74,7 @@ const SpeakerDetails = ({
   web_link,
 }: SpeakerDetailsProps) => (
   <>
-    <h1 className="relative text-left font-extrabold font-sofia_sans_extra_condensed uppercase tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
+    <h1 className="relative text-left font-sofia_sans_extra_condensed font-extrabold uppercase tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
       {name + " " + surname}{" "}
       <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
         {name + " " + surname}{" "}
@@ -94,7 +95,7 @@ export default function SpeakersGeneral() {
       {speakers.map((speaker) => (
         <div
           key={speaker.id}
-          id={`s-${speaker.id}`}
+          id={`${normalizeChars(speaker.name + "-" + speaker.surname)}`}
           className="mb-20 flex w-full max-w-screen-desktop scroll-mt-48 flex-row justify-center gap-6 p-6"
         >
           {speaker.id % 2 === 1 ? (
