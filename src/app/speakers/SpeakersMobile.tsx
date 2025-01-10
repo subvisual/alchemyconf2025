@@ -100,9 +100,9 @@ const SpeakerDetails = ({
   web_link,
 }: SpeakerDetailsProps) => (
   <div className="flex w-full flex-col items-center">
-    <h1 className="relative text-center font-koulen text-[64px] leading-[64px]">
+    <h1 className="relative text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[64px] leading-[64px]">
       {name + " " + surname}{" "}
-      <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
+      <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D]">
         {name + " " + surname}{" "}
       </span>
     </h1>

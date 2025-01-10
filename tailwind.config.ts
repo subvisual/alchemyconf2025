@@ -25,6 +25,7 @@ const config: Config = {
       koulen: ["var(--font-koulen)"],
       unbutton: ["var(--font-unbutton)"],
       alegreya_sans: ["var(--font-alegreya-sans)"],
+      sofia_sans_extra_condensed: ["var(--font-sofia-sans-extra-condensed)"],
     },
     extend: {
       colors: {

@@ -4,9 +4,9 @@ export default function Conf() {
       id="conference"
       className="mb-20 mt-32 flex scroll-mt-32 flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
-      <h1 className="relative pb-6 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
+      <h1 className="relative pb-6 text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         About Alchemy Conf
-        <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
           About Alchemy Conf
         </span>
       </h1>

@@ -73,7 +73,7 @@ const SpeakerDetails = ({
   web_link,
 }: SpeakerDetailsProps) => (
   <>
-    <h1 className="relative text-left font-koulen tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
+    <h1 className="relative text-left font-extrabold font-sofia_sans_extra_condensed uppercase tablet:text-[80px] tablet:leading-[80px] desktop:text-[100px] desktop:leading-[100px]">
       {name + " " + surname}{" "}
       <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
         {name + " " + surname}{" "}

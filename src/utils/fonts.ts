@@ -1,4 +1,4 @@
-import { Zilla_Slab, Koulen, Alegreya_Sans } from "next/font/google";
+import { Zilla_Slab, Koulen, Alegreya_Sans, Sofia_Sans_Extra_Condensed } from "next/font/google";
 import localFont from "next/font/local";
 
 export const unbutton = localFont({
@@ -22,4 +22,10 @@ export const alegreya_sans = Alegreya_Sans({
   subsets: ["latin"],
   weight: ["100", "300", "400", "500", "700", "800"],
   variable: "--font-alegreya-sans",
+});
+
+export const sofia_sans_extra_condensed = Sofia_Sans_Extra_Condensed({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "800"],
+  variable: "--font-sofia-sans-extra-condensed",
 });
