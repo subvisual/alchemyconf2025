@@ -82,7 +82,7 @@ const TeatroBlobMob = ({
         }}
         {...props}
       >
-        <mask id={`theatroMask${id}`}>
+        <mask id={`theatroMaskMob${id}`}>
           <animated.path
             fill="white"
             d={x.to({
@@ -92,7 +92,7 @@ const TeatroBlobMob = ({
           />
         </mask>
       </svg>
-      <div style={{ mask: `url(#theatroMask${id})`, overflow: "hidden" }}>
+      <div style={{ mask: `url(#theatroMaskMob${id})`, overflow: "hidden" }}>
         <animated.img
           src={src}
           alt={alt}
