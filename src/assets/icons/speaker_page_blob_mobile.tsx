@@ -11,7 +11,6 @@ interface SpeakerBlobProps {
   height: string;
   position: string;
   blobType: number;
-  offset: string;
 }
 
 const SpeakerPageBlobMobile = ({
@@ -22,7 +21,6 @@ const SpeakerPageBlobMobile = ({
   height,
   position,
   blobType,
-  offset,
 }: SpeakerBlobProps) => {
 
   return (
@@ -39,18 +37,18 @@ const SpeakerPageBlobMobile = ({
       <SpeakerBackBlobMobile
         position={position}
         style={{
-          transform: `translateX(-50px) translateY(-40px)`,
+          transform: `translateX(-30px) translateY(-40px)`,
           objectFit: "contain",
         }}
       />
-      <div>
+      <div className="relative flex items-center justify-center">
         <Image
           src={src}
           alt={alt}
           width="190"
           height="250"
           style={{
-            transform: `translateX(${offset}) translateY(${blobType === 1 ? "40px" : "10px"})`,
+            transform: `translateY(${blobType === 1 ? "40px" : "10px"})`,
             objectFit: "contain",
           }}
         />

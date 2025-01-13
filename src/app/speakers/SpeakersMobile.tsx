@@ -8,7 +8,7 @@ import ArrowRight from "@/assets/icons/arrow_right";
 
 import speakers from "../_constants/speakers.json";
 import speakerImagesMob from "../_constants/speakers_images_mob";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import SpeakerPageBlobMobile from "@/assets/icons/speaker_page_blob_mobile";
 import AltButton from "../_components/AltButton";
 import { normalizeChars } from "../utils";
@@ -126,14 +126,6 @@ export default function SpeakersMobile() {
       );
     },
   );
-  const [isNonChromium, setIsNonChromium] = useState(false);
-
-  useEffect(() => {
-    const isNonChromiumBrowser =
-      /firefox|safari/i.test(navigator.userAgent) &&
-      !/chrome|android/i.test(navigator.userAgent);
-    setIsNonChromium(isNonChromiumBrowser);
-  }, []);
 
   const handleSectionToggle = (speakerId: number, sectionId: string) => {
     setActiveSections((prev) => ({
@@ -162,7 +154,6 @@ export default function SpeakersMobile() {
               width="250px"
               position={String(speaker.id)}
               blobType={speaker.blobType}
-              offset={isNonChromium ? "35px" : "0px"}
               className="-z-10 translate-x-[0px] translate-y-[-35px]"
             />
             <SpeakerDetails
