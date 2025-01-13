@@ -7,7 +7,7 @@ import ArrowDown from "@/assets/icons/arrow_down";
 import ArrowRight from "@/assets/icons/arrow_right";
 
 import speakers from "../_constants/speakers.json";
-import speakerImages from "../_constants/speakers_images";
+import speakerImagesMob from "../_constants/speakers_images_mob";
 import { useState } from "react";
 import SpeakerPageBlobMobile from "@/assets/icons/speaker_page_blob_mobile";
 import AltButton from "../_components/AltButton";
@@ -106,7 +106,7 @@ const SpeakerDetails = ({
         {name + " " + surname}{" "}
       </span>
     </h1>
-    <div className="flex w-full items-center justify-center space-x-2 pb-2">
+    <div className="flex w-full items-center justify-center space-x-2 pt-2 pb-2">
       {x_link && <XIcon link={x_link} className="h-6" />}
       {git_link && <GithubIcon link={git_link} className="h-6" />}
       {web_link && <WebIcon link={web_link} className="h-6" />}
@@ -135,7 +135,7 @@ export default function SpeakersMobile() {
   };
 
   return (
-    <section className="mx-auto mb-40 mt-14 flex w-full flex-col items-center justify-center">
+    <section className="mx-auto mb-16 mt-48 flex w-full flex-col items-center justify-center">
       {speakers.map((speaker) => {
         const bioSectionId = `bio-${speaker.id}`;
         const talkSectionId = `talk-${speaker.id}`;
@@ -145,19 +145,16 @@ export default function SpeakersMobile() {
           <div
             key={speaker.id}
             id={`${normalizeChars(speaker.name + speaker.surname)}`}
-            className="mb-12 flex w-full scroll-mt-12 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue"
+            className="mb-40 flex w-full scroll-mt-44 flex-col items-center justify-center gap-4 font-alegreya_sans font-normal text-dark-blue"
           >
             <SpeakerPageBlobMobile
-              src={speakerImages[speaker.id - 1].src}
+              src={speakerImagesMob[speaker.id - 1].src}
               alt={speaker.name}
-              height="350px"
-              width="350px"
+              height="250px"
+              width="250px"
               position={String(speaker.id)}
               blobType={speaker.blobType}
-              imageX={speaker.image_x_mob_sm}
-              imageY={speaker.image_y_mob_sm}
-              imageScale={Number(speaker.image_scale_mob_sm)}
-              className="-z-10 translate-x-[80px] translate-y-[80px]"
+              className="-z-10 translate-x-[0px] translate-y-[-35px]"
             />
             <SpeakerDetails
               name={speaker.name}
