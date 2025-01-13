@@ -7,6 +7,8 @@ import speakerImages from "../_constants/speakers_images";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import SpeakerTitleBlobMobile from "@/assets/icons/speaker_title_blob_mobile";
 import { normalizeChars } from "../utils";
+import speakerImagesMob from "../_constants/speakers_images_mob";
+
 export default function Speakers() {
   const [isNonChromium, setIsNonChromium] = useState(false);
   const [isMounted, setIsMounted] = useState(false);
@@ -30,8 +32,8 @@ export default function Speakers() {
           Speakers
         </span>
       </h1>
-      <div className="relative grid w-full max-w-[1440px] grid-cols-1 justify-center gap-x-[20px] gap-y-[30px] desktop:grid-cols-2">
-        <div className="text-left pb-12 font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
+      <div className="relative grid w-full max-w-[1440px] grid-cols-1 justify-center gap-x-[20px] tablet:gap-y-[30px] desktop:grid-cols-2">
+        <div className="text-left pb-1 font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Alchemy Conf 2025 brings together the brightest minds in the Elixir
           community. <br /> The top experts in our community will share what
           they’ve learned about building, innovation, and real-world
@@ -41,7 +43,7 @@ export default function Speakers() {
           speakers.map((speakers) => (
             <div
               key={speakers.id}
-              className="speaker-transform relative mx-auto flex h-[350px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
+              className="speaker-transform relative mx-auto flex h-[325px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
               style={{
                 // @ts-ignore
                 "--translate-mobile": `translateX(${isNonChromium ? speakers.m_blob_x_ff : speakers.m_blob_x}px) translateY(${speakers.m_blob_y}px)`,
@@ -82,15 +84,14 @@ export default function Speakers() {
                   href={`/speakers#${normalizeChars(speakers.name + speakers.surname)}`}
                 >
                   <SpeakerBlobMobile
-                    src={speakerImages[speakers.id - 1].src}
+                    src={speakerImagesMob[speakers.id - 1].src}
                     alt={speakers.name}
-                    height="550px"
-                    width="550px"
+                    height="250px"
+                    width="250px"
                     position={String(speakers.id)}
                     blobType={speakers.blobType}
                     imageX={speakers.image_x_mob}
                     imageY={speakers.image_y_mob}
-                    imageScale={Number(speakers.image_scale_mob)}
                   />
                 </a>
                 <SpeakerTitleBlobMobile
