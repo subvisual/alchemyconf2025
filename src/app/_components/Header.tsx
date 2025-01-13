@@ -13,10 +13,12 @@ export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const getNavLinkClass = (path: string) => 
-    `px-3 py-8 transition-all ${
+    `px-3 py-8 transition-all border-2 ${
       pathname === path
-        ? "bg-bordeux text-background"
-        : "hover:bg-bordeux hover:text-background"
+        ? "bg-bordeux text-background border-transparent"
+        : pathname === "/" 
+          ? "border-transparent hover:bg-bordeux hover:text-background"  
+          : "border-transparent hover:border-bordeux"
     }`;
 
   const toggleSidebar = () => setShowSidebar(!showSidebar);
