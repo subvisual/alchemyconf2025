@@ -13,7 +13,7 @@ export default function Header() {
   const [showSidebar, setShowSidebar] = useState(false);
 
   const getNavLinkClass = (path: string) => 
-    `px-3 py-8 transition-all border-2 ${
+    `px-3 py-8 transition-all border-r-2 border-t-2 border-l-2 ${
       pathname === path
         ? "bg-bordeux text-background border-transparent"
         : pathname === "/" 
