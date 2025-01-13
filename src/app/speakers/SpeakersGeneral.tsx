@@ -79,7 +79,7 @@ const SpeakerDetails = ({
         {name + " " + surname}{" "}
       </span>
     </h1>
-    <div className="mt-[-20px] flex items-center justify-start pb-8 pl-16 tablet:space-x-3 desktop:space-x-4">
+    <div className="mt-[-10px] flex items-center justify-start pb-8 pl-16 tablet:space-x-3 desktop:space-x-4">
       <p className="font-bold">FOLLOW</p>
       <XIcon link={x_link} className="tablet:h-6 desktop:h-8" />
       <GithubIcon link={git_link} className="tablet:h-6 desktop:h-8" />
