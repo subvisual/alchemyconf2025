@@ -3,7 +3,7 @@ import Button from "../_components/Button";
 
 export default function Workshops() {
   return (
-    <section id="tickets" className="mt-[100px] tablet:mt-[0px]">
+    <section id="tickets" className="mt-[36px] tablet:mt-[0px]">
       <div className="mx-auto mb-16 max-w-screen-desktop border-l-4 border-yellow pl-5">
         <p className="mb-4 flex flex-row items-center font-alegreya_sans text-3xl font-bold leading-none text-dark-blue tablet:text-5xl">
           Workshops

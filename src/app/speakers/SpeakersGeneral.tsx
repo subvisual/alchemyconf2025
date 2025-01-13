@@ -6,7 +6,6 @@ import WebIcon from "@/assets/icons/icon_web";
 import speakers from "../_constants/speakers.json";
 import speakerImages from "../_constants/speakers_images";
 import SpeakerPageBlob from "@/assets/icons/speaker_page_blob";
-import Button from "../_components/Button";
 import AltButton from "../_components/AltButton";
 import { normalizeChars } from "../utils";
 
@@ -174,6 +173,7 @@ export default function SpeakersGeneral() {
                   <InfoSection
                     section_title="Workshop"
                     content_title={speaker.workshop_title}
+                    content_link={speaker.workshop_link || ""}
                     content_description={speaker.workshop_description || ""}
                     color="yellow"
                   />

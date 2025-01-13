@@ -24,14 +24,14 @@ export default function Speakers() {
       id="speakers"
       className="relative mt-36 flex flex-col items-center justify-center mobile:mb-40 tablet:py-0 desktop:mb-72"
     >
-      <h1 className="relative pb-16 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-10 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[500px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Speakers
         <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1 desktop:left-6">
           Speakers
         </span>
       </h1>
       <div className="relative grid w-full max-w-[1440px] grid-cols-1 justify-center gap-x-[20px] gap-y-[30px] desktop:grid-cols-2">
-        <div className="text-left font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
+        <div className="text-left pb-12 font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Alchemy Conf 2025 brings together the brightest minds in the Elixir
           community. <br /> The top experts in our community will share what
           they’ve learned about building, innovation, and real-world

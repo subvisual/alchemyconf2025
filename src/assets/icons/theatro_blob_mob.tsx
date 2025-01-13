@@ -15,6 +15,10 @@ interface TeatroBlobProps extends SVGProps<SVGSVGElement> {
   posY: string;
 }
 
+const isSafari = () => {
+  return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+};
+
 const TeatroBlobMob = ({
   className,
   src,
@@ -40,21 +44,24 @@ const TeatroBlobMob = ({
 
   const { x } = useSpring({
     to: startAnimation
-      ?  [
+      ? [
           { x: 1, config: { duration: 2000 } },
           { x: 2, config: { duration: 2000 } },
           { x: 3, config: { duration: 2000 } },
           { x: 0, config: { duration: 5000 } },
           { x: 2, config: { duration: 2000 } },
-      { x: 1, config: { duration: 2000 } },
-      { x: 0, config: { duration: 4000 } },
-    ] : { x: 0},
+          { x: 1, config: { duration: 2000 } },
+          { x: 0, config: { duration: 4000 } },
+        ]
+      : { x: 0 },
     from: { x: 0 },
     loop: { reverse: false },
   });
 
   useEffect(() => {
-    setStartAnimation(true);
+    if (!isSafari()) {
+      setStartAnimation(true);
+    }
   }, []);
 
   return (
@@ -82,7 +89,7 @@ const TeatroBlobMob = ({
         }}
         {...props}
       >
-        <mask id={`theatroMask${id}`}>
+        <mask id={`theatroMaskMob${id}`}>
           <animated.path
             fill="white"
             d={x.to({
@@ -92,7 +99,7 @@ const TeatroBlobMob = ({
           />
         </mask>
       </svg>
-      <div style={{ mask: `url(#theatroMask${id})`, overflow: "hidden" }}>
+      <div style={{ mask: `url(#theatroMaskMob${id})`, overflow: "hidden" }}>
         <animated.img
           src={src}
           alt={alt}
