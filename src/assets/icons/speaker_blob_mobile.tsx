@@ -1,16 +1,13 @@
 "use client";
 
-import { SVGProps } from "react";
 import Image from "next/image";
 
-interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
+interface SpeakerBlobProps {
   className?: string;
   src: string;
   alt: string;
   width: string;
   height: string;
-  position: string;
-  blobType: number;
   imageX: string;
   imageY: string;
 }
@@ -21,12 +18,8 @@ const SpeakerBlobMobile = ({
   alt,
   width,
   height,
-  position,
-  blobType,
   imageX,
   imageY,
-  // imageScale,
-  ...props
 }: SpeakerBlobProps) => {
 
   return (

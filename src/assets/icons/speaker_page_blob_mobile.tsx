@@ -1,10 +1,9 @@
 "use client";
 
-import { SVGProps } from "react";
 import Image from "next/image";
 import SpeakerBackBlobMobile from "./speaker_page_back_blob_mobile";
 
-interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
+interface SpeakerBlobProps {
   className?: string;
   src: string;
   alt: string;
@@ -12,6 +11,7 @@ interface SpeakerBlobProps extends SVGProps<SVGSVGElement> {
   height: string;
   position: string;
   blobType: number;
+  offset: string;
 }
 
 const SpeakerPageBlobMobile = ({
@@ -22,7 +22,7 @@ const SpeakerPageBlobMobile = ({
   height,
   position,
   blobType,
-  ...props
+  offset,
 }: SpeakerBlobProps) => {
 
   return (
@@ -38,7 +38,6 @@ const SpeakerPageBlobMobile = ({
     >
       <SpeakerBackBlobMobile
         position={position}
-        className="translate-x-[10px]"
         style={{
           transform: `translateX(-50px) translateY(-40px)`,
           objectFit: "contain",
@@ -51,7 +50,7 @@ const SpeakerPageBlobMobile = ({
           width="190"
           height="250"
           style={{
-            transform: `translateY(${blobType === 1 ? "40px" : "10px"})`,
+            transform: `translateX(${offset}) translateY(${blobType === 1 ? "40px" : "10px"})`,
             objectFit: "contain",
           }}
         />

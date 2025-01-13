@@ -88,8 +88,6 @@ export default function Speakers() {
                     alt={speakers.name}
                     height="250px"
                     width="250px"
-                    position={String(speakers.id)}
-                    blobType={speakers.blobType}
                     imageX={speakers.image_x_mob}
                     imageY={speakers.image_y_mob}
                   />
