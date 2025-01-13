@@ -192,8 +192,8 @@
     "git_link": "https://github.com/hugobarauna",
     "web_link": "",
     "bio": "Hugo is a developer advocate at Livebook. He’s also the founder of Elixir Radar. Before that, he co-founded Plataformatec, the company where Elixir was created.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "The Architecture Behind Deploying Livebook Apps with Livebook Teams",
+    "talk_description": "In this talk, we’ll explore the architecture that powers the seamless deployment of Livebook apps with just a click of a button. This system combines a hybrid approach with an app running on localhost, a SaaS layer, and an on-premises app. We’ll examine how these distributed system components interact, the challenges they address, and how Elixir’s OTP is leveraged to make it all work.",
     "workshop_title": "",
     "workshop_description": "",
     "workshop_link": ""
@@ -357,8 +357,8 @@
     "git_link": "https://github.com/wojtekmach",
     "web_link": "https://hex.pm/users/wojtekmach",
     "bio": "Wojtek Mach is a developer based in Kraków, Poland. He works at Dashbit helping organisations adopt and run Elixir in production as well as advance the Elixir Open Source ecosystem. He is a member of Hex, Ecto, and ExDoc core teams. He is also the creator of MyXQL, Livebook Desktop, and Req HTTP client.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "Library Client/Server Symmetry",
+    "talk_description": "As developers we often work with standardized formats and have functions to encode/decoded them. For example, we have Date.to_iso8601 + Date.from_iso8601, JSON.encode! + JSON.decode, NimbleTOTP.verification_code + NimbleTOTP.valid?, etc. I'd call these libraries symmetrical, they can work with either end of the format. We also work with network protocols like HTTP and for example we have: Req, an HTTP client, and Bandit, an HTTP server. Req and Bandit, even though they implement the common standard, HTTP, share almost no code and have different data structures. Why? Perhaps there are opportunities for symmetry?",
     "workshop_title": "",
     "workshop_description": "",
     "workshop_link": ""
