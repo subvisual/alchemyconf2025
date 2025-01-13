@@ -75,7 +75,7 @@ export default function Hero() {
         <div className="relative pb-[500px] flex w-full justify-center tablet:hidden">
           <TheatroTitleBlob
             className="absolute right-[-20px] top-[-80px] overflow-visible"
-            style={{ height: "394px", scale: "0.6" }}
+            style={{ height: "394px", scale: "0.5" }}
           />
           <TheatroBlobMob
             height="1000px"

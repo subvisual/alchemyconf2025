@@ -2,9 +2,9 @@ export default function CodeConduct() {
   return (
     <section
       id="code-of-conduct"
-      className="mb-[250px] flex scroll-mt-32 flex-col items-center justify-start"
+      className="mb-[250px] flex scroll-mt-40 flex-col items-center justify-start"
     >
-      <h1 className="relative pb-6 text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
+      <h1 className="relative pb-10 text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         Code of Conduct
         <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
           Code of Conduct
