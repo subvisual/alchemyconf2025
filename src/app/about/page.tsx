@@ -7,8 +7,6 @@ export default function About() {
   return (
     <>
       <Conf />
-      <Organizers />
-      <PastConferences />
       <CodeConduct />
     </>
   );

@@ -29,17 +29,17 @@ export default function Sponsors() {
       id="sponsors"
       className="mb-48 mt-32 flex flex-col items-center justify-center tablet:mb-28 desktop:mb-48"
     >
-      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-20 text-center font-sofia_sans_extra_condensed font-extrabold uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Sponsors
-        <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
           Sponsors
         </span>
       </h1>
 
       <div className="relative mb-10 flex flex-col desktop:flex-row">
         <div className="relative">
-          <SponsorMainBlob className="left-[45px] top-[-80px]" />
-          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans text-[28px] font-bold text-bordeux tablet:text-[32px]">
+          <SponsorMainBlob className="left-[45px] top-[-80px] mobile:translate-x-[-40px] mobile:scale-[0.8] tablet:translate-x-[0px] tablet:scale-[1.0]" />
+          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans font-bold text-bordeux mobile:text-[20px] tablet:text-[24px] desktop:text-[32px]">
             Main Sponsor
           </div>
           <a href="https://remote.com/" target="_blank">
@@ -110,7 +110,7 @@ export default function Sponsors() {
       {/* tablet / mobile */}
       <div className="relative desktop:hidden">
         <SponsorGoldBlob className="tablet: z-0 translate-x-[40px] tablet:translate-y-[-90px] tablet:scale-[0.8]" />
-        <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-2.5xl font-bold text-yellow">
+        <div className="absolute left-1/2 top-[140px] -translate-x-1/2 font-alegreya_sans text-[20px] font-bold text-yellow tablet:text-[24px] desktop:text-[32px]">
           Partners
         </div>
         <div className="absolute left-1/2 top-[215px] z-10 -translate-x-1/2">

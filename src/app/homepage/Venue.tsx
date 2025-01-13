@@ -14,14 +14,14 @@ export default function Venue() {
       id="venue"
       className="mt-32 flex flex-col items-center justify-center"
     >
-      <h1 className="relative pb-20 text-center font-koulen text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-10 text-center font-sofia_sans_extra_condensed font-extrabold uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:w-[1000px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Beyond a simple conference
-        <span className="absolute left-0 top-0 -z-10 translate-x-1 translate-y-1 text-[#7D1D3F3D]">
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
           Beyond a simple conference
         </span>
       </h1>
 
-      <div className="flex w-full flex-col justify-between gap-8 desktop:flex-row desktop:gap-48">
+      <div className="flex w-full max-w-[1440px] flex-col justify-between gap-6 desktop:flex-row desktop:gap-48">
         <div className="flex w-full flex-row justify-between desktop:flex-col">
           <div className="mb-8 border-l-4 border-bordeux pl-2 tablet:pl-5">
             <p className="font-alegreya_sans text-sm font-medium leading-none text-bordeux tablet:text-xl desktop:text-2xl">
