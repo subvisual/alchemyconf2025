@@ -8,6 +8,7 @@ import speakerImages from "../_constants/speakers_images";
 import SpeakerPageBlob from "@/assets/icons/speaker_page_blob";
 import AltButton from "../_components/AltButton";
 import { normalizeChars } from "../utils";
+import ReactMarkdown from 'react-markdown';
 
 interface InfoSectionProps {
   section_title: string;
@@ -43,7 +44,21 @@ const InfoSection = ({
     </div>
     <div className={`flex flex-col ${content_title !== "" ? "gap-4" : ""}`}>
       {content_title && <p className="font-bold uppercase">{content_title}</p>}
-      <p className="whitespace-pre-line">{content_description}</p>
+      <ReactMarkdown 
+        className="whitespace-pre-line"
+        components={{
+          a: ({node, ...props}) => (
+            <a 
+              {...props} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-dark-blue underline"
+            />
+          )
+        }}
+      >
+        {content_description}
+      </ReactMarkdown>
       {content_link && (
         <div className="mb-2 mt-1 flex">
           <AltButton
