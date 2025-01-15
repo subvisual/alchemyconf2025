@@ -96,9 +96,9 @@ const SpeakerDetails = ({
     </h1>
     <div className="mt-[-10px] flex items-center justify-start pb-8 pl-16 tablet:space-x-3 desktop:space-x-4">
       <p className="font-bold">FOLLOW</p>
-      <XIcon link={x_link} className="tablet:h-6 desktop:h-8" />
-      <GithubIcon link={git_link} className="tablet:h-6 desktop:h-8" />
-      <WebIcon link={web_link} className="tablet:h-6 desktop:h-8" />
+      {x_link && <XIcon link={x_link} className="tablet:h-6 desktop:h-8" />}
+      {git_link && <GithubIcon link={git_link} className="tablet:h-6 desktop:h-8" />}
+      {web_link && <WebIcon link={web_link} className="tablet:h-6 desktop:h-8" />}
     </div>
   </>
 );

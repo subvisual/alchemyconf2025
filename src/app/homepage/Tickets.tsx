@@ -43,7 +43,7 @@ export default function Tickets() {
                 <AltButton
                   className="font-medium"
                   text="Get Tickets"
-                  href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
+                  href="https://membrz.club/alchemyconf/events"
                 />
               </div>
             </div>

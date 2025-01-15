@@ -64,7 +64,7 @@ export default function Header() {
           <div className="flex items-center gap-4 tablet:py-4 tablet:gap-8">
             <Button
               text="Get Tickets"
-              href="https://membrz.club/alchemyconf/events/alchemy-conference-2025"
+              href="https://membrz.club/alchemyconf/events"
             />
             <Burguer
               className="h-6 w-6 hover:cursor-pointer desktop:hidden"
