@@ -70,7 +70,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             <Button
               className="text-center"
               text="Get Tickets"
-              href="https://ti.to/subvisual/alchemy-conf-2025"
+              href="https://membrz.club/alchemyconf/events"
             />
           </li>
         </ul>
