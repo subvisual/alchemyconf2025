@@ -17,10 +17,12 @@ export default function Tickets() {
         </span>
       </h1>
 
-      <div className="w-full max-w-[1440px] z-0 flex justify-center items-center ">
-        <TicketsBlob className=" -z-10 opacity-25 translate-x-[-260px] translate-y-[-10px] mobile:scale-[0.9] tablet:translate-x-0 tablet:translate-y-4 desktop:translate-y-4" />
+      <div className="w-full max-w-[1440px] z-0 flex justify-center items-center relative">
+        <div className="absolute -z-10 w-0 h-0 ">
+          <TicketsBlob className="absolute -z-10 opacity-25 translate-x-[-890px] translate-y-[-430px] mobile:scale-[0.9] tablet:translate-x-[-660px] tablet:translate-y-[-400px] desktop:translate-x-[-660px] desktop:translate-y-[-400px]" />
+        </div>
         <div className="flex w-full flex-col justify-center items-center tablet:w-[1500px] tablet:flex-row tablet:justify-evenly tablet:items-start tablet:translate-y-[50px] desktop:justify-center desktop:translate-y-[70px]">
-          <div className="font-alegreya_sans max-w-[400px] text-xl text-dark-blue mobile:mb-[50px] text-left tablet:text-left tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[600px] desktop:max-w-[1000px] desktop:text-[32px] desktop:leading-[44px]">
+          <div className="font-alegreya_sans max-w-[400px] text-xl text-dark-blue mobile:mb-[35px] text-left tablet:text-left tablet:flex tablet:w-[470px] tablet:pb-20 tablet:text-[26px] tablet:leading-[36px] desktop:w-[600px] desktop:max-w-[1000px] desktop:text-[32px] desktop:leading-[44px]">
             Join us in celebrating Elixir! Choose the ticket option that best
             suits your needs and secure your spot at the most unique event the
             community’s ever seen.
