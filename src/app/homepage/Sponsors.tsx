@@ -29,21 +29,21 @@ export default function Sponsors() {
       id="sponsors"
       className="mb-48 mt-32 flex flex-col items-center justify-center tablet:mb-28 desktop:mb-48"
     >
-      <h1 className="relative pb-20 text-center font-sofia_sans_extra_condensed font-extrabold uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="relative pb-20 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:pb-28 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Sponsors
-        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
           Sponsors
         </span>
       </h1>
 
-      <div className="relative items-center mb-10 flex flex-col desktop:flex-row">
-        <div className="relative">
+      <div className="relative mb-4 flex w-full max-w-[1440px] flex-col items-center tablet:mb-6 desktop:mb-10 desktop:flex-row">
+        <div className="relative mobile:mb-[-60px] tablet:mb-0">
           <SponsorMainBlob className="left-[45px] top-[-80px] mobile:translate-x-[-40px] mobile:scale-[0.8] tablet:translate-x-[0px] tablet:scale-[1.0]" />
-          <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans font-bold text-bordeux mobile:text-[20px] tablet:text-[24px] desktop:text-[32px]">
+          <div className="absolute left-[140px] top-[5px] w-[10px] font-alegreya_sans font-bold text-bordeux mobile:text-[20px] tablet:left-[120px] tablet:text-[24px] desktop:text-[32px]">
             Main Sponsor
           </div>
           <a href="https://remote.com/" target="_blank">
-            <div className="absolute scale-[0.7] left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:scale-[1.0] tablet:left-[250px]">
+            <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] scale-[0.7] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px] tablet:scale-[1.0]">
               <Image
                 src={remoteLogo}
                 alt="Remote Logo"
@@ -53,8 +53,9 @@ export default function Sponsors() {
             </div>
           </a>
         </div>
-        <div className="flex flex-col items-start desktop:ml-28">
-          <div className="mb-8 flex flex-col items-center gap-4 px-[90px] text-center font-alegreya_sans text-xl text-dark-blue tablet:px-0 tablet:text-2xl desktop:items-start desktop:gap-8 desktop:text-left desktop:text-3xl">
+
+        <div className="relative flex w-full max-w-[1440px] flex-col items-center justify-center desktop:ml-28">
+          <div className="mb-8 flex flex-col items-center gap-2 text-center font-alegreya_sans text-xl text-dark-blue tablet:px-0 tablet:text-2xl desktop:items-start desktop:gap-8 desktop:text-left desktop:text-3xl">
             Alchemy Conf is powered by the support of our esteemed sponsors.
             <br />
             <br />
