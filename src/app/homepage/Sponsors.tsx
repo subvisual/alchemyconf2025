@@ -36,14 +36,14 @@ export default function Sponsors() {
         </span>
       </h1>
 
-      <div className="relative mb-10 flex flex-col desktop:flex-row">
+      <div className="relative items-center mb-10 flex flex-col desktop:flex-row">
         <div className="relative">
           <SponsorMainBlob className="left-[45px] top-[-80px] mobile:translate-x-[-40px] mobile:scale-[0.8] tablet:translate-x-[0px] tablet:scale-[1.0]" />
           <div className="absolute left-[120px] top-[5px] w-[10px] font-alegreya_sans font-bold text-bordeux mobile:text-[20px] tablet:text-[24px] desktop:text-[32px]">
             Main Sponsor
           </div>
           <a href="https://remote.com/" target="_blank">
-            <div className="absolute left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:left-[250px]">
+            <div className="absolute scale-[0.7] left-[190px] top-[100px] h-[200px] w-[286px] rotate-[-14.75deg] rounded-lg bg-white drop-shadow-[0_12px_12px_rgba(203,92,0,0.24)] tablet:scale-[1.0] tablet:left-[250px]">
               <Image
                 src={remoteLogo}
                 alt="Remote Logo"
