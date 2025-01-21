@@ -113,11 +113,11 @@
     "git_link": "https://github.com/batate",
     "web_link": "",
     "bio": "Bruce Tate lives in Chattanooga, Tennessee. An avid adventurer, he enjoys kayaking rivers, indoor climbing, and boating. He has actively participated in the launch of three companies and served as the CTO of icanmakeitbetter. With a strong focus on education, Bruce is an author of over a dozen books and a prominent figure in the Elixir community as a speaker, author, editor, and conference organizer. In 2018, he founded Groxio, a platform dedicated to teaching computer languages. Bruce Tate's contributions in the field of programming education have made a significant impact nationally and beyond.",
-    "talk_title": "TBD",
-    "talk_description": "",
-    "workshop_title": "TBD",
-    "workshop_description": "",
-    "workshop_link": ""
+    "talk_title": "Elixir 10 Years In",
+    "talk_description": "Over the past 10 years, Elixir has seen incredible growth. Together, we'll explore some of the key moments in Elixir's evolution, and look at the underlying design and community decisions that shaped it into what it is today.",
+    "workshop_title": "Thinking in Elixir",
+    "workshop_description": "In this session, you'll learn an overview of Elixir programming techniques. You'll learn Elixir using LiveBook, a quick and expressive way to capture both code and notes to collaborate on graphical applications. One piece at a time, we will use Elixir to write a small game using functional programming. Then, if there is time, we'll make the game fault tolerant and reliable with Elixir's concurrency framework called OTP.",
+    "workshop_link": "https://membrz.club/alchemyconf/events/thinking-in-elixir"
   },
   {
     "id": 5,
