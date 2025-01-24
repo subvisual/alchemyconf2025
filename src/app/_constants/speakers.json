@@ -83,8 +83,8 @@
     "git_link": "https://github.com/whatyouhide",
     "web_link": "https://andrealeopardi.com/",
     "bio": "Andrea is a human born in the ancient lands of central Italy. He loves programming, writing, and learning stuff. He’s a software architect, speaker, and member of the core team of the Elixir programming language. He also co-wrote a book about testing in Elixir. His weak spot is having red hair.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "gen_statem — OTP's Unsung Hero",
+    "talk_description": "gen_statem is one of the most powerful, yet least celebrated, behaviours in OTP. It handles infinite states, offers a rich set of event options, and provides robust debugging tools—all while staying true to OTP principles and functional programming. This talk is where you find out a lot more about this little module (possibly too much). Learn what gen_statem can do, when to use it, and when a silly GenServer does it instead.",
     "workshop_title": "Concurrent Data Processing in Elixir",
     "workshop_description": "Consuming data and processing it is a central problem in so many systems nowadays. And Elixir is just so good at doing that, and doing it concurrently. Whether you run an event-sourced architecture with applications that react to events, or you have the occasional use case of map/reducing over collections in an optimized way, Elixir has your back! \n In this half-day workshop, we will cover tools like Broadway, GenStage, and Flow to handle tasks such as batch processing, event-driven systems, and rate-limiting outgoing requests.",
     "workshop_link": "https://membrz.club/alchemyconf/events/workshop-concurrent-data-processing-in-elixir"
@@ -234,8 +234,8 @@
     "git_link": "https://github.com/sasa1977",
     "web_link": "https://medium.com/@sasa.juric",
     "bio": "Saša is a passionate chocolate enthusiast, aspiring latte artist, and wannabe fingerstyle guitarist. When he’s not perfecting his coffee skills or strumming away, he enjoys helping teams make the most of Elixir. He’s the author of Elixir in Action and an occasional blogger at theerlangelist.com.",
-    "talk_title": "TBD",
-    "talk_description": "",
+    "talk_title": "Tell me a story",
+    "talk_description": "Saša's talk is called \"Tell me a story\". \n\nHe didn't provide us with an abstract at all. \n\nNot only have we decided to trust him, we are maybe even more excited for his time on our stage. You should be too.",
     "workshop_title": "Practical testing with Elixir (and Phoenix)",
     "workshop_description": "This workshop will help you maximize the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn practical strategies to write clear, reliable tests and increase confidence in your code. This very interactive and hands-on session focuses on testing Phoenix-powered Elixir web servers, involving a lot of coding and discussions.This tutorial teaches a practical testing approach which maximizes the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn how to increase the confidence in your tests, organically maximize code coverage, and improve the test clarity. This is going to be a very interactive and hands-on session involving a lot of coding and discussions.",
     "workshop_link": "https://membrz.club/alchemyconf/events/workshop-practical-testing-with-elixir-and-phoenix"
