@@ -11,7 +11,7 @@ const SponsorMainBlob = ({
   ...props
 }: BlobProps) => {
   return (
-    <div className={`relative ${className}`}>
+    <div className={`relative -z-10 ${className}`}>
       <svg
         width="1119"
         height="668"
