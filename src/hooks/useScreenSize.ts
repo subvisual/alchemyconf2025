@@ -11,7 +11,7 @@ export default function useScreenSize() {
   useEffect(() => {
     function handleResize() {
       setScreenSize(
-        window.innerWidth < 640 ? ScreenSize.Small : ScreenSize.Normal,
+        window.innerWidth < 834 ? ScreenSize.Small : ScreenSize.Normal,
       );
     }
 
