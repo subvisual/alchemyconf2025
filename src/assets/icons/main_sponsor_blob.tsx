@@ -1,87 +1,52 @@
-"use client";
-
 import { SVGProps } from "react";
-import { animated } from "@react-spring/web";
-import SpeakerPageBackBlob from "./speaker_page_back_blob";
 
 interface BlobProps extends SVGProps<SVGSVGElement> {
   className?: string;
-  src: string;
-  alt: string;
-  width: string;
-  height: string;
-  position: string;
-  blobType: number;
-  imageX: string;
-  imageY: string;
-  imageScale: number;
+  color?: string;
+  imageSrc: string;
 }
 
-const MainSponsorBlob = ({
+const SponsorMainBlob = ({
   className,
-  src,
-  alt,
-  width,
-  height,
-  position,
-  blobType,
-  imageX,
-  imageY,
-  imageScale,
+  color = "#F4AC45",
+  imageSrc,
   ...props
 }: BlobProps) => {
-  const speakerBlobPaths = [
-    "M489.232 -123.982L-145.216 40.0979L-86.1903 268.334C-63.0937 209.248 -7.00851 177.244 45.6469 176.509C81.3554 176.011 99.7527 192.192 122.602 212.287C141.862 229.226 164.286 248.948 202.908 263.807C229.985 274.224 261.165 266.108 296.413 256.934C335.024 246.884 378.517 235.564 426.845 245.943C447.695 250.421 482.774 272.214 510.555 306.177L594.841 284.379L489.232 -123.982Z",
-  ];
-
-  const selectedSpeakerBlobPath = speakerBlobPaths[blobType];
-
   return (
-    <div
-      className={`${className}`}
-      style={{
-        width,
-        height,
-        position: "relative",
-        justifyItems: "center",
-        alignItems: "center",
-      }}
-    >
+    <div className={`relative ${className}`}>
       <svg
-        width="642"
-        height="583"
-        viewBox="0 0 642 583"
+        width="490"
+        height="440"
+        viewBox="0 0 290 240"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        style={{
-          position: "absolute",
-          maxHeight: "100%",
-          maxWidth: "100%",
-        }}
+        style={{ transform: 'rotate(-4deg)' }}
         {...props}
-      >                
-      <defs>
-        <mask id={`sponsorMask${position}`}>
-          <path fill="white" stroke="white" strokeWidth="1" d="M582.232 10.0184L-52.2161 174.098L6.80975 402.334C29.9063 343.248 85.9915 311.244 138.647 310.509C174.355 310.011 192.753 326.192 215.602 346.287C234.862 363.226 257.286 382.948 295.908 397.807C322.985 408.224 354.165 400.108 389.413 390.934C428.024 380.884 471.517 369.564 519.845 379.943C540.695 384.421 575.774 406.214 603.555 440.177L687.841 418.379L582.232 10.0184Z" />
-        </mask>
+      >
+        <defs>
+          <clipPath id="blobClip">
+            <path
+              d="M8 0C3.58172 0 0 3.58171 0 7.99999V182.887C13.9738 175.714 30.3824 169.001 50.9838 164.11C77.0679 157.917 103.608 168.275 133.61 179.984C166.476 192.811 203.497 207.259 248.624 203.349C258.973 202.452 273.775 197.727 290 189.503V8C290 3.58172 286.418 0 282 0H8Z"
+            />
+          </clipPath>
         </defs>
+        <g clipPath="url(#blobClip)">
+          <path
+            d="M8 0C3.58172 0 0 3.58171 0 7.99999V182.887C13.9738 175.714 30.3824 169.001 50.9838 164.11C77.0679 157.917 103.608 168.275 133.61 179.984C166.476 192.811 203.497 207.259 248.624 203.349C258.973 202.452 273.775 197.727 290 189.503V8C290 3.58172 286.418 0 282 0H8Z"
+            fill="white"
+          />
+          <image
+            href={imageSrc}
+            width="70%"
+            height="100%"
+            // preserveAspectRatio="xMidYMid meet"
+            transform="translate(50, -25) rotate(4, 143, 100)"
+          />
+        </g>
       </svg>
-      <div style={{ mask: `url(#sponsorMask${position})`, overflow: "visible" }}>
-        <animated.img
-          src={src}
-          alt={alt}
-          width="600"
-          height="600"
-          style={{
-            translateX: `${imageX}`,
-            translateY: `${imageY}`,
-            objectFit: "contain",
-            scale: imageScale,
-          }}
-        />
-      </div>
     </div>
   );
 };
 
-export default MainSponsorBlob;
+export default SponsorMainBlob;
+
