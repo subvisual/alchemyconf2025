@@ -42,7 +42,7 @@
       "name": "marmela",
       "logo": "marmelaLogo",
       "link": "https://marmelasoft.com/",
-      "scale": "0.9"
+      "scale": "1.0"
     },
     {
       "id": 2,
@@ -56,14 +56,14 @@
       "name": "CeSIUM Centro de Estudantes",
       "logo": "cesiumLogo",
       "link": "https://cesium.di.uminho.pt/",
-      "scale": "0.9"
+      "scale": "1.0"
     },
     {
       "id": 4,
       "name": "GET BUS",
       "logo": "getBusLogo",
       "link": "https://www.getbus.eu/en/",
-      "scale": "0.8"
+      "scale": "1.0"
     }
   ]
 }

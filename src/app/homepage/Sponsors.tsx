@@ -8,16 +8,27 @@ import logo2 from "@/assets/images/startupbraga_logo.png";
 import logo3 from "@/assets/images/cesium_logo.svg";
 import logo4 from "@/assets/images/getbus_logo.png";
 import SponsorGoldBlob from "@/assets/icons/sponsor_gold_blob";
-import SponsorMainBlob from "@/assets/icons/main_sponsor_blob";
+import MainSponsorBlob from "@/assets/icons/main_sponsor_blob";
+import SponsorMainBlob from "@/assets/icons/sponsor_main_blob";
 import sponsorLogos from "../_constants/sponsors_logos";
+import SponsorBlobs from "@/assets/icons/sponsor_blobs";
 
 type SponsorLogoKey = keyof typeof sponsorLogos;
 
 export default function Sponsors() {
   const logoImages = [logo1, logo2, logo3, logo4];
-  let itemsPerRow = 2;
+  let itemsPerRow = 3;
 
-  const chunkArray = (arr: Array<{id: number, name: string, logo: SponsorLogoKey, link: string, scale: number}>, size: number) => {
+  const chunkArray = (
+    arr: Array<{
+      id: number;
+      name: string;
+      logo: SponsorLogoKey;
+      link: string;
+      scale: number;
+    }>,
+    size: number,
+  ) => {
     let chunkedArray = [];
     for (let i = 0; i < arr.length; i += size) {
       chunkedArray.push(arr.slice(i, i + size));
@@ -25,10 +36,10 @@ export default function Sponsors() {
     return chunkedArray;
   };
 
-  const partnersWithNumberScale = sponsors.partners.map(partner => ({
+  const partnersWithNumberScale = sponsors.partners.map((partner) => ({
     ...partner,
     scale: Number(partner.scale),
-    logo: partner.logo as SponsorLogoKey
+    logo: partner.logo as SponsorLogoKey,
   }));
 
   const rows = chunkArray(partnersWithNumberScale, itemsPerRow);
@@ -38,7 +49,7 @@ export default function Sponsors() {
       id="sponsors"
       className="mb-48 mt-32 flex flex-col items-center justify-center tablet:mb-28 desktop:mb-48"
     >
-      <h1 className="relative pb-16 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:pb-22 tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
+      <h1 className="tablet:pb-22 relative pb-16 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
         Sponsors
         <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
           Sponsors
@@ -47,13 +58,16 @@ export default function Sponsors() {
 
       <div className="relative mb-4 flex w-full max-w-[1440px] flex-col items-center tablet:mb-6 desktop:mb-10 desktop:flex-row">
         <div className="relative mobile:mb-[-180px] tablet:mb-0">
-          <div className="text-center left-[140px] tablet:top-[-10px] font-alegreya_sans font-bold text-dark-blue mobile:text-[20px] tablet:text-[24px] desktop:left-[120px] desktop:top-[5px] desktop:text-[32px]">
+          <div className="left-[140px] text-center font-alegreya_sans font-bold text-dark-blue mobile:text-[20px] tablet:top-[-10px] tablet:text-[24px] desktop:left-[120px] desktop:top-[45px] desktop:text-[32px]">
             Main Sponsor
           </div>
-          <a href={sponsors.main[0].link} target="_blank">
-            <SponsorMainBlob
+          <a
+            href={sponsors.main[0].link}
+            target="_blank"
+          >
+            <MainSponsorBlob
               imageSrc={remoteLogo.src}
-              className="left-[40px] top-[-100px] mobile:translate-x-[-40px] mobile:scale-[0.45] tablet:left-[45px] tablet:top-[0px] tablet:scale-[0.8]"
+              className="left-[40px] top-[-100px] mobile:translate-x-[-40px] mobile:scale-[0.45] tablet:left-[45px] tablet:top-[50px] tablet:scale-[1.0]"
             />
           </a>
         </div>
@@ -74,6 +88,13 @@ export default function Sponsors() {
         </div>
       </div>
 
+      <div className="relative mobile:mb-[-180px] tablet:mb-0">
+          <div className="left-[140px] text-center font-alegreya_sans font-bold text-dark-blue mobile:text-[20px] tablet:top-[-10px] tablet:text-[24px] desktop:left-[120px] desktop:top-[45px] desktop:text-[32px]">
+            Gold Sponsors
+          </div>
+          <SponsorMainBlob />
+        </div>
+
       {/* PARTNERS: desktop */}
       <div className="relative hidden desktop:flex">
         <SponsorGoldBlob className="z-0" />
@@ -85,25 +106,17 @@ export default function Sponsors() {
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
-              className={`grid grid-cols-1 gap-x-6 desktop:grid-cols-2 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
+              className={`grid gap-x-20 desktop:grid-cols-3 ${rowIndex % 2 !== 0 ? "translate-x-[120px]" : ""} transition-transform`}
             >
               {row.map((sponsor) => (
                 <a href={sponsor.link} target="_blank" key={sponsor.id}>
-                  <div
-                    key={sponsor.id}
-                    className="flex h-[200px] w-[286px] items-center justify-center rounded-lg bg-white drop-shadow-xl"
-                  >
-                    <Image
-                      src={sponsorLogos[sponsor.logo]}
-                      width={286}
-                      height={200}
-                      alt={sponsor.name}
-                      className="h-auto w-full object-contain"
-                      style={{
-                        scale: `${sponsor.scale}`,
-                      }}
-                    />
-                  </div>
+                  <SponsorBlobs
+                    imageSrc={sponsorLogos[sponsor.logo].src}
+                    id={sponsor.id.toString()}
+                    className="scale-[1.0]"
+                    blobVariant={sponsor.id - 1}
+                    scale={sponsor.scale}
+                  />
                 </a>
               ))}
             </div>

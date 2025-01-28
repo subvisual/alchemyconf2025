@@ -15,8 +15,8 @@ const SponsorMainBlob = ({
   return (
     <div className={`relative ${className}`}>
       <svg
-        width="490"
-        height="440"
+        width="390"
+        height="340"
         viewBox="0 0 290 240"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
