@@ -6,6 +6,8 @@ interface BlobProps extends SVGProps<SVGSVGElement> {
   imageSrc: string;
   blobVariant?: number;
   scale?: number;
+  x?: string;
+  y?: string;
   id?: string;
 }
 
@@ -24,6 +26,8 @@ const SponsorBlobs = ({
   imageSrc,
   blobVariant = 0,
   scale = 1,
+  x = "50",
+  y = "-25",
   id,
   ...props
 }: BlobProps) => {
@@ -53,7 +57,7 @@ const SponsorBlobs = ({
             href={imageSrc}
             width="70%"
             height="100%"
-            transform={`translate(50, -25) rotate(${-rotation}, 143, 100) scale(${scale})`}
+            transform={`translate(${x}, ${y}) rotate(${-rotation}, 143, 100) scale(${scale})`}
           />
         </g>
       </svg>

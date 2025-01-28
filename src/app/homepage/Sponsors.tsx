@@ -24,6 +24,8 @@ export default function Sponsors() {
       logo: SponsorLogoKey;
       link: string;
       scale: number;
+      x?: string;
+      y?: string;
     }>,
     size: number,
   ) => {
@@ -54,6 +56,7 @@ export default function Sponsors() {
         </span>
       </h1>
 
+      {/* MAIN SPONSOR */}
       <div className="relative mb-16 flex w-full max-w-[1440px] flex-col items-center tablet:mb-6 desktop:mb-28 desktop:flex-row">
         <div className="relative mobile:mb-[-120px] tablet:mb-[-10px] desktop:mb-0">
           <div className="left-[140px] text-center font-alegreya_sans font-bold text-dark-blue mobile:text-[24px] tablet:top-[-10px] tablet:text-[28px] desktop:left-[120px] desktop:top-[45px] desktop:text-[32px]">
@@ -83,6 +86,7 @@ export default function Sponsors() {
         </div>
       </div>
 
+      {/* GOLD SPONSORS */}
       <div className="relative mobile:mb-[-270px] tablet:mb-16 desktop:mb-32">
         <div className="text-center font-alegreya_sans font-bold text-dark-blue mobile:text-[24px] tablet:absolute tablet:left-[170px] tablet:top-[120px] tablet:text-[28px] desktop:left-[100px] desktop:top-[80px] desktop:text-[32px]">
           Gold Sponsors
@@ -105,14 +109,14 @@ export default function Sponsors() {
         </div>
       </div>
 
-      {/* PARTNERS: desktop */}
+      {/* PARTNERS */}
       <div className="relative">
       {/* <div className="relative hidden desktop:flex"> */}
         {/* <SponsorGoldBlob color="bg-background" className="z-0" /> */}
         <div className="text-center top-[60px] font-alegreya_sans font-bold text-dark-blue tablet:text-[28px] mobile:text-[24px] tablet:absolute tablet:left-[20px] desktop:top-[0px] desktop:left-[20px] desktop:text-[32px]">
           Our Partners
         </div>
-        <div className="ml-[-50px] space-y-[-80px] tablet:left-[180px] top-[100px] tablet:py-[124px] desktop:space-y-[86px]">
+        <div className="ml-[-50px] space-y-[-80px] tablet:left-[180px] top-[100px] tablet:py-[124px] tablet:space-y-[60px] desktop:space-y-[86px]">
           {rows.map((row, rowIndex) => (
             <div
               key={rowIndex}
@@ -126,6 +130,8 @@ export default function Sponsors() {
                     className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
                     blobVariant={sponsor.id - 1}
                     scale={sponsor.scale}
+                    x={sponsor.x}
+                    y={sponsor.y}
                   />
                 </a>
               ))}
