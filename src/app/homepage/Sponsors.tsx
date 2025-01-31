@@ -41,9 +41,15 @@ export default function Sponsors() {
     scale: Number(partner.scale),
     logo: partner.logo as SponsorLogoKey,
   }));
+  const coffeeBreakWithNumberScale = sponsors.breaks.map((breakItem) => ({
+    ...breakItem,
+    scale: Number(breakItem.scale),
+    logo: breakItem.logo as SponsorLogoKey,
+  }));
 
-  const rows = chunkArray(partnersWithNumberScale, itemsPerRow);
+  const partnerRows = chunkArray(partnersWithNumberScale, itemsPerRow);
 
+  const coffeeBreakRows = chunkArray(coffeeBreakWithNumberScale, itemsPerRow);
   return (
     <section
       id="sponsors"
@@ -74,7 +80,7 @@ export default function Sponsors() {
             Alchemy Conf is powered by the support of our esteemed sponsors.
             <br />
             <br />
-            <span className="font-bold">Want to join them?</span> <br />
+            <span className="font-bold ">Want to join them?</span>
             You get to support the Elixir community and elevate your brand. A
             win-win.
             <AltButton
@@ -109,15 +115,15 @@ export default function Sponsors() {
         </div>
       </div>
 
-      {/* PARTNERS */}
+      {/* COFFEE BREAK */}
       <div className="relative">
       {/* <div className="relative hidden desktop:flex"> */}
         {/* <SponsorGoldBlob color="bg-background" className="z-0" /> */}
         <div className="text-center top-[60px] font-alegreya_sans font-bold text-dark-blue tablet:text-[28px] mobile:text-[24px] tablet:absolute tablet:left-[20px] desktop:top-[0px] desktop:left-[20px] desktop:text-[32px]">
-          Our Partners
+          Coffee Break Sponsors
         </div>
         <div className="ml-[-50px] space-y-[-80px] tablet:left-[180px] top-[100px] tablet:py-[124px] tablet:space-y-[60px] desktop:space-y-[86px]">
-          {rows.map((row, rowIndex) => (
+          {coffeeBreakRows.map((row, rowIndex) => (
             <div
               key={rowIndex}
               className={`grid gap-x-0 tablet:gap-x-20 grid-cols-2 tablet:grid-cols-3 ${rowIndex % 2 !== 0 ? "tablet:translate-x-[120px]" : ""} transition-transform`}
@@ -130,6 +136,39 @@ export default function Sponsors() {
                     className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
                     blobVariant={sponsor.id - 1}
                     scale={sponsor.scale}
+                    typeStart={1}
+                    x={sponsor.x}
+                    y={sponsor.y}
+                  />
+                </a>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* PARTNERS */}
+      <div className="relative">
+      {/* <div className="relative hidden desktop:flex"> */}
+        {/* <SponsorGoldBlob color="bg-background" className="z-0" /> */}
+        <div className="text-center top-[60px] font-alegreya_sans font-bold text-dark-blue tablet:text-[28px] mobile:text-[24px] tablet:absolute tablet:left-[20px] desktop:top-[0px] desktop:left-[20px] desktop:text-[32px]">
+          Our Partners
+        </div>
+        <div className="ml-[-50px] space-y-[-80px] tablet:left-[180px] top-[100px] tablet:py-[124px] tablet:space-y-[60px] desktop:space-y-[86px]">
+          {partnerRows.map((row, rowIndex) => (
+            <div
+              key={rowIndex}
+              className={`grid gap-x-0 tablet:gap-x-20 grid-cols-2 tablet:grid-cols-3 ${rowIndex % 2 !== 0 ? "tablet:translate-x-[120px]" : ""} transition-transform`}
+            >
+              {row.map((sponsor) => (
+                <a href={sponsor.link} target="_blank" key={sponsor.id}>
+                  <SponsorBlobs
+                    imageSrc={sponsorLogos[sponsor.logo].src}
+                    id={sponsor.id.toString()}
+                    className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
+                    blobVariant={sponsor.id - 1}
+                    scale={sponsor.scale}
+                    typeStart={0}
                     x={sponsor.x}
                     y={sponsor.y}
                   />

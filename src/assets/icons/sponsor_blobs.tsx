@@ -6,6 +6,7 @@ interface BlobProps extends SVGProps<SVGSVGElement> {
   imageSrc: string;
   blobVariant?: number;
   scale?: number;
+  typeStart?: number;
   x?: string;
   y?: string;
   id?: string;
@@ -29,11 +30,12 @@ const SponsorBlobs = ({
   x = "50",
   y = "-25",
   id,
+  typeStart = 0,
   ...props
 }: BlobProps) => {
   const selectedPath = blobPaths[blobVariant];
-  // Calculate rotation based on whether id is even or odd
-  const rotation = id && parseInt(id) % 2 === 0 ? 4 : -4;
+  
+  const rotation = id && parseInt(id) % 2 && typeStart === 0 ? -4 : 4;
 
   return (
     <div className={`relative ${className}`}>

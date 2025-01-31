@@ -30,9 +30,9 @@
   "breaks": [
     {
       "id": 1,
-      "name": "",
-      "logo": "",
-      "link": "http://",
+      "name": "Yari Labs",
+      "logo": "yariLogo",
+      "link": "https://www.yarilabs.com/",
       "scale": "1.0"
     }
   ],
