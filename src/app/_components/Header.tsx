@@ -73,6 +73,16 @@ export default function Header() {
               <li>
                 <div className="w-[140px]">
                   <Link
+                    href="/schedule"
+                    className={`${getNavLinkClass("/schedule")}`}
+                  >
+                    Schedule
+                  </Link>
+                </div>
+              </li>
+              <li>
+                <div className="w-[140px]">
+                  <Link
                     href={PRACTICAL_GUIDE_LINK}
                     target="_blank"
                     rel="noreferrer noopener"
