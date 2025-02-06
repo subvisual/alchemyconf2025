@@ -161,7 +161,7 @@ export default function Sponsors() {
               className={`grid gap-x-0 tablet:gap-x-20 grid-cols-2 tablet:grid-cols-3 ${rowIndex % 2 !== 0 ? "tablet:translate-x-[120px]" : ""} transition-transform`}
             >
               {row.map((sponsor) => (
-                <a href={sponsor.link} target="_blank" key={sponsor.id}>
+                <a href={sponsor.link} target="_blank" rel="noopener noreferrer" key={sponsor.id}>
                   <SponsorBlobs
                     imageSrc={sponsorLogos[sponsor.logo].src}
                     id={sponsor.id.toString()}

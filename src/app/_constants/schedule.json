@@ -1,37 +1,208 @@
-[
-    {
-        "type": "outro",
-        "time": "9 AM",
-        "title": "CHECK-IN",
-        "isBreak": false
-    },
-    {
-        "type": "outro",
-        "time": "9:50 AM",
-        "title": "OPENING OF ALCHEMYCONF 2025",
-        "isBreak": false
-    },
-    {
-        "type": "talk",
-        "time": "10 AM",
-        "speakerId": 8,
-        "name": "SAŠA JURIĆ",
-        "title": "Expressing Entanglement: Art & the More-Than-Human World"
-    },
-    {
-        "type": "talk",
-        "time": "10:45 AM",
-        "speakerId": 1,
-        "name": "ANDREA LEOPARDI",
-        "title": "Expressing Entanglement: Art & the More-Than-Human World"
-    },
-    {
-        "type": "break",
-        "time": "11:30 AM",
-        "sponsorId": 1,
-        "title": "COFFEE BREAK",
-        "subtitle": "Sponsored by Remote",
-        "isBreak": true,
-        "sponsorLogo": "/sponsors/remote.svg"
-    }
-]
+{
+    "day1": [
+        {
+            "type": "outro",
+            "time": "8:30",
+            "title": "CHECK-IN",
+            "isBreak": false
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "OPENING CEREMONY",
+            "isBreak": false
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 1,
+            "name": "AARON CRUZ"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 12,
+            "name": "ZACH DANIEL"
+        },
+        {
+            "type": "break",
+            "time": "11:40",
+            "sponsorType": "break",
+            "sponsorId": 2,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "12:00",
+            "speakerId": 2,
+            "name": "ANDRE ALBUQUERQUE"
+        },
+        {
+            "type": "outro",
+            "time": "12:40",
+            "title": "LUNCH",
+            "isBreak": false
+        },
+        {
+            "type": "outro",
+            "time": "14:30",
+            "title": "EMPTY SLOT",
+            "isBreak": false
+        },
+        {
+            "type": "talk",
+            "time": "15:00",
+            "speakerId": 11,
+            "name": "WOJTEK MACH"
+        },
+        {
+            "type": "break",
+            "time": "15:40",
+            "sponsorType": "break",
+            "sponsorId": 3,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "16:00",
+            "speakerId": 3,
+            "name": "ANDREA LEOPARDI"
+        },
+        {
+            "type": "break",
+            "time": "16:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "17:00",
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
+        },
+        {
+            "type": "break",
+            "time": "17:40",
+            "sponsorType": "break",
+            "sponsorId": 2,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "outro",
+            "time": "18:00",
+            "title": "NETWORKING",
+            "isBreak": false
+        }
+    ],
+    "day2": [
+        {
+            "type": "outro",
+            "time": "8:30",
+            "title": "CHECK-IN",
+            "isBreak": false
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "OPENING CEREMONY",
+            "isBreak": false
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 9,
+            "name": "SHANNON C. RYAN"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 5,
+            "name": "CHRISTOPH BECK"
+        },
+        {
+            "type": "break",
+            "time": "11:40",
+            "sponsorType": "break",
+            "sponsorId": 2,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "12:00",
+            "speakerId": 8,
+            "name": "SASA JURIC"
+        },
+        {
+            "type": "outro",
+            "time": "12:40",
+            "title": "LUNCH",
+            "isBreak": false
+        },
+        {
+            "type": "outro",
+            "time": "14:30",
+            "title": "EMPTY SLOT",
+            "isBreak": false
+        },
+        {
+            "type": "talk",
+            "time": "15:00",
+            "speakerId": 6,
+            "name": "HUGO BARAUNA"
+        },
+        {
+            "type": "break",
+            "time": "15:40",
+            "sponsorType": "break",
+            "sponsorId": 3,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "16:00",
+            "speakerId": 7,
+            "name": "JULIA MATHIAS"
+        },
+        {
+            "type": "break",
+            "time": "16:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "17:00",
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
+        },
+        {
+            "type": "break",
+            "time": "17:40",
+            "sponsorType": "break",
+            "sponsorId": 2,
+            "title": "COFFEE BREAK"
+        },
+       {
+            "type": "outro",
+            "time": "18:00",
+            "title": "CLOSING",
+            "isBreak": false
+        }
+    ]
+}
