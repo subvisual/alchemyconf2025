@@ -6,15 +6,37 @@ import sponsors from "@/app/_constants/sponsors.json";
 import schedule from "@/app/_constants/schedule.json";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
+import sponsorLogos from "@/app/_constants/sponsors_logos";
 import { normalizeChars } from "@/app/utils";
+
+import Image from "next/image";
+
+const getSponsorInfo = (type: string, id: number) => {
+  const sponsorTypes = sponsors as Record<
+    string,
+    Array<{ id: number; logo: string; name: string; link: string }>
+  >;
+
+  const sponsor = sponsorTypes[type]?.find((s) => s.id === id);
+
+  return {
+    logo: sponsorLogos[
+      (sponsor?.logo as keyof typeof sponsorLogos) || "remoteLogo"
+    ].src,
+    link: sponsor?.link,
+  };
+};
 
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1);
 
+  // Get the schedule for the active day
+  const currentSchedule = activeDay === 1 ? schedule.day1 : schedule.day2;
+
   return (
     <section
       id="schedule"
-      className="mb-28 mt-28 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
+      className="mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
       {/* Days selector */}
       <div className="w-full max-w-4xl">
@@ -63,8 +85,8 @@ export default function Schedule() {
           {/* Full-height timeline line */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
 
-          {schedule.map((item, index) => (
-            <div key={index} className="relative flex gap-4 pb-4">
+          {currentSchedule.map((item, index) => (
+            <div key={index} className="relative flex gap-4 pb-5">
               {/* Timeline dot */}
               <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background"></div>
 
@@ -75,33 +97,48 @@ export default function Schedule() {
                 </div>
 
                 {item.type === "break" ? (
-                  <div className="mt-1 rounded-lg bg-yellow/10 p-6">
-                    <h3 className="text-xl font-bold text-dark-blue">
-                      {item.title}
-                    </h3>
-                    {item.subtitle && (
-                      <div className="mt-1 flex items-center gap-2">
-                        <span className="text-xl text-dark-blue">
-                          Sponsored by
-                        </span>
-                        {item.sponsorLogo && (
-                          <img
-                            src={item.sponsorLogo}
-                            alt="Sponsor"
-                            className="h-6"
-                          />
-                        )}
-                      </div>
-                    )}
+                  <div className="flex items-center justify-between">
+                    <div className="pr-5">
+                      <h3 className="text-xl font-bold uppercase text-dark-blue">
+                        COFFEE BREAK
+                      </h3>
+                      <p className="mt-1 font-alegreya_sans text-base text-dark-blue">
+                        Sponsored by{" "}
+                        <a
+                          href={getSponsorInfo("breaks", item.sponsorId ?? 1).link}
+                          className="font-semibold text-dark-blue underline"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          {
+                            sponsors.breaks.find((s) => s.id === item.sponsorId)
+                              ?.name
+                          }
+                        </a>
+                      </p>
+                    </div>
+                    <a
+                      href={getSponsorInfo("breaks", item.sponsorId ?? 1).link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Image
+                        src={getSponsorInfo("breaks", item.sponsorId ?? 1).logo}
+                        width={90}
+                        height={0}
+                        alt="Sponsor"
+                        className="flex-shrink-0"
+                      />
+                    </a>
                   </div>
                 ) : item.type === "talk" ? (
                   <a
                     href={`/speakers#${normalizeChars(
-                      (speakers.find((s) => s.id === item.speakerId)?.name || "") +
-                      (speakers.find((s) => s.id === item.speakerId)?.surname || "")
+                      (speakers.find((s) => s.id === item.speakerId)?.name ||
+                        "") +
+                        (speakers.find((s) => s.id === item.speakerId)
+                          ?.surname || ""),
                     )}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
                     className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-yellow/10"
                   >
                     <div className="flex items-center justify-between">
@@ -112,7 +149,7 @@ export default function Schedule() {
                             speakers.find((s) => s.id === item.speakerId)
                               ?.surname || item.name}
                         </h3>
-                        <p className="mt-1 text-xl text-dark-blue">
+                        <p className="mt-1 font-alegreya_sans text-base text-dark-blue">
                           {speakers.find((s) => s.id === item.speakerId)
                             ?.talk_title || item.title}
                         </p>
@@ -137,7 +174,7 @@ export default function Schedule() {
                     </div>
                   </a>
                 ) : (
-                  <div className="mt-1">
+                  <div className="mt-0">
                     <h3 className="text-xl font-bold text-dark-blue">
                       {item.title}
                     </h3>
