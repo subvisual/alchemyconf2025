@@ -79,7 +79,27 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             <Link href={PRACTICAL_GUIDE_LINK} target="_blank" rel="noreferrer noopener">
               Practical
             </Link>
-            <OpenTabIcon color="#FFF5DA" sidebar={true} className="scale-[0.75]"/>
+            </div>
+          </li>
+          <li
+            className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
+            <div
+              className="flex items-center justify-center gap-1"
+              onClick={toggleSidebar}
+            >
+              <Link
+                href={PRACTICAL_GUIDE_LINK}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Practical
+              </Link>
+              <OpenTabIcon
+                color="#FFF5DA"
+                sidebar={true}
+                className="scale-[0.75]"
+              />
             </div>
           </li>
           <li>
