@@ -1,34 +1,34 @@
 [
     {
+        "type": "outro",
         "time": "9 AM",
         "title": "CHECK-IN",
         "isBreak": false
     },
     {
+        "type": "outro",
         "time": "9:50 AM",
         "title": "OPENING OF ALCHEMYCONF 2025",
         "isBreak": false
     },
     {
+        "type": "talk",
         "time": "10 AM",
-        "title": "SAŠA JURIĆ",
-        "subtitle": "Expressing Entanglement: Art & the More-Than-Human World",
-        "speaker": {
-            "name": "Saša Jurić",
-            "image": "/speakers/sasa-juric.png"
-        }
+        "speakerId": 8,
+        "name": "SAŠA JURIĆ",
+        "title": "Expressing Entanglement: Art & the More-Than-Human World"
     },
     {
+        "type": "talk",
         "time": "10:45 AM",
-        "title": "ANDREA LEOPARDI",
-        "subtitle": "Expressing Entanglement: Art & the More-Than-Human World",
-        "speaker": {
-            "name": "Andrea Leopardi",
-            "image": "/speakers/andrea-leopardi.png"
-        }
+        "speakerId": 1,
+        "name": "ANDREA LEOPARDI",
+        "title": "Expressing Entanglement: Art & the More-Than-Human World"
     },
     {
+        "type": "break",
         "time": "11:30 AM",
+        "sponsorId": 1,
         "title": "COFFEE BREAK",
         "subtitle": "Sponsored by Remote",
         "isBreak": true,

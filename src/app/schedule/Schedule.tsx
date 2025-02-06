@@ -1,63 +1,146 @@
+"use client";
+import { useState } from "react";
+import speakers from "@/app/_constants/speakers.json";
+import sponsors from "@/app/_constants/sponsors.json";
+
 import schedule from "@/app/_constants/schedule.json";
+import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
+import speakerImagesMob from "@/app/_constants/speakers_images_mob";
+import { normalizeChars } from "@/app/utils";
 
 export default function Schedule() {
+  const [activeDay, setActiveDay] = useState(1);
+
   return (
     <section
       id="schedule"
-      className="mb-20 mt-40 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
+      className="mb-28 mt-28 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
-      <h1 className="tablet:pb-22 relative pb-16 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:text-[120px] tablet:leading-[120px] desktop:pb-32 desktop:text-[140px] desktop:leading-[140px]">
-        Schedule
-        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
-          Schedule
-        </span>
-      </h1>
+      {/* Days selector */}
+      <div className="w-full max-w-4xl">
+        <div className="flex gap-8 font-sofia_sans_extra_condensed">
+          <div className="flex flex-col">
+            <button
+              onClick={() => setActiveDay(1)}
+              className={`relative text-[64px] font-extrabold uppercase leading-[50px] tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px] ${
+                activeDay === 1 ? "text-dark-blue" : "text-dark-blue/20"
+              }`}
+            >
+              DAY 1
+              {activeDay === 1 && (
+                <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
+                  DAY 1
+                </span>
+              )}
+              <span className="block text-left text-xl font-normal">
+                THURSDAY
+              </span>
+            </button>
+          </div>
+          <div className="flex flex-col">
+            <button
+              onClick={() => setActiveDay(2)}
+              className={`relative text-[64px] font-extrabold uppercase leading-[50px] tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px] ${
+                activeDay === 2 ? "text-dark-blue" : "text-dark-blue/20"
+              }`}
+            >
+              DAY 2
+              {activeDay === 2 && (
+                <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
+                  DAY 2
+                </span>
+              )}
+              <span className="block text-left text-xl font-normal">
+                FRIDAY
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
 
-      <div className="mt-12 font-sofia_sans_extra_condensed w-full max-w-4xl">
+      <div className="mt-8 w-full max-w-4xl font-sofia_sans_extra_condensed">
         <div className="relative">
           {/* Full-height timeline line */}
-          <div className="absolute left-2 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
-          
+          <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
+
           {schedule.map((item, index) => (
-            <div key={index} className="relative flex gap-8 pb-8">
-              {/* Timeline dot only */}
-              <div className="mt-1.5 h-4 w-4 rounded-full border-2 border-bordeux bg-background"></div>
+            <div key={index} className="relative flex gap-4 pb-4">
+              {/* Timeline dot */}
+              <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background"></div>
 
               {/* Content */}
               <div className="flex-1">
-                <div className="text-lg font-medium text-bordeux">{item.time}</div>
-                
-                {item.isBreak ? (
-                  <div className="mt-2 rounded-lg bg-yellow/10 p-6">
-                    <h3 className="text-xl font-bold text-dark-blue">{item.title}</h3>
+                <div className="text-xl font-medium text-bordeux">
+                  {item.time}
+                </div>
+
+                {item.type === "break" ? (
+                  <div className="mt-1 rounded-lg bg-yellow/10 p-6">
+                    <h3 className="text-xl font-bold text-dark-blue">
+                      {item.title}
+                    </h3>
                     {item.subtitle && (
-                      <div className="mt-2 flex items-center gap-2">
-                        <span className="text-sm text-dark-blue">Sponsored by</span>
+                      <div className="mt-1 flex items-center gap-2">
+                        <span className="text-xl text-dark-blue">
+                          Sponsored by
+                        </span>
                         {item.sponsorLogo && (
-                          <img src={item.sponsorLogo} alt="Sponsor" className="h-6" />
+                          <img
+                            src={item.sponsorLogo}
+                            alt="Sponsor"
+                            className="h-6"
+                          />
                         )}
                       </div>
                     )}
                   </div>
-                ) : item.speaker ? (
-                  <div className=" rounded-lg border-2 border-dark-blue/10 p-6">
+                ) : item.type === "talk" ? (
+                  <a
+                    href={`/speakers#${normalizeChars(
+                      (speakers.find((s) => s.id === item.speakerId)?.name || "") +
+                      (speakers.find((s) => s.id === item.speakerId)?.surname || "")
+                    )}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-yellow/10"
+                  >
                     <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="text-xl font-bold text-dark-blue">{item.title}</h3>
-                        <p className="mt-1 text-dark-blue/80">{item.subtitle}</p>
+                      <div className="pr-5">
+                        <h3 className="text-xl font-bold uppercase text-dark-blue">
+                          {speakers.find((s) => s.id === item.speakerId)?.name +
+                            " " +
+                            speakers.find((s) => s.id === item.speakerId)
+                              ?.surname || item.name}
+                        </h3>
+                        <p className="mt-1 text-xl text-dark-blue">
+                          {speakers.find((s) => s.id === item.speakerId)
+                            ?.talk_title || item.title}
+                        </p>
                       </div>
-                      {item.speaker.image && (
-                        <img 
-                          src={item.speaker.image} 
-                          alt={item.speaker.name}
-                          className="h-16 w-16 rounded-full object-cover"
-                        />
-                      )}
+                      <SpeakerBlobMobile
+                        className="flex-shrink-0"
+                        src={
+                          speakerImagesMob[
+                            (speakers.find((s) => s.id === item.speakerId)
+                              ?.id ?? 1) - 1
+                          ]?.src || ""
+                        }
+                        alt={
+                          speakers.find((s) => s.id === item.speakerId)?.name ||
+                          ""
+                        }
+                        height="45px"
+                        width="45px"
+                        imageX="0px"
+                        imageY="-10px"
+                      />
                     </div>
-                  </div>
+                  </a>
                 ) : (
-                  <div className="mt-2">
-                    <h3 className="text-xl font-bold text-dark-blue">{item.title}</h3>
+                  <div className="mt-1">
+                    <h3 className="text-xl font-bold text-dark-blue">
+                      {item.title}
+                    </h3>
                   </div>
                 )}
               </div>
