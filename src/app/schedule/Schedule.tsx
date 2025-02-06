@@ -27,60 +27,63 @@ const getSponsorInfo = (type: string, id: number) => {
   };
 };
 
+interface DayButtonProps {
+  day: 1 | 2;
+  activeDay: number;
+  onClick: () => void;
+  dayLabel: string;
+}
+
+const DayButton = ({ day, activeDay, onClick, dayLabel }: DayButtonProps) => (
+  <div className="flex flex-col">
+    <button
+      onClick={onClick}
+      className={`relative text-[64px] font-extrabold uppercase leading-[50px] tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px] ${
+        activeDay === day ? "text-dark-blue" : "text-dark-blue/20"
+      }`}
+    >
+      DAY {day}
+      {activeDay === day && (
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
+          DAY {day}
+        </span>
+      )}
+      <span className="block text-left text-xl tablet:text-4xl desktop:text-3xl font-normal">
+        {dayLabel}
+      </span>
+    </button>
+  </div>
+);
+
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1);
 
-  // Get the schedule for the active day
   const currentSchedule = activeDay === 1 ? schedule.day1 : schedule.day2;
 
   return (
     <section
       id="schedule"
-      className="mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
+      className="mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-56 tablet:mt-40 desktop:mb-56 desktop:mt-48"
     >
       {/* Days selector */}
       <div className="w-full max-w-4xl">
-        <div className="flex gap-8 font-sofia_sans_extra_condensed">
-          <div className="flex flex-col">
-            <button
-              onClick={() => setActiveDay(1)}
-              className={`relative text-[64px] font-extrabold uppercase leading-[50px] tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px] ${
-                activeDay === 1 ? "text-dark-blue" : "text-dark-blue/20"
-              }`}
-            >
-              DAY 1
-              {activeDay === 1 && (
-                <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
-                  DAY 1
-                </span>
-              )}
-              <span className="block text-left text-xl font-normal">
-                THURSDAY
-              </span>
-            </button>
-          </div>
-          <div className="flex flex-col">
-            <button
-              onClick={() => setActiveDay(2)}
-              className={`relative text-[64px] font-extrabold uppercase leading-[50px] tablet:text-[120px] tablet:leading-[120px] desktop:text-[140px] desktop:leading-[140px] ${
-                activeDay === 2 ? "text-dark-blue" : "text-dark-blue/20"
-              }`}
-            >
-              DAY 2
-              {activeDay === 2 && (
-                <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
-                  DAY 2
-                </span>
-              )}
-              <span className="block text-left text-xl font-normal">
-                FRIDAY
-              </span>
-            </button>
-          </div>
+        <div className="flex gap-8 tablet:gap-16 desktop:gap-24 font-sofia_sans_extra_condensed">
+          <DayButton
+            day={1}
+            activeDay={activeDay}
+            onClick={() => setActiveDay(1)}
+            dayLabel="THURSDAY"
+          />
+          <DayButton
+            day={2}
+            activeDay={activeDay}
+            onClick={() => setActiveDay(2)}
+            dayLabel="FRIDAY"
+          />
         </div>
       </div>
 
-      <div className="mt-8 w-full max-w-4xl font-sofia_sans_extra_condensed">
+      <div className="mt-8 w-full max-w-4xl font-sofia_sans_extra_condensed tablet:mt-16 desktop:mt-24">
         <div className="relative">
           {/* Full-height timeline line */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
@@ -139,7 +142,7 @@ export default function Schedule() {
                         (speakers.find((s) => s.id === item.speakerId)
                           ?.surname || ""),
                     )}`}
-                    className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-yellow/10"
+                    className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-bordeux/5"
                   >
                     <div className="flex items-center justify-between">
                       <div className="pr-5">
