@@ -8,7 +8,7 @@ import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
 import sponsorLogos from "@/app/_constants/sponsors_logos";
 import { normalizeChars } from "@/app/utils";
-
+import useScreenSize, { ScreenSize } from "@/hooks/useScreenSize";
 import Image from "next/image";
 
 const getSponsorInfo = (type: string, id: number) => {
@@ -58,12 +58,13 @@ const DayButton = ({ day, activeDay, onClick, dayLabel }: DayButtonProps) => (
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1);
 
+  const screenSize = useScreenSize();
   const currentSchedule = activeDay === 1 ? schedule.day1 : schedule.day2;
 
   return (
     <section
       id="schedule"
-      className="mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-56 tablet:mt-40 desktop:mb-56 desktop:mt-46"
+      className="desktop:mt-46 mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-56 tablet:mt-36 desktop:mb-56"
     >
       {/* Days selector */}
       <div className="w-full max-w-4xl">
@@ -85,15 +86,18 @@ export default function Schedule() {
 
       <div className="mt-8 w-full max-w-4xl font-sofia_sans_extra_condensed tablet:mt-14 desktop:mt-16">
         <div className="relative">
-          {/* Full-height timeline line */}
-          <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:w-[9px] desktop:right-0.5"></div>
+          {/* TIMELINE LINE */}
+          <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:right-0.5 desktop:w-[9px]"></div>
 
           {currentSchedule.map((item, index) => (
-            <div key={index} className="relative flex gap-4 pb-5 desktop:pb-7">
-              {/* Timeline dot */}
+            <div
+              key={index}
+              className="relative flex gap-4 pb-4 tablet:pb-6 desktop:pb-7"
+            >
+              {/* TIMELINE DOT */}
               <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background tablet:h-4 tablet:w-4 desktop:h-[18px] desktop:w-[18px]"></div>
 
-              {/* Content */}
+              {/* CONTENT */}
               <div className="flex-1">
                 <div className="text-xl font-bold text-bordeux tablet:text-2xl desktop:text-3xl">
                   {item.time}
@@ -101,7 +105,7 @@ export default function Schedule() {
 
                 {/* COFFEE BREAK SECTION */}
                 {item.type === "break" ? (
-                  <div className="flex items-center justify-between mt-0 desktop:mt-3">
+                  <div className="mt-0 flex items-center justify-between desktop:mt-3">
                     <div className="pr-5">
                       <h3 className="text-xl font-bold uppercase text-dark-blue tablet:text-2xl desktop:text-3xl">
                         COFFEE BREAK
@@ -133,20 +137,30 @@ export default function Schedule() {
                         width={90}
                         height={0}
                         alt="Sponsor"
-                        className="flex-shrink-0 mr-3 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
+                        className="mr-3 flex-shrink-0 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
                       />
                     </a>
                   </div>
-                ) : //* TALK SECTION *
+                ) : // TALK SECTION
                 item.type === "talk" ? (
                   <a
-                    href={`/speakers#${normalizeChars(
-                      (speakers.find((s) => s.id === item.speakerId)?.name ||
-                        "") +
-                        (speakers.find((s) => s.id === item.speakerId)
-                          ?.surname || ""),
-                    )}`}
-                    className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-bordeux/5 desktop:p-4 desktop:mt-2"
+                    href={
+                      screenSize === ScreenSize.Small
+                        ? `/speakers#${normalizeChars(
+                            (speakers.find((s) => s.id === item.speakerId)
+                              ?.name || "") +
+                              (speakers.find((s) => s.id === item.speakerId)
+                                ?.surname || ""),
+                          )}`
+                        : `/speakers#${normalizeChars(
+                            (speakers.find((s) => s.id === item.speakerId)
+                              ?.name || "") +
+                              "-" +
+                              (speakers.find((s) => s.id === item.speakerId)
+                                ?.surname || ""),
+                          )}`
+                    }
+                    className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-bordeux/5 desktop:mt-2 desktop:p-4"
                   >
                     <div className="flex items-center justify-between">
                       <div className="pr-5">
@@ -162,7 +176,7 @@ export default function Schedule() {
                         </p>
                       </div>
                       <SpeakerBlobMobile
-                        className="flex-shrink-0  mr-3 tablet:scale-110 desktop:mr-5 desktop:scale-[1.3]"
+                        className="mr-3 flex-shrink-0 tablet:scale-110 desktop:mr-5 desktop:scale-[1.3]"
                         src={
                           speakerImagesMob[
                             (speakers.find((s) => s.id === item.speakerId)
@@ -181,7 +195,7 @@ export default function Schedule() {
                     </div>
                   </a>
                 ) : (
-                  //* OTHER SECTION *
+                  // OTHER SECTION
                   <div className="mt-0 desktop:mt-2">
                     <h3 className="text-xl font-bold text-dark-blue tablet:text-2xl desktop:text-3xl">
                       {item.title}
