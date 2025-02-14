@@ -20,7 +20,10 @@ const navigationLinks = {
   },
   social: {
     title: "FOLLOW US",
-    links: [{ href: "https://x.com/alchemy_conf", label: "X", external: true }],
+    links: [
+      { href: "https://x.com/alchemy_conf", label: "X", external: true },
+      { href: "https://discord.gg/Unh2Y5Hb", label: "Discord", external: true },
+    ],
   },
 };
 
@@ -89,3 +92,4 @@ export default function Footer() {
     </div>
   );
 }
+ 
