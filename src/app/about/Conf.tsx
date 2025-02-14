@@ -1,12 +1,16 @@
+import Image from "next/image";
+import SubvisualCirc from "@/assets/images/subvisual_circ.svg";
+import Link from "next/link";
+
 export default function Conf() {
   return (
     <section
       id="conference"
       className="mb-20 mt-40 flex scroll-mt-40 flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64"
     >
-      <h1 className="relative pb-10 text-center font-extrabold font-sofia_sans_extra_condensed uppercase text-[50px] leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
+      <h1 className="relative pb-10 text-center font-sofia_sans_extra_condensed text-[50px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:pb-10 tablet:text-[100px] tablet:leading-[100px] desktop:pb-16 desktop:text-[120px] desktop:leading-[120px]">
         About Alchemy Conf
-        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] tablet:translate-x-1 tablet:translate-y-1 text-[#7D1D3F3D]">
+        <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-1 tablet:translate-y-1">
           About Alchemy Conf
         </span>
       </h1>
@@ -36,6 +40,45 @@ export default function Conf() {
           building whether you&apos;re a seasoned developer or new to Elixir by
           creating a full experience throughout the week.
         </p>
+        <div className="mt-2 flex flex-col items-center tablet:mt-14 tablet:flex-row tablet:items-start tablet:gap-14 desktop:mt-20 desktop:gap-20">
+          <Link
+            href="https://subvisual.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex-shrink-0"
+          >
+            <Image
+              src={SubvisualCirc}
+              alt="Subvisual Logo"
+              width={200}
+              height={200}
+              className="mobile:scale-50 tablet:scale-90 desktop:scale-100"
+            />
+          </Link>
+          <p>
+            Alchemy Conf is brought to life by{" "}
+            <span className="font-bold text-bordeux">Subvisual</span>, a venture
+            studio and development house known for its expertise in building
+            decentralized solutions and organizing standout events like{" "}
+            <span className="font-bold text-dark-blue underline">
+              <a href="https://x.com/rubyconfpt" target="_blank">
+                RubyConf Portugal
+              </a>
+            </span>{" "}
+            and{" "}
+            <span className="font-bold text-dark-blue underline">
+              <a href="https://www.instagram.com/mirror.conf/" target="_blank">
+                Mirror Conf
+              </a>
+            </span>
+            .
+            <br />
+            <br />
+            <span className="font-bold text-bordeux">Subvisual</span> is
+            dedicated to elevating not just the products they’re entrusted with,
+            but the very companies that come through the door.
+          </p>
+        </div>
       </div>
     </section>
   );
