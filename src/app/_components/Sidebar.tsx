@@ -66,6 +66,13 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
               Speakers
             </Link>
           </li>
+          <li
+            className={`${pathname === "/schedule" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
+            <Link href="/schedule" onClick={toggleSidebar}>
+              Schedule
+            </Link>
+          </li>
           <li>
             <Button
               className="text-center"
