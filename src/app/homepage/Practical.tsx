@@ -34,7 +34,7 @@ export default function Practical() {
             <Button
               className="font-medium"
               text="See Practical Guide"
-              href=""
+              href="https://subvisual.notion.site/alchemy-conf-hotel-discounts"
             />
           </div>
           <div className="relative flex translate-x-[100px] translate-y-[240px] flex-row items-center justify-center">
@@ -60,7 +60,7 @@ export default function Practical() {
             <Button
               className="font-medium"
               text="Join our Discord"
-              href=""
+              href="https://discord.gg/Unh2Y5Hb"
             />
           </div>
         </div>
@@ -88,7 +88,7 @@ export default function Practical() {
               <Button
                 className="font-medium translate-x-[20px] translate-y-[60px]"
                 text="See Practical Guide"
-                href=""
+                href="https://subvisual.notion.site/alchemy-conf-hotel-discounts"
               />
             </div>
           </div>
@@ -110,7 +110,7 @@ export default function Practical() {
               <Button
                 className="font-medium translate-y-[20px]"
                 text="Join our Discord"
-                href=""
+                href="https://discord.gg/Unh2Y5Hb"
               />
           </div>
         </div>
