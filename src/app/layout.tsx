@@ -41,8 +41,10 @@ export default function RootLayout({
       <GoogleTagManager gtmId="GTM-TMJC46NG" />
       <body className="overflow-x-hidden overscroll-none bg-background">
         <Header />
-        <div className="md:overflow-auto overflow-hidden px-6 tablet:px-24 desktop:px-52">
-          {children}
+        <div className="min-h-screen flex flex-col md:overflow-auto overflow-hidden px-6 tablet:px-24 desktop:px-52">
+          <main className="flex-grow">
+            {children}
+          </main>
           <Footer />
         </div>
       </body>
