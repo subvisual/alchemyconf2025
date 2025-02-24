@@ -72,7 +72,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             <Link href="https://subvisual.notion.site/alchemy-conf-hotel-discounts" target="_blank" rel="noreferrer noopener">
               Practical
             </Link>
-            <OpenTabIcon color="#FFF5DA" sidebar={true} className="scale-[0.8]"/>
+            <OpenTabIcon color="#FFF5DA" sidebar={true} className="scale-[0.75]"/>
             </div>
           </li>
           <li>
