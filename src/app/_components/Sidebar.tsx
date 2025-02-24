@@ -5,6 +5,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import Button from "./Button";
+import OpenTabIcon from "@/assets/icons/icon_open_tab";
 
 interface SidebarProps {
   showSidebar: boolean;
@@ -65,6 +66,14 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
             <Link href="/speakers" onClick={toggleSidebar}>
               Speakers
             </Link>
+          </li>
+          <li className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}>
+            <div className="flex items-center justify-center gap-2" onClick={toggleSidebar}>
+            <Link href="https://subvisual.notion.site/alchemy-conf-hotel-discounts" target="_blank" rel="noreferrer noopener">
+              Practical
+            </Link>
+            <OpenTabIcon color="#003049" sidebar={true} />
+            </div>
           </li>
           <li>
             <Button

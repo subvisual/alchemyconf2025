@@ -11,6 +11,7 @@ const navigationLinks = {
     title: "ABOUT",
     links: [
       { href: "/about#conference", label: "About Alchemy Conf" },
+      { href: "https://subvisual.notion.site/alchemy-conf-hotel-discounts", label: "Practical Guide", external: true },
       { href: "/about#code-of-conduct", label: "Code of Conduct" },
     ],
   },
@@ -56,7 +57,7 @@ export default function Footer() {
         <FooterBlobMobile className="flex tablet:hidden" />
       </div>
 
-      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-8 tablet:text-xl">
+      <footer className="z-50 mx-auto flex max-w-[1440px] flex-col justify-around bg-none p-10 pb-8 font-alegreya_sans text-lg font-light text-background tablet:flex-row tablet:p-20 tablet:pb-8 tablet:text-xl desktop:pb-2">
         <Link
           href="/"
           className="mb-4 flex h-fit translate-y-[-10px] items-center gap-4 pr-12 outline-none hover:opacity-80 tablet:mb-0"
