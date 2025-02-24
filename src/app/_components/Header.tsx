@@ -70,6 +70,7 @@ export default function Header() {
                     Practical
                     <OpenTabIcon 
                       className="transition-colors fill-[#003049] group-hover:fill-[#FFF5DA]"
+                      otherPath={pathname === "/" ? false : true}
                     />
                   </Link>
                 </div>
