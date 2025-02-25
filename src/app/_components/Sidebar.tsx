@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import Button from "./Button";
 import OpenTabIcon from "@/assets/icons/icon_open_tab";
-
+import { PRACTICAL_GUIDE_LINK } from "../_constants/links";
 interface SidebarProps {
   showSidebar: boolean;
   toggleSidebar: () => void;
@@ -69,7 +69,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
           </li>
           <li className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}>
             <div className="flex items-center justify-center gap-1" onClick={toggleSidebar}>
-            <Link href="https://subvisual.notion.site/alchemy-conf-hotel-discounts" target="_blank" rel="noreferrer noopener">
+            <Link href={PRACTICAL_GUIDE_LINK} target="_blank" rel="noreferrer noopener">
               Practical
             </Link>
             <OpenTabIcon color="#FFF5DA" sidebar={true} className="scale-[0.75]"/>
