@@ -124,10 +124,15 @@ export default function Schedule() {
                     >
                       <Image
                         src={getSponsorInfo("breaks", item.sponsorId ?? 1).logo}
-                        width={90}
-                        height={0}
-                        alt="Sponsor"
-                        className="flex-shrink-0"
+                        width={150}
+                        height={150}
+                        alt={sponsors.breaks.find((s) => s.id === item.sponsorId)?.name || "Sponsor"}
+                        className="mr-3 h-auto w-[90px] flex-shrink-0 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
+                       
+                        style={{ 
+                          objectFit: "contain",
+                          maxWidth: "100%"
+                        }}
                       />
                     </a>
                   </div>
