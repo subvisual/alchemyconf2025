@@ -5,13 +5,13 @@ import AlchemySquareIcon from "@/assets/icons/alchemy_square_icon";
 import FooterBlob from "@/assets/icons/footer_blob";
 import FooterBlobMobile from "@/assets/icons/footer_blob_mobile";
 import SubvisualIcon from "@/assets/icons/subvisual_icon";
-
+import { DISCORD_LINK, PRACTICAL_GUIDE_LINK } from "../_constants/links";
 const navigationLinks = {
   about: {
     title: "ABOUT",
     links: [
       { href: "/about#conference", label: "About Alchemy Conf" },
-      { href: "https://subvisual.notion.site/alchemy-conf-hotel-discounts", label: "Practical Guide", external: true },
+      { href: PRACTICAL_GUIDE_LINK, label: "Practical Guide", external: true },
       { href: "/about#code-of-conduct", label: "Code of Conduct" },
     ],
   },
@@ -23,7 +23,8 @@ const navigationLinks = {
     title: "FOLLOW US",
     links: [
       { href: "https://x.com/alchemy_conf", label: "X", external: true },
-      { href: "https://discord.gg/Unh2Y5Hb", label: "Discord", external: true },
+      { href: "https://bsky.app/profile/alchemyconf.bsky.social", label: "Bluesky", external: true },
+      { href: DISCORD_LINK, label: "Discord", external: true },
     ],
   },
 };

@@ -5,6 +5,9 @@ import CurvedArrow from "@/assets/icons/curved_arrow";
 import CurvedArrowMobile from "@/assets/icons/curved_arrow mobile";
 import DiscordBlob from "@/assets/icons/discord_blob";
 import DiscordBlobMobile from "@/assets/icons/discord_blob mobile";
+import { DISCORD_LINK, PRACTICAL_GUIDE_LINK } from "../_constants/links";
+
+
 
 export default function Practical() {
   return (
@@ -34,7 +37,7 @@ export default function Practical() {
             <Button
               className="font-medium"
               text="See Practical Guide"
-              href="https://subvisual.notion.site/alchemy-conf-hotel-discounts"
+              href={PRACTICAL_GUIDE_LINK}
             />
           </div>
           <div className="relative flex translate-x-[100px] translate-y-[240px] flex-row items-center justify-center">
@@ -60,7 +63,7 @@ export default function Practical() {
             <Button
               className="font-medium"
               text="Join our Discord"
-              href="https://discord.gg/Unh2Y5Hb"
+              href={DISCORD_LINK}
             />
           </div>
         </div>
@@ -88,7 +91,7 @@ export default function Practical() {
               <Button
                 className="font-medium translate-x-[20px] translate-y-[60px]"
                 text="See Practical Guide"
-                href="https://subvisual.notion.site/alchemy-conf-hotel-discounts"
+                href={PRACTICAL_GUIDE_LINK}
               />
             </div>
           </div>
@@ -110,7 +113,7 @@ export default function Practical() {
               <Button
                 className="font-medium translate-y-[20px]"
                 text="Join our Discord"
-                href="https://discord.gg/Unh2Y5Hb"
+                href={DISCORD_LINK}
               />
           </div>
         </div>

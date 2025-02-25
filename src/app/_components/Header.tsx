@@ -8,6 +8,7 @@ import { usePathname } from "next/navigation";
 import Burguer from "@/assets/icons/burguer";
 import Sidebar from "./Sidebar";
 import OpenTabIcon from "@/assets/icons/icon_open_tab";
+import { PRACTICAL_GUIDE_LINK } from "../_constants/links";
 
 export default function Header() {
   const pathname = usePathname();
@@ -72,14 +73,14 @@ export default function Header() {
               <li>
                 <div className="w-[140px]">
                   <Link
-                    href="https://subvisual.notion.site/alchemy-conf-hotel-discounts"
+                    href={PRACTICAL_GUIDE_LINK}
                     target="_blank"
                     rel="noreferrer noopener"
                     className={`group flex items-center justify-center gap-2 ${getNavLinkClass("/practical")}`}
                   >
                     Practical
-                    <OpenTabIcon 
-                      className="transition-colors fill-[#003049] group-hover:fill-[#FFF5DA]"
+                    <OpenTabIcon
+                      className="fill-[#003049] transition-colors group-hover:fill-[#FFF5DA]"
                       otherPath={pathname === "/" ? false : true}
                     />
                   </Link>
