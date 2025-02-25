@@ -3,20 +3,18 @@
         {
             "type": "outro",
             "time": "8:30",
-            "title": "CHECK-IN",
-            "isBreak": false
+            "title": "CHECK-IN"
         },
         {
             "type": "outro",
             "time": "9:45",
-            "title": "OPENING CEREMONY",
-            "isBreak": false
+            "title": "OPENING CEREMONY"
         },
         {
             "type": "talk",
             "time": "10:00",
-            "speakerId": 1,
-            "name": "AARON CRUZ"
+            "speakerId": 4,
+            "name": "BRUCE TATE"
         },
         {
             "type": "break",
@@ -28,8 +26,8 @@
         {
             "type": "talk",
             "time": "11:00",
-            "speakerId": 12,
-            "name": "ZACH DANIEL"
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
         },
         {
             "type": "break",
@@ -47,117 +45,7 @@
         {
             "type": "outro",
             "time": "12:40",
-            "title": "LUNCH",
-            "isBreak": false
-        },
-        {
-            "type": "outro",
-            "time": "14:30",
-            "title": "EMPTY SLOT",
-            "isBreak": false
-        },
-        {
-            "type": "talk",
-            "time": "15:00",
-            "speakerId": 11,
-            "name": "WOJTEK MACH"
-        },
-        {
-            "type": "break",
-            "time": "15:40",
-            "sponsorType": "break",
-            "sponsorId": 3,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "16:00",
-            "speakerId": 3,
-            "name": "ANDREA LEOPARDI"
-        },
-        {
-            "type": "break",
-            "time": "16:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "17:00",
-            "speakerId": 10,
-            "name": "TOBIAS PFEIFFER"
-        },
-        {
-            "type": "break",
-            "time": "17:40",
-            "sponsorType": "break",
-            "sponsorId": 2,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "outro",
-            "time": "18:00",
-            "title": "NETWORKING",
-            "isBreak": false
-        }
-    ],
-    "day2": [
-        {
-            "type": "outro",
-            "time": "8:30",
-            "title": "CHECK-IN",
-            "isBreak": false
-        },
-        {
-            "type": "outro",
-            "time": "9:45",
-            "title": "OPENING CEREMONY",
-            "isBreak": false
-        },
-        {
-            "type": "talk",
-            "time": "10:00",
-            "speakerId": 9,
-            "name": "SHANNON C. RYAN"
-        },
-        {
-            "type": "break",
-            "time": "10:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "11:00",
-            "speakerId": 5,
-            "name": "CHRISTOPH BECK"
-        },
-        {
-            "type": "break",
-            "time": "11:40",
-            "sponsorType": "break",
-            "sponsorId": 2,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "12:00",
-            "speakerId": 8,
-            "name": "SASA JURIC"
-        },
-        {
-            "type": "outro",
-            "time": "12:40",
-            "title": "LUNCH",
-            "isBreak": false
-        },
-        {
-            "type": "outro",
-            "time": "14:30",
-            "title": "EMPTY SLOT",
-            "isBreak": false
+            "title": "LUNCH"
         },
         {
             "type": "talk",
@@ -175,8 +63,8 @@
         {
             "type": "talk",
             "time": "16:00",
-            "speakerId": 7,
-            "name": "JULIA MATHIAS"
+            "speakerId": 9,
+            "name": "SHANNON C. RYAN"
         },
         {
             "type": "break",
@@ -188,21 +76,101 @@
         {
             "type": "talk",
             "time": "17:00",
-            "speakerId": 10,
-            "name": "TOBIAS PFEIFFER"
+            "speakerId": 8,
+            "name": "SASA JURIC"
         },
         {
             "type": "break",
             "time": "17:40",
             "sponsorType": "break",
             "sponsorId": 2,
+            "title": "DAY CLOSE"
+        },
+        {
+            "type": "outro",
+            "time": "20:30",
+            "title": "CONFERENCE PARTY"
+        }
+    ],
+    "day2": [
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "CHECK-IN"
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 11,
+            "name": "WOJTEK MACH"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
             "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 7,
+            "name": "JULIA MATHIAS"
+        },
+        {
+            "type": "break",
+            "time": "11:40",
+            "sponsorType": "break",
+            "sponsorId": 2,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "12:00",
+            "speakerId": 5,
+            "name": "CHRISTOPH BECK"
+        },
+        {
+            "type": "outro",
+            "time": "12:40",
+            "title": "LUNCH"
+        },
+        {
+            "type": "talk",
+            "time": "15:00",
+            "speakerId": 12,
+            "name": "ZACH DANIEL"
+        },
+        {
+            "type": "break",
+            "time": "15:40",
+            "sponsorType": "break",
+            "sponsorId": 3,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "16:00",
+            "speakerId": 1,
+            "name": "AARON CRUZ"
+        },
+        {
+            "type": "break",
+            "time": "16:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "17:00",
+            "speakerId": 3,
+            "name": "ANDREA LEOPARDI"
         },
        {
             "type": "outro",
             "time": "18:00",
-            "title": "CLOSING",
-            "isBreak": false
+            "title": "CLOSING"
         }
     ]
 }
