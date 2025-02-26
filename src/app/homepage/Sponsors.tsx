@@ -117,7 +117,7 @@ export default function Sponsors() {
       </div>
 
       {/* STONE SPONSORS */}
-      <div className="relative mobile:mb-[-480px] tablet:mb-16 desktop:mb-32">
+      <div className="relative mobile:mb-[-550px] tablet:mb-16 desktop:mb-32">
         <div className="text-center font-alegreya_sans font-bold text-background mobile:translate-y-[70px] mobile:text-[24px] tablet:absolute tablet:left-[260px] tablet:top-[140px] tablet:text-[28px] desktop:left-[180px] desktop:top-[70px] desktop:text-[32px]">
           Stone Sponsors
         </div>
