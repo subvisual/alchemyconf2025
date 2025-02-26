@@ -20,11 +20,12 @@
   "stone": [
     {
       "id": 1,
-      "name": "",
-      "logo": "",
-
-      "link": "http://",
-      "scale": "1.0"
+      "name": "Maersk",
+      "logo": "maerskLogo",
+      "link": "https://www.maersk.com/",
+      "scale": "1.4",
+      "x": "0",
+      "y": "-60"
     }
   ],
   "breaks": [
