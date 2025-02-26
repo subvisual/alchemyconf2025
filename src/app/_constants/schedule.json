@@ -1,5 +1,67 @@
 {
-    "day1": [
+    "workshopsDay1": [
+        {
+            "type": "outro",
+            "time": "8:30",
+            "title": "CHECK-IN"
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "OPENING CEREMONY"
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 4,
+            "name": "BRUCE TATE"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
+        }
+    ],
+    "workshopsDay2": [
+        {
+            "type": "outro",
+            "time": "8:30",
+            "title": "CHECK-IN"
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "OPENING CEREMONY"
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 4,
+            "name": "BRUCE TATE"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorType": "break",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
+        }
+    ],
+    "conferenceDay1": [
         {
             "type": "outro",
             "time": "8:30",
@@ -92,7 +154,7 @@
             "title": "CONFERENCE PARTY"
         }
     ],
-    "day2": [
+    "conferenceDay2": [
         {
             "type": "outro",
             "time": "9:45",
