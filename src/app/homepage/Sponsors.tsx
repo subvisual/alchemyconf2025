@@ -121,7 +121,7 @@ export default function Sponsors() {
         <div className="text-center font-alegreya_sans font-bold text-background mobile:translate-y-[70px] mobile:text-[24px] tablet:absolute tablet:left-[260px] tablet:top-[140px] tablet:text-[28px] desktop:left-[180px] desktop:top-[70px] desktop:text-[32px]">
           Stone Sponsors
         </div>
-        <SponsorStoneBlob className="top-[-320px] mobile:scale-[0.5] tablet:top-0 tablet:scale-[0.9] desktop:scale-[1.1]" />
+        <SponsorStoneBlob className="top-[-350px] mobile:scale-[0.4] tablet:top-0 tablet:scale-[0.9] desktop:scale-[1.1]" />
         <div className="absolute left-1/2 top-[100px] z-10 -translate-x-1/2 tablet:top-[300px] desktop:top-[275px]">
           <div className="grid w-[340px] gap-x-[0px] mobile:grid-cols-2 tablet:ml-[-60px] tablet:w-[800px] tablet:grid-cols-3 tablet:gap-x-20 desktop:ml-0 desktop:w-[1000px] desktop:gap-x-20">
             {sponsors.stone.map((sponsor) => (
