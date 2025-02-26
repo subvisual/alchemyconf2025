@@ -10,7 +10,7 @@ const FooterBlobMobile = ({ className, color = "#7D1D3F", ...props }: BlobProps)
     <div className={`relative ${className}`}>
       <svg
         width="1480"
-        height="860"
+        height="960"
         viewBox="-50 0 1280 260"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

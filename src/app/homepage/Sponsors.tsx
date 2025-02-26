@@ -118,7 +118,7 @@ export default function Sponsors() {
 
       {/* STONE SPONSORS */}
       <div className="relative mobile:mb-[-480px] tablet:mb-16 desktop:mb-32">
-        <div className="text-center font-alegreya_sans font-bold text-background mobile:translate-y-[70px] mobile:text-[24px] tablet:absolute tablet:left-[260px] tablet:top-[200px] tablet:text-[28px] desktop:left-[180px] desktop:top-[140px] desktop:text-[32px]">
+        <div className="text-center font-alegreya_sans font-bold text-background mobile:translate-y-[70px] mobile:text-[24px] tablet:absolute tablet:left-[260px] tablet:top-[140px] tablet:text-[28px] desktop:left-[180px] desktop:top-[70px] desktop:text-[32px]">
           Stone Sponsors
         </div>
         <SponsorStoneBlob className="top-[-320px] mobile:scale-[0.5] tablet:top-0 tablet:scale-[0.9] desktop:scale-[1.1]" />
