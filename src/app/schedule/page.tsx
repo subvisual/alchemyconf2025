@@ -1,9 +1,15 @@
-import Schedule from "./Schedule";
+import ScheduleGeneral from "./ScheduleGeneral";
+import ScheduleMobile from "./ScheduleMobile";
 
 export default function SchedulePage() {
   return (
     <>
-        <Schedule />
+      <div className="hidden tablet:flex justify-center">
+        <ScheduleGeneral />
+      </div>
+      <div className="tablet:hidden flex">
+        <ScheduleMobile />
+      </div>
     </>
   );
 }
