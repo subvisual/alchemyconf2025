@@ -2,6 +2,7 @@
 
 import schedule from "@/app/_constants/schedule.json";
 import ConferenceDay from "./_components/ConferenceDay";
+import { useState } from "react";
 
 interface DayButtonProps {
   day: 1 | 2;
@@ -32,12 +33,41 @@ const DayButton = ({ day, activeDay, onClick, dayLabel }: DayButtonProps) => (
 );
 
 export default function ScheduleGeneral() {
+  const [activeView, setActiveView] = useState<"workshops" | "talks">("workshops");
+  
   return (
     <section
       id="schedule"
       className="desktop:mt-46 mb-36 mt-28 flex flex-col items-center justify-center tablet:mb-56 tablet:mt-36 desktop:mb-56"
     >
       <div className="w-full max-w-[1440px]">
+        {/* TOGGLE BUTTON */}
+        <div className="mb-12 mt-12 flex justify-start text-5xl font-semibold font-sofia_sans_extra_condensed">
+          <div className="flex rounded-lg gap-4 border-2 py-1 px-1 border-[#7D1D3F] overflow-hidden">
+            <button
+              onClick={() => setActiveView("workshops")}
+              className={`px-4 pt-1 pb-[1px] rounded-lg transition-colors flex items-center justify-center ${
+                activeView === "workshops" 
+                  ? "bg-[#7D1D3F] text-background" 
+                  : "bg-background text-[#7D1D3F]"
+              }`}
+            >
+              WORKSHOPS
+            </button>
+            <button
+              onClick={() => setActiveView("talks")}
+              className={`px-4 pt-1 pb-[1px] rounded-lg transition-colors flex items-center justify-center ${
+                activeView === "talks" 
+                  ? "bg-[#7D1D3F] text-background" 
+                  : "bg-background text-[#7D1D3F]"
+              }`}
+            >
+              TALKS
+            </button>
+          </div>
+        </div>
+
+
         <div className="flex flex-row font-sofia_sans_extra_condensed tablet:gap-40 desktop:gap-52">
           {/* Day 1 Column */}
           <div className="flex flex-col">
