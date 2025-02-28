@@ -31,7 +31,7 @@ export default function WorkshopDay({ day }: { day: number }) {
             .map((item: any, index: number) => (
               <div
                 key={`${day}-${index}`}
-                className="relative flex gap-3 pb-4 tablet:gap-8 tablet:pb-6 desktop:gap-10 desktop:pb-7"
+                className="relative flex gap-3 pb-8 tablet:gap-8 tablet:pb-10 desktop:gap-10 desktop:pb-12"
               >
                 {/* TIMELINE DOT */}
                 <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background tablet:h-4 tablet:w-4 desktop:h-[18px] desktop:w-[18px]"></div>

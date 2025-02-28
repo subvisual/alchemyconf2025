@@ -42,7 +42,7 @@ export default function ConferenceDay({ day }: { day: number }) {
         <div className="relative">
           {/* TIMELINE LINE */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:right-0.5 desktop:w-[9px]"></div>
-          <div className="hidden tablet:block gap-3 pb-4 tablet:gap-4 tablet:pb-16 tablet:pl-12 desktop:pb-20 desktop:pl-14">
+          <div className="hidden tablet:block gap-3 pb-4 tablet:gap-4 tablet:pb-10 tablet:pl-12 desktop:pb-16 desktop:pl-14">
             <span className="text-xl font-semibold text-dark-blue tablet:text-3xl desktop:text-4xl">
               {day === 1 ? "Wednesday" : "Thursday"} <br />
             </span>
