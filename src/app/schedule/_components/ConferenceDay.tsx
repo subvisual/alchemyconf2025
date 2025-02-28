@@ -47,7 +47,10 @@ export default function ConferenceDay({ day }: { day: number }) {
               {day === 1 ? "Wednesday" : "Thursday"} <br />
             </span>
             <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
-              {day === 1 ? "April 2nd" : "April 3rd"}
+              {day === 1 ? "April 2nd" : "April 3rd"} <br/>
+            </span>
+            <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
+              @Theatro Circo
             </span>
           </div>
           {schedule[`conferenceDay${day}` as keyof typeof schedule]

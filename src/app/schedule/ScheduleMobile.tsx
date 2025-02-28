@@ -12,9 +12,10 @@ interface DayButtonProps {
   onClick: () => void;
   dayLabel: string;
   dateLabel: string;
+  locationLabel: string;
 }
 
-const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel }: DayButtonProps) => (
+const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel, locationLabel }: DayButtonProps) => (
   <div className="flex flex-col">
     <button
       onClick={onClick}
@@ -33,6 +34,9 @@ const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel }: DayButtonPr
       </span>
       <span className="block mt-[-4px] text-left text-xl font-normal">
         {dateLabel}
+      </span>
+      <span className="block mt-[-4px] text-left text-xl font-normal">
+        {locationLabel}
       </span>
     </button>
   </div>
@@ -65,15 +69,17 @@ export default function Schedule() {
             day={1}
             activeDay={activeDay}
             onClick={() => setActiveDay(1)}
-            dayLabel="Wednesday"
-            dateLabel="April 2nd"
+            dayLabel={activeSchedule === "workshops" ? "Monday" : "Wednesday"}
+            dateLabel={activeSchedule === "workshops" ? "March 31st" : "April 2nd"}
+            locationLabel={activeSchedule === "workshops" ? "@GNRation" : "@Theatro Circo"}
           />
           <DayButton
             day={2}
             activeDay={activeDay}
             onClick={() => setActiveDay(2)}
-            dayLabel="Thursday"
-            dateLabel="April 3rd"
+            dayLabel={activeSchedule === "workshops" ? "Tuesday" : "Thursday"}
+            dateLabel={activeSchedule === "workshops" ? "April 1st" : "April 3rd"}
+            locationLabel={activeSchedule === "workshops" ? "@GNRation" : "@Theatro Circo"}
           />
         </div>
       </div>

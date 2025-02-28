@@ -23,7 +23,10 @@ export default function WorkshopDay({ day }: { day: number }) {
               {day === 1 ? "Monday" : "Tuesday"} <br />
             </span>
             <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
-              {day === 1 ? "March 31st" : "April 1st"}
+              {day === 1 ? "March 31st" : "April 1st"} <br/>
+            </span>
+            <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
+              @GNRation
             </span>
           </div>
           {schedule[`workshopsDay${day}` as keyof typeof schedule]
