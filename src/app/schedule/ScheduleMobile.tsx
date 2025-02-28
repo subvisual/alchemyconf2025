@@ -3,6 +3,8 @@ import { useState } from "react";
 
 import schedule from "@/app/_constants/schedule.json";
 import ConferenceDay from "./_components/ConferenceDay";
+import WorkshopDay from "./_components/WorkshopDay";
+import ScheduleToggle from "./_components/ScheduleToggle";
 
 interface DayButtonProps {
   day: 1 | 2;
@@ -38,15 +40,24 @@ const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel }: DayButtonPr
 
 export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1);
+  const [activeSchedule, setActiveSchedule] = useState<"workshops" | "talks">(
+    "workshops",
+  );
 
-  const currentSchedule =
-    activeDay === 1 ? schedule.conferenceDay1 : schedule.conferenceDay2;
+  const handleScheduleChange = (newSchedule: "workshops" | "talks") => {
+    setActiveSchedule(newSchedule);
+    setActiveDay(1);
+  };
 
   return (
     <section
       id="schedule"
-      className="desktop:mt-46 mb-36 mt-28 flex flex-col items-center justify-center"
+      className="mb-52 mt-28 flex flex-col items-start justify-center"
     >
+      <ScheduleToggle
+        activeView={activeSchedule}
+        setActiveView={handleScheduleChange}
+      />
       {/* DAYS SELECTOR */}
       <div className="w-full max-w-4xl">
         <div className="flex gap-12 font-sofia_sans_extra_condensed">
@@ -67,11 +78,13 @@ export default function Schedule() {
         </div>
       </div>
 
-      <div className="mt-6 w-full font-sofia_sans_extra_condensed">
+      <div className="mt-[-10px] w-full font-sofia_sans_extra_condensed">
         <div className="relative">
-          {currentSchedule.map((item, index) => (
-            <ConferenceDay key={index} day={activeDay} />
-          ))}
+          {activeSchedule === "workshops" ? (
+            <WorkshopDay day={activeDay} />
+          ) : (
+            <ConferenceDay day={activeDay} />
+          )}
         </div>
       </div>
     </section>

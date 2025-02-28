@@ -32,7 +32,7 @@ export default function ConferenceDay({ day }: { day: number }) {
 
   return (
     <>
-      <div className="relative hidden text-[64px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:block tablet:pl-12 tablet:text-[120px] tablet:leading-[120px] desktop:pl-14 desktop:text-[120px] desktop:leading-[120px]">
+      <div className="relative hidden text-[64px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:block tablet:pl-12 tablet:text-[100px] tablet:leading-[100px] desktop:pl-14 desktop:text-[120px] desktop:leading-[120px]">
         {day === 1 ? "DAY 1" : "DAY 2"}
         <span className="absolute left-0 top-0 -z-10 translate-x-[3px] translate-y-[3px] text-[#7D1D3F3D] tablet:translate-x-[54px] tablet:translate-y-[6px] desktop:translate-x-[62px] desktop:translate-y-[6px]">
           {day === 1 ? "DAY 1" : "DAY 2"}
