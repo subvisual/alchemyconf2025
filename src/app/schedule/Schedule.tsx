@@ -31,7 +31,7 @@ export default function Schedule() {
   const [activeDay, setActiveDay] = useState(1);
 
   // Get the schedule for the active day
-  const currentSchedule = activeDay === 1 ? schedule.day1 : schedule.day2;
+  const currentSchedule = activeDay === 1 ? schedule.conferenceDay1 : schedule.conferenceDay2;
 
   return (
     <section
@@ -85,7 +85,7 @@ export default function Schedule() {
           {/* Full-height timeline line */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
 
-          {currentSchedule.map((item, index) => (
+          {currentSchedule.map((item: any, index: number) => (
             <div key={index} className="relative flex gap-4 pb-5">
               {/* Timeline dot */}
               <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background"></div>
