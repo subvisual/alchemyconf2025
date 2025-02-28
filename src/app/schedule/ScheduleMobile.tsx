@@ -69,11 +69,8 @@ export default function Schedule() {
 
       <div className="mt-6 w-full font-sofia_sans_extra_condensed">
         <div className="relative">
-          {/* TIMELINE LINE */}
-          <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20"></div>
-          {/* CONFERENCE DAY */}
           {currentSchedule.map((item, index) => (
-            <ConferenceDay key={index} day={activeDay} item={item} />
+            <ConferenceDay key={index} day={activeDay} />
           ))}
         </div>
       </div>

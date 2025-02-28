@@ -1,68 +1,59 @@
 {
     "workshopsDay1": [
         {
-            "type": "outro",
-            "time": "8:30",
-            "title": "CHECK-IN"
+            "type": "date",
+            "day": 1,
+            "weekDay": "Monday",
+            "monthDay": "March 31st",
+            "location": "@GNRation"
         },
         {
-            "type": "outro",
-            "time": "9:45",
-            "title": "OPENING CEREMONY"
-        },
-        {
-            "type": "talk",
-            "time": "10:00",
+            "type": "workshop",
+            "timeStart": "14:00",
+            "timeEnd": "18:30",
             "speakerId": 4,
             "name": "BRUCE TATE"
-        },
-        {
-            "type": "break",
-            "time": "10:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "11:00",
-            "speakerId": 10,
-            "name": "TOBIAS PFEIFFER"
         }
     ],
     "workshopsDay2": [
         {
-            "type": "outro",
-            "time": "8:30",
-            "title": "CHECK-IN"
+            "type": "date",
+            "day": 2,
+            "weekDay": "Tuesday",
+            "monthDay": "April 1st",
+            "location": "@GNRation"
         },
         {
-            "type": "outro",
-            "time": "9:45",
-            "title": "OPENING CEREMONY"
+            "type": "workshop",
+            "timeStart": "10:00",
+            "timeEnd": "18:00",
+            "speakerId": 8,
+            "name": "SASA JURIC"
         },
         {
-            "type": "talk",
-            "time": "10:00",
-            "speakerId": 4,
-            "name": "BRUCE TATE"
+            "type": "workshop",
+            "timeStart": "10:00",
+            "timeEnd": "18:00",
+            "speakerId": 12,
+            "name": "ZACH DANIEL"
         },
         {
-            "type": "break",
-            "time": "10:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
-        },
-        {
-            "type": "talk",
-            "time": "11:00",
-            "speakerId": 10,
-            "name": "TOBIAS PFEIFFER"
+            "type": "workshop",
+            "timeStart": "14:00",
+            "timeEnd": "18:00",
+            "speakerId": 3,
+            "name": "ANDREA LEOPARDI"
         }
     ],
     "conferenceDay1": [
         {
+            "type": "date",
+            "day": 1,
+            "weekDay": "Wednesday",
+            "monthDay": "April 2nd",
+            "location": "@Theatro Circo"
+        },
+        {
             "type": "outro",
             "time": "8:30",
             "title": "CHECK-IN"
@@ -81,7 +72,6 @@
         {
             "type": "break",
             "time": "10:40",
-            "sponsorType": "break",
             "sponsorId": 1,
             "title": "COFFEE BREAK"
         },
@@ -94,9 +84,8 @@
         {
             "type": "break",
             "time": "11:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
+            "sponsorId": 0,
+            "title": "BREAK"
         },
         {
             "type": "talk",
@@ -108,6 +97,11 @@
             "type": "outro",
             "time": "12:40",
             "title": "LUNCH"
+        },        
+        {
+            "type": "outro",
+            "time": "14:30",
+            "title": "OPEN DOORS"
         },
         {
             "type": "talk",
@@ -118,9 +112,8 @@
         {
             "type": "break",
             "time": "15:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
+            "sponsorId": 0,
+            "title": "BREAK"
         },
         {
             "type": "talk",
@@ -131,8 +124,7 @@
         {
             "type": "break",
             "time": "16:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
+            "sponsorId": 0,
             "title": "COFFEE BREAK"
         },
         {
@@ -142,10 +134,8 @@
             "name": "SASA JURIC"
         },
         {
-            "type": "break",
+            "type": "outro",
             "time": "17:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
             "title": "DAY CLOSE"
         },
         {
@@ -155,6 +145,13 @@
         }
     ],
     "conferenceDay2": [
+        {
+            "type": "date",
+            "day": 2,
+            "weekDay": "Thursday",
+            "monthDay": "April 3rd",
+            "location": "@Theatro Circo"
+        },
         {
             "type": "outro",
             "time": "9:45",
@@ -169,8 +166,7 @@
         {
             "type": "break",
             "time": "10:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
+            "sponsorId": 0,
             "title": "COFFEE BREAK"
         },
         {
@@ -182,9 +178,8 @@
         {
             "type": "break",
             "time": "11:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
+            "sponsorId": 0,
+            "title": "BREAK"
         },
         {
             "type": "talk",
@@ -198,6 +193,11 @@
             "title": "LUNCH"
         },
         {
+            "type": "outro",
+            "time": "14:30",
+            "title": "OPEN DOORS"
+        },
+        {
             "type": "talk",
             "time": "15:00",
             "speakerId": 12,
@@ -206,9 +206,8 @@
         {
             "type": "break",
             "time": "15:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
-            "title": "COFFEE BREAK"
+            "sponsorId": 0,
+            "title": "BREAK"
         },
         {
             "type": "talk",
@@ -219,8 +218,7 @@
         {
             "type": "break",
             "time": "16:40",
-            "sponsorType": "break",
-            "sponsorId": 1,
+            "sponsorId": 0,
             "title": "COFFEE BREAK"
         },
         {
