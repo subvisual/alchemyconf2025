@@ -40,11 +40,11 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
                         {item.weekDay} <br />
                       </span>
                       <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.monthDay} -
+                        {item.monthDay} {"- "}
                       </span>
-                      <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.location}
-                      </span>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      {item.location}
+                      </a>
                     </div>
                   ) : // WORKSHOP SECTION
                   item.type === "workshop" ? (

@@ -13,9 +13,10 @@ interface DayButtonProps {
   dayLabel: string;
   dateLabel: string;
   locationLabel: string;
+  locationLink: string;
 }
 
-const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel, locationLabel }: DayButtonProps) => (
+const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel, locationLabel, locationLink }: DayButtonProps) => (
   <div className="flex flex-col">
     <button
       onClick={onClick}
@@ -35,9 +36,7 @@ const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel, locationLabel
       <span className="block mt-[-4px] text-left text-xl font-normal">
         {dateLabel}
       </span>
-      <span className="block mt-[-4px] text-left text-xl font-normal">
-        {locationLabel}
-      </span>
+      <a href={locationLink} target="_blank" rel="noopener noreferrer" className="block mt-[-4px] text-left text-xl font-normal underline">{locationLabel}</a>
     </button>
   </div>
 );
@@ -72,6 +71,7 @@ export default function Schedule() {
             dayLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].weekDay ?? "" : schedule.conferenceDay1[0].weekDay ?? ""}
             dateLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].monthDay ?? "" : schedule.conferenceDay1[0].monthDay ?? ""}
             locationLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].location ?? "" : schedule.conferenceDay1[0].location ?? ""}
+            locationLink={activeSchedule === "workshops" ? schedule.workshopsDay1[0].link ?? "" : schedule.conferenceDay1[0].link ?? ""}
           />
           <DayButton
             day={2}
@@ -80,6 +80,7 @@ export default function Schedule() {
             dayLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].weekDay ?? "" : schedule.conferenceDay2[0].weekDay ?? ""}
             dateLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].monthDay ?? "" : schedule.conferenceDay2[0].monthDay ?? ""}
             locationLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].location ?? "" : schedule.conferenceDay2[0].location ?? ""}
+            locationLink={activeSchedule === "workshops" ? schedule.workshopsDay2[0].link ?? "" : schedule.conferenceDay2[0].link ?? ""}
           />
         </div>
       </div>

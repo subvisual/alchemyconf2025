@@ -69,11 +69,11 @@ export default function ConferenceDay({ day, mobile }: { day: number, mobile?: b
                         {item.weekDay} <br />
                       </span>
                       <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.monthDay} - 
+                        {item.monthDay} {"- "}
                       </span>
-                      <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.location}
-                      </span>
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      {item.location}
+                      </a>
                     </div>
                   ) : // BREAK SECTION
                   item.type === "break" ? (
