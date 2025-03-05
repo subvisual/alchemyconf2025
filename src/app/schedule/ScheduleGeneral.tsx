@@ -22,19 +22,19 @@ export default function ScheduleGeneral() {
         {activeView === "workshops" ? (
           <div className="flex flex-row font-sofia_sans_extra_condensed tablet:gap-32 desktop:gap-40">
             <div className="flex flex-col w-1/2">
-              <WorkshopDay day={1} />
+              <WorkshopDay day={1} mobile={false} />
             </div>
             <div className="flex flex-col w-1/2">
-              <WorkshopDay day={2} />
+              <WorkshopDay day={2} mobile={false} />
             </div>
           </div>
         ) : (
           <div className="flex flex-row font-sofia_sans_extra_condensed tablet:gap-32 desktop:gap-40">
             <div className="flex flex-col w-1/2">
-              <ConferenceDay day={1} />
+              <ConferenceDay day={1} mobile={false} />
             </div>
             <div className="flex flex-col w-1/2">
-              <ConferenceDay day={2} />
+              <ConferenceDay day={2} mobile={false} />
             </div>
           </div>
         )}

@@ -27,7 +27,7 @@ const getSponsorInfo = (type: string, id: number) => {
   };
 };
 
-export default function ConferenceDay({ day }: { day: number }) {
+export default function ConferenceDay({ day, mobile }: { day: number, mobile?: boolean }) {
   const screenSize = useScreenSize();
 
   return (
@@ -42,35 +42,42 @@ export default function ConferenceDay({ day }: { day: number }) {
         <div className="relative">
           {/* TIMELINE LINE */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:right-0.5 desktop:w-[9px]"></div>
-          <div className="hidden tablet:block gap-3 pb-4 tablet:gap-4 tablet:pb-10 tablet:pl-12 desktop:pb-16 desktop:pl-14">
-            <span className="text-xl font-semibold text-dark-blue tablet:text-3xl desktop:text-4xl">
-              {day === 1 ? "Wednesday" : "Thursday"} <br />
-            </span>
-            <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
-              {day === 1 ? "April 2nd" : "April 3rd"} <br/>
-            </span>
-            <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
-              @Theatro Circo
-            </span>
-          </div>
           {schedule[`conferenceDay${day}` as keyof typeof schedule]
-            .filter((item: any) => item.type !== "date")
             .map((item: any, index: number) => (
               <div
                 key={`${day}-${index}`}
-                className="relative flex gap-3 pb-4 tablet:gap-8 tablet:pb-6 desktop:gap-10 desktop:pb-7"
+                className={`relative flex gap-3 ${item.type === "date" && mobile ? "hidden" : "pb-4 tablet:gap-8 tablet:pb-6 desktop:gap-10 desktop:pb-7"}`}
               >
                 {/* TIMELINE DOT */}
-                <div className="mt-2 h-3 w-3 rounded-full border-2 border-bordeux bg-background tablet:h-4 tablet:w-4 desktop:h-[18px] desktop:w-[18px]"></div>
-
+                <div 
+                  className={`mt-2 h-3 w-3 rounded-full border-2 border-bordeux ${
+                    item.type === "break" || item.type === "outro" 
+                      ? "bg-background" 
+                      : "bg-bordeux"
+                  } tablet:h-4 tablet:w-4 desktop:h-[18px] desktop:w-[18px]`}
+                ></div>
+                
                 {/* CONTENT */}
                 <div className="flex-1">
-                  <div className="text-xl font-bold text-bordeux tablet:text-2xl desktop:text-3xl">
+                  {item.type !== "date" ? <div className="text-xl font-bold text-bordeux tablet:text-2xl desktop:text-3xl">
                     {item.time}
-                  </div>
+                  </div> : null}
 
-                  {/* BREAK SECTION */}
-                  {item.type === "break" ? (
+                  {/* DATE SECTION */}
+                  {item.type === "date" ? (
+                    <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-10 desktop:pb-16">
+                      <span className="text-xl font-semibold text-dark-blue tablet:text-3xl desktop:text-4xl">
+                        {item.weekDay} <br />
+                      </span>
+                      <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
+                        {item.monthDay} - 
+                      </span>
+                      <span className="text-xl font-normal text-dark-blue tablet:text-3xl desktop:text-4xl">
+                        {item.location}
+                      </span>
+                    </div>
+                  ) : // BREAK SECTION
+                  item.type === "break" ? (
                     <div className="mt-0 flex items-center justify-between desktop:mt-1">
                       <div className="pr-5">
                         <h3 className="text-xl font-medium uppercase text-dark-blue tablet:text-2xl desktop:text-3xl">

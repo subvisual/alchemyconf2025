@@ -69,17 +69,17 @@ export default function Schedule() {
             day={1}
             activeDay={activeDay}
             onClick={() => setActiveDay(1)}
-            dayLabel={activeSchedule === "workshops" ? "Monday" : "Wednesday"}
-            dateLabel={activeSchedule === "workshops" ? "March 31st" : "April 2nd"}
-            locationLabel={activeSchedule === "workshops" ? "@GNRation" : "@Theatro Circo"}
+            dayLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].weekDay ?? "" : schedule.conferenceDay1[0].weekDay ?? ""}
+            dateLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].monthDay ?? "" : schedule.conferenceDay1[0].monthDay ?? ""}
+            locationLabel={activeSchedule === "workshops" ? schedule.workshopsDay1[0].location ?? "" : schedule.conferenceDay1[0].location ?? ""}
           />
           <DayButton
             day={2}
             activeDay={activeDay}
             onClick={() => setActiveDay(2)}
-            dayLabel={activeSchedule === "workshops" ? "Tuesday" : "Thursday"}
-            dateLabel={activeSchedule === "workshops" ? "April 1st" : "April 3rd"}
-            locationLabel={activeSchedule === "workshops" ? "@GNRation" : "@Theatro Circo"}
+            dayLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].weekDay ?? "" : schedule.conferenceDay2[0].weekDay ?? ""}
+            dateLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].monthDay ?? "" : schedule.conferenceDay2[0].monthDay ?? ""}
+            locationLabel={activeSchedule === "workshops" ? schedule.workshopsDay2[0].location ?? "" : schedule.conferenceDay2[0].location ?? ""}
           />
         </div>
       </div>
@@ -87,9 +87,9 @@ export default function Schedule() {
       <div className="mt-[-10px] w-full font-sofia_sans_extra_condensed">
         <div className="relative">
           {activeSchedule === "workshops" ? (
-            <WorkshopDay day={activeDay} />
+            <WorkshopDay day={activeDay} mobile={true} />
           ) : (
-            <ConferenceDay day={activeDay} />
+            <ConferenceDay day={activeDay} mobile={true} />
           )}
         </div>
       </div>
