@@ -15,6 +15,13 @@ const navigationLinks = {
       { href: "/about#code-of-conduct", label: "Code of Conduct" },
     ],
   },
+  schedule: {
+    title: "SCHEDULE",
+    links: [
+      { href: "/schedule/workshops", label: "Workshops" },
+      { href: "/schedule/talks", label: "Talks" },
+    ],
+  },
   sponsors: {
     title: "SPONSORS",
     links: [{ href: "/sponsorship.pdf", label: "Sponsorship\nProspectus" }],

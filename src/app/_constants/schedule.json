@@ -1,0 +1,240 @@
+{
+    "workshopsDay1": [
+        {
+            "type": "date",
+            "day": 1,
+            "weekDay": "Monday",
+            "monthDay": "March 31st",
+            "location": "GNRation",
+            "link": "https://www.gnration.pt/"
+        },
+        {
+            "type": "workshop",
+            "timeStart": "14:00",
+            "timeEnd": "18:30",
+            "speakerId": 4,
+            "name": "BRUCE TATE"
+        }
+    ],
+    "workshopsDay2": [
+        {
+            "type": "date",
+            "day": 2,
+            "weekDay": "Tuesday",
+            "monthDay": "April 1st",
+            "location": "GNRation",
+            "link": "https://www.gnration.pt/"
+        },
+        {
+            "type": "workshop",
+            "timeStart": "10:00",
+            "timeEnd": "18:00",
+            "speakerId": 8,
+            "name": "SASA JURIC"
+        },
+        {
+            "type": "workshop",
+            "timeStart": "10:00",
+            "timeEnd": "18:00",
+            "speakerId": 12,
+            "name": "ZACH DANIEL"
+        },
+        {
+            "type": "workshop",
+            "timeStart": "14:00",
+            "timeEnd": "18:00",
+            "speakerId": 3,
+            "name": "ANDREA LEOPARDI"
+        }
+    ],
+    "conferenceDay1": [
+        {
+            "type": "date",
+            "day": 1,
+            "weekDay": "Wednesday",
+            "monthDay": "April 2nd",
+            "location": "Theatro Circo",
+            "link": "https://www.theatrocirco.com/"
+        },
+        {
+            "type": "outro",
+            "time": "8:30",
+            "title": "CHECK-IN"
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "OPENING CEREMONY"
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 4,
+            "name": "BRUCE TATE"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorId": 1,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 10,
+            "name": "TOBIAS PFEIFFER"
+        },
+        {
+            "type": "break",
+            "time": "11:40",
+            "sponsorId": 0,
+            "title": "BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "12:00",
+            "speakerId": 2,
+            "name": "ANDRE ALBUQUERQUE"
+        },
+        {
+            "type": "outro",
+            "time": "12:40",
+            "title": "LUNCH"
+        },        
+        {
+            "type": "outro",
+            "time": "14:30",
+            "title": "OPEN DOORS"
+        },
+        {
+            "type": "talk",
+            "time": "15:00",
+            "speakerId": 6,
+            "name": "HUGO BARAUNA"
+        },
+        {
+            "type": "break",
+            "time": "15:40",
+            "sponsorId": 0,
+            "title": "BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "16:00",
+            "speakerId": 9,
+            "name": "SHANNON C. RYAN"
+        },
+        {
+            "type": "break",
+            "time": "16:40",
+            "sponsorId": 0,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "17:00",
+            "speakerId": 8,
+            "name": "SASA JURIC"
+        },
+        {
+            "type": "outro",
+            "time": "17:40",
+            "title": "DAY CLOSE"
+        },
+        {
+            "type": "outro",
+            "time": "20:30",
+            "title": "CONFERENCE PARTY"
+        }
+    ],
+    "conferenceDay2": [
+        {
+            "type": "date",
+            "day": 2,
+            "weekDay": "Thursday",
+            "monthDay": "April 3rd",
+            "location": "Theatro Circo",
+            "link": "https://www.theatrocirco.com/"
+        },
+        {
+            "type": "outro",
+            "time": "9:45",
+            "title": "CHECK-IN"
+        },
+        {
+            "type": "talk",
+            "time": "10:00",
+            "speakerId": 11,
+            "name": "WOJTEK MACH"
+        },
+        {
+            "type": "break",
+            "time": "10:40",
+            "sponsorId": 0,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "11:00",
+            "speakerId": 7,
+            "name": "JULIA MATHIAS"
+        },
+        {
+            "type": "break",
+            "time": "11:40",
+            "sponsorId": 0,
+            "title": "BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "12:00",
+            "speakerId": 5,
+            "name": "CHRISTOPH BECK"
+        },
+        {
+            "type": "outro",
+            "time": "12:40",
+            "title": "LUNCH"
+        },
+        {
+            "type": "outro",
+            "time": "14:30",
+            "title": "OPEN DOORS"
+        },
+        {
+            "type": "talk",
+            "time": "15:00",
+            "speakerId": 12,
+            "name": "ZACH DANIEL"
+        },
+        {
+            "type": "break",
+            "time": "15:40",
+            "sponsorId": 0,
+            "title": "BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "16:00",
+            "speakerId": 1,
+            "name": "AARON CRUZ"
+        },
+        {
+            "type": "break",
+            "time": "16:40",
+            "sponsorId": 0,
+            "title": "COFFEE BREAK"
+        },
+        {
+            "type": "talk",
+            "time": "17:00",
+            "speakerId": 3,
+            "name": "ANDREA LEOPARDI"
+        },
+       {
+            "type": "outro",
+            "time": "18:00",
+            "title": "CLOSING"
+        }
+    ]
+}

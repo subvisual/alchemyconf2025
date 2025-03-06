@@ -35,12 +35,28 @@
       "logo": "yariLogo",
       "link": "https://www.yarilabs.com/",
       "scale": "1.0"
+    },
+    {
+      "id": 2,
+      "name": "Remote",
+      "logo": "remoteLogo",
+      "link": "https://remote.com/",
+      "scale": "1.0"
+    },
+    {
+      "id": 3,
+      "name": "Startup Braga",
+      "logo": "startupBragaLogo",
+      "link": "https://www.startupbraga.com/",
+      "scale": "1.2",
+      "x": "20",
+      "y": "-45"
     }
   ],
   "partners": [
     {
       "id": 1,
-      "name": "marmela",
+      "name": "Marmela",
       "logo": "marmelaLogo",
       "link": "https://marmelasoft.com/",
       "scale": "1.0"

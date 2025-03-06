@@ -87,7 +87,8 @@
     "talk_description": "gen_statem is one of the most powerful, yet least celebrated, behaviours in OTP. It handles infinite states, offers a rich set of event options, and provides robust debugging tools—all while staying true to OTP principles and functional programming. This talk is where you find out a lot more about this little module (possibly too much). Learn what gen_statem can do, when to use it, and when a silly GenServer does it instead.",
     "workshop_title": "Concurrent Data Processing in Elixir",
     "workshop_description": "Consuming data and processing it is a central problem in so many systems nowadays. And Elixir is just so good at doing that, and doing it concurrently. Whether you run an event-sourced architecture with applications that react to events, or you have the occasional use case of map/reducing over collections in an optimized way, Elixir has your back! \n In this half-day workshop, we will cover tools like Broadway, GenStage, and Flow to handle tasks such as batch processing, event-driven systems, and rate-limiting outgoing requests.",
-    "workshop_link": "https://membrz.club/alchemyconf/events/workshop-concurrent-data-processing-in-elixir"
+    "workshop_link": "https://membrz.club/alchemyconf/events/workshop-concurrent-data-processing-in-elixir",
+    "workshop_resume": "In this half-day workshop, we will cover tools like Broadway, GenStage, and Flow to handle tasks such as batch processing, event-driven systems, and rate-limiting outgoing requests."
   },
   {
     "id": 4,
@@ -117,7 +118,8 @@
     "talk_description": "Over the past 10 years, Elixir has seen incredible growth. Together, we'll explore some of the key moments in Elixir's evolution, and look at the underlying design and community decisions that shaped it into what it is today.",
     "workshop_title": "Thinking in Elixir",
     "workshop_description": "In this session, you'll learn an overview of Elixir programming techniques. You'll learn Elixir using LiveBook, a quick and expressive way to capture both code and notes to collaborate on graphical applications. One piece at a time, we will use Elixir to write a small game using functional programming. Then, if there is time, we'll make the game fault tolerant and reliable with Elixir's concurrency framework called OTP.",
-    "workshop_link": "https://membrz.club/alchemyconf/events/thinking-in-elixir"
+    "workshop_link": "https://membrz.club/alchemyconf/events/thinking-in-elixir",
+    "workshop_resume": "This beginner-friendly workshop is the perfect starting point for developers new to Elixir."
   },
   {
     "id": 5,
@@ -238,7 +240,8 @@
     "talk_description": "Saša's talk is called \"Tell me a story\". \n\nHe didn't provide us with an abstract at all. \n\nNot only have we decided to trust him, we are maybe even more excited for his time on our stage. You should be too.",
     "workshop_title": "Practical testing with Elixir (and Phoenix)",
     "workshop_description": "This workshop will help you maximize the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn practical strategies to write clear, reliable tests and increase confidence in your code. This very interactive and hands-on session focuses on testing Phoenix-powered Elixir web servers, involving a lot of coding and discussions.This tutorial teaches a practical testing approach which maximizes the value you can get out of your tests in real-life collaborative Elixir projects. You’ll learn how to increase the confidence in your tests, organically maximize code coverage, and improve the test clarity. This is going to be a very interactive and hands-on session involving a lot of coding and discussions.",
-    "workshop_link": "https://membrz.club/alchemyconf/events/workshop-practical-testing-with-elixir-and-phoenix"
+    "workshop_link": "https://membrz.club/alchemyconf/events/workshop-practical-testing-with-elixir-and-phoenix",
+    "workshop_resume": "This workshop will help you maximize the value you can get out of your tests in real-life collaborative Elixir projects."
   },
   {
     "id": 9,
@@ -358,6 +361,7 @@
     "talk_description": "Igniter is a project patching and code generation framework for Elixir. It allows us to seamlessly install and upgrade our packages. By leveraging AST-based code patching, library authors can provide intelligent installer and upgraders, massively improving the developer experience for getting started with a new Elixir tool. The talk delves into Igniter's capabilities, exploring from basic to advanced use cases, its impact on developer experience, and its potential to transform the way we work with our Elixir applications every day.",
     "workshop_title": "Supercharge Your Elixir Apps with Ash",
     "workshop_description": "This full-day workshop introduces the Ash Framework, a tool for building maintainable and scalable Elixir applications. Ash Framework is a refreshingly different way to craft efficient and maintainable Elixir applications. In this hands-on, interactive course, we’ll dive deep into Ash’s capabilities, exploring how it can streamline your development process and enhance your application’s architecture. Throughout this class, we’ll build a real-world application from the ground up, leveraging Ash’s unique features.",
-    "workshop_link": "https://membrz.club/alchemyconf/events/supercharge-your-elixir-apps-with-ash"
+    "workshop_link": "https://membrz.club/alchemyconf/events/supercharge-your-elixir-apps-with-ash",
+    "workshop_resume": "This full-day workshop introduces the Ash Framework, a tool for building maintainable and scalable Elixir applications."
   }
 ]

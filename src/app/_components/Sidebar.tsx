@@ -67,12 +67,32 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
               Speakers
             </Link>
           </li>
-          <li className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}>
-            <div className="flex items-center justify-center gap-1" onClick={toggleSidebar}>
-            <Link href={PRACTICAL_GUIDE_LINK} target="_blank" rel="noreferrer noopener">
-              Practical
+          <li
+            className={`${pathname === "/schedule" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
+            <Link href="/schedule" onClick={toggleSidebar}>
+              Schedule
             </Link>
-            <OpenTabIcon color="#FFF5DA" sidebar={true} className="scale-[0.75]"/>
+          </li>
+          <li
+            className={`${pathname === "/practical" ? "-ml-0.5 font-semibold" : ""} transition-all hover:font-semibold`}
+          >
+            <div
+              className="flex items-center justify-center gap-1"
+              onClick={toggleSidebar}
+            >
+              <Link
+                href={PRACTICAL_GUIDE_LINK}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                Practical
+              </Link>
+              <OpenTabIcon
+                color="#FFF5DA"
+                sidebar={true}
+                className="scale-[0.75]"
+              />
             </div>
           </li>
           <li>
