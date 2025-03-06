@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import schedule from "@/app/_constants/schedule.json";
-import ConferenceDay from "./_components/ConferenceDay";
+import TalkDay from "./_components/TalkDay";
 import WorkshopDay from "./_components/WorkshopDay";
 import ScheduleToggle from "./_components/ScheduleToggle";
 
@@ -97,7 +97,7 @@ export default function ScheduleMobile({
           {activeSchedule === "workshops" ? (
             <WorkshopDay day={activeDay} mobile={true} />
           ) : (
-            <ConferenceDay day={activeDay} mobile={true} />
+            <TalkDay day={activeDay} mobile={true} />
           )}
         </div>
       </div>

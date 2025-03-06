@@ -29,20 +29,20 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
 
                 {/* CONTENT */}
                 <div className="flex-1">
-                  {item.type !== "date" ? <div className="text-xl font-bold text-bordeux tablet:text-lg desktop:text-xl">
+                  {item.type !== "date" ? <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
                     {item.timeStart} - {item.timeEnd}
                   </div> : null}
 
                   {/* WORKSHOP SECTION */}
                   {item.type === "date" ? (mobile ? null :
                     <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-5 desktop:pb-6">
-                      <span className="text-xl font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <span className="font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                         {item.weekDay} <br />
                       </span>
-                      <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <span className="font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                         {item.monthDay} {"- "}
                       </span>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                       {item.location}
                       </a>
                     </div>
@@ -58,13 +58,13 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
                       <div className="flex flex-col items-start">
                         <div className="flex w-full items-center justify-between">
                           <div className="pr-5">
-                            <h3 className="text-xl font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                            <p className="text-lg font-bold uppercase text-dark-blue tablet:text-xl desktop:text-2xl">
                               {speakers.find((s) => s.id === item.speakerId)
                                 ?.name +
                                 " " +
                                 speakers.find((s) => s.id === item.speakerId)
                                   ?.surname || item.name}
-                            </h3>
+                            </p>
                             <p className="mt-1 font-alegreya_sans text-base font-semibold text-dark-blue tablet:text-lg desktop:text-xl">
                               {speakers.find((s) => s.id === item.speakerId)
                                 ?.workshop_title || item.title}

@@ -26,7 +26,7 @@ const getSponsorInfo = (type: string, id: number) => {
   };
 };
 
-export default function ConferenceDay({ day, mobile }: { day: number, mobile?: boolean }) {
+export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean }) {
   const screenSize = useScreenSize();
 
   return (
@@ -58,32 +58,32 @@ export default function ConferenceDay({ day, mobile }: { day: number, mobile?: b
                 
                 {/* CONTENT */}
                 <div className="flex-1">
-                  {item.type !== "date" ? <div className="text-xl font-bold text-bordeux tablet:text-lg desktop:text-xl">
+                  {item.type !== "date" ? <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
                     {item.time}
                   </div> : null}
 
                   {/* DATE SECTION */}
                   {item.type === "date" ? (
                     <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-5 desktop:pb-6">
-                      <span className="text-xl font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <span className="font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                         {item.weekDay} <br />
                       </span>
-                      <span className="text-xl font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <span className="font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                         {item.monthDay} {"- "}
                       </span>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="text-xl font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                       {item.location}
                       </a>
                     </div>
                   ) : // BREAK SECTION
                   item.type === "break" ? (
-                    <div className="mt-0 flex items-center justify-between desktop:mt-0">
+                    <div className="mt-[-4px] flex items-center justify-between tablet:mt-[-4px] desktop:mt-[-2px]">
                       <div className="pr-5">
-                        <h3 className="text-xl font-medium uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                        <h3 className="text-base font-medium uppercase text-dark-blue tablet:text-lg desktop:text-xl">
                           {item.title}
                         </h3>
                         {item.sponsorId !== 0 && (
-                          <p className="mt-1 font-alegreya_sans text-base text-dark-blue tablet:text-lg desktop:text-xl">
+                          <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-lg desktop:text-xl">
                             Sponsored by{" "}
                             <a
                               href={
@@ -154,14 +154,14 @@ export default function ConferenceDay({ day, mobile }: { day: number, mobile?: b
                     >
                       <div className="flex items-center justify-between">
                         <div className="pr-5">
-                          <h3 className="text-xl font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                          <h3 className="text-lg font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
                             {speakers.find((s) => s.id === item.speakerId)
                               ?.name +
                               " " +
                               speakers.find((s) => s.id === item.speakerId)
                                 ?.surname || item.name}
                           </h3>
-                          <p className="mt-1 font-alegreya_sans text-base text-dark-blue tablet:text-lg desktop:text-xl">
+                          <p className="mt-1 font-alegreya_sans text-base text-dark-blue tablet:text- desktop:text-lg">
                             {speakers.find((s) => s.id === item.speakerId)
                               ?.talk_title || item.title}
                           </p>
@@ -187,8 +187,8 @@ export default function ConferenceDay({ day, mobile }: { day: number, mobile?: b
                     </a>
                   ) : item.type === "outro" ? (
                     // OTHER SECTION
-                    <div className="mt-0 desktop:mt-">
-                      <h3 className="text-xl font-medium text-dark-blue tablet:text-lg desktop:text-xl">
+                    <div className="mt-[-4px] tablet:mt-[-4px] desktop:mt-[-2px]">
+                      <h3 className="text-base font-medium text-dark-blue tablet:text-lg desktop:text-xl">
                         {item.title}
                       </h3>
                     </div>

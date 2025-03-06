@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 
-import ConferenceDay from "./_components/ConferenceDay";
+import TalkDay from "./_components/TalkDay";
 import WorkshopDay from "./_components/WorkshopDay";
 import ScheduleToggle from "./_components/ScheduleToggle";
 
@@ -42,10 +42,10 @@ export default function ScheduleGeneral({
         ) : (
           <div className="flex flex-row font-sofia_sans_extra_condensed tablet:gap-32 desktop:gap-40">
             <div className="flex flex-col w-1/2">
-              <ConferenceDay day={1} mobile={false} />
+              <TalkDay day={1} mobile={false} />
             </div>
             <div className="flex flex-col w-1/2">
-              <ConferenceDay day={2} mobile={false} />
+              <TalkDay day={2} mobile={false} />
             </div>
           </div>
         )}
