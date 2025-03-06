@@ -1,5 +1,5 @@
 import { redirect } from "next/navigation";
 
 export default function SchedulePage() {
-  redirect("/schedule/workshops");
+  redirect("/schedule/talks");
 }
