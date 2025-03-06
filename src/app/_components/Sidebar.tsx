@@ -86,7 +86,7 @@ export default function Sidebar({ showSidebar, toggleSidebar }: SidebarProps) {
                 target="_blank"
                 rel="noreferrer noopener"
               >
-                Practical
+                Practical Guide
               </Link>
               <OpenTabIcon
                 color="#FFF5DA"
