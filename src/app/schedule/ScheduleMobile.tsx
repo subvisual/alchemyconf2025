@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 import schedule from "@/app/_constants/schedule.json";
 import ConferenceDay from "./_components/ConferenceDay";
@@ -41,15 +42,21 @@ const DayButton = ({ day, activeDay, onClick, dayLabel, dateLabel, locationLabel
   </div>
 );
 
-export default function Schedule() {
+export default function ScheduleMobile({ 
+  initialSchedule = "workshops" 
+}: { 
+  initialSchedule?: "workshops" | "talks" 
+}) {
   const [activeDay, setActiveDay] = useState(1);
   const [activeSchedule, setActiveSchedule] = useState<"workshops" | "talks">(
-    "workshops",
+    initialSchedule
   );
+  const router = useRouter();
 
   const handleScheduleChange = (newSchedule: "workshops" | "talks") => {
     setActiveSchedule(newSchedule);
     setActiveDay(1);
+    router.push(`/schedule/${newSchedule}`);
   };
 
   return (
