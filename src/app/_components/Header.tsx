@@ -71,14 +71,14 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <div className="w-[140px]">
+                <div className="w-[210px]">
                   <Link
                     href={PRACTICAL_GUIDE_LINK}
                     target="_blank"
                     rel="noreferrer noopener"
                     className={`group flex items-center justify-center gap-2 ${getNavLinkClass("/practical")}`}
                   >
-                    Practical
+                    Practical Guide
                     <OpenTabIcon
                       className="fill-[#003049] transition-colors group-hover:fill-[#FFF5DA]"
                       otherPath={pathname === "/" ? false : true}

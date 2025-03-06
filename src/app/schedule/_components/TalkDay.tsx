@@ -161,7 +161,7 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                               speakers.find((s) => s.id === item.speakerId)
                                 ?.surname || item.name}
                           </h3>
-                          <p className="mt-1 font-alegreya_sans text-base text-dark-blue tablet:text- desktop:text-lg">
+                          <p className="mt-1 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
                             {speakers.find((s) => s.id === item.speakerId)
                               ?.talk_title || item.title}
                           </p>

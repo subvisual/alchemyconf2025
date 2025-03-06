@@ -58,14 +58,14 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
                       <div className="flex flex-col items-start">
                         <div className="flex w-full items-center justify-between">
                           <div className="pr-5">
-                            <p className="text-lg font-bold uppercase text-dark-blue tablet:text-xl desktop:text-2xl">
+                            <p className="text-lg font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
                               {speakers.find((s) => s.id === item.speakerId)
                                 ?.name +
                                 " " +
                                 speakers.find((s) => s.id === item.speakerId)
                                   ?.surname || item.name}
                             </p>
-                            <p className="mt-1 font-alegreya_sans text-base font-semibold text-dark-blue tablet:text-lg desktop:text-xl">
+                            <p className="mt-1 font-alegreya_sans text-base font-semibold text-dark-blue tablet:text-base desktop:text-lg">
                               {speakers.find((s) => s.id === item.speakerId)
                                 ?.workshop_title || item.title}
                             </p>
@@ -88,7 +88,7 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
                             imageY="-10px"
                           />
                         </div>
-                        <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-lg desktop:text-xl">
+                        <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
                           {speakers.find((s) => s.id === item.speakerId)
                             ?.workshop_resume || item.description}
                         </p>
