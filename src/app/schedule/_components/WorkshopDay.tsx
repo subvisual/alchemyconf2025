@@ -70,43 +70,41 @@ export default function WorkshopDay({
                       }
                       className="block rounded-lg border-2 border-dark-blue p-3 transition-colors hover:bg-bordeux/5 desktop:mt-0 desktop:p-3"
                     >
-                      <div className="flex flex-col items-start">
-                        <div className="flex w-full items-center justify-between">
-                          <div className="pr-5">
-                            <p className="text-lg font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
-                              {speakers.find((s) => s.id === item.speakerId)
-                                ?.name +
-                                " " +
-                                speakers.find((s) => s.id === item.speakerId)
-                                  ?.surname || item.name}
-                            </p>
-                            <p className="mt-1 font-alegreya_sans text-base font-semibold text-dark-blue tablet:text-base desktop:text-lg">
-                              {speakers.find((s) => s.id === item.speakerId)
-                                ?.workshop_title || item.title}
-                            </p>
-                          </div>
-                          <SpeakerBlobMobile
-                            className="mr-3 flex-shrink-0 tablet:scale-110 desktop:mr-3 desktop:scale-[1.2]"
-                            src={
-                              speakerImagesMob[
-                                (speakers.find((s) => s.id === item.speakerId)
-                                  ?.id ?? 1) - 1
-                              ]?.src || ""
-                            }
-                            alt={
+                      <div className="flex items-center justify-between">
+                        <div className="pr-6">
+                          <p className="text-lg font-bold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                            {speakers.find((s) => s.id === item.speakerId)
+                              ?.name +
+                              " " +
                               speakers.find((s) => s.id === item.speakerId)
-                                ?.name || ""
-                            }
-                            height="45px"
-                            width="45px"
-                            imageX="0px"
-                            imageY="-10px"
-                          />
+                                ?.surname || item.name}
+                          </p>
+                          <p className="mt-1 font-alegreya_sans text-base font-semibold text-dark-blue tablet:text-base desktop:text-lg">
+                            {speakers.find((s) => s.id === item.speakerId)
+                              ?.workshop_title || item.title}
+                          </p>
+                          <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                            {speakers.find((s) => s.id === item.speakerId)
+                              ?.workshop_resume || item.description}
+                          </p>
                         </div>
-                        <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
-                          {speakers.find((s) => s.id === item.speakerId)
-                            ?.workshop_resume || item.description}
-                        </p>
+                        <SpeakerBlobMobile
+                          className="mr-3 flex-shrink-0 scale-[1.4] tablet:scale-[1.3] desktop:mr-5 desktop:scale-[1.5]"
+                          src={
+                            speakerImagesMob[
+                              (speakers.find((s) => s.id === item.speakerId)
+                                ?.id ?? 1) - 1
+                            ]?.src || ""
+                          }
+                          alt={
+                            speakers.find((s) => s.id === item.speakerId)
+                              ?.name || ""
+                          }
+                          height="45px"
+                          width="45px"
+                          imageX="0px"
+                          imageY="-10px"
+                        />
                       </div>
                     </a>
                   ) : item.type === "outro" ? ( // OTHER SECTION

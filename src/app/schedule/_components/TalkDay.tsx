@@ -83,7 +83,7 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                           {item.title}
                         </h3>
                         {item.sponsorId !== 0 && (
-                          <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-lg desktop:text-xl">
+                          <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
                             Sponsored by{" "}
                             <a
                               href={
