@@ -111,7 +111,7 @@ export default function WorkshopDay({
                     </a>
                   ) : item.type === "outro" ? ( // OTHER SECTION
                     <div className="mt-[-4px] tablet:mt-[-4px] desktop:mt-[-2px]">
-                      <h3 className="text-base font-medium text-dark-blue tablet:text-lg desktop:text-xl">
+                      <h3 className="text-base font-semibold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
                         {item.title}
                       </h3>
                     </div>
