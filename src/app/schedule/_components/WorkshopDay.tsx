@@ -89,7 +89,7 @@ export default function WorkshopDay({
                           </p>
                         </div>
                         <SpeakerBlobMobile
-                          className="mr-3 flex-shrink-0 scale-[1.4] tablet:scale-[1.3] desktop:mr-5 desktop:scale-[1.5]"
+                          className="mr-3 flex-shrink-0 scale-[1.4] tablet:scale-[1.6] desktop:mr-5 desktop:scale-[1.7]"
                           src={
                             speakerImagesMob[
                               (speakers.find((s) => s.id === item.speakerId)
