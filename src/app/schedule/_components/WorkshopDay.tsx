@@ -5,7 +5,13 @@ import speakers from "@/app/_constants/speakers.json";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
 
-export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boolean }) {
+export default function WorkshopDay({
+  day,
+  mobile,
+}: {
+  day: number;
+  mobile?: boolean;
+}) {
   return (
     <>
       <div className="relative hidden text-[64px] font-extrabold uppercase leading-[50px] text-dark-blue tablet:block tablet:pl-8 tablet:text-[80px] tablet:leading-[80px] desktop:pl-10 desktop:text-[100px] desktop:leading-[100px]">
@@ -18,8 +24,8 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
         <div className="relative">
           {/* TIMELINE LINE */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:right-0.5 desktop:w-[9px]"></div>
-          {schedule[`workshopsDay${day}` as keyof typeof schedule]
-            .map((item: any, index: number) => (
+          {schedule[`workshopsDay${day}` as keyof typeof schedule].map(
+            (item: any, index: number) => (
               <div
                 key={`${day}-${index}`}
                 className={`relative flex gap-3 ${item.type === "date" && mobile ? "hidden" : "pb-1 tablet:gap-4 tablet:pb-2 desktop:gap-6 desktop:pb-4"}`}
@@ -29,23 +35,32 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
 
                 {/* CONTENT */}
                 <div className="flex-1">
-                  {item.type !== "date" ? <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
-                    {item.timeStart} - {item.timeEnd}
-                  </div> : null}
+                  {item.type !== "date" ? (
+                    <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
+                      {item.timeStart} - {item.timeEnd}
+                    </div>
+                  ) : null}
 
                   {/* WORKSHOP SECTION */}
-                  {item.type === "date" ? (mobile ? null :
-                    <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-5 desktop:pb-6">
-                      <span className="font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.weekDay} <br />
-                      </span>
-                      <span className="font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                        {item.monthDay} {"- "}
-                      </span>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                      {item.location}
-                      </a>
-                    </div>
+                  {item.type === "date" ? (
+                    mobile ? null : (
+                      <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-5 desktop:pb-6">
+                        <span className="font-semibold text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                          {item.weekDay} <br />
+                        </span>
+                        <span className="font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
+                          {item.monthDay} {"- "}
+                        </span>
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]"
+                        >
+                          {item.location}
+                        </a>
+                      </div>
+                    )
                   ) : // WORKSHOP SECTION
                   item.type === "workshop" ? (
                     <a
@@ -94,10 +109,17 @@ export default function WorkshopDay({ day, mobile }: { day: number, mobile?: boo
                         </p>
                       </div>
                     </a>
+                  ) : item.type === "outro" ? ( // OTHER SECTION
+                    <div className="mt-[-4px] tablet:mt-[-4px] desktop:mt-[-2px]">
+                      <h3 className="text-base font-semibold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                        {item.title}
+                      </h3>
+                    </div>
                   ) : null}
                 </div>
               </div>
-            ))}
+            ),
+          )}
         </div>
       </div>
     </>
