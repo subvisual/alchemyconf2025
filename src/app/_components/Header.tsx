@@ -16,7 +16,7 @@ export default function Header() {
 
   const getNavLinkClass = (path: string) =>
     `tablet:py-7 transition-all text-center w-full h-full block ${
-      pathname === path
+      pathname === path || (path !== '/' && pathname.startsWith(path))
         ? "bg-bordeux text-background border-transparent"
         : pathname === "/"
           ? "border-transparent hover:bg-bordeux hover:text-background"
