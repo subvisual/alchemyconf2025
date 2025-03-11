@@ -109,6 +109,7 @@ export default function Sponsors() {
                   className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
                   blobVariant={sponsor.id - 1}
                   scale={Number(sponsor.scale)}
+                  typeStart={0}
                 />
               </a>
             ))}
@@ -163,7 +164,7 @@ export default function Sponsors() {
                     className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
                     blobVariant={sponsor.id - 1}
                     scale={Number(sponsor.scale)}
-                    typeStart={1}
+                    typeStart={0}
                     x={sponsor.x}
                     y={sponsor.y}
                   />
@@ -195,7 +196,7 @@ export default function Sponsors() {
                     className="scale-[0.5] tablet:scale-[0.8] desktop:scale-[1.0]"
                     blobVariant={sponsor.id - 1}
                     scale={Number(sponsor.scale)}
-                    typeStart={0}
+                    typeStart={1}
                     x={sponsor.x}
                     y={sponsor.y}
                   />

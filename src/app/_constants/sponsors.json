@@ -26,6 +26,15 @@
       "scale": "1.4",
       "x": "0",
       "y": "-60"
+    },
+    {
+      "id": 2,
+      "name": "Coverflex",
+      "logo": "coverflexLogo",
+      "link": "https://www.coverflex.com/",
+      "scale": "1.2",
+      "x": "20",
+      "y": "-40"
     }
   ],
   "breaks": [
