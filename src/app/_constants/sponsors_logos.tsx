@@ -6,6 +6,7 @@ import getBusLogo from "@/assets/images/getbus_logo.png";
 import erlangLogo from "@/assets/images/erlang_logo.svg";
 import yariLogo from "@/assets/images/yari_logo.png";
 import maerskLogo from "@/assets/images/maersk_logo.png";
+import coverflexLogo from "@/assets/images/coverflex_logo.png";
 
 const sponsorLogos = {
   remoteLogo,
@@ -15,7 +16,8 @@ const sponsorLogos = {
   getBusLogo,
   erlangLogo,
   yariLogo,
-  maerskLogo
+  maerskLogo,
+  coverflexLogo,
 } as const;
 
 export default sponsorLogos;

@@ -34,8 +34,10 @@ const SponsorBlobs = ({
   ...props
 }: BlobProps) => {
   const selectedPath = blobPaths[blobVariant];
-  
-  const rotation = id && parseInt(id) % 2 && typeStart === 0 ? -4 : 4;
+
+  const rotation = typeStart === 0 
+    ? (parseInt(id ?? "0") % 2 === 0 ? -4 : 4)
+    : (parseInt(id ?? "0") % 2 === 0 ? 4 : -4);
 
   return (
     <div className={`relative ${className}`}>
