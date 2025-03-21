@@ -6,7 +6,7 @@
       "weekDay": "Monday",
       "monthDay": "March 31st",
       "location": "GNRation",
-      "link": "https://www.gnration.pt/"
+      "link": "https://maps.app.goo.gl/XXvkCz3BtjpLgaXG7"
     },
     {
       "type": "workshop",
@@ -14,6 +14,17 @@
       "timeEnd": "18:30",
       "speakerId": 4,
       "name": "BRUCE TATE"
+    },
+    {
+      "type": "event",
+      "timeStart": "18:00",
+      "timeEnd": "20:00",
+      "title": "Alchemy Back from the Road",
+      "sponsorId": 3,
+      "location": "Subvisual",
+      "location_link": "https://maps.app.goo.gl/NcFVgcX15BKbpyVP9",
+      "description": "We’re hosting the final Alchemy on the Road, sponsored by Alembic! Join us for an evening of lightning talks, great conversations, new connections, and the perfect warm-up before Alchemy Conf.",
+      "link": "https://membrz.club/alchemyconf/events/alchemy-on-the-road-lightning-demos-special-edition-braga"
     }
   ],
   "workshopsDay2": [
@@ -23,7 +34,7 @@
       "weekDay": "Tuesday",
       "monthDay": "April 1st",
       "location": "GNRation",
-      "link": "https://www.gnration.pt/"
+      "link": "https://maps.app.goo.gl/XXvkCz3BtjpLgaXG7"
     },
     {
       "type": "workshop",
@@ -47,10 +58,15 @@
       "name": "ANDREA LEOPARDI"
     },
     {
-      "type": "outro",
+      "type": "event",
       "timeStart": "18:00",
       "timeEnd": "20:00",
-      "title": "Gathering of Alchemists"
+      "title": "Gathering of Alchemists",
+      "sponsorId": 0,
+      "location": "GNRation",
+      "location_link": "https://maps.app.goo.gl/XXvkCz3BtjpLgaXG7",
+      "description": "A casual get-together to connect, chat, and enjoy some good company before the main event!",
+      "link": "https://membrz.club/alchemyconf/events/gathering-of-alchemists"
     }
   ],
   "conferenceDay1": [
@@ -60,7 +76,7 @@
       "weekDay": "Wednesday",
       "monthDay": "April 2nd",
       "location": "Theatro Circo",
-      "link": "https://www.theatrocirco.com/"
+      "link": "https://maps.app.goo.gl/S8H8rnymNTjPeEtQ9"
     },
     {
       "type": "outro",
@@ -160,7 +176,7 @@
       "weekDay": "Thursday",
       "monthDay": "April 3rd",
       "location": "Theatro Circo",
-      "link": "https://www.theatrocirco.com/"
+      "link": "https://maps.app.goo.gl/S8H8rnymNTjPeEtQ9"
     },
     {
       "type": "outro",

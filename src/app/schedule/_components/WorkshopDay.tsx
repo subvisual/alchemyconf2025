@@ -4,7 +4,8 @@ import schedule from "@/app/_constants/schedule.json";
 import speakers from "@/app/_constants/speakers.json";
 import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
-
+import { getSponsorInfo } from "./TalkDay";
+import Image from "next/image";
 export default function WorkshopDay({
   day,
   mobile,
@@ -41,7 +42,7 @@ export default function WorkshopDay({
                     </div>
                   ) : null}
 
-                  {/* WORKSHOP SECTION */}
+                  {/* DATE/LOCATION SECTION */}
                   {item.type === "date" ? (
                     mobile ? null : (
                       <div className="hidden gap-3 pb-4 tablet:block tablet:gap-4 tablet:pb-5 desktop:pb-6">
@@ -107,6 +108,91 @@ export default function WorkshopDay({
                         />
                       </div>
                     </a>
+                  ) : item.type === "event" ? ( // EVENT SECTION
+                    <div className="block rounded-lg border-2 border-yellow p-3 transition-colors hover:bg-bordeux/5 desktop:mt-0 desktop:p-3">
+                      <div className="mt-[-4px] flex-col items-center justify-between tablet:mt-[-4px] desktop:mt-[-2px]">
+                        <div className="flex items-center justify-between gap-2">
+                          <div className="pr-5">
+                            <h3 className="text-base font-semibold uppercase text-dark-blue tablet:text-lg desktop:text-xl">
+                              {item.title}
+                            </h3>
+                            {item.sponsorId !== 0 && (
+                              <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                                Powered by{" "}
+                                <a
+                                  href={
+                                    getSponsorInfo("stone", item.sponsorId ?? 1)
+                                      .link
+                                  }
+                                  className="font-semibold text-dark-blue underline"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                >
+                                  {
+                                    getSponsorInfo("stone", item.sponsorId ?? 1)
+                                      .name
+                                  }
+                                </a>
+                              </p>
+                            )}
+                            <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                              Location:{" "}
+                              <a
+                                href={item.location_link}
+                                className="font-semibold text-dark-blue underline"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                {item.location}
+                              </a>
+                            </p>
+                          </div>
+                          {item.sponsorId !== 0 && (
+                            <div>
+                              <a
+                                href={
+                                  getSponsorInfo("stone", item.sponsorId ?? 1)
+                                    .link
+                                }
+                                target="_blank"
+                                rel="noopener noreferrer"
+                              >
+                                <Image
+                                  src={
+                                    getSponsorInfo("stone", item.sponsorId ?? 1)
+                                      .logo
+                                  }
+                                  width={150}
+                                  height={150}
+                                  alt={
+                                    getSponsorInfo("stone", item.sponsorId ?? 1)
+                                      .name || "Sponsor"
+                                  }
+                                  className="mr-3 h-auto w-[90px] flex-shrink-0 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
+                                  style={{
+                                    objectFit: "contain",
+                                    maxWidth: "100%",
+                                  }}
+                                />
+                              </a>
+                            </div>
+                          )}
+                        </div>
+                        <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                          {item.description}
+                        </p>
+                        <p className="mt-3 font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                          <a
+                            href={item.link}
+                            className="font-semibold text-dark-blue underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            RSVP now
+                          </a>
+                        </p>
+                      </div>
+                    </div>
                   ) : item.type === "outro" ? ( // OTHER SECTION
                     <div className="mt-[-4px] tablet:mt-[-4px] desktop:mt-[-2px]">
                       <h3 className="text-base font-semibold uppercase text-dark-blue tablet:text-lg desktop:text-xl">

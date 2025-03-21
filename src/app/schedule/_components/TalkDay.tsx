@@ -10,7 +10,7 @@ import sponsors from "@/app/_constants/sponsors.json";import SpeakerBlobMobile f
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
 import sponsorLogos from "@/app/_constants/sponsors_logos";
 
-const getSponsorInfo = (type: string, id: number) => {
+export const getSponsorInfo = (type: string, id: number) => {
   const sponsorTypes = sponsors as Record<
     string,
     Array<{ id: number; logo: string; name: string; link: string }>
@@ -23,6 +23,7 @@ const getSponsorInfo = (type: string, id: number) => {
       (sponsor?.logo as keyof typeof sponsorLogos) || "remoteLogo"
     ].src,
     link: sponsor?.link,
+    name: sponsor?.name,
   };
 };
 
@@ -95,9 +96,7 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                               rel="noopener noreferrer"
                             >
                               {
-                                sponsors.breaks.find(
-                                  (s) => s.id === item.sponsorId,
-                                )?.name
+                                getSponsorInfo("breaks", item.sponsorId ?? 1).name
                               }
                             </a>
                           </p>
@@ -118,9 +117,7 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                             width={150}
                             height={150}
                             alt={
-                              sponsors.breaks.find(
-                                (s) => s.id === item.sponsorId,
-                              )?.name || "Sponsor"
+                              getSponsorInfo("breaks", item.sponsorId ?? 1).name || "Sponsor"
                             }
                             className="mr-3 h-auto w-[90px] flex-shrink-0 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
                             style={{

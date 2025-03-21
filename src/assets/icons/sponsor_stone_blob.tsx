@@ -11,7 +11,7 @@ const SponsorStoneBlob = ({
   ...props
 }: BlobProps) => {
   return (
-    <div className={`relative ${className} -z-10`}>
+    <div className={`absolute ${className} -z-10`}>
       <svg
         width="1289"
         height="1047"
