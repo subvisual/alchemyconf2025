@@ -166,7 +166,9 @@
     {
       "type": "outro",
       "time": "21:00",
-      "title": "CONFERENCE PARTY"
+      "title": "CONFERENCE PARTY",
+      "location": "SETRA Urban & Cocktail Bar",
+      "location_link": "https://maps.app.goo.gl/ktFKj4m3xRykJ3rf9"
     }
   ],
   "conferenceDay2": [

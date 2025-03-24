@@ -6,7 +6,8 @@ import { normalizeChars } from "@/app/utils";
 
 import schedule from "@/app/_constants/schedule.json";
 import speakers from "@/app/_constants/speakers.json";
-import sponsors from "@/app/_constants/sponsors.json";import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
+import sponsors from "@/app/_constants/sponsors.json";
+import SpeakerBlobMobile from "@/assets/icons/speaker_blob_mobile";
 import speakerImagesMob from "@/app/_constants/speakers_images_mob";
 import sponsorLogos from "@/app/_constants/sponsors_logos";
 
@@ -27,7 +28,13 @@ export const getSponsorInfo = (type: string, id: number) => {
   };
 };
 
-export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean }) {
+export default function TalkDay({
+  day,
+  mobile,
+}: {
+  day: number;
+  mobile?: boolean;
+}) {
   const screenSize = useScreenSize();
 
   return (
@@ -42,26 +49,28 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
         <div className="relative">
           {/* TIMELINE LINE */}
           <div className="absolute left-1 top-2 h-[calc(100%-16px)] w-1 bg-yellow/20 tablet:w-2 desktop:right-0.5 desktop:w-[9px]"></div>
-          {schedule[`conferenceDay${day}` as keyof typeof schedule]
-            .map((item: any, index: number) => (
+          {schedule[`conferenceDay${day}` as keyof typeof schedule].map(
+            (item: any, index: number) => (
               <div
                 key={`${day}-${index}`}
                 className={`relative flex gap-3 ${item.type === "date" && mobile ? "hidden" : "pb-1 tablet:gap-4 tablet:pb-2 desktop:gap-6 desktop:pb-4"}`}
               >
                 {/* TIMELINE DOT */}
-                <div 
+                <div
                   className={`mt-[6px] h-3 w-3 rounded-full border-2 border-bordeux ${
-                    item.type === "break" || item.type === "outro" 
-                      ? "bg-background" 
+                    item.type === "break" || item.type === "outro"
+                      ? "bg-background"
                       : "bg-bordeux"
                   } tablet:h-4 tablet:w-4 desktop:h-[18px] desktop:w-[18px]`}
                 ></div>
-                
+
                 {/* CONTENT */}
                 <div className="flex-1">
-                  {item.type !== "date" ? <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
-                    {item.time}
-                  </div> : null}
+                  {item.type !== "date" ? (
+                    <div className="text-base font-bold text-bordeux tablet:text-lg desktop:text-xl">
+                      {item.time}
+                    </div>
+                  ) : null}
 
                   {/* DATE SECTION */}
                   {item.type === "date" ? (
@@ -72,8 +81,13 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                       <span className="font-normal text-dark-blue tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
                         {item.monthDay} {"- "}
                       </span>
-                      <a href={item.link} target="_blank" rel="noopener noreferrer" className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]">
-                      {item.location}
+                      <a
+                        href={item.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-normal text-dark-blue underline tablet:text-2xl desktop:text-[28px] desktop:leading-[34px]"
+                      >
+                        {item.location}
                       </a>
                     </div>
                   ) : // BREAK SECTION
@@ -96,7 +110,8 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                               rel="noopener noreferrer"
                             >
                               {
-                                getSponsorInfo("breaks", item.sponsorId ?? 1).name
+                                getSponsorInfo("breaks", item.sponsorId ?? 1)
+                                  .name
                               }
                             </a>
                           </p>
@@ -117,7 +132,8 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                             width={150}
                             height={150}
                             alt={
-                              getSponsorInfo("breaks", item.sponsorId ?? 1).name || "Sponsor"
+                              getSponsorInfo("breaks", item.sponsorId ?? 1)
+                                .name || "Sponsor"
                             }
                             className="mr-3 h-auto w-[90px] flex-shrink-0 tablet:w-[120px] desktop:mr-5 desktop:w-[150px]"
                             style={{
@@ -188,11 +204,25 @@ export default function TalkDay({ day, mobile }: { day: number, mobile?: boolean
                       <h3 className="text-base font-medium text-dark-blue tablet:text-lg desktop:text-xl">
                         {item.title}
                       </h3>
+                      {item.location && (
+                        <p className="mt-[-2px] font-alegreya_sans text-base text-dark-blue tablet:text-base desktop:text-lg">
+                          Location:{" "}
+                          <a
+                            href={item.location_link}
+                            className="font-semibold text-dark-blue underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            {item.location}
+                          </a>
+                        </p>
+                      )}
                     </div>
                   ) : null}
                 </div>
               </div>
-            ))}
+            ),
+          )}
         </div>
       </div>
     </>
