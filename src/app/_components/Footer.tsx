@@ -30,7 +30,7 @@ const navigationLinks = {
     title: "FOLLOW US",
     links: [
       { href: "https://x.com/alchemy_conf", label: "X", external: true },
-      { href: "https://bsky.app/profile/alchemyconf.bsky.social", label: "Bluesky", external: true },
+      { href: "https://bsky.app/profile/alchemyconf.com", label: "Bluesky", external: true },
       { href: DISCORD_LINK, label: "Discord", external: true },
     ],
   },
