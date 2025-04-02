@@ -179,23 +179,25 @@ export default function TalkDay({
                               ?.talk_title || item.title}
                           </p>
                         </div>
-                        <SpeakerBlobMobile
-                          className="mr-3 flex-shrink-0 tablet:scale-110 desktop:mr-3 desktop:scale-[1.2]"
-                          src={
-                            speakerImagesMob[
-                              (speakers.find((s) => s.id === item.speakerId)
-                                ?.id ?? 1) - 1
-                            ]?.src || ""
-                          }
-                          alt={
-                            speakers.find((s) => s.id === item.speakerId)
-                              ?.name || ""
-                          }
-                          height="45px"
-                          width="45px"
-                          imageX="0px"
-                          imageY="-10px"
-                        />
+                        {item.speakerId !== 13 && (
+                          <SpeakerBlobMobile
+                            className="mr-3 flex-shrink-0 tablet:scale-110 desktop:mr-3 desktop:scale-[1.2]"
+                            src={
+                              speakerImagesMob[
+                                (speakers.find((s) => s.id === item.speakerId)
+                                  ?.id ?? 1) - 1
+                              ]?.src || ""
+                            }
+                            alt={
+                              speakers.find((s) => s.id === item.speakerId)
+                                ?.name || ""
+                            }
+                            height="45px"
+                            width="45px"
+                            imageX="0px"
+                            imageY="-10px"
+                          />
+                        )}
                       </div>
                     </a>
                   ) : item.type === "outro" ? (

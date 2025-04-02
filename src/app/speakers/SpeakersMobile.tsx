@@ -133,13 +133,15 @@ const SpeakerDetails = ({
 export default function SpeakersMobile() {
   const [activeSections, setActiveSections] = useState<Record<number, string>>(
     () => {
-      return speakers.reduce(
-        (acc, speaker) => {
-          acc[speaker.id] = `bio-${speaker.id}`;
-          return acc;
-        },
-        {} as Record<number, string>,
-      );
+      return speakers
+        .filter(speaker => speaker.id !== 13)
+        .reduce(
+          (acc, speaker) => {
+            acc[speaker.id] = `bio-${speaker.id}`;
+            return acc;
+          },
+          {} as Record<number, string>,
+        );
     },
   );
 
@@ -152,7 +154,9 @@ export default function SpeakersMobile() {
 
   return (
     <section className="mx-auto mb-16 mt-48 flex w-full flex-col items-center justify-center">
-      {speakers.map((speaker) => {
+      {speakers
+        .filter(speaker => speaker.id !== 13)
+        .map((speaker) => {
         const bioSectionId = `bio-${speaker.id}`;
         const talkSectionId = `talk-${speaker.id}`;
         const workshopSectionId = `workshop-${speaker.id}`;

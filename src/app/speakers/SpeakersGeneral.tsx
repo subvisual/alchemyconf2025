@@ -106,7 +106,9 @@ const SpeakerDetails = ({
 export default function SpeakersGeneral() {
   return (
     <section className="mb-20 mt-40 flex flex-col items-center justify-center tablet:mb-28 tablet:mt-56 desktop:mb-40 desktop:mt-64">
-      {speakers.map((speaker) => (
+      {speakers
+        .filter(speaker => speaker.id !== 13)
+        .map((speaker) => (
         <div
           key={speaker.id}
           id={`${normalizeChars(speaker.name + "-" + speaker.surname)}`}
