@@ -36,11 +36,13 @@ export default function Speakers() {
         <div className="text-left pb-1 font-alegreya_sans text-xl text-dark-blue tablet:text-[28px] tablet:leading-[36px] desktop:text-[32px] desktop:leading-[44px]">
           Alchemy Conf 2025 brings together the brightest minds in the Elixir
           community. <br /> The top experts in our community will share what
-          they’ve learned about building, innovation, and real-world
+          they've learned about building, innovation, and real-world
           applications.
         </div>
         {isMounted &&
-          speakers.map((speakers) => (
+          speakers
+            .filter(speaker => speaker.id !== 13)
+            .map((speakers) => (
             <div
               key={speakers.id}
               className="speaker-transform relative mx-auto flex h-[325px] w-[400px] items-center justify-center xs:ml-[-20px] tablet:h-[500px] tablet:w-[600px] desktop:w-[600px]"
